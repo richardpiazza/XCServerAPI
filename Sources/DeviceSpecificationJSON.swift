@@ -28,11 +28,11 @@
 import Foundation
 import CodeQuickKit
 
-class DeviceSpecificationJSON: SerializableObject {
-    var filters: [FilterJSON]?
-    var deviceIdentifers: [String]?
+public class DeviceSpecificationJSON: SerializableObject {
+    public var filters: [FilterJSON]?
+    public var deviceIdentifers: [String]?
     
-    override func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "filters" {
             return FilterJSON.self
         }

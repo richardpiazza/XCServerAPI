@@ -28,18 +28,18 @@
 import Foundation
 import CodeQuickKit
 
-class IntegrationCommitJSON: SerializableObject {
-    var _id: String?
-    var _rev: String?
-    var doc_type: String?
-    var tinyID: String?
-    var integration: String?
-    var botID: String?
-    var botTinyID: String?
-    var endedTimeDate: [Int] = [Int]()
-    var commits: [String : [CommitJSON]] = [String : [CommitJSON]]()
+public class IntegrationCommitJSON: SerializableObject {
+    public var _id: String?
+    public var _rev: String?
+    public var doc_type: String?
+    public var tinyID: String?
+    public var integration: String?
+    public var botID: String?
+    public var botTinyID: String?
+    public var endedTimeDate: [Int] = [Int]()
+    public var commits: [String : [CommitJSON]] = [String : [CommitJSON]]()
     
-    override func initializedObject(forPropertyName propertyName: String, withData data: NSObject) -> NSObject? {
+    override public func initializedObject(forPropertyName propertyName: String, withData data: NSObject) -> NSObject? {
         if propertyName == "commits" {
             var initialized = [String : [CommitJSON]]()
             

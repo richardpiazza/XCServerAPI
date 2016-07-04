@@ -28,12 +28,12 @@
 import Foundation
 import CodeQuickKit
 
-class IntegrationAssetsJSON: SerializableObject {
-    var archive: AssetJSON?
-    var buildServiceLog: AssetJSON?
-    var product: AssetJSON?
-    var sourceControlLog: AssetJSON?
-    var triggerAssets: [AssetJSON]?
-    var xcodebuildLog: AssetJSON?
-    var xcodebuildOutput: AssetJSON?
+public class IntegrationAssetsJSON: SerializableObject {
+    public var archive: AssetJSON?
+    public var buildServiceLog: AssetJSON?
+    public var product: AssetJSON?
+    public var sourceControlLog: AssetJSON?
+    public var triggerAssets: [AssetJSON]?
+    public var xcodebuildLog: AssetJSON?
+    public var xcodebuildOutput: AssetJSON?
 }

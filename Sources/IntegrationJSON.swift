@@ -28,33 +28,33 @@
 import Foundation
 import CodeQuickKit
 
-class IntegrationJSON: SerializableObject {
-    var _id: String = ""
-    var _rev: String?
-    var doc_type: String?
-    var tinyID: String?
-    var number: Int = 0
-    var shouldClean: Bool = false
-    var currentStep: String?
-    var result: String?
-    var buildResultSummary: BuildResultSummaryJSON?
-    var queuedDate: String?
-    var startedTime: String?
-    var endedTime: String?
-    var endedTimeDate: [Int] = [Int]()
-    var duration: Float = 0
-    var success_streak: Int = 0
-    var tags: [String] = [String]()
-    var buildServiceFingerprint: String?
-    var testedDevices: [DeviceJSON] = [DeviceJSON]()
-    var testHierarchy: [String : AnyObject]?
-    var perfMetricNames: [String] = [String]()
-    var perfMetricKeyPaths: [String] = [String]()
-    var assets: IntegrationAssetsJSON?
-    var revisionBlueprint: RevisionBlueprintJSON?
-    var hasCoverageData: Bool?
+public class IntegrationJSON: SerializableObject {
+    public var _id: String = ""
+    public var _rev: String?
+    public var doc_type: String?
+    public var tinyID: String?
+    public var number: Int = 0
+    public var shouldClean: Bool = false
+    public var currentStep: String?
+    public var result: String?
+    public var buildResultSummary: BuildResultSummaryJSON?
+    public var queuedDate: String?
+    public var startedTime: String?
+    public var endedTime: String?
+    public var endedTimeDate: [Int] = [Int]()
+    public var duration: Float = 0
+    public var success_streak: Int = 0
+    public var tags: [String] = [String]()
+    public var buildServiceFingerprint: String?
+    public var testedDevices: [DeviceJSON] = [DeviceJSON]()
+    public var testHierarchy: [String : AnyObject]?
+    public var perfMetricNames: [String] = [String]()
+    public var perfMetricKeyPaths: [String] = [String]()
+    public var assets: IntegrationAssetsJSON?
+    public var revisionBlueprint: RevisionBlueprintJSON?
+    public var hasCoverageData: Bool?
     
-    override func propertyName(forSerializedKey serializedKey: String) -> String? {
+    override public func propertyName(forSerializedKey serializedKey: String) -> String? {
         if serializedKey == "lastRevisionBlueprint" {
             return "revisionBlueprint"
         }
@@ -62,7 +62,7 @@ class IntegrationJSON: SerializableObject {
         return super.propertyName(forSerializedKey: serializedKey)
     }
     
-    override func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "testedDevices" {
             return DeviceJSON.self
         }

@@ -28,17 +28,17 @@
 import Foundation
 import CodeQuickKit
 
-class BuildResultSummaryJSON: SerializableObject {
-    var errorCount: Int = 0
-    var errorChange: Int = 0
-    var warningCount: Int = 0
-    var warningChange: Int = 0
-    var testsCount: Int = 0
-    var testsChange: Int = 0
-    var testFailureCount: Int = 0
-    var testFailureChange: Int = 0
-    var analyzerWarningCount: Int = 0
-    var analyzerWarningChange: Int = 0
-    var regressedPerfTestCount: Int = 0
-    var improvedPerfTestCount: Int = 0
+public class BuildResultSummaryJSON: SerializableObject {
+    public var errorCount: Int = 0
+    public var errorChange: Int = 0
+    public var warningCount: Int = 0
+    public var warningChange: Int = 0
+    public var testsCount: Int = 0
+    public var testsChange: Int = 0
+    public var testFailureCount: Int = 0
+    public var testFailureChange: Int = 0
+    public var analyzerWarningCount: Int = 0
+    public var analyzerWarningChange: Int = 0
+    public var regressedPerfTestCount: Int = 0
+    public var improvedPerfTestCount: Int = 0
 }

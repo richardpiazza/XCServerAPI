@@ -28,11 +28,11 @@
 import Foundation
 import CodeQuickKit
 
-class TriggerJSON: SerializableObject {
-    var name: String?
-    var type: Int = 0
-    var phase: Int = 0
-    var scriptBody: String?
-    var conditions: ConditionsJSON?
-    var emailConfiguration: EmailConfigurationJSON?
+public class TriggerJSON: SerializableObject {
+    public var name: String?
+    public var type: Int = 0
+    public var phase: Int = 0
+    public var scriptBody: String?
+    public var conditions: ConditionsJSON?
+    public var emailConfiguration: EmailConfigurationJSON?
 }

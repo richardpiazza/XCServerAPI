@@ -28,10 +28,10 @@
 import Foundation
 import CodeQuickKit
 
-class AssetJSON: SerializableObject {
-    var allowAnonymousAccess: NSNumber?
-    var fileName: String?
-    var infoDictionary: NSObject?
-    var relativePath: String?
-    var size: NSNumber?
+public class AssetJSON: SerializableObject {
+    public var allowAnonymousAccess: NSNumber?
+    public var fileName: String?
+    public var infoDictionary: NSObject?
+    public var relativePath: String?
+    public var size: NSNumber?
 }

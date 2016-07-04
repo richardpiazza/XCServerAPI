@@ -28,18 +28,18 @@
 import Foundation
 import CodeQuickKit
 
-class IssueJSON: SerializableObject {
-    var _id: String = ""
-    var _rev: String?
-    var status: Int = 0
-    var target: String?
-    var testCase: String?
-    var lineNumber: Int?
-    var documentLocationData: String?
-    var documentFilePath: String?
-    var age: Int = 0
-    var message: String?
-    var integrationID: String?
-    var type: String?
-    var issueType: String?
+public class IssueJSON: SerializableObject {
+    public var _id: String = ""
+    public var _rev: String?
+    public var status: Int = 0
+    public var target: String?
+    public var testCase: String?
+    public var lineNumber: Int?
+    public var documentLocationData: String?
+    public var documentFilePath: String?
+    public var age: Int = 0
+    public var message: String?
+    public var integrationID: String?
+    public var type: String?
+    public var issueType: String?
 }

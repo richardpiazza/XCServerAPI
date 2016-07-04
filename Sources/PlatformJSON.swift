@@ -28,12 +28,12 @@
 import Foundation
 import CodeQuickKit
 
-class PlatformJSON: SerializableObject {
-    var _id: String?
-    var displayName: String?
-    var _rev: String?
-    var simulatorIdentifier: String?
-    var identifier: String?
-    var buildNumber: String?
-    var version: String?
+public class PlatformJSON: SerializableObject {
+    public var _id: String?
+    public var displayName: String?
+    public var _rev: String?
+    public var simulatorIdentifier: String?
+    public var identifier: String?
+    public var buildNumber: String?
+    public var version: String?
 }

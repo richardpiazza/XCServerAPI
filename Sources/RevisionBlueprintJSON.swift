@@ -28,20 +28,20 @@
 import Foundation
 import CodeQuickKit
 
-class RevisionBlueprintJSON: SerializableObject {
-    var DVTSourceControlWorkspaceBlueprintIdentifierKey: String?
-    var DVTSourceControlWorkspaceBlueprintNameKey: String?
-    var DVTSourceControlWorkspaceBlueprintVersion: NSNumber?
-    var DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey: String?
-    var DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey: String?
-    var DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey: [RemoteRepositoryJSON]?
-    var DVTSourceControlWorkspaceBlueprintLocationsKey: [String : BlueprintLocationJSON] = [String : BlueprintLocationJSON]()
-    var DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey: [String : RepositoryLocationJSON] = [String : RepositoryLocationJSON]()
-    var DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey: [String : AuthenticationStrategyJSON] = [String : AuthenticationStrategyJSON]()
-    var DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey: [String : NSNumber]?
-    var DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey: [String : String]?
+public class RevisionBlueprintJSON: SerializableObject {
+    public var DVTSourceControlWorkspaceBlueprintIdentifierKey: String?
+    public var DVTSourceControlWorkspaceBlueprintNameKey: String?
+    public var DVTSourceControlWorkspaceBlueprintVersion: NSNumber?
+    public var DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey: String?
+    public var DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey: String?
+    public var DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey: [RemoteRepositoryJSON]?
+    public var DVTSourceControlWorkspaceBlueprintLocationsKey: [String : BlueprintLocationJSON] = [String : BlueprintLocationJSON]()
+    public var DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey: [String : RepositoryLocationJSON] = [String : RepositoryLocationJSON]()
+    public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey: [String : AuthenticationStrategyJSON] = [String : AuthenticationStrategyJSON]()
+    public var DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey: [String : NSNumber]?
+    public var DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey: [String : String]?
     
-    override func initializedObject(forPropertyName propertyName: String, withData data: NSObject) -> NSObject? {
+    override public func initializedObject(forPropertyName propertyName: String, withData data: NSObject) -> NSObject? {
         if propertyName == "DVTSourceControlWorkspaceBlueprintLocationsKey" {
             var initialized = [String : BlueprintLocationJSON]()
             
@@ -83,7 +83,7 @@ class RevisionBlueprintJSON: SerializableObject {
         return super.initializedObject(forPropertyName: propertyName, withData: data)
     }
     
-    override func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" {
             return RemoteRepositoryJSON.self
         }
@@ -91,7 +91,7 @@ class RevisionBlueprintJSON: SerializableObject {
         return super.objectClassOfCollectionType(forPropertyname: propertyName)
     }
     
-    var repositoryIds: [String] {
+    public var repositoryIds: [String] {
         var ids = [String]()
         
         if let remoteRepositories = self.DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey {

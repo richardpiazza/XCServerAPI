@@ -28,20 +28,20 @@
 import Foundation
 import CodeQuickKit
 
-class BotJSON: SerializableObject {
-    var _id: String = ""
-    var _rev: String?
-    var doc_type: String?
-    var tinyID: String?
-    var name: String?
-    var type: Int = 0
-    var integration_counter: Int = 0
-    var requiresUpgrade: Bool = false
-    var configuration: ConfigurationJSON?
-    var lastRevisionBlueprint: RevisionBlueprintJSON?
-    var integrations: [IntegrationJSON] = [IntegrationJSON]()
+public class BotJSON: SerializableObject {
+    public var _id: String = ""
+    public var _rev: String?
+    public var doc_type: String?
+    public var tinyID: String?
+    public var name: String?
+    public var type: Int = 0
+    public var integration_counter: Int = 0
+    public var requiresUpgrade: Bool = false
+    public var configuration: ConfigurationJSON?
+    public var lastRevisionBlueprint: RevisionBlueprintJSON?
+    public var integrations: [IntegrationJSON] = [IntegrationJSON]()
     
-    override func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "integrations" {
             return IntegrationJSON.self
         }
