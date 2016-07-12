@@ -213,7 +213,7 @@ public class XCServerWebAPI: WebAPI {
     
     /// Requests the '`/bots/{id}`' endpoint from the Xcode Server API.
     public func getBot(bot identifier: String, completion: XCServerWebAPIBotCompletion) {
-        self.get("bot/\(identifier)") { (statusCode, response, responseObject, error) in
+        self.get("bots/\(identifier)") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(bot: nil, error: self.invalidAuthorization)
                 return
@@ -239,7 +239,7 @@ public class XCServerWebAPI: WebAPI {
     
     /// Requests the '`/bots/{id}/stats`' endpoint from the Xcode Server API.
     public func getStats(forBot identifier: String, completion: XCServerWebAPIStatsCompletion) {
-        self.get("bot/\(identifier)/stats") { (statusCode, response, responseObject, error) in
+        self.get("bots/\(identifier)/stats") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(stats: nil, error: self.invalidAuthorization)
                 return
