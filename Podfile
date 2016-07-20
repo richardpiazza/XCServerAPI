@@ -5,6 +5,5 @@ target 'XCServerAPI' do
 end
 
 target 'XCServerAPITests' do
-    inherit! :search_paths
-    # Pods for testing
+    pod 'CodeQuickKit', '~> 2.5'
 end
