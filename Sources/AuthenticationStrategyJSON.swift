@@ -28,6 +28,6 @@
 import Foundation
 import CodeQuickKit
 
-open class AuthenticationStrategyJSON: SerializableObject {
-    open var DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey: String?
+public class AuthenticationStrategyJSON: SerializableObject {
+    public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey: String?
 }

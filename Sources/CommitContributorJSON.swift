@@ -28,8 +28,8 @@
 import Foundation
 import CodeQuickKit
 
-open class CommitContributorJSON: SerializableObject {
-    open var XCSContributorEmails: [String] = [String]()
-    open var XCSContributorName: String?
-    open var XCSContributorDisplayName: String?
+public class CommitContributorJSON: SerializableObject {
+    public var XCSContributorEmails: [String] = [String]()
+    public var XCSContributorName: String?
+    public var XCSContributorDisplayName: String?
 }

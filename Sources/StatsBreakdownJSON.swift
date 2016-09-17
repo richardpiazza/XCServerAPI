@@ -28,11 +28,11 @@
 import Foundation
 import CodeQuickKit
 
-open class StatsBreakdownJSON: SerializableObject {
-    open var sum: NSNumber?
-    open var count: NSNumber?
-    open var min: NSNumber?
-    open var max: NSNumber?
-    open var avg: NSNumber?
-    open var stdDev: NSNumber?
+public class StatsBreakdownJSON: SerializableObject {
+    public var sum: NSNumber?
+    public var count: NSNumber?
+    public var min: NSNumber?
+    public var max: NSNumber?
+    public var avg: NSNumber?
+    public var stdDev: NSNumber?
 }

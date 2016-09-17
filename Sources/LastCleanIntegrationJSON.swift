@@ -28,7 +28,7 @@
 import Foundation
 import CodeQuickKit
 
-open class LastCleanIntegrationJSON: SerializableObject {
-    open var intergraionID: String?
-    open var endedTime: String?
+public class LastCleanIntegrationJSON: SerializableObject {
+    public var intergraionID: String?
+    public var endedTime: String?
 }

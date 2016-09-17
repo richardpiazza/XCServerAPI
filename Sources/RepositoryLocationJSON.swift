@@ -28,6 +28,6 @@
 import Foundation
 import CodeQuickKit
 
-open class RepositoryLocationJSON: SerializableObject {
+public class RepositoryLocationJSON: SerializableObject {
     
 }

@@ -31,11 +31,11 @@ import CodeQuickKit
 /// ## BotsResponse
 /// This is the response structure received from the Xcode Server API when
 /// querying /bots endpoint.
-open class BotsResponse: SerializableObject {
-    open var count: Int = 0
-    open var results: [BotJSON] = [BotJSON]()
+public class BotsResponse: SerializableObject {
+    public var count: Int = 0
+    public var results: [BotJSON] = [BotJSON]()
     
-    override open func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "results" {
             return BotJSON.self
         }
@@ -47,11 +47,11 @@ open class BotsResponse: SerializableObject {
 /// ## IntegrationsResponse
 /// This is the response structure received from the Xcode Server API when
 /// querying /bots/{id}/integrations endpoint.
-open class IntegrationsResponse : SerializableObject {
-    open var count: Int = 0
-    open var results: [IntegrationJSON] = [IntegrationJSON]()
+public class IntegrationsResponse : SerializableObject {
+    public var count: Int = 0
+    public var results: [IntegrationJSON] = [IntegrationJSON]()
     
-    override open func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "results" {
             return IntegrationJSON.self
         }
@@ -63,11 +63,11 @@ open class IntegrationsResponse : SerializableObject {
 /// ## IntegrationCommitsResponse
 /// This is the response structure received from the Xcode Server API when
 /// querying /integrations/{id}/commits endpoint.
-open class IntegrationCommitsResponse : SerializableObject {
-    open var count: Int = 0
-    open var results: [IntegrationCommitJSON] = [IntegrationCommitJSON]()
+public class IntegrationCommitsResponse : SerializableObject {
+    public var count: Int = 0
+    public var results: [IntegrationCommitJSON] = [IntegrationCommitJSON]()
     
-    override open func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "results" {
             return IntegrationCommitJSON.self
         }
@@ -79,18 +79,20 @@ open class IntegrationCommitsResponse : SerializableObject {
 /// ## IntegrationIssuesResponse
 /// This is the response structure received from the Xcode Server API when
 /// querying /integrations/{id}/issues endpoint.
-open class IntegrationIssuesResponse : SerializableObject {
-    open var errors: IntegrationIssuesJSON?
-    open var warnings: IntegrationIssuesJSON?
-    open var analyzerWarnings: IntegrationIssuesJSON?
-    open var testFailures: IntegrationIssuesJSON?
-    open var buildServiceErrors: [IssueJSON] = [IssueJSON]()
-    open var buildServiceWarnings: [IssueJSON] = [IssueJSON]()
+public class IntegrationIssuesResponse : SerializableObject {
+    public var errors: IntegrationIssuesJSON?
+    public var warnings: IntegrationIssuesJSON?
+    public var analyzerWarnings: IntegrationIssuesJSON?
+    public var testFailures: IntegrationIssuesJSON?
+    public var buildServiceErrors: [IssueJSON] = [IssueJSON]()
+    public var buildServiceWarnings: [IssueJSON] = [IssueJSON]()
     
-    open override func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         switch propertyName {
-        case "buildServiceErrors", "buildServiceWarnings": return IssueJSON.self
-        default: return super.objectClassOfCollectionType(forPropertyname: propertyName)
+        case "buildServiceErrors", "buildServiceWarnings":
+            return IssueJSON.self
+        default:
+            return super.objectClassOfCollectionType(forPropertyname: propertyName)
         }
     }
 }

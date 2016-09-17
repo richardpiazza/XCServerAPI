@@ -28,25 +28,25 @@
 import Foundation
 import CodeQuickKit
 
-open class ConfigurationJSON: SerializableObject {
-    open var schemeName: String!
-    open var builtFromClean: Int = 0
-    open var performsTestAction: Bool = false
-    open var performsAnalyzeAction: Bool = false
-    open var performsArchiveAction: Bool = false
-    open var testingDestinationType: Int = 0
-    open var testingDeviceIDs: [String] = [String]()
-    open var scheduleType: Int = 0
-    open var periodicScheduleInterval: Int = 0
-    open var weeklyScheduleDay: Int = 0
-    open var hourOfIntegration: Int = 0
-    open var minutesAfterHourToIntegrate: Int = 0
-    open var triggers: [TriggerJSON] = [TriggerJSON]()
-    open var sourceControlBlueprint: RevisionBlueprintJSON?
-    open var codeCoveragePreference: NSNumber?
-    open var deviceSpecification: DeviceSpecificationJSON?
+public class ConfigurationJSON: SerializableObject {
+    public var schemeName: String!
+    public var builtFromClean: Int = 0
+    public var performsTestAction: Bool = false
+    public var performsAnalyzeAction: Bool = false
+    public var performsArchiveAction: Bool = false
+    public var testingDestinationType: Int = 0
+    public var testingDeviceIDs: [String] = [String]()
+    public var scheduleType: Int = 0
+    public var periodicScheduleInterval: Int = 0
+    public var weeklyScheduleDay: Int = 0
+    public var hourOfIntegration: Int = 0
+    public var minutesAfterHourToIntegrate: Int = 0
+    public var triggers: [TriggerJSON] = [TriggerJSON]()
+    public var sourceControlBlueprint: RevisionBlueprintJSON?
+    public var codeCoveragePreference: NSNumber?
+    public var deviceSpecification: DeviceSpecificationJSON?
     
-    override open func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "triggers" {
             return TriggerJSON.self
         }

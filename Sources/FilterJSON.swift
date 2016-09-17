@@ -28,12 +28,12 @@
 import Foundation
 import CodeQuickKit
 
-open class FilterJSON: SerializableObject {
-    open var platform: PlatformJSON?
-    open var filterType: NSNumber?
-    open var architectureType: NSNumber?
+public class FilterJSON: SerializableObject {
+    public var platform: PlatformJSON?
+    public var filterType: NSNumber?
+    public var architectureType: NSNumber?
     
-    override open func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "platform" {
             return PlatformJSON.self
         }

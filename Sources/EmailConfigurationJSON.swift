@@ -28,9 +28,9 @@
 import Foundation
 import CodeQuickKit
 
-open class EmailConfigurationJSON: SerializableObject {
-    open var emailCommitters: Bool = false
-    open var additionalRecipients: [String] = [String]()
-    open var includeCommitMessages: Bool = false
-    open var includeIssueDetails: Bool = false
+public class EmailConfigurationJSON: SerializableObject {
+    public var emailCommitters: Bool = false
+    public var additionalRecipients: [String] = [String]()
+    public var includeCommitMessages: Bool = false
+    public var includeIssueDetails: Bool = false
 }

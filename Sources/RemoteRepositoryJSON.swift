@@ -28,8 +28,8 @@
 import Foundation
 import CodeQuickKit
 
-open class RemoteRepositoryJSON: SerializableObject {
-    open var DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey: String?
-    open var DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey: String?
-    open var DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey: String?
+public class RemoteRepositoryJSON: SerializableObject {
+    public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey: String?
+    public var DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey: String?
+    public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey: String?
 }

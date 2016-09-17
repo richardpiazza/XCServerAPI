@@ -59,11 +59,11 @@ public extension XCServerWebAPICredentialDelegate {
 }
 
 /// Wrapper for `WebAPI` that implements common Xcode Server requests.
-open class XCServerWebAPI: WebAPI {
+public class XCServerWebAPI: WebAPI {
     
     /// Class implementing the NSURLSessionDelegate which forcefully bypasses
     /// untrusted SSL Certificates.
-    open class XCServerDefaultSessionDelegate: NSObject, URLSessionDelegate {
+    public class XCServerDefaultSessionDelegate: NSObject, URLSessionDelegate {
         // MARK: - NSURLSessionDelegate
         @objc open func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
             guard challenge.previousFailureCount < 1 else {
@@ -83,18 +83,18 @@ open class XCServerWebAPI: WebAPI {
     }
     
     /// Class implementing the XCServerWebAPICredentialDelgate
-    open class XCServerDefaultCredentialDelegate: XCServerWebAPICredentialDelegate {
+    public class XCServerDefaultCredentialDelegate: XCServerWebAPICredentialDelegate {
         // MARK: - XCServerWebAPICredentialsDelegate
         open func credentials(forAPI api: XCServerWebAPI) -> XCServerWebAPICredentials? {
             return nil
         }
     }
     
-    open static var sessionDelegate: URLSessionDelegate = XCServerDefaultSessionDelegate()
-    open static var credentialDelegate: XCServerWebAPICredentialDelegate = XCServerDefaultCredentialDelegate()
+    public static var sessionDelegate: URLSessionDelegate = XCServerDefaultSessionDelegate()
+    public static var credentialDelegate: XCServerWebAPICredentialDelegate = XCServerDefaultCredentialDelegate()
     fileprivate static var apis = [String : XCServerWebAPI]()
     
-    open static func api(forFQDN fqdn: String) -> XCServerWebAPI {
+    public static func api(forFQDN fqdn: String) -> XCServerWebAPI {
         if let api = self.apis[fqdn] {
             return api
         }
@@ -109,7 +109,7 @@ open class XCServerWebAPI: WebAPI {
         return api
     }
     
-    open static func resetAPI(forFQDN fqdn: String) {
+    public static func resetAPI(forFQDN fqdn: String) {
         if let _ = self.apis[fqdn] {
             self.apis[fqdn] = nil
         }
@@ -138,7 +138,7 @@ open class XCServerWebAPI: WebAPI {
         self.init(baseURL: url, sessionDelegate: XCServerWebAPI.sessionDelegate)
     }
     
-    open override func request(forPath path: String, queryItems: [URLQueryItem]?, method: WebAPIRequestMethod, data: Data?) -> NSMutableURLRequest? {
+    override public func request(forPath path: String, queryItems: [URLQueryItem]?, method: WebAPIRequestMethod, data: Data?) -> NSMutableURLRequest? {
         guard let request = super.request(forPath: path, queryItems: queryItems, method: method, data: data) else {
             return nil
         }
@@ -153,14 +153,14 @@ open class XCServerWebAPI: WebAPI {
     // MARK: - Endpoints
     
     /// Requests the '`/ping`' endpoint from the Xcode Server API.
-    open func getPing(_ completion: @escaping WebAPICompletion) {
+    public func getPing(_ completion: @escaping WebAPICompletion) {
         self.get("ping", completion: completion)
     }
     
     public typealias XCServerWebAPIVersionCompletion = (_ version: VersionJSON?, _ error: NSError?) -> Void
     
     /// Requests the '`/version`' endpoint from the Xcode Server API.
-    open func getVersion(_ completion: @escaping XCServerWebAPIVersionCompletion) {
+    public func getVersion(_ completion: @escaping XCServerWebAPIVersionCompletion) {
         self.get("version") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
@@ -186,7 +186,7 @@ open class XCServerWebAPI: WebAPI {
     public typealias XCServerWebAPIBotsCompletion = (_ bots: [BotJSON]?, _ error: NSError?) -> Void
     
     /// Requests the '`/bots`' endpoint from the Xcode Server API.
-    open func getBots(_ completion: @escaping XCServerWebAPIBotsCompletion) {
+    public func getBots(_ completion: @escaping XCServerWebAPIBotsCompletion) {
         self.get("bots") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
@@ -212,7 +212,7 @@ open class XCServerWebAPI: WebAPI {
     public typealias XCServerWebAPIBotCompletion = (_ bot: BotJSON?, _ error: NSError?) -> Void
     
     /// Requests the '`/bots/{id}`' endpoint from the Xcode Server API.
-    open func getBot(bot identifier: String, completion: @escaping XCServerWebAPIBotCompletion) {
+    public func getBot(bot identifier: String, completion: @escaping XCServerWebAPIBotCompletion) {
         self.get("bots/\(identifier)") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
@@ -238,7 +238,7 @@ open class XCServerWebAPI: WebAPI {
     public typealias XCServerWebAPIStatsCompletion = (_ stats: StatsJSON?, _ error: NSError?) -> Void
     
     /// Requests the '`/bots/{id}/stats`' endpoint from the Xcode Server API.
-    open func getStats(forBot identifier: String, completion: @escaping XCServerWebAPIStatsCompletion) {
+    public func getStats(forBot identifier: String, completion: @escaping XCServerWebAPIStatsCompletion) {
         self.get("bots/\(identifier)/stats") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
@@ -264,7 +264,7 @@ open class XCServerWebAPI: WebAPI {
     public typealias XCServerWebAPIIntegrationCompletion = (_ integration: IntegrationJSON?, _ error: NSError?) -> Void
     
     /// Posts a request to the '`/bots/{id}`' endpoint from the Xcode Server API.
-    open func postBot(forBot identifier: String, completion: @escaping XCServerWebAPIIntegrationCompletion) {
+    public func postBot(forBot identifier: String, completion: @escaping XCServerWebAPIIntegrationCompletion) {
         self.post(nil, path: "bots/\(identifier)/integrations") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
@@ -290,7 +290,7 @@ open class XCServerWebAPI: WebAPI {
     public typealias XCServerWebAPIIntegrationsCompletion = (_ integrations: [IntegrationJSON]?, _ error: NSError?) -> Void
     
     /// Requests the '`/bots/{id}/integrations`' endpoint from the Xcode Server API.
-    open func getIntegrations(forBot identifier: String, completion: @escaping XCServerWebAPIIntegrationsCompletion) {
+    public func getIntegrations(forBot identifier: String, completion: @escaping XCServerWebAPIIntegrationsCompletion) {
         self.get("bots/\(identifier)/integrations") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
@@ -314,7 +314,7 @@ open class XCServerWebAPI: WebAPI {
     }
     
     /// Requests the '`/integrations/{id}`' endpoint from the Xcode Server API.
-    open func getIntegration(integration identifier: String, completion: @escaping XCServerWebAPIIntegrationCompletion) {
+    public func getIntegration(integration identifier: String, completion: @escaping XCServerWebAPIIntegrationCompletion) {
         self.get("integrations/\(identifier)") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
@@ -340,7 +340,7 @@ open class XCServerWebAPI: WebAPI {
     public typealias XCServerWebAPICommitsCompletion = (_ commits: [IntegrationCommitJSON]?, _ error: NSError?) -> Void
     
     /// Requests the '`/integrations/{id}/commits`' endpoint from the Xcode Server API.
-    open func getCommits(forIntegration identifier: String, completion: @escaping XCServerWebAPICommitsCompletion) {
+    public func getCommits(forIntegration identifier: String, completion: @escaping XCServerWebAPICommitsCompletion) {
         self.get("integrations/\(identifier)/commits") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
@@ -366,7 +366,7 @@ open class XCServerWebAPI: WebAPI {
     public typealias XCServerWebAPIIssuesCompletion = (_ issues: IntegrationIssuesResponse?, _ error: NSError?) -> Void
     
     /// Requests the '`/integrations/{id}/issues`' endpoint from the Xcode Server API.
-    open func getIssues(forIntegration identifier: String, completion: @escaping XCServerWebAPIIssuesCompletion) {
+    public func getIssues(forIntegration identifier: String, completion: @escaping XCServerWebAPIIssuesCompletion) {
         self.get("integrations/\(identifier)/issues") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
