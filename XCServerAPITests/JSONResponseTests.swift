@@ -95,7 +95,7 @@ class JSONResponseTests: XCTestCase {
             return
         }
         
-        XCTAssertEqual(best.success_streak?.integerValue, 2)
+        XCTAssertEqual(best.success_streak?.intValue, 2)
         
         guard let analysis = stats.analysisWarnings else {
             XCTFail()
@@ -151,7 +151,7 @@ class JSONResponseTests: XCTestCase {
         }
         
         XCTAssertEqual(log.fileName, "sourceControl.log")
-        XCTAssertEqual(log.size?.integerValue, 2201)
+        XCTAssertEqual(log.size?.intValue, 2201)
         
         let devices = integration.testedDevices
         guard let device = devices.first else {
@@ -184,7 +184,7 @@ class JSONResponseTests: XCTestCase {
             return
         }
         
-        XCTAssertEqual(recipeTest["F6B2A590-E67B-40F7-8857-7290451769A4"]?.integerValue, 1)
+        XCTAssertEqual(recipeTest["F6B2A590-E67B-40F7-8857-7290451769A4"]?.intValue, 1)
         
         XCTAssertNotNil(integration._id, "")
     }

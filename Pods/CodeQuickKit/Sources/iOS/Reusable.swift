@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// Downloader+UIKit.swift
+// Reusable.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/CodeQuickKit
@@ -27,28 +27,18 @@
 
 import UIKit
 
-public typealias DownloaderImageCompletion = (statusCode: Int, responseImage: UIImage?, error: NSError?) -> Void
+public protocol Reusable {
+    static func reuseIdentifier() -> String
+}
 
-/// A wrapper for `NSURLSession` similar to `WebAPI` for general purpose
-/// downloading of data and images.
-public extension Downloader {
-    public func getImageAtPath(path: String, cachePolicy: NSURLRequestCachePolicy, completion: DownloaderImageCompletion) {
-        guard let url = self.urlForPath(path) else {
-            completion(statusCode: 0, responseImage: nil, error: invalidBaseURL)
-            return
-        }
-        
-        self.getImageAtURL(url, cachePolicy: cachePolicy, completion: completion)
+extension UITableViewCell: Reusable {
+    public class func reuseIdentifier() -> String {
+        return String(describing: self)
     }
-    
-    public func getImageAtURL(url: NSURL, cachePolicy: NSURLRequestCachePolicy, completion: DownloaderImageCompletion) {
-        self.getDataAtURL(url, cachePolicy: cachePolicy) { (statusCode, responseData, error) -> Void in
-            var image: UIImage?
-            if responseData != nil {
-                image = UIImage(data: responseData!)
-            }
-            
-            completion(statusCode: statusCode, responseImage: image, error: error)
-        }
+}
+
+extension UICollectionReusableView: Reusable {
+    public class func reuseIdentifier() -> String {
+        return String(describing: self)
     }
 }

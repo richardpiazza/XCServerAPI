@@ -28,12 +28,12 @@
 import Foundation
 import CodeQuickKit
 
-public class ConditionsJSON: SerializableObject {
-    public var status: Int = 0
-    public var onWarnings: Bool = false
-    public var onBuildErrors: Bool = false
-    public var onInternalErrors: Bool = false
-    public var onAnalyzerWarnings: Bool = false
-    public var onFailingTests: Bool = false
-    public var onSuccess: Bool = false
+open class ConditionsJSON: SerializableObject {
+    open var status: Int = 0
+    open var onWarnings: Bool = false
+    open var onBuildErrors: Bool = false
+    open var onInternalErrors: Bool = false
+    open var onAnalyzerWarnings: Bool = false
+    open var onFailingTests: Bool = false
+    open var onSuccess: Bool = false
 }

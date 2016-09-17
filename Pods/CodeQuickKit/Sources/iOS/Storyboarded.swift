@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// NSDateFormatter.swift
+// Storyboarded.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/CodeQuickKit
@@ -25,51 +25,37 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Foundation
+import UIKit
 
-public enum DateFormat {
-    case RFC1123
-    
-    var dateFormat: String {
-        switch self {
-        case .RFC1123: return "EEE',' dd MMM yyyy HH':'mm':'ss 'GMT'"
-        }
+public protocol Storyboarded {
+    static func bundle() -> Bundle
+    static func storyboard() -> UIStoryboard
+    static func storyboardIdentifier() -> String
+}
+
+extension UIViewController: Storyboarded {
+    public class func bundle() -> Bundle {
+        return Bundle(for: self)
     }
     
-    var locale: NSLocale {
-        switch self {
-        case .RFC1123: return NSLocale(localeIdentifier: "en_US")
+    public class func storyboard() -> UIStoryboard {
+        if let storyboard = self.bundle().mainStoryboard {
+            return storyboard
         }
+        
+        assertionFailure("Bundle Storyboard Not Found")
+        return UIStoryboard()
     }
     
-    var timeZone: NSTimeZone {
-        switch self {
-        case .RFC1123: return NSTimeZone(abbreviation: "GMT")!
-        }
+    public class func storyboardIdentifier() -> String {
+        return String(describing: self)
     }
 }
 
-public extension NSDateFormatter {
-    private struct common {
-        static let rfc1123DateFormatter: NSDateFormatter = NSDateFormatter(withDateFormat: .RFC1123)
-    }
-    
-    public convenience init(withDateFormat format: DateFormat) {
-        self.init()
-        dateFormat = format.dateFormat
-        locale = format.locale
-        timeZone = format.timeZone
-    }
-    
-    public static func rfc1123DateFormatter() -> NSDateFormatter {
-        return common.rfc1123DateFormatter
-    }
-    
-    public static func rfc1123Date(fromString string: String) -> NSDate? {
-        return common.rfc1123DateFormatter.dateFromString(string)
-    }
-    
-    public static func rfc1123String(fromDate date: NSDate) -> String {
-        return common.rfc1123DateFormatter.stringFromDate(date)
+public extension UIStoryboard {
+    /// Instantiates a UIViewController for the provided `Storyboarded` class
+    /// This call potentially throws an execption that cannot be caught.
+    public func instantiateViewController<T: Storyboarded>(forClass viewControllerClass: T.Type) -> T {
+        return self.instantiateViewController(withIdentifier: viewControllerClass.storyboardIdentifier()) as! T
     }
 }

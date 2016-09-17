@@ -31,11 +31,11 @@ import CodeQuickKit
 /// ## BotsResponse
 /// This is the response structure received from the Xcode Server API when
 /// querying /bots endpoint.
-public class BotsResponse: SerializableObject {
-    public var count: Int = 0
-    public var results: [BotJSON] = [BotJSON]()
+open class BotsResponse: SerializableObject {
+    open var count: Int = 0
+    open var results: [BotJSON] = [BotJSON]()
     
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override open func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "results" {
             return BotJSON.self
         }
@@ -47,11 +47,11 @@ public class BotsResponse: SerializableObject {
 /// ## IntegrationsResponse
 /// This is the response structure received from the Xcode Server API when
 /// querying /bots/{id}/integrations endpoint.
-public class IntegrationsResponse : SerializableObject {
-    public var count: Int = 0
-    public var results: [IntegrationJSON] = [IntegrationJSON]()
+open class IntegrationsResponse : SerializableObject {
+    open var count: Int = 0
+    open var results: [IntegrationJSON] = [IntegrationJSON]()
     
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override open func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "results" {
             return IntegrationJSON.self
         }
@@ -63,11 +63,11 @@ public class IntegrationsResponse : SerializableObject {
 /// ## IntegrationCommitsResponse
 /// This is the response structure received from the Xcode Server API when
 /// querying /integrations/{id}/commits endpoint.
-public class IntegrationCommitsResponse : SerializableObject {
-    public var count: Int = 0
-    public var results: [IntegrationCommitJSON] = [IntegrationCommitJSON]()
+open class IntegrationCommitsResponse : SerializableObject {
+    open var count: Int = 0
+    open var results: [IntegrationCommitJSON] = [IntegrationCommitJSON]()
     
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override open func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "results" {
             return IntegrationCommitJSON.self
         }
@@ -79,15 +79,15 @@ public class IntegrationCommitsResponse : SerializableObject {
 /// ## IntegrationIssuesResponse
 /// This is the response structure received from the Xcode Server API when
 /// querying /integrations/{id}/issues endpoint.
-public class IntegrationIssuesResponse : SerializableObject {
-    public var errors: IntegrationIssuesJSON?
-    public var warnings: IntegrationIssuesJSON?
-    public var analyzerWarnings: IntegrationIssuesJSON?
-    public var testFailures: IntegrationIssuesJSON?
-    public var buildServiceErrors: [IssueJSON] = [IssueJSON]()
-    public var buildServiceWarnings: [IssueJSON] = [IssueJSON]()
+open class IntegrationIssuesResponse : SerializableObject {
+    open var errors: IntegrationIssuesJSON?
+    open var warnings: IntegrationIssuesJSON?
+    open var analyzerWarnings: IntegrationIssuesJSON?
+    open var testFailures: IntegrationIssuesJSON?
+    open var buildServiceErrors: [IssueJSON] = [IssueJSON]()
+    open var buildServiceWarnings: [IssueJSON] = [IssueJSON]()
     
-    public override func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    open override func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         switch propertyName {
         case "buildServiceErrors", "buildServiceWarnings": return IssueJSON.self
         default: return super.objectClassOfCollectionType(forPropertyname: propertyName)

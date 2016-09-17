@@ -30,6 +30,6 @@ import PackageDescription
 let package = Package(
     name: "XCServerAPI",
     dependencies: [
-        .Package(url: "https://github.com/richardpiazza/CodeQuickKit.git", majorVersion: 2, minor: 5)
+        .Package(url: "https://github.com/richardpiazza/CodeQuickKit.git", majorVersion: 4, minor: 0)
     ]
 )

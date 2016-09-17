@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// NSDate.swift
+// Date.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/CodeQuickKit
@@ -27,64 +27,64 @@
 
 import Foundation
 
-public extension NSDate {
+public extension Date {
     /// Provides the current datetime minus 24 hours.
-    public static var yesturday: NSDate {
-        return NSDate().dateByAdding(days: -1)!
+    public static var yesturday: Date {
+        return Date().dateByAdding(days: -1)!
     }
     
     /// Provides the current datetime minus 48 hours.
-    public static var twoDaysAgo: NSDate {
-        return NSDate().dateByAdding(days: -2)!
+    public static var twoDaysAgo: Date {
+        return Date().dateByAdding(days: -2)!
     }
     
     /// Provides the current datetime minus 7 days.
-    public static var lastWeek: NSDate {
-        return NSDate().dateByAdding(days: -7)!
+    public static var lastWeek: Date {
+        return Date().dateByAdding(days: -7)!
     }
     
     /// Provides the current datetime plus 24 hours.
-    public static var tomorrow: NSDate {
-        return NSDate().dateByAdding(days: 1)!
+    public static var tomorrow: Date {
+        return Date().dateByAdding(days: 1)!
     }
     
     /// Provides the current datetime plus 48 days.
-    public static var dayAfterTomorrow: NSDate {
-        return NSDate().dateByAdding(days: 2)!
+    public static var dayAfterTomorrow: Date {
+        return Date().dateByAdding(days: 2)!
     }
     
     /// Provides the current datetime plus 7 days.
-    public static var nextWeek: NSDate {
-        return NSDate().dateByAdding(days: 7)!
+    public static var nextWeek: Date {
+        return Date().dateByAdding(days: 7)!
     }
     
     /// Determines if the instance date is before the reference date (second granularity).
-    public func isBefore(date: NSDate) -> Bool {
-        return NSCalendar.currentCalendar().compareDate(self, toDate: date, toUnitGranularity: .Second) == .OrderedAscending
+    public func isBefore(_ date: Date) -> Bool {
+        return Calendar.current.compare(self, to: date, toGranularity: .second) == .orderedAscending
     }
     
     /// Determines if the instance date is after the reference date (second granularity).
-    public func isAfter(date: NSDate) -> Bool {
-        return NSCalendar.currentCalendar().compareDate(self, toDate: date, toUnitGranularity: .Second) == .OrderedDescending
+    public func isAfter(_ date: Date) -> Bool {
+        return Calendar.current.compare(self, to: date, toGranularity: .second) == .orderedDescending
     }
     
     /// Determines if the instance date is equal to the reference date (second granularity).
-    public func isSame(date: NSDate) -> Bool {
-        return NSCalendar.currentCalendar().compareDate(self, toDate: date, toUnitGranularity: .Second) == .OrderedSame
+    public func isSame(_ date: Date) -> Bool {
+        return Calendar.current.compare(self, to: date, toGranularity: .second) == .orderedSame
     }
     
-    /// Uses `NSCalendar` to return the instance date mutated by the specified number of minutes.
-    public func dateByAdding(minutes value: Int) -> NSDate? {
-        return NSCalendar.currentCalendar().dateByAddingUnit(.Minute, value: value, toDate: self, options: NSCalendarOptions())
+    /// Uses `Calendar` to return the instance date mutated by the specified number of minutes.
+    public func dateByAdding(minutes value: Int) -> Date? {
+        return Calendar.current.date(byAdding: .minute, value: value, to: self)
     }
     
-    /// Uses `NSCalendar` to return the instance date mutated by the specified number of hours.
-    public func dateByAdding(hours value: Int) -> NSDate? {
-        return NSCalendar.currentCalendar().dateByAddingUnit(.Hour, value: value, toDate: self, options: NSCalendarOptions())
+    /// Uses `Calendar` to return the instance date mutated by the specified number of hours.
+    public func dateByAdding(hours value: Int) -> Date? {
+        return Calendar.current.date(byAdding: .hour, value: value, to: self)
     }
     
-    /// Uses `NSCalendar` to return the instance date mutated by the specified number of days.
-    public func dateByAdding(days value: Int) -> NSDate? {
-        return NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: value, toDate: self, options: NSCalendarOptions())
+    /// Uses `Calendar` to return the instance date mutated by the specified number of days.
+    public func dateByAdding(days value: Int) -> Date? {
+        return Calendar.current.date(byAdding: .day, value: value, to: self)
     }
 }

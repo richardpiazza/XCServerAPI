@@ -28,8 +28,8 @@
 import Foundation
 import CodeQuickKit
 
-public class BestSuccessStreakJSON: SerializableObject {
-    public var integrationID: String?
-    public var success_streak: NSNumber?
-    public var endedTime: String?
+open class BestSuccessStreakJSON: SerializableObject {
+    open var integrationID: String?
+    open var success_streak: NSNumber?
+    open var endedTime: String?
 }

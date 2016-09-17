@@ -28,16 +28,16 @@
 import Foundation
 import CodeQuickKit
 
-public class CommitJSON: SerializableObject {
-    public var XCSCommitHash: String = ""
-    public var XCSCommitMessage: String?
-    public var XCSCommitContributor: CommitContributorJSON?
-    public var XCSCommitTimestamp: String?
-    public var XCSCommitTimestampDate: [Int] = [Int]()
-    public var XCSBlueprintRepositoryID: String?
-    public var XCSCommitCommitChangeFilePaths: [CommitChangeJSON] = [CommitChangeJSON]()
+open class CommitJSON: SerializableObject {
+    open var XCSCommitHash: String = ""
+    open var XCSCommitMessage: String?
+    open var XCSCommitContributor: CommitContributorJSON?
+    open var XCSCommitTimestamp: String?
+    open var XCSCommitTimestampDate: [Int] = [Int]()
+    open var XCSBlueprintRepositoryID: String?
+    open var XCSCommitCommitChangeFilePaths: [CommitChangeJSON] = [CommitChangeJSON]()
     
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+    override open func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "XCSCommitCommitChangeFilePaths" {
             return CommitChangeJSON.self
         }

@@ -1,9 +1,9 @@
 use_frameworks!
 
 target 'XCServerAPI' do
-    pod 'CodeQuickKit', '~> 2.5'
+    pod 'CodeQuickKit', '~> 4.0'
 end
 
 target 'XCServerAPITests' do
-    pod 'CodeQuickKit', '~> 2.5'
+    pod 'CodeQuickKit', '~> 4.0'
 end

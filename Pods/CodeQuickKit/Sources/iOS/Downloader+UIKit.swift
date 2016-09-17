@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// Storyboarded.swift
+// Downloader+UIKit.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/CodeQuickKit
@@ -27,35 +27,28 @@
 
 import UIKit
 
-public protocol Storyboarded {
-    static func bundle() -> NSBundle
-    static func storyboard() -> UIStoryboard
-    static func storyboardIdentifier() -> String
-}
+public typealias DownloaderImageCompletion = (_ statusCode: Int, _ responseImage: UIImage?, _ error: NSError?) -> Void
 
-extension UIViewController: Storyboarded {
-    public class func bundle() -> NSBundle {
-        return NSBundle(forClass: self)
-    }
-    
-    public class func storyboard() -> UIStoryboard {
-        if let storyboard = self.bundle().mainStoryboard {
-            return storyboard
+/// A wrapper for `NSURLSession` similar to `WebAPI` for general purpose
+/// downloading of data and images.
+public extension Downloader {
+    public func getImageAtPath(_ path: String, cachePolicy: NSURLRequest.CachePolicy, completion: @escaping DownloaderImageCompletion) {
+        guard let url = self.urlForPath(path) else {
+            completion(0, nil, invalidBaseURL)
+            return
         }
         
-        assertionFailure("Bundle Storyboard Not Found")
-        return UIStoryboard()
+        self.getImageAtURL(url, cachePolicy: cachePolicy, completion: completion)
     }
     
-    public class func storyboardIdentifier() -> String {
-        return String(self)
-    }
-}
-
-public extension UIStoryboard {
-    /// Instantiates a UIViewController for the provided `Storyboarded` class
-    /// This call potentially throws an execption that cannot be caught.
-    public func instantiateViewController<T: Storyboarded>(forClass viewControllerClass: T.Type) -> T {
-        return self.instantiateViewControllerWithIdentifier(viewControllerClass.storyboardIdentifier()) as! T
+    public func getImageAtURL(_ url: URL, cachePolicy: NSURLRequest.CachePolicy, completion: @escaping DownloaderImageCompletion) {
+        self.getDataAtURL(url, cachePolicy: cachePolicy) { (statusCode, responseData, error) -> Void in
+            var image: UIImage?
+            if responseData != nil {
+                image = UIImage(data: responseData!)
+            }
+            
+            completion(statusCode, image, error)
+        }
     }
 }

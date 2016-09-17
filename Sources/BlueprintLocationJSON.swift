@@ -28,9 +28,9 @@
 import Foundation
 import CodeQuickKit
 
-public class BlueprintLocationJSON: SerializableObject {
-    public var DVTSourceControlBranchIdentifierKey: String?
-    public var DVTSourceControlLocationRevisionKey: String?
-    public var DVTSourceControlBranchOptionsKey: NSNumber?
-    public var DVTSourceControlWorkspaceBlueprintLocationTypeKey: String?
+open class BlueprintLocationJSON: SerializableObject {
+    open var DVTSourceControlBranchIdentifierKey: String?
+    open var DVTSourceControlLocationRevisionKey: String?
+    open var DVTSourceControlBranchOptionsKey: NSNumber?
+    open var DVTSourceControlWorkspaceBlueprintLocationTypeKey: String?
 }

@@ -28,14 +28,14 @@
 import Foundation
 import CodeQuickKit
 
-public class VersionJSON: SerializableObject {
-    public var _id: String?
+open class VersionJSON: SerializableObject {
+    open var _id: String?
     /// macOS version (i.e. 10.12 (16A201w))
-    public var os: String?
+    open var os: String?
     /// Xcode version used for builds (i.e. 8.0 (8S128d))
-    public var xcode: String?
+    open var xcode: String?
     /// The Xcode Server API version (i.e. 2.0)
-    public var xcodeServer: String?
+    open var xcodeServer: String?
     /// The Server.app version (i.e. 5.1.50 (16S1083q))
-    public var server: String?
+    open var server: String?
 }

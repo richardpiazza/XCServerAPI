@@ -28,20 +28,20 @@
 import Foundation
 import CodeQuickKit
 
-public class StatsJSON: SerializableObject {
-    public var lastCleanIntegration: LastCleanIntegrationJSON?
-    public var bestSuccessStreak: BestSuccessStreakJSON?
-    public var numberOfIntegrations: NSNumber?
-    public var numberOfCommits: NSNumber?
-    public var averageIntegrationTime: StatsBreakdownJSON?
-    public var testAdditionRate: NSNumber?
-    public var analysisWarnings: StatsBreakdownJSON?
-    public var testFailures: StatsBreakdownJSON?
-    public var errors: StatsBreakdownJSON?
-    public var regressedPerfTests: StatsBreakdownJSON?
-    public var warnings: StatsBreakdownJSON?
-    public var improvedPerfTests: StatsBreakdownJSON?
-    public var tests: StatsBreakdownJSON?
-    public var codeCoveragePercentageDelta: NSNumber?
-    public var sinceDate: String?
+open class StatsJSON: SerializableObject {
+    open var lastCleanIntegration: LastCleanIntegrationJSON?
+    open var bestSuccessStreak: BestSuccessStreakJSON?
+    open var numberOfIntegrations: NSNumber?
+    open var numberOfCommits: NSNumber?
+    open var averageIntegrationTime: StatsBreakdownJSON?
+    open var testAdditionRate: NSNumber?
+    open var analysisWarnings: StatsBreakdownJSON?
+    open var testFailures: StatsBreakdownJSON?
+    open var errors: StatsBreakdownJSON?
+    open var regressedPerfTests: StatsBreakdownJSON?
+    open var warnings: StatsBreakdownJSON?
+    open var improvedPerfTests: StatsBreakdownJSON?
+    open var tests: StatsBreakdownJSON?
+    open var codeCoveragePercentageDelta: NSNumber?
+    open var sinceDate: String?
 }

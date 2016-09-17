@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// NSBundle+UIKit.swift
+// Bundle+UIKit.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/CodeQuickKit
@@ -27,7 +27,7 @@
 
 import UIKit
 
-public extension NSBundle {
+public extension Bundle {
     /// This call potentially throws an execption that cannot be caught.
     public var launchScreenStoryboard: UIStoryboard? {
         guard let name = launchScreenStoryboardName else {

@@ -28,7 +28,7 @@
 import Foundation
 import CodeQuickKit
 
-public class CommitChangeJSON: SerializableObject {
-    public var status: Int = 0
-    public var filePath: String?
+open class CommitChangeJSON: SerializableObject {
+    open var status: Int = 0
+    open var filePath: String?
 }

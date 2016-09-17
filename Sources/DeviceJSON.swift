@@ -28,20 +28,20 @@
 import Foundation
 import CodeQuickKit
 
-public class DeviceJSON: SerializableObject {
-    public var ID: String = ""
-    public var revision: String?
-    public var doc_type: String?
-    public var name: String?
-    public var deviceType: String?
-    public var connected: Bool = false
-    public var simulator: Bool = false
-    public var osVersion: String?
-    public var supported: Bool = false
-    public var identifier: String = ""
-    public var enabledForDevelopment: Bool = false
-    public var architecture: String?
-    public var isServer: Bool = false
-    public var platformIdentifier: String?
-    public var retina: Bool = false
+open class DeviceJSON: SerializableObject {
+    open var ID: String = ""
+    open var revision: String?
+    open var doc_type: String?
+    open var name: String?
+    open var deviceType: String?
+    open var connected: Bool = false
+    open var simulator: Bool = false
+    open var osVersion: String?
+    open var supported: Bool = false
+    open var identifier: String = ""
+    open var enabledForDevelopment: Bool = false
+    open var architecture: String?
+    open var isServer: Bool = false
+    open var platformIdentifier: String?
+    open var retina: Bool = false
 }

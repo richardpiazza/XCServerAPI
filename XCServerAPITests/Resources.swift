@@ -11,14 +11,14 @@ import Foundation
 
 class Resources {
     
-    private static func bot(forPrefix prefix: String) -> BotJSON? {
-        guard let path = NSBundle(forClass: Resources.self).pathForResource("\(prefix)_BotResponse", ofType: "txt") else {
+    fileprivate static func bot(forPrefix prefix: String) -> BotJSON? {
+        guard let path = Bundle(for: Resources.self).path(forResource: "\(prefix)_BotResponse", ofType: "txt") else {
             return nil
         }
         
         var json: String
         do {
-            json = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding) as String
+            json = try String(contentsOfFile: path, encoding: .utf8)
         } catch {
             print(error)
             return nil
@@ -32,14 +32,14 @@ class Resources {
         return bot
     }
     
-    private static func integrations(forPrefix prefix: String) -> IntegrationsResponse? {
-        guard let path = NSBundle(forClass: self).pathForResource("\(prefix)_IntegrationsResponse", ofType: "txt") else {
+    fileprivate static func integrations(forPrefix prefix: String) -> IntegrationsResponse? {
+        guard let path = Bundle(for: self).path(forResource: "\(prefix)_IntegrationsResponse", ofType: "txt") else {
             return nil
         }
         
         var json: String
         do {
-            json = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding) as String
+            json = try String(contentsOfFile: path, encoding: .utf8)
         } catch {
             print(error)
             return nil
@@ -53,14 +53,14 @@ class Resources {
         return response
     }
     
-    private static func integration(forPrefix prefix: String) -> IntegrationJSON? {
-        guard let path = NSBundle(forClass: self).pathForResource("\(prefix)_Integration", ofType: "txt") else {
+    fileprivate static func integration(forPrefix prefix: String) -> IntegrationJSON? {
+        guard let path = Bundle(for: self).path(forResource: "\(prefix)_Integration", ofType: "txt") else {
             return nil
         }
         
         var json: String
         do {
-            json = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding) as String
+            json = try String(contentsOfFile: path, encoding: .utf8)
         } catch {
             print(error)
             return nil
@@ -71,14 +71,14 @@ class Resources {
         return response
     }
     
-    private static func stats(forPrefix prefix: String) -> StatsJSON? {
-        guard let path = NSBundle(forClass: self).pathForResource("\(prefix)_Stats", ofType: "txt") else {
+    fileprivate static func stats(forPrefix prefix: String) -> StatsJSON? {
+        guard let path = Bundle(for: self).path(forResource: "\(prefix)_Stats", ofType: "txt") else {
             return nil
         }
         
         var json: String
         do {
-            json = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding) as String
+            json = try String(contentsOfFile: path, encoding: .utf8)
         } catch {
             print(error)
             return nil
@@ -89,14 +89,14 @@ class Resources {
         return response
     }
     
-    private static func commits(forPrefix prefix: String) -> IntegrationCommitsResponse? {
-        guard let path = NSBundle(forClass: self).pathForResource("\(prefix)_Commits", ofType: "txt") else {
+    fileprivate static func commits(forPrefix prefix: String) -> IntegrationCommitsResponse? {
+        guard let path = Bundle(for: self).path(forResource: "\(prefix)_Commits", ofType: "txt") else {
             return nil
         }
         
         var json: String
         do {
-            json = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding) as String
+            json = try String(contentsOfFile: path, encoding: .utf8)
         } catch {
             print(error)
             return nil
@@ -107,14 +107,14 @@ class Resources {
         return response
     }
     
-    private static func issues(forPrefix prefix: String) -> IntegrationIssuesResponse? {
-        guard let path = NSBundle(forClass: self).pathForResource("\(prefix)_Issues", ofType: "txt") else {
+    fileprivate static func issues(forPrefix prefix: String) -> IntegrationIssuesResponse? {
+        guard let path = Bundle(for: self).path(forResource: "\(prefix)_Issues", ofType: "txt") else {
             return nil
         }
         
         var json: String
         do {
-            json = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding) as String
+            json = try String(contentsOfFile: path, encoding: .utf8)
         } catch {
             print(error)
             return nil
@@ -178,13 +178,13 @@ class Resources {
     }
     
     static var Bots: BotsResponse? {
-        guard let path = NSBundle(forClass: Resources.self).pathForResource("BotsResponse", ofType: "txt") else {
+        guard let path = Bundle(for: Resources.self).path(forResource: "BotsResponse", ofType: "txt") else {
             return nil
         }
         
         var json: String
         do {
-            json = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding) as String
+            json = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue) as String
         } catch {
             print(error)
             return nil
