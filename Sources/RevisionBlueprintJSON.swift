@@ -31,7 +31,7 @@ import CodeQuickKit
 public class RevisionBlueprintJSON: SerializableObject {
     public var DVTSourceControlWorkspaceBlueprintIdentifierKey: String?
     public var DVTSourceControlWorkspaceBlueprintNameKey: String?
-    public var DVTSourceControlWorkspaceBlueprintVersion: NSNumber?
+    public var DVTSourceControlWorkspaceBlueprintVersion: Int = -1
     public var DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey: String?
     public var DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey: String?
     public var DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey: [RemoteRepositoryJSON]?

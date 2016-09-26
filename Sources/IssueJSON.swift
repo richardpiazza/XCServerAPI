@@ -28,9 +28,10 @@
 import Foundation
 import CodeQuickKit
 
-public class IssueJSON: SerializableObject {
+public class IssueJSON: SerializableObject, XCServerDocument {
     public var _id: String = ""
-    public var _rev: String?
+    public var _rev: String = ""
+    
     public var status: Int = 0
     public var target: String?
     public var testCase: String?
@@ -42,4 +43,17 @@ public class IssueJSON: SerializableObject {
     public var integrationID: String?
     public var type: String?
     public var issueType: String?
+    
+    public var commits: [CommitJSON] = [CommitJSON]()
+    public var issueAuthors: [IssueAuthorJSON] = [IssueAuthorJSON]()
+    
+    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
+        if propertyName == "commits" {
+            return CommitJSON.self
+        } else if propertyName == "issueAuthors" {
+            return IssueAuthorJSON.self
+        }
+        
+        return super.objectClassOfCollectionType(forPropertyname: propertyName)
+    }
 }

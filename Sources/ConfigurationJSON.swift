@@ -29,22 +29,33 @@ import Foundation
 import CodeQuickKit
 
 public class ConfigurationJSON: SerializableObject {
-    public var schemeName: String!
+    public var schemeName: String = ""
+    
+    // Options
     public var builtFromClean: Int = 0
+    public var codeCoveragePreference: Int = 0
+    public var disableAppThinning: Bool = false
     public var performsTestAction: Bool = false
     public var performsAnalyzeAction: Bool = false
     public var performsArchiveAction: Bool = false
-    public var testingDestinationType: Int = 0
-    public var testingDeviceIDs: [String] = [String]()
+    public var performsUpgradeIntegration: Bool = false
+    public var exportsProductFromArchive: Bool = true
+    
+    // Schedule
     public var scheduleType: Int = 0
     public var periodicScheduleInterval: Int = 0
     public var weeklyScheduleDay: Int = 0
     public var hourOfIntegration: Int = 0
     public var minutesAfterHourToIntegrate: Int = 0
+    
+    // Testing
+    public var testingDestinationType: Int = 0
+    public var testingDeviceIDs: [String] = [String]()
+    
     public var triggers: [TriggerJSON] = [TriggerJSON]()
     public var sourceControlBlueprint: RevisionBlueprintJSON?
-    public var codeCoveragePreference: NSNumber?
     public var deviceSpecification: DeviceSpecificationJSON?
+    public var buildEnvironmentVariables: [String : NSObject] = [String : NSObject]()
     
     override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "triggers" {

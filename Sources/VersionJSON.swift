@@ -28,8 +28,12 @@
 import Foundation
 import CodeQuickKit
 
-public class VersionJSON: SerializableObject {
-    public var _id: String?
+public class VersionJSON: SerializableObject, XCServerDocument {
+    public var _id: String = ""
+    public var _rev: String = ""
+    public var doc_type: String = "version"
+    public var tinyID: String = ""
+    
     /// macOS version (i.e. 10.12 (16A201w))
     public var os: String?
     /// Xcode version used for builds (i.e. 8.0 (8S128d))

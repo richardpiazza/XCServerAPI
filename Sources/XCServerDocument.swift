@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// BotJSON.swift
+// VersionJSON.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerCoreData
@@ -26,28 +26,8 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public class BotJSON: SerializableObject, XCServerDocument {
-    public var _id: String = ""
-    public var _rev: String = ""
-    public var doc_type: String = "bot"
-    public var tinyID: String = ""
-    
-    public var name: String?
-    public var type: Int = 0
-    public var requiresUpgrade: Bool = false
-    public var integration_counter: Int = 0
-    
-    public var configuration: ConfigurationJSON?
-    public var lastRevisionBlueprint: RevisionBlueprintJSON?
-    public var integrations: [IntegrationJSON] = [IntegrationJSON]()
-    
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
-        if propertyName == "integrations" {
-            return IntegrationJSON.self
-        }
-        
-        return super.objectClassOfCollectionType(forPropertyname: propertyName)
-    }
+public protocol XCServerDocument {
+    var _id: String { get set }
+    var _rev: String { get set }
 }

@@ -61,12 +61,7 @@ class JSONResponseTests: XCTestCase {
             return
         }
         
-        guard let revision = bot._rev else {
-            XCTFail()
-            return
-        }
-        
-        XCTAssertNotEqual(revision, "")
+        XCTAssertNotEqual(bot._rev, "")
         
         guard let blueprint = bot.lastRevisionBlueprint else {
             XCTFail()

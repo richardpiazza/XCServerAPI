@@ -31,6 +31,6 @@ import CodeQuickKit
 public class BlueprintLocationJSON: SerializableObject {
     public var DVTSourceControlBranchIdentifierKey: String?
     public var DVTSourceControlLocationRevisionKey: String?
-    public var DVTSourceControlBranchOptionsKey: NSNumber?
+    public var DVTSourceControlBranchOptionsKey: Int = -1
     public var DVTSourceControlWorkspaceBlueprintLocationTypeKey: String?
 }

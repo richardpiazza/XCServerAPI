@@ -43,5 +43,6 @@ public class StatsJSON: SerializableObject {
     public var improvedPerfTests: StatsBreakdownJSON?
     public var tests: StatsBreakdownJSON?
     public var codeCoveragePercentageDelta: NSNumber?
+    public var numberOfSuccessfulIntegrations: NSNumber?
     public var sinceDate: String?
 }

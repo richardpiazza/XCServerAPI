@@ -41,4 +41,6 @@ public class BuildResultSummaryJSON: SerializableObject {
     public var analyzerWarningChange: Int = 0
     public var regressedPerfTestCount: Int = 0
     public var improvedPerfTestCount: Int = 0
+    public var codeCoveragePercentage: Int = 0
+    public var codeCoveragePercentageDelta: Int = 0
 }

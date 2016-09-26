@@ -28,11 +28,12 @@
 import Foundation
 import CodeQuickKit
 
-public class IntegrationJSON: SerializableObject {
+public class IntegrationJSON: SerializableObject, XCServerDocument {
     public var _id: String = ""
-    public var _rev: String?
-    public var doc_type: String?
+    public var _rev: String = ""
+    public var doc_type: String = "integration"
     public var tinyID: String?
+    
     public var number: Int = 0
     public var shouldClean: Bool = false
     public var currentStep: String?

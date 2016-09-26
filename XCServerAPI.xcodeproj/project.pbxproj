@@ -69,6 +69,8 @@
 		E149CC301D2AC07B00E2E688 /* pb_Issues.txt in Resources */ = {isa = PBXBuildFile; fileRef = E149CC151D2AC07B00E2E688 /* pb_Issues.txt */; };
 		E149CC311D2AC07B00E2E688 /* pb_Stats.txt in Resources */ = {isa = PBXBuildFile; fileRef = E149CC161D2AC07B00E2E688 /* pb_Stats.txt */; };
 		E149CC321D2AC07B00E2E688 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CC171D2AC07B00E2E688 /* Resources.swift */; };
+		E151F2151D99B00200157040 /* XCServerDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2141D99B00200157040 /* XCServerDocument.swift */; };
+		E151F2171D99BE5600157040 /* IssueAuthorJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2161D99BE5600157040 /* IssueAuthorJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +155,8 @@
 		E149CC331D2AC0FB00E2E688 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E149CC341D2AC0FB00E2E688 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E149CC351D2AC0FB00E2E688 /* XCServerAPI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XCServerAPI.podspec; sourceTree = "<group>"; };
+		E151F2141D99B00200157040 /* XCServerDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCServerDocument.swift; sourceTree = "<group>"; };
+		E151F2161D99BE5600157040 /* IssueAuthorJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAuthorJSON.swift; sourceTree = "<group>"; };
 		E160CEFCE43769AE99A0D9A8 /* Pods-XCServerAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -298,7 +302,9 @@
 				E149CBDA1D2ABDD700E2E688 /* StatsJSON.swift */,
 				E149CBDB1D2ABDD700E2E688 /* TriggerJSON.swift */,
 				E149CBDC1D2ABDD700E2E688 /* VersionJSON.swift */,
+				E151F2141D99B00200157040 /* XCServerDocument.swift */,
 				E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */,
+				E151F2161D99BE5600157040 /* IssueAuthorJSON.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 			files = (
 				E149CBEA1D2ABDD700E2E688 /* DeviceJSON.swift in Sources */,
 				E149CBE91D2ABDD700E2E688 /* ConfigurationJSON.swift in Sources */,
+				E151F2151D99B00200157040 /* XCServerDocument.swift in Sources */,
 				E149CBEC1D2ABDD700E2E688 /* EmailConfigurationJSON.swift in Sources */,
 				E149CBE41D2ABDD700E2E688 /* BuildResultSummaryJSON.swift in Sources */,
 				E149CBF61D2ABDD700E2E688 /* RepositoryLocationJSON.swift in Sources */,
@@ -546,6 +553,7 @@
 				E149CBE71D2ABDD700E2E688 /* CommitJSON.swift in Sources */,
 				E149CBE01D2ABDD700E2E688 /* AuthenticationStrategyJSON.swift in Sources */,
 				E149CBDE1D2ABDD700E2E688 /* APIResponses.swift in Sources */,
+				E151F2171D99BE5600157040 /* IssueAuthorJSON.swift in Sources */,
 				E149CBF01D2ABDD700E2E688 /* IntegrationIssuesJSON.swift in Sources */,
 				E149CBE61D2ABDD700E2E688 /* CommitContributorJSON.swift in Sources */,
 				E149CBF11D2ABDD700E2E688 /* IntegrationJSON.swift in Sources */,

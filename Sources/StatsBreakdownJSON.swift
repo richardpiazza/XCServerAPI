@@ -35,4 +35,5 @@ public class StatsBreakdownJSON: SerializableObject {
     public var max: NSNumber?
     public var avg: NSNumber?
     public var stdDev: NSNumber?
+    public var sumsqr: NSNumber?
 }

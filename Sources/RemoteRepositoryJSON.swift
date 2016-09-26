@@ -32,4 +32,6 @@ public class RemoteRepositoryJSON: SerializableObject {
     public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey: String?
     public var DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey: String?
     public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey: String?
+    public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustedCertFingerprintKey: String = ""
+    public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryEnforceTrustCertFingerprintKey: Bool = false
 }

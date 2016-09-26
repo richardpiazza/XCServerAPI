@@ -30,8 +30,8 @@ import CodeQuickKit
 
 public class FilterJSON: SerializableObject {
     public var platform: PlatformJSON?
-    public var filterType: NSNumber?
-    public var architectureType: NSNumber?
+    public var filterType: Int = -1
+    public var architectureType: Int = -1
     
     override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "platform" {

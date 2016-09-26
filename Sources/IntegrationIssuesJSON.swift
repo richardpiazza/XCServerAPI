@@ -32,6 +32,7 @@ public class IntegrationIssuesJSON: SerializableObject {
     public var unresolvedIssues: [IssueJSON] = [IssueJSON]()
     public var resolvedIssues: [IssueJSON] = [IssueJSON]()
     public var freshIssues: [IssueJSON] = [IssueJSON]()
+    public var silencedIssues: [IssueJSON] = [IssueJSON]()
     
     override public  func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
         if propertyName == "unresolvedIssues" {
@@ -39,6 +40,8 @@ public class IntegrationIssuesJSON: SerializableObject {
         } else if propertyName == "resolvedIssues" {
             return IssueJSON.self
         } else if propertyName == "freshIssues" {
+            return IssueJSON.self
+        } else if propertyName == "silencedIssues" {
             return IssueJSON.self
         }
         
