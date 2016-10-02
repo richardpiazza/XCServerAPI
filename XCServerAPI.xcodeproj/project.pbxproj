@@ -292,6 +292,7 @@
 				E149CBD01D2ABDD700E2E688 /* IntegrationCommitJSON.swift */,
 				E149CBD11D2ABDD700E2E688 /* IntegrationIssuesJSON.swift */,
 				E149CBD21D2ABDD700E2E688 /* IntegrationJSON.swift */,
+				E151F2161D99BE5600157040 /* IssueAuthorJSON.swift */,
 				E149CBD31D2ABDD700E2E688 /* IssueJSON.swift */,
 				E149CBD41D2ABDD700E2E688 /* LastCleanIntegrationJSON.swift */,
 				E149CBD51D2ABDD700E2E688 /* PlatformJSON.swift */,
@@ -304,7 +305,6 @@
 				E149CBDC1D2ABDD700E2E688 /* VersionJSON.swift */,
 				E151F2141D99B00200157040 /* XCServerDocument.swift */,
 				E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */,
-				E151F2161D99BE5600157040 /* IssueAuthorJSON.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";

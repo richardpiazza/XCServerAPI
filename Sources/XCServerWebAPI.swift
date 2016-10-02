@@ -34,6 +34,7 @@ public typealias XCServerWebAPICredentialsHeader = (value: String, key: String)
 public protocol XCServerWebAPICredentialDelegate {
     func credentials(forAPI api: XCServerWebAPI) -> XCServerWebAPICredentials?
     func credentialsHeader(forAPI api: XCServerWebAPI) -> XCServerWebAPICredentialsHeader?
+    func clearCredentials(forAPI api: XCServerWebAPI)
 }
 
 public extension XCServerWebAPICredentialDelegate {
@@ -55,6 +56,10 @@ public extension XCServerWebAPICredentialDelegate {
         let auth = "Basic \(base64)"
         
         return XCServerWebAPICredentialsHeader(value: auth, key: WebAPIHeaderKey.Authorization)
+    }
+    
+    public func clearCredentials(forAPI api: XCServerWebAPI) {
+        Logger.info("Reset of XCServerWebAPI requested; Credentials should be cleared.", callingClass: XCServerWebAPI.self)
     }
 }
 
@@ -103,6 +108,7 @@ public class XCServerWebAPI: WebAPI {
         api.session.configuration.timeoutIntervalForRequest = 8
         api.session.configuration.timeoutIntervalForResource = 16
         api.session.configuration.httpCookieAcceptPolicy = .never
+        api.session.configuration.httpShouldSetCookies = false
         
         self.apis[fqdn] = api
         
@@ -110,9 +116,13 @@ public class XCServerWebAPI: WebAPI {
     }
     
     public static func resetAPI(forFQDN fqdn: String) {
-        if let _ = self.apis[fqdn] {
-            self.apis[fqdn] = nil
+        guard let api = self.apis[fqdn] else {
+            return
         }
+        
+        credentialDelegate.clearCredentials(forAPI: api)
+        
+        self.apis[fqdn] = nil
     }
     
     fileprivate let invalidAuthorization = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
