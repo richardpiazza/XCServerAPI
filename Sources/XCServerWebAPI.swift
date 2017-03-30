@@ -59,7 +59,7 @@ public extension XCServerWebAPICredentialDelegate {
     }
     
     public func clearCredentials(forAPI api: XCServerWebAPI) {
-        Logger.info("Reset of XCServerWebAPI requested; Credentials should be cleared.", callingClass: XCServerWebAPI.self)
+        Log.info("Reset of XCServerWebAPI requested; Credentials should be cleared.")
     }
 }
 
