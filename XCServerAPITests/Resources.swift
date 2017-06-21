@@ -1,6 +1,6 @@
 //
 //  Resources.swift
-//  XCServerCoreData
+//  XCServerAPI
 //
 //  Created by Richard Piazza on 6/10/16.
 //  Copyright © 2016 Richard Piazza. All rights reserved.
