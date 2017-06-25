@@ -171,7 +171,7 @@ public class XCServerWebAPI: WebAPI {
     
     /// Requests the '`/version`' endpoint from the Xcode Server API.
     public func getVersion(_ completion: @escaping XCServerWebAPIVersionCompletion) {
-        self.get("version") { (statusCode, response, responseObject, error) in
+        self.get("versions") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
                 completion(nil, self.invalidAuthorization)
                 return

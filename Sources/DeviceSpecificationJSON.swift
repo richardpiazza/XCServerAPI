@@ -28,6 +28,11 @@
 import Foundation
 import CodeQuickKit
 
+public struct DeviceSpecification: Codable {
+    public var filters: [Filter]?
+    public var deviceIdentifiers: [String]?
+}
+
 public class DeviceSpecificationJSON: SerializableObject {
     public var filters: [FilterJSON]?
     public var deviceIdentifers: [String]?

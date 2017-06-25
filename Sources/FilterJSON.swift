@@ -28,6 +28,12 @@
 import Foundation
 import CodeQuickKit
 
+public struct Filter: Codable {
+    public var platform: Platform?
+    public var filterType: Int?
+    public var architectureType: Int?
+}
+
 public class FilterJSON: SerializableObject {
     public var platform: PlatformJSON?
     public var filterType: Int = -1

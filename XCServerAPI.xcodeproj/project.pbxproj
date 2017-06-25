@@ -82,6 +82,7 @@
 		E190EBDD1EFEBD81004F0920 /* ReportSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */; };
 		E190EBE01EFEC056004F0920 /* RepositoryBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */; };
 		E190EBE21EFEC953004F0920 /* RepositoryBlueprintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBE11EFEC953004F0920 /* RepositoryBlueprintTests.swift */; };
+		E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +182,7 @@
 		E190EBDE1EFEBF22004F0920 /* XcodeServerAPI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = XcodeServerAPI.md; sourceTree = "<group>"; };
 		E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBlueprint.swift; sourceTree = "<group>"; };
 		E190EBE11EFEC953004F0920 /* RepositoryBlueprintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBlueprintTests.swift; sourceTree = "<group>"; };
+		E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSpecificationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 				E149CC0A1D2AC07B00E2E688 /* JSONResponseTests.swift */,
 				E149CBB71D2ABC8E00E2E688 /* Info.plist */,
 				E190EBE11EFEC953004F0920 /* RepositoryBlueprintTests.swift */,
+				E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */,
 			);
 			path = XCServerAPITests;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E149CC321D2AC07B00E2E688 /* Resources.swift in Sources */,
+				E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */,
 				E149CC251D2AC07B00E2E688 /* JSONResponseTests.swift in Sources */,
 				E190EBE21EFEC953004F0920 /* RepositoryBlueprintTests.swift in Sources */,
 			);

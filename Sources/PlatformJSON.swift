@@ -28,6 +28,16 @@
 import Foundation
 import CodeQuickKit
 
+public struct Platform: Codable {
+    public var _id: String
+    public var _rev: String
+    public var displayName: String?
+    public var simulatorIdentifier: String?
+    public var identifier: String?
+    public var buildNumber: String?
+    public var version: String?
+}
+
 public class PlatformJSON: SerializableObject, XCServerDocument {
     public var _id: String = ""
     public var _rev: String = ""
