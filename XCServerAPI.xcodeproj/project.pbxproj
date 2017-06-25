@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0164414CA64501C6F71102CF /* Pods_XCServerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB6F550AA2780D2129BCABA /* Pods_XCServerAPI.framework */; };
 		2CAA4B297B94CA4ED5C2CC6B /* Pods_XCServerAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F41A62328F1F9FD45C1DD92 /* Pods_XCServerAPITests.framework */; };
+		E108CFCE1EFFF33C00BB7978 /* BotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFCD1EFFF33C00BB7978 /* BotTests.swift */; };
+		E108CFD01EFFF59F00BB7978 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFCF1EFFF59F00BB7978 /* Group.swift */; };
 		E10CC6571EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6561EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift */; };
 		E10CC6591EFFDC7700FE4A3F /* ProvisioningConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6581EFFDC7700FE4A3F /* ProvisioningConfiguration.swift */; };
 		E10CC65B1EFFDDDB00FE4A3F /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65A1EFFDDDB00FE4A3F /* ConfigurationTests.swift */; };
@@ -108,6 +110,8 @@
 		3F41A62328F1F9FD45C1DD92 /* Pods_XCServerAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCServerAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7168F2F8281D069E3847D606 /* Pods-XCServerAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFC97C85D34636CE86B14D89 /* Pods-XCServerAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPI/Pods-XCServerAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		E108CFCD1EFFF33C00BB7978 /* BotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotTests.swift; sourceTree = "<group>"; };
+		E108CFCF1EFFF59F00BB7978 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		E10CC6561EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningConfigurationTests.swift; sourceTree = "<group>"; };
 		E10CC6581EFFDC7700FE4A3F /* ProvisioningConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningConfiguration.swift; sourceTree = "<group>"; };
 		E10CC65A1EFFDDDB00FE4A3F /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 				E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */,
 				E10CC6561EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift */,
 				E10CC65A1EFFDDDB00FE4A3F /* ConfigurationTests.swift */,
+				E108CFCD1EFFF33C00BB7978 /* BotTests.swift */,
 			);
 			path = XCServerAPITests;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				E149CBCD1D2ABDD700E2E688 /* EmailConfigurationJSON.swift */,
 				E190EBDA1EFEBD23004F0920 /* EmailType.swift */,
 				E149CBCE1D2ABDD700E2E688 /* FilterJSON.swift */,
+				E108CFCF1EFFF59F00BB7978 /* Group.swift */,
 				E149CBCF1D2ABDD700E2E688 /* IntegrationAssetsJSON.swift */,
 				E149CBD01D2ABDD700E2E688 /* IntegrationCommitJSON.swift */,
 				E149CBD11D2ABDD700E2E688 /* IntegrationIssuesJSON.swift */,
@@ -586,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E108CFD01EFFF59F00BB7978 /* Group.swift in Sources */,
 				E149CBEA1D2ABDD700E2E688 /* DeviceJSON.swift in Sources */,
 				E10CC6591EFFDC7700FE4A3F /* ProvisioningConfiguration.swift in Sources */,
 				E10CC65F1EFFE27A00FE4A3F /* TestLocalization.swift in Sources */,
@@ -642,6 +649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E149CC321D2AC07B00E2E688 /* Resources.swift in Sources */,
+				E108CFCE1EFFF33C00BB7978 /* BotTests.swift in Sources */,
 				E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */,
 				E10CC65B1EFFDDDB00FE4A3F /* ConfigurationTests.swift in Sources */,
 				E149CC251D2AC07B00E2E688 /* JSONResponseTests.swift in Sources */,
