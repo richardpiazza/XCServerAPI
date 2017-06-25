@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// EmailConfigurationJSON.swift
+// CleanSchedule.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,18 +26,11 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct EmailConfiguration: Codable {
-    public var emailCommiters: Bool
-    public var additionalRecipients: [String]?
-    public var includeCommitMessages: Bool?
-    public var includeIssueDetails: Bool?
-}
-
-public class EmailConfigurationJSON: SerializableObject {
-    public var emailCommitters: Bool = false
-    public var additionalRecipients: [String] = [String]()
-    public var includeCommitMessages: Bool = false
-    public var includeIssueDetails: Bool = false
+// TODO: Verify Order
+public enum CleanSchedule: Int, Codable {
+    case never = 0
+    case always = 1
+    case daily = 2
+    case weekly = 3
 }

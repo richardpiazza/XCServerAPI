@@ -28,6 +28,41 @@
 import Foundation
 import CodeQuickKit
 
+public struct Configuration: Codable {
+    public var schemeName: String?
+    
+    // Options
+    public var builtFromClean: CleanSchedule?
+    public var disableAppThinning: Bool?
+    public var codeCoveragePreference: CodeCoveragePreference?
+    public var useParallelDeviceTesting: Bool?
+    public var performsArchiveAction: Bool?
+    public var performsAnalyzeAction: Bool?
+    public var exportsProductFromArchive: Bool?
+    
+    // Testing
+    public var performsTestAction: Bool?
+    public var runOnlyDisabledTests: Bool?
+    public var testingDestinationType: Int?
+    public var testLocalizations: [TestLocalzation]?
+    
+    // Schedule
+    public var scheduleType: BotSchedule?
+    public var periodicScheduleInterval: PeriodicScheduleInterval
+    public var weeklyScheduleDay: Int?
+    public var hourOfIntegration: Int?
+    public var minutesAfterHourToIntegrate: Int?
+    public var performsUpgradeIntegration: Bool?
+    
+    // Additional Configuration
+    public var buildEnvironmentVariables: [String : String]?
+    public var additionalBuildArguments: [BuildArgument]?
+    public var provisioningConfiguration: ProvisioningConfiguration?
+    public var deviceSpecification: DeviceSpecification?
+    public var sourceControlBlueprint: RepositoryBlueprint?
+    public var triggers: [Trigger]?
+}
+
 public class ConfigurationJSON: SerializableObject {
     public var schemeName: String = ""
     

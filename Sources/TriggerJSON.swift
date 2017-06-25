@@ -28,6 +28,14 @@
 import Foundation
 import CodeQuickKit
 
+public struct Trigger: Codable {
+    public var name: String?
+    public var type: TriggerType?
+    public var phase: TriggerPhase?
+    public var scriptBody: String?
+    public var emailConfiguration: EmailConfiguration?
+}
+
 public class TriggerJSON: SerializableObject {
     public var name: String?
     public var type: Int = 0
