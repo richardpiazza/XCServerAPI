@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// RepositoryLocationJSON.swift
+// ReportSchedule.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,12 +26,10 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct RepositoryLocation: Codable {
-    
-}
-
-public class RepositoryLocationJSON: SerializableObject {
-    
+/// Schedule for issuing report emails.
+public enum ReportSchedule: Int, Codable {
+    case daily = 0
+    case weekly = 1
+    case integration = 2
 }

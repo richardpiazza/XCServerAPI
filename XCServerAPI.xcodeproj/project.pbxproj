@@ -71,6 +71,17 @@
 		E149CC321D2AC07B00E2E688 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CC171D2AC07B00E2E688 /* Resources.swift */; };
 		E151F2151D99B00200157040 /* XCServerDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2141D99B00200157040 /* XCServerDocument.swift */; };
 		E151F2171D99BE5600157040 /* IssueAuthorJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2161D99BE5600157040 /* IssueAuthorJSON.swift */; };
+		E190EBCD1EFEB91C004F0920 /* BotSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */; };
+		E190EBCF1EFEB981004F0920 /* PeriodicScheduleInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */; };
+		E190EBD11EFEBA23004F0920 /* IssueStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD01EFEBA23004F0920 /* IssueStatus.swift */; };
+		E190EBD31EFEBADD004F0920 /* IntegrationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD21EFEBADD004F0920 /* IntegrationStep.swift */; };
+		E190EBD51EFEBBB0004F0920 /* IntegrationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD41EFEBBB0004F0920 /* IntegrationResult.swift */; };
+		E190EBD71EFEBC8C004F0920 /* TriggerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD61EFEBC8C004F0920 /* TriggerType.swift */; };
+		E190EBD91EFEBCC1004F0920 /* TriggerPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD81EFEBCC1004F0920 /* TriggerPhase.swift */; };
+		E190EBDB1EFEBD23004F0920 /* EmailType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDA1EFEBD23004F0920 /* EmailType.swift */; };
+		E190EBDD1EFEBD81004F0920 /* ReportSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */; };
+		E190EBE01EFEC056004F0920 /* RepositoryBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */; };
+		E190EBE21EFEC953004F0920 /* RepositoryBlueprintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBE11EFEC953004F0920 /* RepositoryBlueprintTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +169,18 @@
 		E151F2141D99B00200157040 /* XCServerDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCServerDocument.swift; sourceTree = "<group>"; };
 		E151F2161D99BE5600157040 /* IssueAuthorJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAuthorJSON.swift; sourceTree = "<group>"; };
 		E160CEFCE43769AE99A0D9A8 /* Pods-XCServerAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.release.xcconfig"; sourceTree = "<group>"; };
+		E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotSchedule.swift; sourceTree = "<group>"; };
+		E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicScheduleInterval.swift; sourceTree = "<group>"; };
+		E190EBD01EFEBA23004F0920 /* IssueStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueStatus.swift; sourceTree = "<group>"; };
+		E190EBD21EFEBADD004F0920 /* IntegrationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationStep.swift; sourceTree = "<group>"; };
+		E190EBD41EFEBBB0004F0920 /* IntegrationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationResult.swift; sourceTree = "<group>"; };
+		E190EBD61EFEBC8C004F0920 /* TriggerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerType.swift; sourceTree = "<group>"; };
+		E190EBD81EFEBCC1004F0920 /* TriggerPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerPhase.swift; sourceTree = "<group>"; };
+		E190EBDA1EFEBD23004F0920 /* EmailType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailType.swift; sourceTree = "<group>"; };
+		E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSchedule.swift; sourceTree = "<group>"; };
+		E190EBDE1EFEBF22004F0920 /* XcodeServerAPI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = XcodeServerAPI.md; sourceTree = "<group>"; };
+		E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBlueprint.swift; sourceTree = "<group>"; };
+		E190EBE11EFEC953004F0920 /* RepositoryBlueprintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBlueprintTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +229,7 @@
 			children = (
 				E149CC331D2AC0FB00E2E688 /* Podfile */,
 				E149CC341D2AC0FB00E2E688 /* README.md */,
+				E190EBDE1EFEBF22004F0920 /* XcodeServerAPI.md */,
 				E149CC351D2AC0FB00E2E688 /* XCServerAPI.podspec */,
 				E149CBBE1D2ABDD700E2E688 /* Sources */,
 				E149CBA81D2ABC8E00E2E688 /* XCServerAPI */,
@@ -265,6 +289,7 @@
 				E149CC171D2AC07B00E2E688 /* Resources.swift */,
 				E149CC0A1D2AC07B00E2E688 /* JSONResponseTests.swift */,
 				E149CBB71D2ABC8E00E2E688 /* Info.plist */,
+				E190EBE11EFEC953004F0920 /* RepositoryBlueprintTests.swift */,
 			);
 			path = XCServerAPITests;
 			sourceTree = "<group>";
@@ -278,6 +303,7 @@
 				E149CBC21D2ABDD700E2E688 /* BestSuccessStreakJSON.swift */,
 				E149CBC31D2ABDD700E2E688 /* BlueprintLocationJSON.swift */,
 				E149CBC41D2ABDD700E2E688 /* BotJSON.swift */,
+				E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */,
 				E149CBC51D2ABDD700E2E688 /* BuildResultSummaryJSON.swift */,
 				E149CBC61D2ABDD700E2E688 /* CommitChangeJSON.swift */,
 				E149CBC71D2ABDD700E2E688 /* CommitContributorJSON.swift */,
@@ -287,21 +313,30 @@
 				E149CBCB1D2ABDD700E2E688 /* DeviceJSON.swift */,
 				E149CBCC1D2ABDD700E2E688 /* DeviceSpecificationJSON.swift */,
 				E149CBCD1D2ABDD700E2E688 /* EmailConfigurationJSON.swift */,
+				E190EBDA1EFEBD23004F0920 /* EmailType.swift */,
 				E149CBCE1D2ABDD700E2E688 /* FilterJSON.swift */,
 				E149CBCF1D2ABDD700E2E688 /* IntegrationAssetsJSON.swift */,
 				E149CBD01D2ABDD700E2E688 /* IntegrationCommitJSON.swift */,
 				E149CBD11D2ABDD700E2E688 /* IntegrationIssuesJSON.swift */,
 				E149CBD21D2ABDD700E2E688 /* IntegrationJSON.swift */,
+				E190EBD41EFEBBB0004F0920 /* IntegrationResult.swift */,
+				E190EBD21EFEBADD004F0920 /* IntegrationStep.swift */,
 				E151F2161D99BE5600157040 /* IssueAuthorJSON.swift */,
 				E149CBD31D2ABDD700E2E688 /* IssueJSON.swift */,
+				E190EBD01EFEBA23004F0920 /* IssueStatus.swift */,
 				E149CBD41D2ABDD700E2E688 /* LastCleanIntegrationJSON.swift */,
+				E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */,
 				E149CBD51D2ABDD700E2E688 /* PlatformJSON.swift */,
 				E149CBD61D2ABDD700E2E688 /* RemoteRepositoryJSON.swift */,
+				E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */,
+				E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */,
 				E149CBD71D2ABDD700E2E688 /* RepositoryLocationJSON.swift */,
 				E149CBD81D2ABDD700E2E688 /* RevisionBlueprintJSON.swift */,
 				E149CBD91D2ABDD700E2E688 /* StatsBreakdownJSON.swift */,
 				E149CBDA1D2ABDD700E2E688 /* StatsJSON.swift */,
 				E149CBDB1D2ABDD700E2E688 /* TriggerJSON.swift */,
+				E190EBD81EFEBCC1004F0920 /* TriggerPhase.swift */,
+				E190EBD61EFEBC8C004F0920 /* TriggerType.swift */,
 				E149CBDC1D2ABDD700E2E688 /* VersionJSON.swift */,
 				E151F2141D99B00200157040 /* XCServerDocument.swift */,
 				E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */,
@@ -529,10 +564,15 @@
 			files = (
 				E149CBEA1D2ABDD700E2E688 /* DeviceJSON.swift in Sources */,
 				E149CBE91D2ABDD700E2E688 /* ConfigurationJSON.swift in Sources */,
+				E190EBD91EFEBCC1004F0920 /* TriggerPhase.swift in Sources */,
 				E151F2151D99B00200157040 /* XCServerDocument.swift in Sources */,
+				E190EBD31EFEBADD004F0920 /* IntegrationStep.swift in Sources */,
 				E149CBEC1D2ABDD700E2E688 /* EmailConfigurationJSON.swift in Sources */,
+				E190EBD11EFEBA23004F0920 /* IssueStatus.swift in Sources */,
+				E190EBDB1EFEBD23004F0920 /* EmailType.swift in Sources */,
 				E149CBE41D2ABDD700E2E688 /* BuildResultSummaryJSON.swift in Sources */,
 				E149CBF61D2ABDD700E2E688 /* RepositoryLocationJSON.swift in Sources */,
+				E190EBCD1EFEB91C004F0920 /* BotSchedule.swift in Sources */,
 				E149CBE21D2ABDD700E2E688 /* BlueprintLocationJSON.swift in Sources */,
 				E149CBF41D2ABDD700E2E688 /* PlatformJSON.swift in Sources */,
 				E149CBE81D2ABDD700E2E688 /* ConditionsJSON.swift in Sources */,
@@ -540,6 +580,7 @@
 				E149CBDF1D2ABDD700E2E688 /* AssetJSON.swift in Sources */,
 				E149CBFA1D2ABDD700E2E688 /* TriggerJSON.swift in Sources */,
 				E149CBF21D2ABDD700E2E688 /* IssueJSON.swift in Sources */,
+				E190EBD71EFEBC8C004F0920 /* TriggerType.swift in Sources */,
 				E149CBEB1D2ABDD700E2E688 /* DeviceSpecificationJSON.swift in Sources */,
 				E149CBF71D2ABDD700E2E688 /* RevisionBlueprintJSON.swift in Sources */,
 				E149CBFB1D2ABDD700E2E688 /* VersionJSON.swift in Sources */,
@@ -551,13 +592,17 @@
 				E149CBED1D2ABDD700E2E688 /* FilterJSON.swift in Sources */,
 				E149CBF91D2ABDD700E2E688 /* StatsJSON.swift in Sources */,
 				E149CBE71D2ABDD700E2E688 /* CommitJSON.swift in Sources */,
+				E190EBD51EFEBBB0004F0920 /* IntegrationResult.swift in Sources */,
 				E149CBE01D2ABDD700E2E688 /* AuthenticationStrategyJSON.swift in Sources */,
+				E190EBE01EFEC056004F0920 /* RepositoryBlueprint.swift in Sources */,
 				E149CBDE1D2ABDD700E2E688 /* APIResponses.swift in Sources */,
 				E151F2171D99BE5600157040 /* IssueAuthorJSON.swift in Sources */,
 				E149CBF01D2ABDD700E2E688 /* IntegrationIssuesJSON.swift in Sources */,
 				E149CBE61D2ABDD700E2E688 /* CommitContributorJSON.swift in Sources */,
 				E149CBF11D2ABDD700E2E688 /* IntegrationJSON.swift in Sources */,
 				E149CBF31D2ABDD700E2E688 /* LastCleanIntegrationJSON.swift in Sources */,
+				E190EBDD1EFEBD81004F0920 /* ReportSchedule.swift in Sources */,
+				E190EBCF1EFEB981004F0920 /* PeriodicScheduleInterval.swift in Sources */,
 				E149CBFC1D2ABDD700E2E688 /* XCServerWebAPI.swift in Sources */,
 				E149CBEF1D2ABDD700E2E688 /* IntegrationCommitJSON.swift in Sources */,
 			);
@@ -569,6 +614,7 @@
 			files = (
 				E149CC321D2AC07B00E2E688 /* Resources.swift in Sources */,
 				E149CC251D2AC07B00E2E688 /* JSONResponseTests.swift in Sources */,
+				E190EBE21EFEC953004F0920 /* RepositoryBlueprintTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,15 @@
 import Foundation
 import CodeQuickKit
 
+public struct AuthenticationStrategy: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case authenticationType = "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey"
+    }
+    
+    public var authenticationType: String?
+}
+
 public class AuthenticationStrategyJSON: SerializableObject {
     public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey: String?
 }

@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// RepositoryLocationJSON.swift
+// TriggerPhase.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,12 +26,9 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct RepositoryLocation: Codable {
-    
-}
-
-public class RepositoryLocationJSON: SerializableObject {
-    
+/// Indication of when a trigger runs.
+public enum TriggerPhase: Int, Codable {
+    case beforeIntegration = 1
+    case afterIntegration = 2
 }

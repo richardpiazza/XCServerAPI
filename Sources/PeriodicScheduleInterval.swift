@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// RepositoryLocationJSON.swift
+// PeriodicScheduleInterval.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,12 +26,13 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct RepositoryLocation: Codable {
-    
+/// Intervals available for a `periodic` `BotSchedule`.
+public enum PeriodicScheduleInterval: Int, Codable {
+    case none = 0
+    case hourly = 1
+    case daily = 2
+    case weekly = 3
+    case integration = 4
 }
 
-public class RepositoryLocationJSON: SerializableObject {
-    
-}

@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// RepositoryLocationJSON.swift
+// TriggerType.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,12 +26,9 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct RepositoryLocation: Codable {
-    
-}
-
-public class RepositoryLocationJSON: SerializableObject {
-    
+/// The type of trigger being executed.
+public enum TriggerType: Int, Codable {
+    case script = 1
+    case email = 2
 }

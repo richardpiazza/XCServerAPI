@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// RepositoryLocationJSON.swift
+// IntegrationStep.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,12 +26,15 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct RepositoryLocation: Codable {
-    
-}
-
-public class RepositoryLocationJSON: SerializableObject {
-    
+/// Current step an integration is running.
+public enum IntegrationStep: String, Codable {
+    case pending
+    case preparing
+    case checkout
+    case triggers
+    case building
+    case processing
+    case uploading
+    case completed
 }

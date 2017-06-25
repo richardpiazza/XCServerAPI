@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// RepositoryLocationJSON.swift
+// IntegrationResult.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,12 +26,14 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct RepositoryLocation: Codable {
-    
-}
-
-public class RepositoryLocationJSON: SerializableObject {
-    
+/// Final result of an integration.
+public enum IntegrationResult: String, Codable {
+    case succeeded
+    case buildErrors = "build-errors"
+    case testFailures = "test-failures"
+    case warnings
+    case analyzerWarnings = "analyzer-warnings"
+    case canceled
+    case internalError = "internal-error"
 }

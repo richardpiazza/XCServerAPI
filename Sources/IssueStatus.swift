@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// RepositoryLocationJSON.swift
+// IssueStatus.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,12 +26,11 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct RepositoryLocation: Codable {
-    
+/// The status of an integration issue.
+public enum IssueStatus: Int, Codable {
+    case new = 1
+    case unresolved = 2
+    case resolved = 3
 }
 
-public class RepositoryLocationJSON: SerializableObject {
-    
-}

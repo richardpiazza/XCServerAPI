@@ -28,6 +28,23 @@
 import Foundation
 import CodeQuickKit
 
+public struct RemoteRepository: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case identifier = "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey"
+        case system = "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey"
+        case url = "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey"
+        case trustedCertFingerprint = "DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustedCertFingerprintKey"
+        case enforceTrustCertFingerprint = "DVTSourceControlWorkspaceBlueprintRemoteRepositoryEnforceTrustCertFingerprintKey"
+    }
+    
+    public var identifier: String?
+    public var system: String?
+    public var url: String?
+    public var trustedCertFingerprint: String?
+    public var enforceTrustCertFingerprint: Bool?
+}
+
 public class RemoteRepositoryJSON: SerializableObject {
     public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey: String?
     public var DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey: String?
