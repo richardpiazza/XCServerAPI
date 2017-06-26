@@ -28,7 +28,7 @@
 import Foundation
 import CodeQuickKit
 
-public struct Device: Codable {
+public struct DeviceDocument: Codable {
     
     enum CodingKeys: String, CodingKey {
         case osVersion
@@ -64,7 +64,7 @@ public struct Device: Codable {
     public var modelUTI: String?
     public var name: String?
     public var trusted: Bool?
-    public var docType: String?
+    public var docType: String = "device"
     public var supported: Bool?
     public var identifier: String?
     public var enabledForDevelopment: Bool?
@@ -74,7 +74,7 @@ public struct Device: Codable {
     public var retina: Bool?
     public var isServer: Bool?
     public var tinyID: String?
-    public var activeProxiedDevice: ProxiedDevice?
+    public var activeProxiedDevice: ProxiedDeviceDocument?
 }
 
 public class DeviceJSON: SerializableObject {

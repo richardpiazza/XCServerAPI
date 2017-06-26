@@ -27,7 +27,7 @@
 
 import Foundation
 
-public struct ProxiedDevice: Codable {
+public struct ProxiedDeviceDocument: Codable {
     
     enum CodingKeys: String, CodingKey {
         case osVersion
@@ -58,7 +58,7 @@ public struct ProxiedDevice: Codable {
     public var modelUTI: String?
     public var name: String?
     public var trusted: Bool?
-    public var docType: String?
+    public var docType: String = "device"
     public var supported: Bool?
     public var identifier: String?
     public var enabledForDevelopment: Bool?

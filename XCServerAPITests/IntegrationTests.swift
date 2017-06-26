@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import XCServerAPI
 
 class IntegrationTests: XCTestCase {
     
@@ -89,7 +90,17 @@ class IntegrationTests: XCTestCase {
         }
     """
     
-    let decoder = JSONDecoder()
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return formatter
+    }
+    
+    var decoder: JSONDecoder {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        return decoder
+    }
     
     override func setUp() {
         super.setUp()
@@ -101,5 +112,61 @@ class IntegrationTests: XCTestCase {
         super.tearDown()
     }
     
-    
+    func testIntegration() {
+        let queuedDate = DateComponents(calendar: Calendar.current, timeZone: TimeZone.current, era: 1, year: 2017, month: 06, day: 25, hour: 13, minute: 24, second: 05, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil).date!
+        let startDate = DateComponents(calendar: Calendar.current, timeZone: TimeZone.current, era: 1, year: 2017, month: 06, day: 25, hour: 13, minute: 24, second: 06, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil).date!
+        let endDate = DateComponents(calendar: Calendar.current, timeZone: TimeZone.current, era: 1, year: 2017, month: 06, day: 25, hour: 13, minute: 27, second: 28, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil).date!
+        
+        guard let integration = IntegrationDocument.decode(json: json) else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertEqual(integration._id, "d7f19e1d0b0f1ea270f60154c2003e49")
+        XCTAssertEqual(integration._rev, "17-951dc5cf5aa7ceae4f6442086ab85ce9")
+        XCTAssertEqual(integration.number, 4)
+        XCTAssertEqual(integration.currentStep, .completed)
+        XCTAssertEqual(integration.result, .succeeded)
+        XCTAssertNotNil(integration.queuedDate)
+        var match = Calendar.current.compare(integration.queuedDate!, to: queuedDate, toGranularity: .second)
+        XCTAssertTrue(match == .orderedSame)
+        XCTAssertEqual(integration.successStreak, 1)
+        XCTAssertNotNil(integration.assets)
+        XCTAssertEqual(integration.docType, "integration")
+        XCTAssertEqual(integration.tinyID, "9658B8D")
+        XCTAssertEqual(integration.buildServiceFingerprint, "4F:EF:EB:BC:15:11:B4:0C:90:65:3B:0D:86:1A:C5:6F:71:14:54:42")
+        XCTAssertEqual(integration.tags?.count, 0)
+        XCTAssertNotNil(integration.startedTime)
+        match = Calendar.current.compare(integration.startedTime!, to: startDate, toGranularity: .second)
+        XCTAssertTrue(match == .orderedSame)
+        XCTAssertNotNil(integration.endedTime)
+        match = Calendar.current.compare(integration.endedTime!, to: endDate, toGranularity: .second)
+        XCTAssertTrue(match == .orderedSame)
+        XCTAssertEqual(integration.endedTimeDate?.count, 7)
+        XCTAssertEqual(integration.duration, 201.988)
+        XCTAssertEqual(integration.ccPercentage, 0)
+        XCTAssertEqual(integration.ccPercentageDelta, 0)
+        XCTAssertEqual(integration.perfMetricNames?.count, 0)
+        XCTAssertEqual(integration.perfMetricKeyPaths?.count, 0)
+        
+        guard let resultSummary = integration.buildResultSummary else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertEqual(resultSummary.analyzerWarningCount, 0)
+        XCTAssertEqual(resultSummary.testFailureCount, 0)
+        XCTAssertEqual(resultSummary.testsChange, 12)
+        XCTAssertEqual(resultSummary.errorCount, 0)
+        XCTAssertEqual(resultSummary.testsCount, 12)
+        XCTAssertEqual(resultSummary.testFailureChange, 0)
+        XCTAssertEqual(resultSummary.warningChange, 0)
+        XCTAssertEqual(resultSummary.regressedPerfTestCount, 0)
+        XCTAssertEqual(resultSummary.warningCount, 0)
+        XCTAssertEqual(resultSummary.errorChange, 0)
+        XCTAssertEqual(resultSummary.improvedPerfTestCount, 0)
+        XCTAssertEqual(resultSummary.analyzerWarningChange, 0)
+        XCTAssertEqual(resultSummary.codeCoveragePercentage, 21)
+        XCTAssertEqual(resultSummary.codeCoveragePercentageDelta, 0)
+    }
 }

@@ -30,6 +30,86 @@ import CodeQuickKit
 
 public struct IntegrationDocument: Codable {
     
+    static var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return formatter
+    }
+    
+    static var decoder: JSONDecoder {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        return decoder
+    }
+    
+    public static func decode(json: String) -> IntegrationDocument? {
+        guard let data = json.data(using: .utf8) else {
+            return nil
+        }
+        
+        do {
+            return try decoder.decode(IntegrationDocument.self, from: data)
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case _id
+        case _rev
+        case number
+        case currentStep
+        case result
+        case queuedDate
+        case successStreak = "success_streak"
+        case shouldClean
+        case assets
+        case docType = "doc_type"
+        case tinyID
+        case buildServiceFingerprint
+        case tags
+        case startedTime
+        case buildResultSummary
+        case endedTime
+        case endedTimeDate
+        case duration
+        case ccPercentage
+        case ccPercentageDelta
+        case perfMetricNames
+        case perfMetricKeyPaths
+        case bot
+        case revisionBlueprint
+        case testedDevices
+        case testHierarchy
+    }
+    
+    public var _id: String
+    public var _rev: String
+    public var number: Int
+    public var currentStep: IntegrationStep
+    public var result: IntegrationResult
+    public var queuedDate: Date?
+    public var successStreak: Int?
+    public var shouldClean: Bool?
+    public var assets: Assets?
+    public var docType: String = "integration"
+    public var tinyID: String?
+    public var buildServiceFingerprint: String?
+    public var tags: [String]?
+    public var startedTime: Date?
+    public var buildResultSummary: BuildResultSummary?
+    public var endedTime: Date?
+    public var endedTimeDate: [Int]?
+    public var duration: Double?
+    public var ccPercentage: Int?
+    public var ccPercentageDelta: Int?
+    public var perfMetricNames: [String]?
+    public var perfMetricKeyPaths: [String]?
+    public var bot: BotDocument?
+    public var revisionBlueprint: RepositoryBlueprint?
+    public var testedDevices: [DeviceDocument]?
+    public var testHierarchy: TestHierarchy?
 }
 
 public class IntegrationJSON: SerializableObject, XCServerDocument {

@@ -73,9 +73,9 @@ class DeviceTests: XCTestCase {
             return
         }
         
-        var device: Device
+        var device: DeviceDocument
         do {
-            device = try decoder.decode(Device.self, from: data)
+            device = try decoder.decode(DeviceDocument.self, from: data)
         } catch {
             print(error)
             XCTFail()
