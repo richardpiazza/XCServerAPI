@@ -43,6 +43,7 @@ public struct BotDocument: Codable {
         case tinyID
         case configuration
         case lastRevisionBlueprint
+        case sourceControlBlueprint
     }
     
     public var _id: String
@@ -57,6 +58,7 @@ public struct BotDocument: Codable {
     public var tinyID: String
     public var configuration: Configuration?
     public var lastRevisionBlueprint: RepositoryBlueprint?
+    public var sourceControlBlueprint: RepositoryBlueprint?
 }
 
 public class BotJSON: SerializableObject, XCServerDocument {

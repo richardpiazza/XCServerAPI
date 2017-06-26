@@ -28,6 +28,13 @@
 import Foundation
 import CodeQuickKit
 
+public struct IntegrationAsset: Codable {
+    public var size: Int?
+    public var fileName: String?
+    public var allowAnonymousAccess: Bool?
+    public var relativePath: String?
+}
+
 public class AssetJSON: SerializableObject {
     public var allowAnonymousAccess: NSNumber?
     public var fileName: String?

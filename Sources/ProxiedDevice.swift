@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// DeviceJSON.swift
+// ProxiedDevice.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,9 +26,8 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct Device: Codable {
+public struct ProxiedDevice: Codable {
     
     enum CodingKeys: String, CodingKey {
         case osVersion
@@ -37,7 +36,6 @@ public struct Device: Codable {
         case modelCode
         case deviceType
         case modelName
-        case revision
         case modelUTI
         case name
         case trusted
@@ -46,12 +44,9 @@ public struct Device: Codable {
         case identifier
         case enabledForDevelopment
         case platformIdentifier
-        case ID
         case architecture
         case retina
         case isServer
-        case tinyID
-        case activeProxiedDevice
     }
     
     public var osVersion: String?
@@ -60,7 +55,6 @@ public struct Device: Codable {
     public var modelCode: String?
     public var deviceType: String?
     public var modelName: String?
-    public var revision: String?
     public var modelUTI: String?
     public var name: String?
     public var trusted: Bool?
@@ -69,28 +63,7 @@ public struct Device: Codable {
     public var identifier: String?
     public var enabledForDevelopment: Bool?
     public var platformIdentifier: String?
-    public var ID: String?
     public var architecture: String?
     public var retina: Bool?
     public var isServer: Bool?
-    public var tinyID: String?
-    public var activeProxiedDevice: ProxiedDevice?
-}
-
-public class DeviceJSON: SerializableObject {
-    public var ID: String = ""
-    public var revision: String?
-    public var doc_type: String?
-    public var name: String?
-    public var deviceType: String?
-    public var connected: Bool = false
-    public var simulator: Bool = false
-    public var osVersion: String?
-    public var supported: Bool = false
-    public var identifier: String = ""
-    public var enabledForDevelopment: Bool = false
-    public var architecture: String?
-    public var isServer: Bool = false
-    public var platformIdentifier: String?
-    public var retina: Bool = false
 }

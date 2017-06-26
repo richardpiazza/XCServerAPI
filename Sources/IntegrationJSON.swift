@@ -28,6 +28,10 @@
 import Foundation
 import CodeQuickKit
 
+public struct IntegrationDocument: Codable {
+    
+}
+
 public class IntegrationJSON: SerializableObject, XCServerDocument {
     public var _id: String = ""
     public var _rev: String = ""

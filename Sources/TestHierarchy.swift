@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// IntegrationAssetsJSON.swift
+// TestHierarchy.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,21 +26,13 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct Assets: Codable {
-    public var xcodebuildOutput: IntegrationAsset?
-    public var buildServiceLog: IntegrationAsset?
-    public var xcodebuildLog: IntegrationAsset?
-    public var sourceControlLog: IntegrationAsset?
-}
+public typealias TestModuleName = String
+public typealias TestFileName = String
+public typealias TestFunctionName = String
+public typealias TestDeviceIdentifier = String
 
-public class IntegrationAssetsJSON: SerializableObject {
-    public var archive: AssetJSON?
-    public var buildServiceLog: AssetJSON?
-    public var product: AssetJSON?
-    public var sourceControlLog: AssetJSON?
-    public var triggerAssets: [AssetJSON]?
-    public var xcodebuildLog: AssetJSON?
-    public var xcodebuildOutput: AssetJSON?
-}
+public typealias TestDeviceResults = [TestDeviceIdentifier : Int]
+public typealias TestFunctionResults = [TestFunctionName : TestDeviceResults]
+public typealias TestFileResults = [TestFileName : TestFunctionResults]
+public typealias TestHierarchy = [TestModuleName : TestFileResults]
