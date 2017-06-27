@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// StatsBreakdownJSON.swift
+// Issues.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,24 +26,13 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct StatsSummary: Codable {
-    public var sum: Double
-    public var count: Int
-    public var min: Double
-    public var max: Double
-    public var avg: Double
-    public var stdDev: Double
-    public var sumsqr: Double?
-}
-
-public class StatsBreakdownJSON: SerializableObject {
-    public var sum: NSNumber?
-    public var count: NSNumber?
-    public var min: NSNumber?
-    public var max: NSNumber?
-    public var avg: NSNumber?
-    public var stdDev: NSNumber?
-    public var sumsqr: NSNumber?
+public struct Issues: Codable {
+    public var buildServiceErrors: [Issue]?
+    public var buildServiceWarnings: [Issue]?
+    public var triggerErrors: [Issue]?
+    public var errors: IssueGroup?
+    public var warnings: IssueGroup?
+    public var testFailures: IssueGroup?
+    public var analyzerWarnings: IssueGroup?
 }

@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// StatsBreakdownJSON.swift
+// XCServerJSONDecoder.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,24 +26,19 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct StatsSummary: Codable {
-    public var sum: Double
-    public var count: Int
-    public var min: Double
-    public var max: Double
-    public var avg: Double
-    public var stdDev: Double
-    public var sumsqr: Double?
-}
-
-public class StatsBreakdownJSON: SerializableObject {
-    public var sum: NSNumber?
-    public var count: NSNumber?
-    public var min: NSNumber?
-    public var max: NSNumber?
-    public var avg: NSNumber?
-    public var stdDev: NSNumber?
-    public var sumsqr: NSNumber?
+public class XCServerJSONDecoder: JSONDecoder {
+    
+    private static var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return formatter
+    }
+    
+    public static var `default` = XCServerJSONDecoder()
+    
+    public override init() {
+        super.init()
+        self.dateDecodingStrategy = .formatted(type(of: self).dateFormatter)
+    }
 }

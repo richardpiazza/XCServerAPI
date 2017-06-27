@@ -28,6 +28,20 @@
 import Foundation
 import CodeQuickKit
 
+public struct Issue: Codable {
+    public var _id: String
+    public var _rev: String
+    public var message: String?
+    public var type: String?
+    public var fixItType: String?
+    public var issueType: String?
+    public var commits: [Commit]?
+    public var integrationID: String?
+    public var age: Int?
+    public var status: Int?
+    public var issueAuthors: [IssueAuthor]?
+}
+
 public class IssueJSON: SerializableObject, XCServerDocument {
     public var _id: String = ""
     public var _rev: String = ""

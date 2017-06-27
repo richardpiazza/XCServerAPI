@@ -28,6 +28,9 @@
 import Foundation
 import CodeQuickKit
 
+public struct IssueAuthor: Codable {
+}
+
 public class IssueAuthorJSON: SerializableObject {
     public var XCSIssueSuspectstrategy: NSDictionary?
     public var XCSBlueprintRepositoryID: String?

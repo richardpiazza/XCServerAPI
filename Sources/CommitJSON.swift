@@ -28,6 +28,29 @@
 import Foundation
 import CodeQuickKit
 
+public struct Commit: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case repositoryID = "XCSBlueprintRepositoryID"
+        case commitChangeFilePaths = "XCSCommitCommitChangeFilePaths"
+        case contributor = "XCSCommitContributor"
+        case hash = "XCSCommitHash"
+        case message = "XCSCommitMessage"
+        case isMerge = "XCSCommitIsMerge"
+        case timestamp = "XCSCommitTimestamp"
+        case timestampDate = "XCSCommitTimestampDate"
+    }
+    
+    public var repositoryID: String?
+    public var commitChangeFilePaths: [CommitChangeFilePath]?
+    public var contributor: CommitContributor?
+    public var hash: String?
+    public var message: String?
+    public var isMerge: String?
+    public var timestamp: Date?
+    public var timestampDate: [Int]?
+}
+
 public class CommitJSON: SerializableObject {
     public var XCSCommitHash: String = ""
     public var XCSCommitMessage: String?

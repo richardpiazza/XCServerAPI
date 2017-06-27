@@ -28,6 +28,11 @@
 import Foundation
 import CodeQuickKit
 
+public struct CommitChangeFilePath: Codable {
+    public var status: Int
+    public var filePath: String
+}
+
 public class CommitChangeJSON: SerializableObject {
     public var status: Int = 0
     public var filePath: String?

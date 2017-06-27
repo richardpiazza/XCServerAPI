@@ -28,6 +28,25 @@
 import Foundation
 import CodeQuickKit
 
+public struct Stats: Codable {
+    public var lastCleanIntegration: IntegrationSnippet?
+    public var bestSuccessStreak: IntegrationSnippet?
+    public var numberOfIntegrations: Int?
+    public var numberOfCommits: Int?
+    public var averageIntegrationTime: StatsSummary?
+    public var testAdditionRate: Int?
+    public var analysisWarnings: StatsSummary?
+    public var testFailures: StatsSummary?
+    public var errors: StatsSummary?
+    public var regressedPerfTests: StatsSummary?
+    public var warnings: StatsSummary?
+    public var improvedPerfTests: StatsSummary?
+    public var tests: StatsSummary?
+    public var codeCoveragePercentageDelta: Int?
+    public var numberOfSuccessfulIntegrations: Int?
+    public var sinceDate: Date?
+}
+
 public class StatsJSON: SerializableObject {
     public var lastCleanIntegration: LastCleanIntegrationJSON?
     public var bestSuccessStreak: BestSuccessStreakJSON?

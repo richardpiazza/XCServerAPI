@@ -30,31 +30,6 @@ import CodeQuickKit
 
 public struct IntegrationDocument: Codable {
     
-    static var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        return formatter
-    }
-    
-    static var decoder: JSONDecoder {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(dateFormatter)
-        return decoder
-    }
-    
-    public static func decode(json: String) -> IntegrationDocument? {
-        guard let data = json.data(using: .utf8) else {
-            return nil
-        }
-        
-        do {
-            return try decoder.decode(IntegrationDocument.self, from: data)
-        } catch {
-            print(error)
-            return nil
-        }
-    }
-    
     enum CodingKeys: String, CodingKey {
         case _id
         case _rev

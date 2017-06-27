@@ -1,8 +1,8 @@
 //===----------------------------------------------------------------------===//
 //
-// StatsBreakdownJSON.swift
+// Decodable+XCServerAPI.swift
 //
-// Copyright (c) 2016 Richard Piazza
+// Copyright (c) 2017 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,24 +26,27 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct StatsSummary: Codable {
-    public var sum: Double
-    public var count: Int
-    public var min: Double
-    public var max: Double
-    public var avg: Double
-    public var stdDev: Double
-    public var sumsqr: Double?
-}
-
-public class StatsBreakdownJSON: SerializableObject {
-    public var sum: NSNumber?
-    public var count: NSNumber?
-    public var min: NSNumber?
-    public var max: NSNumber?
-    public var avg: NSNumber?
-    public var stdDev: NSNumber?
-    public var sumsqr: NSNumber?
+public extension Decodable {
+    static func decode(json: String) -> Self? {
+        var mutable = json
+        while let range = mutable.rangeOfCharacter(from: CharacterSet.controlCharacters) {
+            mutable.removeSubrange(range)
+        }
+        
+        guard let data = mutable.data(using: .utf8) else {
+            return nil
+        }
+        
+        return decode(data: data)
+    }
+    
+    static func decode(data: Data) -> Self? {
+        do {
+            return try XCServerJSONDecoder.default.decode(Self.self, from: data)
+        } catch {
+            print(error)
+            return nil
+        }
+    }
 }
