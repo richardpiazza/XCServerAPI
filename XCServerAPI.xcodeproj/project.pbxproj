@@ -79,6 +79,8 @@
 		E1956AD51F01D3F4006193D7 /* IssueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1956AD41F01D3F4006193D7 /* IssueTests.swift */; };
 		E1956AD71F01D712006193D7 /* CommitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1956AD61F01D712006193D7 /* CommitTests.swift */; };
 		E1956AD91F01D9DE006193D7 /* StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1956AD81F01D9DE006193D7 /* StatsTests.swift */; };
+		E19E5E331F0FC92500440470 /* TriggersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19E5E321F0FC92500440470 /* TriggersTests.swift */; };
+		E19E5E351F0FCB2300440470 /* AssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19E5E341F0FCB2300440470 /* AssetsTests.swift */; };
 		E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */; };
 		E1AEB59F1F013E7B0019B6E2 /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */; };
 /* End PBXBuildFile section */
@@ -177,6 +179,8 @@
 		E1956AD41F01D3F4006193D7 /* IssueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTests.swift; sourceTree = "<group>"; };
 		E1956AD61F01D712006193D7 /* CommitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTests.swift; sourceTree = "<group>"; };
 		E1956AD81F01D9DE006193D7 /* StatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTests.swift; sourceTree = "<group>"; };
+		E19E5E321F0FC92500440470 /* TriggersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggersTests.swift; sourceTree = "<group>"; };
+		E19E5E341F0FCB2300440470 /* AssetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTests.swift; sourceTree = "<group>"; };
 		E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSpecificationTests.swift; sourceTree = "<group>"; };
 		E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHierarchy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -271,6 +275,8 @@
 				E1956AD41F01D3F4006193D7 /* IssueTests.swift */,
 				E1956AD61F01D712006193D7 /* CommitTests.swift */,
 				E1956AD81F01D9DE006193D7 /* StatsTests.swift */,
+				E19E5E321F0FC92500440470 /* TriggersTests.swift */,
+				E19E5E341F0FCB2300440470 /* AssetsTests.swift */,
 			);
 			path = XCServerAPITests;
 			sourceTree = "<group>";
@@ -600,6 +606,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19E5E331F0FC92500440470 /* TriggersTests.swift in Sources */,
+				E19E5E351F0FCB2300440470 /* AssetsTests.swift in Sources */,
 				E108CFCE1EFFF33C00BB7978 /* BotTests.swift in Sources */,
 				E1956AD91F01D9DE006193D7 /* StatsTests.swift in Sources */,
 				E108CFD41EFFFD3700BB7978 /* DeviceTests.swift in Sources */,

@@ -81,7 +81,7 @@ class IssueTests: XCTestCase {
     }
     
     func testIssues() {
-        guard let issues = Issues.decode(json: json) else {
+        guard let issues = XCServerWebAPI.Issues.decode(json: json) else {
             XCTFail()
             return
         }
