@@ -125,19 +125,19 @@ public class XCServerWebAPI: WebAPI {
         self.apis[fqdn] = nil
     }
     
-    fileprivate let invalidAuthorization = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
+    internal let invalidAuthorization = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
         NSLocalizedDescriptionKey: "Invalid Authorization",
         NSLocalizedFailureReasonErrorKey: "The server returned a 401 response code.",
         NSLocalizedRecoverySuggestionErrorKey: "Have you specified a XCServerWebAPICredentialDelegate to handle authentication?"
         ])
     
-    fileprivate let invalidXcodeServer = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
+    internal let invalidXcodeServer = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
         NSLocalizedDescriptionKey: "Invalid Xcode Server",
         NSLocalizedFailureReasonErrorKey: "This class was initialized without an XcodeServer entity.",
         NSLocalizedRecoverySuggestionErrorKey: "Re-initialize this class using init(xcodeServer:)."
         ])
     
-    fileprivate let invalidResponseCast = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
+    internal let invalidResponseCast = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
         NSLocalizedDescriptionKey: "Invalid responseObject",
         NSLocalizedFailureReasonErrorKey: "The response object could not be cast into the requested type.",
         NSLocalizedRecoverySuggestionErrorKey: "Check the request is sending a valid response."
@@ -192,210 +192,5 @@ public class XCServerWebAPI: WebAPI {
             completion(typedResponse, nil)
         }
     }
-    
-    public typealias XCServerWebAPIBotsCompletion = (_ bots: [BotJSON]?, _ error: NSError?) -> Void
-    
-    /// Requests the '`/bots`' endpoint from the Xcode Server API.
-    public func getBots(_ completion: @escaping XCServerWebAPIBotsCompletion) {
-        self.get("bots") { (statusCode, response, responseObject, error) in
-            guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
-                return
-            }
-            
-            guard statusCode == 200 else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
-                return
-            }
-            
-            let typedResponse = BotsResponse(withDictionary: dictionary)
-            
-            completion(typedResponse.results, nil)
-        }
-    }
-    
-    public typealias XCServerWebAPIBotCompletion = (_ bot: BotJSON?, _ error: NSError?) -> Void
-    
-    /// Requests the '`/bots/{id}`' endpoint from the Xcode Server API.
-    public func getBot(bot identifier: String, completion: @escaping XCServerWebAPIBotCompletion) {
-        self.get("bots/\(identifier)") { (statusCode, response, responseObject, error) in
-            guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
-                return
-            }
-            
-            guard statusCode == 200 else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
-                return
-            }
-            
-            let typedResponse = BotJSON(withDictionary: dictionary)
-            
-            completion(typedResponse, nil)
-        }
-    }
-    
-    public typealias XCServerWebAPIStatsCompletion = (_ stats: StatsJSON?, _ error: NSError?) -> Void
-    
-    /// Requests the '`/bots/{id}/stats`' endpoint from the Xcode Server API.
-    public func getStats(forBot identifier: String, completion: @escaping XCServerWebAPIStatsCompletion) {
-        self.get("bots/\(identifier)/stats") { (statusCode, response, responseObject, error) in
-            guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
-                return
-            }
-            
-            guard statusCode == 200 else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
-                return
-            }
-            
-            let typedResponse = StatsJSON(withDictionary: dictionary)
-            
-            completion(typedResponse, nil)
-        }
-    }
-    
-    public typealias XCServerWebAPIIntegrationCompletion = (_ integration: IntegrationJSON?, _ error: NSError?) -> Void
-    
-    /// Posts a request to the '`/bots/{id}`' endpoint from the Xcode Server API.
-    public func postBot(forBot identifier: String, completion: @escaping XCServerWebAPIIntegrationCompletion) {
-        self.post(nil, path: "bots/\(identifier)/integrations") { (statusCode, response, responseObject, error) in
-            guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
-                return
-            }
-            
-            guard statusCode == 201 else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
-                return
-            }
-            
-            let typedResponse = IntegrationJSON(withDictionary: dictionary)
-            
-            completion(typedResponse, nil)
-        }
-    }
-    
-    public typealias XCServerWebAPIIntegrationsCompletion = (_ integrations: [IntegrationJSON]?, _ error: NSError?) -> Void
-    
-    /// Requests the '`/bots/{id}/integrations`' endpoint from the Xcode Server API.
-    public func getIntegrations(forBot identifier: String, completion: @escaping XCServerWebAPIIntegrationsCompletion) {
-        self.get("bots/\(identifier)/integrations") { (statusCode, response, responseObject, error) in
-            guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
-                return
-            }
-            
-            guard statusCode == 200 else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
-                return
-            }
-            
-            let typedResponse = IntegrationsResponse(withDictionary: dictionary)
-            
-            completion(typedResponse.results, nil)
-        }
-    }
-    
-    /// Requests the '`/integrations/{id}`' endpoint from the Xcode Server API.
-    public func getIntegration(integration identifier: String, completion: @escaping XCServerWebAPIIntegrationCompletion) {
-        self.get("integrations/\(identifier)") { (statusCode, response, responseObject, error) in
-            guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
-                return
-            }
-            
-            guard statusCode == 200 else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
-                return
-            }
-            
-            let typedResponse = IntegrationJSON(withDictionary: dictionary)
-            
-            completion(typedResponse, nil)
-        }
-    }
-    
-    public typealias XCServerWebAPICommitsCompletion = (_ commits: [IntegrationCommitJSON]?, _ error: NSError?) -> Void
-    
-    /// Requests the '`/integrations/{id}/commits`' endpoint from the Xcode Server API.
-    public func getCommits(forIntegration identifier: String, completion: @escaping XCServerWebAPICommitsCompletion) {
-        self.get("integrations/\(identifier)/commits") { (statusCode, response, responseObject, error) in
-            guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
-                return
-            }
-            
-            guard statusCode == 200 else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
-                return
-            }
-            
-            let typedResponse = IntegrationCommitsResponse(withDictionary: dictionary)
-            
-            completion(typedResponse.results, nil)
-        }
-    }
-    
-    public typealias XCServerWebAPIIssuesCompletion = (_ issues: IntegrationIssuesResponse?, _ error: NSError?) -> Void
-    
-    /// Requests the '`/integrations/{id}/issues`' endpoint from the Xcode Server API.
-    public func getIssues(forIntegration identifier: String, completion: @escaping XCServerWebAPIIssuesCompletion) {
-        self.get("integrations/\(identifier)/issues") { (statusCode, response, responseObject, error) in
-            guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
-                return
-            }
-            
-            guard statusCode == 200 else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
-                return
-            }
-            
-            let typedResponse = IntegrationIssuesResponse(withDictionary: dictionary)
-            
-            completion(typedResponse, nil)
-        }
-    }
+
 }

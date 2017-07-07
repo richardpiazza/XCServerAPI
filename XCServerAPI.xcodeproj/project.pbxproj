@@ -22,6 +22,10 @@
 		E10CC65F1EFFE27A00FE4A3F /* TestLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65E1EFFE27A00FE4A3F /* TestLocalization.swift */; };
 		E10CC6611EFFE47200FE4A3F /* CodeCoveragePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6601EFFE47200FE4A3F /* CodeCoveragePreference.swift */; };
 		E10CC6631EFFE51100FE4A3F /* CleanSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6621EFFE51100FE4A3F /* CleanSchedule.swift */; };
+		E12209AB1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12209AA1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift */; };
+		E12209AD1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12209AC1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift */; };
+		E14878401F0813C4008C5788 /* XCServerWebAPI+Issues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148783F1F0813C4008C5788 /* XCServerWebAPI+Issues.swift */; };
+		E14878421F08169A008C5788 /* XCServerWebAPI+Commits.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14878411F08169A008C5788 /* XCServerWebAPI+Commits.swift */; };
 		E149CBAA1D2ABC8E00E2E688 /* XCServerAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E149CBA91D2ABC8E00E2E688 /* XCServerAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E149CBB11D2ABC8E00E2E688 /* XCServerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E149CBA71D2ABC8E00E2E688 /* XCServerAPI.framework */; };
 		E149CBDE1D2ABDD700E2E688 /* APIResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBBF1D2ABDD700E2E688 /* APIResponses.swift */; };
@@ -60,7 +64,6 @@
 		E176DFD31F0280B1005CE042 /* IntegrationSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */; };
 		E176DFD51F0283D1005CE042 /* XCServerJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */; };
 		E176DFD71F02851F005CE042 /* Decodable+XCServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */; };
-		E176DFD91F029D98005CE042 /* Issues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD81F029D98005CE042 /* Issues.swift */; };
 		E176DFDB1F029E4D005CE042 /* IssueGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFDA1F029E4D005CE042 /* IssueGroup.swift */; };
 		E190EBCD1EFEB91C004F0920 /* BotSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */; };
 		E190EBCF1EFEB981004F0920 /* PeriodicScheduleInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */; };
@@ -109,6 +112,10 @@
 		E10CC65E1EFFE27A00FE4A3F /* TestLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocalization.swift; sourceTree = "<group>"; };
 		E10CC6601EFFE47200FE4A3F /* CodeCoveragePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoveragePreference.swift; sourceTree = "<group>"; };
 		E10CC6621EFFE51100FE4A3F /* CleanSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSchedule.swift; sourceTree = "<group>"; };
+		E12209AA1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Integrations.swift"; sourceTree = "<group>"; };
+		E12209AC1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Bots.swift"; sourceTree = "<group>"; };
+		E148783F1F0813C4008C5788 /* XCServerWebAPI+Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Issues.swift"; sourceTree = "<group>"; };
+		E14878411F08169A008C5788 /* XCServerWebAPI+Commits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Commits.swift"; sourceTree = "<group>"; };
 		E149CBA71D2ABC8E00E2E688 /* XCServerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCServerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E149CBA91D2ABC8E00E2E688 /* XCServerAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCServerAPI.h; sourceTree = "<group>"; };
 		E149CBAB1D2ABC8E00E2E688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,7 +161,6 @@
 		E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationSnippet.swift; sourceTree = "<group>"; };
 		E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCServerJSONDecoder.swift; sourceTree = "<group>"; };
 		E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+XCServerAPI.swift"; sourceTree = "<group>"; };
-		E176DFD81F029D98005CE042 /* Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issues.swift; sourceTree = "<group>"; };
 		E176DFDA1F029E4D005CE042 /* IssueGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueGroup.swift; sourceTree = "<group>"; };
 		E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotSchedule.swift; sourceTree = "<group>"; };
 		E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicScheduleInterval.swift; sourceTree = "<group>"; };
@@ -305,7 +311,6 @@
 				E151F2161D99BE5600157040 /* IssueAuthorJSON.swift */,
 				E149CBD31D2ABDD700E2E688 /* IssueJSON.swift */,
 				E176DFDA1F029E4D005CE042 /* IssueGroup.swift */,
-				E176DFD81F029D98005CE042 /* Issues.swift */,
 				E190EBD01EFEBA23004F0920 /* IssueStatus.swift */,
 				E149CBD41D2ABDD700E2E688 /* LastCleanIntegrationJSON.swift */,
 				E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */,
@@ -328,6 +333,10 @@
 				E151F2141D99B00200157040 /* XCServerDocument.swift */,
 				E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */,
 				E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */,
+				E12209AC1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift */,
+				E14878411F08169A008C5788 /* XCServerWebAPI+Commits.swift */,
+				E12209AA1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift */,
+				E148783F1F0813C4008C5788 /* XCServerWebAPI+Issues.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -528,11 +537,13 @@
 				E108CFD01EFFF59F00BB7978 /* Group.swift in Sources */,
 				E149CBEA1D2ABDD700E2E688 /* DeviceJSON.swift in Sources */,
 				E10CC6591EFFDC7700FE4A3F /* ProvisioningConfiguration.swift in Sources */,
+				E12209AB1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift in Sources */,
 				E10CC65F1EFFE27A00FE4A3F /* TestLocalization.swift in Sources */,
 				E149CBE91D2ABDD700E2E688 /* ConfigurationJSON.swift in Sources */,
 				E10CC65D1EFFE24600FE4A3F /* BuildArgument.swift in Sources */,
 				E190EBD91EFEBCC1004F0920 /* TriggerPhase.swift in Sources */,
 				E151F2151D99B00200157040 /* XCServerDocument.swift in Sources */,
+				E14878421F08169A008C5788 /* XCServerWebAPI+Commits.swift in Sources */,
 				E190EBD31EFEBADD004F0920 /* IntegrationStep.swift in Sources */,
 				E149CBEC1D2ABDD700E2E688 /* EmailConfigurationJSON.swift in Sources */,
 				E1AEB59F1F013E7B0019B6E2 /* TestHierarchy.swift in Sources */,
@@ -553,8 +564,10 @@
 				E149CBF71D2ABDD700E2E688 /* RevisionBlueprintJSON.swift in Sources */,
 				E176DFD31F0280B1005CE042 /* IntegrationSnippet.swift in Sources */,
 				E149CBFB1D2ABDD700E2E688 /* VersionJSON.swift in Sources */,
+				E14878401F0813C4008C5788 /* XCServerWebAPI+Issues.swift in Sources */,
 				E149CBF51D2ABDD700E2E688 /* RemoteRepositoryJSON.swift in Sources */,
 				E149CBE11D2ABDD700E2E688 /* BestSuccessStreakJSON.swift in Sources */,
+				E12209AD1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift in Sources */,
 				E149CBEE1D2ABDD700E2E688 /* IntegrationAssetsJSON.swift in Sources */,
 				E149CBF81D2ABDD700E2E688 /* StatsBreakdownJSON.swift in Sources */,
 				E149CBE31D2ABDD700E2E688 /* BotJSON.swift in Sources */,
@@ -564,7 +577,6 @@
 				E149CBF91D2ABDD700E2E688 /* StatsJSON.swift in Sources */,
 				E108CFD81F012FE000BB7978 /* ProxiedDevice.swift in Sources */,
 				E149CBE71D2ABDD700E2E688 /* CommitJSON.swift in Sources */,
-				E176DFD91F029D98005CE042 /* Issues.swift in Sources */,
 				E190EBD51EFEBBB0004F0920 /* IntegrationResult.swift in Sources */,
 				E149CBE01D2ABDD700E2E688 /* AuthenticationStrategyJSON.swift in Sources */,
 				E190EBE01EFEC056004F0920 /* RepositoryBlueprint.swift in Sources */,
@@ -656,7 +668,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -697,7 +709,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
