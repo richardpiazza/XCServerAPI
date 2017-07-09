@@ -42,7 +42,7 @@ public extension XCServerWebAPI {
     public func getCommits(forIntegration identifier: String, completion: @escaping XCServerWebAPICommitsCompletion) {
         self.get("integrations/\(identifier)/commits") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
+                completion(nil, Errors.authorization.nsError)
                 return
             }
             
@@ -52,7 +52,7 @@ public extension XCServerWebAPI {
             }
             
             guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
+                completion(nil, Errors.decodeResponse.nsError)
                 return
             }
             

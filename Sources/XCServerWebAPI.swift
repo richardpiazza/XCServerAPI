@@ -66,6 +66,52 @@ public extension XCServerWebAPICredentialDelegate {
 /// Wrapper for `WebAPI` that implements common Xcode Server requests.
 public class XCServerWebAPI: WebAPI {
     
+    public enum Errors: Error {
+        case authorization
+        case noXcodeServer
+        case decodeResponse
+        
+        public var code: Int {
+            switch self {
+            case .authorization: return 0
+            case .noXcodeServer: return 1
+            case .decodeResponse: return 2
+            }
+        }
+        
+        public var localizedDescription: String {
+            switch self {
+            case .authorization: return "Invalid Authorization"
+            case .noXcodeServer: return "No Xcode Server"
+            case .decodeResponse: return "Failed To Decode Response"
+            }
+        }
+        
+        public var localizedFailureReason: String {
+            switch self {
+            case .authorization: return "The server returned a 401 response code."
+            case .noXcodeServer: return "This class was initialized without an XcodeServer entity."
+            case .decodeResponse: return "The response object could not be cast into the requested type."
+            }
+        }
+        
+        public var localizedRecoverySuggestion: String {
+            switch self {
+            case .authorization: return "Have you specified a XCServerWebAPICredentialDelegate to handle authentication?"
+            case .noXcodeServer: return "Re-initialize this class using init(xcodeServer:)."
+            case .decodeResponse: return "Check the request is sending a valid response."
+            }
+        }
+        
+        public var nsError: NSError {
+            return NSError(domain: String(describing: self), code: self.code, userInfo: [
+                    NSLocalizedDescriptionKey: self.localizedDescription,
+                    NSLocalizedFailureReasonErrorKey: self.localizedFailureReason,
+                    NSLocalizedRecoverySuggestionErrorKey: self.localizedRecoverySuggestion
+                ])
+        }
+    }
+    
     /// Class implementing the NSURLSessionDelegate which forcefully bypasses
     /// untrusted SSL Certificates.
     public class XCServerDefaultSessionDelegate: NSObject, URLSessionDelegate {
@@ -125,24 +171,6 @@ public class XCServerWebAPI: WebAPI {
         self.apis[fqdn] = nil
     }
     
-    internal let invalidAuthorization = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
-        NSLocalizedDescriptionKey: "Invalid Authorization",
-        NSLocalizedFailureReasonErrorKey: "The server returned a 401 response code.",
-        NSLocalizedRecoverySuggestionErrorKey: "Have you specified a XCServerWebAPICredentialDelegate to handle authentication?"
-        ])
-    
-    internal let invalidXcodeServer = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
-        NSLocalizedDescriptionKey: "Invalid Xcode Server",
-        NSLocalizedFailureReasonErrorKey: "This class was initialized without an XcodeServer entity.",
-        NSLocalizedRecoverySuggestionErrorKey: "Re-initialize this class using init(xcodeServer:)."
-        ])
-    
-    internal let invalidResponseCast = NSError(domain: String(describing: XCServerWebAPI.self), code: 0, userInfo: [
-        NSLocalizedDescriptionKey: "Invalid responseObject",
-        NSLocalizedFailureReasonErrorKey: "The response object could not be cast into the requested type.",
-        NSLocalizedRecoverySuggestionErrorKey: "Check the request is sending a valid response."
-        ])
-    
     public convenience init(fqdn: String) {
         let url = URL(string: "https://\(fqdn):20343/api")
         self.init(baseURL: url, sessionDelegate: XCServerWebAPI.sessionDelegate)
@@ -163,17 +191,17 @@ public class XCServerWebAPI: WebAPI {
     // MARK: - Endpoints
     
     /// Requests the '`/ping`' endpoint from the Xcode Server API.
-    public func getPing(_ completion: @escaping WebAPICompletion) {
+    public func ping(_ completion: @escaping WebAPICompletion) {
         self.get("ping", completion: completion)
     }
     
     public typealias XCServerWebAPIVersionCompletion = (_ version: VersionJSON?, _ error: NSError?) -> Void
     
     /// Requests the '`/version`' endpoint from the Xcode Server API.
-    public func getVersion(_ completion: @escaping XCServerWebAPIVersionCompletion) {
+    public func versions(_ completion: @escaping XCServerWebAPIVersionCompletion) {
         self.get("versions") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
+                completion(nil, Errors.authorization.nsError)
                 return
             }
             
@@ -183,7 +211,7 @@ public class XCServerWebAPI: WebAPI {
             }
             
             guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
+                completion(nil, Errors.decodeResponse.nsError)
                 return
             }
             

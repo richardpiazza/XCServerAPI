@@ -42,7 +42,7 @@ public extension XCServerWebAPI {
     public func getBots(_ completion: @escaping XCServerWebAPIBotsCompletion) {
         self.get("bots") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
+                completion(nil, Errors.authorization.nsError)
                 return
             }
             
@@ -52,7 +52,7 @@ public extension XCServerWebAPI {
             }
             
             guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
+                completion(nil, Errors.decodeResponse.nsError)
                 return
             }
             
@@ -68,7 +68,7 @@ public extension XCServerWebAPI {
     public func getBot(bot identifier: String, completion: @escaping XCServerWebAPIBotCompletion) {
         self.get("bots/\(identifier)") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
+                completion(nil, Errors.authorization.nsError)
                 return
             }
             
@@ -78,7 +78,7 @@ public extension XCServerWebAPI {
             }
             
             guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
+                completion(nil, Errors.decodeResponse.nsError)
                 return
             }
             
@@ -94,7 +94,7 @@ public extension XCServerWebAPI {
     public func getStats(forBot identifier: String, completion: @escaping XCServerWebAPIStatsCompletion) {
         self.get("bots/\(identifier)/stats") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
+                completion(nil, Errors.authorization.nsError)
                 return
             }
             
@@ -104,7 +104,7 @@ public extension XCServerWebAPI {
             }
             
             guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
+                completion(nil, Errors.decodeResponse.nsError)
                 return
             }
             
@@ -120,7 +120,7 @@ public extension XCServerWebAPI {
     public func postBot(forBot identifier: String, completion: @escaping XCServerWebAPIIntegrationCompletion) {
         self.post(nil, path: "bots/\(identifier)/integrations") { (statusCode, response, responseObject, error) in
             guard statusCode != 401 else {
-                completion(nil, self.invalidAuthorization)
+                completion(nil, Errors.authorization.nsError)
                 return
             }
             
@@ -130,7 +130,7 @@ public extension XCServerWebAPI {
             }
             
             guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, self.invalidResponseCast)
+                completion(nil, Errors.decodeResponse.nsError)
                 return
             }
             
