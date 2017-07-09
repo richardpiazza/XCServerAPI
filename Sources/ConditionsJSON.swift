@@ -28,6 +28,16 @@
 import Foundation
 import CodeQuickKit
 
+public struct Conditions: Codable {
+    public var status: Int
+    public var onAllIssuesResolved: Bool
+    public var onWarnings: Bool
+    public var onBuildErrors: Bool
+    public var onAnalyzerWarnings: Bool
+    public var onFailingTests: Bool
+    public var onSuccess: Bool
+}
+
 public class ConditionsJSON: SerializableObject {
     public var status: Int = 0
     public var onWarnings: Bool = false

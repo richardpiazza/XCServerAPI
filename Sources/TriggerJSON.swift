@@ -34,6 +34,7 @@ public struct Trigger: Codable {
     public var phase: TriggerPhase?
     public var scriptBody: String?
     public var emailConfiguration: EmailConfiguration?
+    public var conditions: Conditions?
 }
 
 public class TriggerJSON: SerializableObject {

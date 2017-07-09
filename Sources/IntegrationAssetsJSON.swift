@@ -33,6 +33,9 @@ public struct Assets: Codable {
     public var buildServiceLog: IntegrationAsset?
     public var xcodebuildLog: IntegrationAsset?
     public var sourceControlLog: IntegrationAsset?
+    public var triggerAssets: [IntegrationAsset]?
+    public var archive: IntegrationAsset?
+    public var product: IntegrationAsset?
 }
 
 public class IntegrationAssetsJSON: SerializableObject {
