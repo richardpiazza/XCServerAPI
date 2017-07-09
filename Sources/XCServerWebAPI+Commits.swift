@@ -36,13 +36,11 @@ public extension XCServerWebAPI {
     
     public typealias IntegrationCommitsCompletion = (_ commits: [CommitDocument]?, _ error: Error?) -> Void
     
-    public typealias XCServerWebAPICommitsCompletion = (_ commits: [IntegrationCommitJSON]?, _ error: NSError?) -> Void
-    
     /// Requests the '`/integrations/{id}/commits`' endpoint from the Xcode Server API.
-    public func getCommits(forIntegration identifier: String, completion: @escaping XCServerWebAPICommitsCompletion) {
-        self.get("integrations/\(identifier)/commits") { (statusCode, response, responseObject, error) in
+    public func commits(forIntegrationWithIdentifier identifier: String, completion: @escaping IntegrationCommitsCompletion) {
+        self.get("integrations/\(identifier)/commits") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, Errors.authorization.nsError)
+                completion(nil, Errors.authorization)
                 return
             }
             
@@ -51,14 +49,17 @@ public extension XCServerWebAPI {
                 return
             }
             
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, Errors.decodeResponse.nsError)
+            guard let responseData = data else {
+                completion(nil, Errors.decodeResponse)
                 return
             }
             
-            let typedResponse = IntegrationCommitsResponse(withDictionary: dictionary)
+            guard let integrationCommits = IntegrationCommits.decode(data: responseData) else {
+                completion(nil, Errors.decodeResponse)
+                return
+            }
             
-            completion(typedResponse.results, nil)
+            completion(integrationCommits.results, nil)
         }
     }
 }

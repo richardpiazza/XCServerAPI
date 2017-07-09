@@ -41,13 +41,11 @@ public extension XCServerWebAPI {
     
     public typealias IssuesCompletion = (_ issues: Issues?, _ error: Error?) -> Void
     
-    public typealias XCServerWebAPIIssuesCompletion = (_ issues: IntegrationIssuesResponse?, _ error: NSError?) -> Void
-    
     /// Requests the '`/integrations/{id}/issues`' endpoint from the Xcode Server API.
-    public func getIssues(forIntegration identifier: String, completion: @escaping XCServerWebAPIIssuesCompletion) {
-        self.get("integrations/\(identifier)/issues") { (statusCode, response, responseObject, error) in
+    public func issues(forIntegrationWithIdentifier identifier: String, completion: @escaping IssuesCompletion) {
+        self.get("integrations/\(identifier)/issues") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, Errors.authorization.nsError)
+                completion(nil, Errors.authorization)
                 return
             }
             
@@ -56,14 +54,17 @@ public extension XCServerWebAPI {
                 return
             }
             
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, Errors.decodeResponse.nsError)
+            guard let responseData = data else {
+                completion(nil, Errors.decodeResponse)
                 return
             }
             
-            let typedResponse = IntegrationIssuesResponse(withDictionary: dictionary)
+            guard let issues = Issues.decode(data: responseData) else {
+                completion(nil, Errors.decodeResponse)
+                return
+            }
             
-            completion(typedResponse, nil)
+            completion(issues, nil)
         }
     }
 }

@@ -36,13 +36,11 @@ public extension XCServerWebAPI {
     
     public typealias BotsCompletion = (_ bots: [BotDocument]?, _ error: Error?) -> Void
     
-    public typealias XCServerWebAPIBotsCompletion = (_ bots: [BotJSON]?, _ error: NSError?) -> Void
-    
     /// Requests the '`/bots`' endpoint from the Xcode Server API.
-    public func getBots(_ completion: @escaping XCServerWebAPIBotsCompletion) {
-        self.get("bots") { (statusCode, response, responseObject, error) in
+    public func bots(_ completion: @escaping BotsCompletion) {
+        self.get("bots") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, Errors.authorization.nsError)
+                completion(nil, Errors.authorization)
                 return
             }
             
@@ -51,24 +49,27 @@ public extension XCServerWebAPI {
                 return
             }
             
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, Errors.decodeResponse.nsError)
+            guard let responseData = data else {
+                completion(nil, Errors.decodeResponse)
                 return
             }
             
-            let typedResponse = BotsResponse(withDictionary: dictionary)
+            guard let bots = Bots.decode(data: responseData) else {
+                completion(nil, Errors.decodeResponse)
+                return
+            }
             
-            completion(typedResponse.results, nil)
+            completion(bots.results, nil)
         }
     }
     
-    public typealias XCServerWebAPIBotCompletion = (_ bot: BotJSON?, _ error: NSError?) -> Void
+    public typealias BotCompletion = (_ bot: BotDocument?, _ error: Error?) -> Void
     
     /// Requests the '`/bots/{id}`' endpoint from the Xcode Server API.
-    public func getBot(bot identifier: String, completion: @escaping XCServerWebAPIBotCompletion) {
-        self.get("bots/\(identifier)") { (statusCode, response, responseObject, error) in
+    public func bot(withIdentifier identifier: String, completion: @escaping BotCompletion) {
+        self.get("bots/\(identifier)") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, Errors.authorization.nsError)
+                completion(nil, Errors.authorization)
                 return
             }
             
@@ -77,24 +78,27 @@ public extension XCServerWebAPI {
                 return
             }
             
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, Errors.decodeResponse.nsError)
+            guard let responseData = data else {
+                completion(nil, Errors.decodeResponse)
                 return
             }
             
-            let typedResponse = BotJSON(withDictionary: dictionary)
+            guard let bot = BotDocument.decode(data: responseData) else {
+                completion(nil, Errors.decodeResponse)
+                return
+            }
             
-            completion(typedResponse, nil)
+            completion(bot, nil)
         }
     }
     
-    public typealias XCServerWebAPIStatsCompletion = (_ stats: StatsJSON?, _ error: NSError?) -> Void
+    public typealias StatsCompletion = (_ stats: Stats?, _ error: Error?) -> Void
     
     /// Requests the '`/bots/{id}/stats`' endpoint from the Xcode Server API.
-    public func getStats(forBot identifier: String, completion: @escaping XCServerWebAPIStatsCompletion) {
-        self.get("bots/\(identifier)/stats") { (statusCode, response, responseObject, error) in
+    public func stats(forBotWithIdentifier identifier: String, completion: @escaping StatsCompletion) {
+        self.get("bots/\(identifier)/stats") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, Errors.authorization.nsError)
+                completion(nil, Errors.authorization)
                 return
             }
             
@@ -103,40 +107,17 @@ public extension XCServerWebAPI {
                 return
             }
             
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, Errors.decodeResponse.nsError)
+            guard let responseData = data else {
+                completion(nil, Errors.decodeResponse)
                 return
             }
             
-            let typedResponse = StatsJSON(withDictionary: dictionary)
-            
-            completion(typedResponse, nil)
-        }
-    }
-    
-    public typealias XCServerWebAPIIntegrationCompletion = (_ integration: IntegrationJSON?, _ error: NSError?) -> Void
-    
-    /// Posts a request to the '`/bots/{id}`' endpoint from the Xcode Server API.
-    public func postBot(forBot identifier: String, completion: @escaping XCServerWebAPIIntegrationCompletion) {
-        self.post(nil, path: "bots/\(identifier)/integrations") { (statusCode, response, responseObject, error) in
-            guard statusCode != 401 else {
-                completion(nil, Errors.authorization.nsError)
+            guard let stats = Stats.decode(data: responseData) else {
+                completion(nil, Errors.decodeResponse)
                 return
             }
             
-            guard statusCode == 201 else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, Errors.decodeResponse.nsError)
-                return
-            }
-            
-            let typedResponse = IntegrationJSON(withDictionary: dictionary)
-            
-            completion(typedResponse, nil)
+            completion(stats, nil)
         }
     }
 }

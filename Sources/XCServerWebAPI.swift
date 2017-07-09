@@ -55,7 +55,7 @@ public extension XCServerWebAPICredentialDelegate {
         let base64 = data.base64EncodedString(options: [])
         let auth = "Basic \(base64)"
         
-        return XCServerWebAPICredentialsHeader(value: auth, key: WebAPIHeaderKey.Authorization)
+        return XCServerWebAPICredentialsHeader(value: auth, key: WebAPI.HTTPHeaderKey.Authorization)
     }
     
     public func clearCredentials(forAPI api: XCServerWebAPI) {
@@ -65,6 +65,10 @@ public extension XCServerWebAPICredentialDelegate {
 
 /// Wrapper for `WebAPI` that implements common Xcode Server requests.
 public class XCServerWebAPI: WebAPI {
+    
+    public struct HTTPHeaders {
+        public static let xscAPIVersion = "x-xscapiversion"
+    }
     
     public enum Errors: Error {
         case authorization
@@ -176,10 +180,8 @@ public class XCServerWebAPI: WebAPI {
         self.init(baseURL: url, sessionDelegate: XCServerWebAPI.sessionDelegate)
     }
     
-    override public func request(forPath path: String, queryItems: [URLQueryItem]?, method: WebAPIRequestMethod, data: Data?) -> NSMutableURLRequest? {
-        guard let request = super.request(forPath: path, queryItems: queryItems, method: method, data: data) else {
-            return nil
-        }
+    public override func request(method: WebAPI.HTTPRequestMethod, path: String, queryItems: [URLQueryItem]?, data: Data?) throws -> NSMutableURLRequest {
+        let request = try super.request(method: method, path: path, queryItems: queryItems, data: data)
         
         if let header = XCServerWebAPI.credentialDelegate.credentialsHeader(forAPI: self) {
             request.setValue(header.value, forHTTPHeaderField: header.key)
@@ -191,33 +193,44 @@ public class XCServerWebAPI: WebAPI {
     // MARK: - Endpoints
     
     /// Requests the '`/ping`' endpoint from the Xcode Server API.
-    public func ping(_ completion: @escaping WebAPICompletion) {
+    public func ping(_ completion: @escaping WebAPIRequestCompletion) {
         self.get("ping", completion: completion)
     }
     
-    public typealias XCServerWebAPIVersionCompletion = (_ version: VersionJSON?, _ error: NSError?) -> Void
+    public typealias VersionCompletion = (_ version: VersionDocument?, _ apiVersion: Int?, _ error: Error?) -> Void
     
     /// Requests the '`/version`' endpoint from the Xcode Server API.
-    public func versions(_ completion: @escaping XCServerWebAPIVersionCompletion) {
-        self.get("versions") { (statusCode, response, responseObject, error) in
+    public func versions(_ completion: @escaping VersionCompletion) {
+        self.get("versions") { (statusCode, headers, data, error) in
+            var apiVersion: Int?
+            
             guard statusCode != 401 else {
-                completion(nil, Errors.authorization.nsError)
+                completion(nil, apiVersion, Errors.authorization)
                 return
             }
             
             guard statusCode == 200 else {
-                completion(nil, error)
+                completion(nil, apiVersion, error)
                 return
             }
             
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, Errors.decodeResponse.nsError)
+            if let responseHeaders = headers {
+                if let version = responseHeaders[HTTPHeaders.xscAPIVersion] as? Int {
+                    apiVersion = version
+                }
+            }
+            
+            guard let responseData = data else {
+                completion(nil, apiVersion, Errors.decodeResponse)
                 return
             }
             
-            let typedResponse = VersionJSON(withDictionary: dictionary)
+            guard let versions = VersionDocument.decode(data: responseData) else {
+                completion(nil, apiVersion, Errors.decodeResponse)
+                return
+            }
             
-            completion(typedResponse, nil)
+            completion(versions, apiVersion, nil)
         }
     }
 

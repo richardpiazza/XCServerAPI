@@ -34,16 +34,14 @@ public extension XCServerWebAPI {
         public var results: [IntegrationDocument]
     }
     
-    public typealias IntegrationCompletion = (_ integration: IntegrationDocument, _ error: Error?) -> Void
-    public typealias IntegrationsCompletion = (_ integrations: [IntegrationDocument], _ error: Error?) -> Void
-    
-    public typealias XCServerWebAPIIntegrationsCompletion = (_ integrations: [IntegrationJSON]?, _ error: NSError?) -> Void
+    public typealias IntegrationCompletion = (_ integration: IntegrationDocument?, _ error: Error?) -> Void
+    public typealias IntegrationsCompletion = (_ integrations: [IntegrationDocument]?, _ error: Error?) -> Void
     
     /// Requests the '`/bots/{id}/integrations`' endpoint from the Xcode Server API.
-    public func getIntegrations(forBot identifier: String, completion: @escaping XCServerWebAPIIntegrationsCompletion) {
-        self.get("bots/\(identifier)/integrations") { (statusCode, response, responseObject, error) in
+    public func integrations(forBotWithIdentifier identifier: String, completion: @escaping IntegrationsCompletion) {
+        self.get("bots/\(identifier)/integrations") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, Errors.authorization.nsError)
+                completion(nil, Errors.authorization)
                 return
             }
             
@@ -52,22 +50,52 @@ public extension XCServerWebAPI {
                 return
             }
             
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, Errors.decodeResponse.nsError)
+            guard let responseData = data else {
+                completion(nil, Errors.decodeResponse)
                 return
             }
             
-            let typedResponse = IntegrationsResponse(withDictionary: dictionary)
+            guard let integrations = Integrations.decode(data: responseData) else {
+                completion(nil, Errors.decodeResponse)
+                return
+            }
             
-            completion(typedResponse.results, nil)
+            completion(integrations.results, nil)
+        }
+    }
+    
+    /// Posts a request to the '`/bots/{id}`' endpoint from the Xcode Server API.
+    public func runIntegration(forBotWithIdentifier identifier: String, completion: @escaping IntegrationCompletion) {
+        self.post(nil, path: "bots/\(identifier)/integrations") { (statusCode, headers, data, error) in
+            guard statusCode != 401 else {
+                completion(nil, Errors.authorization)
+                return
+            }
+            
+            guard statusCode == 200 else {
+                completion(nil, error)
+                return
+            }
+            
+            guard let responseData = data else {
+                completion(nil, Errors.decodeResponse)
+                return
+            }
+            
+            guard let integration = IntegrationDocument.decode(data: responseData) else {
+                completion(nil, Errors.decodeResponse)
+                return
+            }
+            
+            completion(integration, nil)
         }
     }
     
     /// Requests the '`/integrations/{id}`' endpoint from the Xcode Server API.
-    public func getIntegration(integration identifier: String, completion: @escaping XCServerWebAPIIntegrationCompletion) {
-        self.get("integrations/\(identifier)") { (statusCode, response, responseObject, error) in
+    public func integration(withIdentifier identifier: String, completion: @escaping IntegrationCompletion) {
+        self.get("integrations/\(identifier)") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, Errors.authorization.nsError)
+                completion(nil, Errors.authorization)
                 return
             }
             
@@ -76,14 +104,17 @@ public extension XCServerWebAPI {
                 return
             }
             
-            guard let dictionary = responseObject as? SerializableDictionary else {
-                completion(nil, Errors.decodeResponse.nsError)
+            guard let responseData = data else {
+                completion(nil, Errors.decodeResponse)
                 return
             }
             
-            let typedResponse = IntegrationJSON(withDictionary: dictionary)
+            guard let integration = IntegrationDocument.decode(data: responseData) else {
+                completion(nil, Errors.decodeResponse)
+                return
+            }
             
-            completion(typedResponse, nil)
+            completion(integration, nil)
         }
     }
 }
