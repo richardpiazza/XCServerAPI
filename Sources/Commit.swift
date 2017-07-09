@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// CommitJSON.swift
+// Commit.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,7 +26,6 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
 public struct Commit: Codable {
     
@@ -49,22 +48,4 @@ public struct Commit: Codable {
     public var isMerge: String?
     public var timestamp: Date?
     public var timestampDate: [Int]?
-}
-
-public class CommitJSON: SerializableObject {
-    public var XCSCommitHash: String = ""
-    public var XCSCommitMessage: String?
-    public var XCSCommitContributor: CommitContributorJSON?
-    public var XCSCommitTimestamp: String?
-    public var XCSCommitTimestampDate: [Int] = [Int]()
-    public var XCSBlueprintRepositoryID: String?
-    public var XCSCommitCommitChangeFilePaths: [CommitChangeJSON] = [CommitChangeJSON]()
-    
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
-        if propertyName == "XCSCommitCommitChangeFilePaths" {
-            return CommitChangeJSON.self
-        }
-        
-        return super.objectClassOfCollectionType(forPropertyname: propertyName)
-    }
 }

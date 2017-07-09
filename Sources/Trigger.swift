@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// AuthenticationStrategyJSON.swift
+// Trigger.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,17 +26,12 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct AuthenticationStrategy: Codable {
-    
-    enum CodingKeys: String, CodingKey {
-        case authenticationType = "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey"
-    }
-    
-    public var authenticationType: String?
-}
-
-public class AuthenticationStrategyJSON: SerializableObject {
-    public var DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey: String?
+public struct Trigger: Codable {
+    public var name: String?
+    public var type: TriggerType?
+    public var phase: TriggerPhase?
+    public var scriptBody: String?
+    public var emailConfiguration: EmailConfiguration?
+    public var conditions: Conditions?
 }

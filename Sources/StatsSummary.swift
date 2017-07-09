@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// IntegrationAssetsJSON.swift
+// StatsSummary.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -28,22 +28,12 @@
 import Foundation
 import CodeQuickKit
 
-public struct Assets: Codable {
-    public var xcodebuildOutput: IntegrationAsset?
-    public var buildServiceLog: IntegrationAsset?
-    public var xcodebuildLog: IntegrationAsset?
-    public var sourceControlLog: IntegrationAsset?
-    public var triggerAssets: [IntegrationAsset]?
-    public var archive: IntegrationAsset?
-    public var product: IntegrationAsset?
-}
-
-public class IntegrationAssetsJSON: SerializableObject {
-    public var archive: AssetJSON?
-    public var buildServiceLog: AssetJSON?
-    public var product: AssetJSON?
-    public var sourceControlLog: AssetJSON?
-    public var triggerAssets: [AssetJSON]?
-    public var xcodebuildLog: AssetJSON?
-    public var xcodebuildOutput: AssetJSON?
+public struct StatsSummary: Codable {
+    public var sum: Double
+    public var count: Int
+    public var min: Double
+    public var max: Double
+    public var avg: Double
+    public var stdDev: Double
+    public var sumsqr: Double?
 }

@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// BotJSON.swift
+// BotDocument.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,7 +26,6 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
 public struct BotDocument: Codable {
     
@@ -59,28 +58,4 @@ public struct BotDocument: Codable {
     public var configuration: Configuration?
     public var lastRevisionBlueprint: RepositoryBlueprint?
     public var sourceControlBlueprint: RepositoryBlueprint?
-}
-
-public class BotJSON: SerializableObject, XCServerDocument {
-    public var _id: String = ""
-    public var _rev: String = ""
-    public var doc_type: String = "bot"
-    public var tinyID: String = ""
-    
-    public var name: String?
-    public var type: Int = 0
-    public var requiresUpgrade: Bool = false
-    public var integration_counter: Int = 0
-    
-    public var configuration: ConfigurationJSON?
-    public var lastRevisionBlueprint: RevisionBlueprintJSON?
-    public var integrations: [IntegrationJSON] = [IntegrationJSON]()
-    
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
-        if propertyName == "integrations" {
-            return IntegrationJSON.self
-        }
-        
-        return super.objectClassOfCollectionType(forPropertyname: propertyName)
-    }
 }

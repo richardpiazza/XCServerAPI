@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// TriggerJSON.swift
+// Issue.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,22 +26,17 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct Trigger: Codable {
-    public var name: String?
-    public var type: TriggerType?
-    public var phase: TriggerPhase?
-    public var scriptBody: String?
-    public var emailConfiguration: EmailConfiguration?
-    public var conditions: Conditions?
-}
-
-public class TriggerJSON: SerializableObject {
-    public var name: String?
-    public var type: Int = 0
-    public var phase: Int = 0
-    public var scriptBody: String?
-    public var conditions: ConditionsJSON?
-    public var emailConfiguration: EmailConfigurationJSON?
+public struct Issue: Codable {
+    public var _id: String
+    public var _rev: String
+    public var message: String?
+    public var type: String?
+    public var fixItType: String?
+    public var issueType: String?
+    public var commits: [Commit]?
+    public var integrationID: String?
+    public var age: Int?
+    public var status: Int?
+    public var issueAuthors: [IssueAuthor]?
 }

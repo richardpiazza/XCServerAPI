@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// FilterJSON.swift
+// Filter.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,24 +26,9 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
 public struct Filter: Codable {
     public var platform: Platform?
     public var filterType: Int?
     public var architectureType: Int?
-}
-
-public class FilterJSON: SerializableObject {
-    public var platform: PlatformJSON?
-    public var filterType: Int = -1
-    public var architectureType: Int = -1
-    
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
-        if propertyName == "platform" {
-            return PlatformJSON.self
-        }
-        
-        return super.objectClassOfCollectionType(forPropertyname: propertyName)
-    }
 }

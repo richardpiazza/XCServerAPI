@@ -131,8 +131,8 @@ public class Serializer {
         
         for index in 0..<Int(propertyListCount) {
             let runtimeProperty = runtimeProperties?[index]
-            let runtimeName = property_getName(runtimeProperty)
-            let propertyName = NSString(utf8String: runtimeName!)
+            let runtimeName = property_getName(runtimeProperty!)
+            let propertyName = NSString(utf8String: runtimeName)
             guard var property = propertyName else {
                 continue
             }

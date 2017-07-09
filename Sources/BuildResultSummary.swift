@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// LastCleanIntegrationJSON.swift
+// BuildResultSummary.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,9 +26,20 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public class LastCleanIntegrationJSON: SerializableObject {
-    public var intergraionID: String?
-    public var endedTime: String?
+public struct BuildResultSummary: Codable {
+    public var errorCount: Int = 0
+    public var errorChange: Int = 0
+    public var warningCount: Int = 0
+    public var warningChange: Int = 0
+    public var testsCount: Int = 0
+    public var testsChange: Int = 0
+    public var testFailureCount: Int = 0
+    public var testFailureChange: Int = 0
+    public var analyzerWarningCount: Int = 0
+    public var analyzerWarningChange: Int = 0
+    public var regressedPerfTestCount: Int = 0
+    public var improvedPerfTestCount: Int = 0
+    public var codeCoveragePercentage: Int = 0
+    public var codeCoveragePercentageDelta: Int = 0
 }

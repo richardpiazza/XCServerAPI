@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// AssetJSON.swift
+// CommitContributor.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -28,18 +28,15 @@
 import Foundation
 import CodeQuickKit
 
-public struct IntegrationAsset: Codable {
-    public var size: Int?
-    public var fileName: String?
-    public var allowAnonymousAccess: Bool?
-    public var relativePath: String?
-    public var triggerName: String?
-}
-
-public class AssetJSON: SerializableObject {
-    public var allowAnonymousAccess: NSNumber?
-    public var fileName: String?
-    public var infoDictionary: NSObject?
-    public var relativePath: String?
-    public var size: NSNumber?
+public struct CommitContributor: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case emails = "XCSContributorEmails"
+        case name = "XCSContributorName"
+        case displayName = "XCSContributorDisplayName"
+    }
+    
+    public var emails: [String]?
+    public var name: String?
+    public var displayName: String?
 }

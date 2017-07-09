@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// VersionJSON.swift
+// DeviceSpecification.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -27,7 +27,7 @@
 
 import Foundation
 
-public protocol XCServerDocument {
-    var _id: String { get set }
-    var _rev: String { get set }
+public struct DeviceSpecification: Codable {
+    public var filters: [Filter]?
+    public var deviceIdentifiers: [String]?
 }

@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// EmailConfigurationJSON.swift
+// BlueprintLocation.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,30 +26,20 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct EmailConfiguration: Codable {
-    public var ccAddresses: [String]?
-    public var allowedDomainNames: [String]?
-    public var includeCommitMessages: Bool?
-    public var includeLogs: Bool?
-    public var replyToAddress: String?
-    public var includeIssueDetails: Bool?
-    public var includeBotConfiguration: Bool?
-    public var additionalRecipients: [String]?
-    public var scmOptions: [String : Int]?
-    public var emailCommitters: Bool?
-    public var fromAddress: String?
-    public var type: EmailType?
-    public var includeResolvedIssues: Bool?
-    public var weeklyScheduleDay: Int?
-    public var minutesAfterHour: Int?
-    public var hour: Int?
-}
-
-public class EmailConfigurationJSON: SerializableObject {
-    public var emailCommitters: Bool = false
-    public var additionalRecipients: [String] = [String]()
-    public var includeCommitMessages: Bool = false
-    public var includeIssueDetails: Bool = false
+public struct BlueprintLocation: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case branchIdentifier = "DVTSourceControlBranchIdentifierKey"
+        case locationRevision = "DVTSourceControlLocationRevisionKey"
+        case branchOptions = "DVTSourceControlBranchOptionsKey"
+        case locationType = "DVTSourceControlWorkspaceBlueprintLocationTypeKey"
+        case remoteName = "DVTSourceControlBranchRemoteNameKey"
+    }
+    
+    public var branchIdentifier: String?
+    public var locationRevision: String?
+    public var branchOptions: Int?
+    public var locationType: String?
+    public var remoteName: String?
 }

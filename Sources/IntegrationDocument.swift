@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// IntegrationJSON.swift
+// IntegrationDocument.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,7 +26,6 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
 public struct IntegrationDocument: Codable {
     
@@ -85,48 +84,4 @@ public struct IntegrationDocument: Codable {
     public var revisionBlueprint: RepositoryBlueprint?
     public var testedDevices: [DeviceDocument]?
     public var testHierarchy: TestHierarchy?
-}
-
-public class IntegrationJSON: SerializableObject, XCServerDocument {
-    public var _id: String = ""
-    public var _rev: String = ""
-    public var doc_type: String = "integration"
-    public var tinyID: String?
-    
-    public var number: Int = 0
-    public var shouldClean: Bool = false
-    public var currentStep: String?
-    public var result: String?
-    public var buildResultSummary: BuildResultSummaryJSON?
-    public var queuedDate: String?
-    public var startedTime: String?
-    public var endedTime: String?
-    public var endedTimeDate: [Int] = [Int]()
-    public var duration: Float = 0
-    public var success_streak: Int = 0
-    public var tags: [String] = [String]()
-    public var buildServiceFingerprint: String?
-    public var testedDevices: [DeviceJSON] = [DeviceJSON]()
-    public var testHierarchy: [String : AnyObject]?
-    public var perfMetricNames: [String] = [String]()
-    public var perfMetricKeyPaths: [String] = [String]()
-    public var assets: IntegrationAssetsJSON?
-    public var revisionBlueprint: RevisionBlueprintJSON?
-    public var hasCoverageData: Bool?
-    
-    override public func propertyName(forSerializedKey serializedKey: String) -> String? {
-        if serializedKey == "lastRevisionBlueprint" {
-            return "revisionBlueprint"
-        }
-        
-        return super.propertyName(forSerializedKey: serializedKey)
-    }
-    
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
-        if propertyName == "testedDevices" {
-            return DeviceJSON.self
-        }
-        
-        return super.objectClassOfCollectionType(forPropertyname: propertyName)
-    }
 }

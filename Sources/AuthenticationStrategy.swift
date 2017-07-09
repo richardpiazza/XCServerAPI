@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// StatsBreakdownJSON.swift
+// AuthenticationStrategy.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,24 +26,12 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct StatsSummary: Codable {
-    public var sum: Double
-    public var count: Int
-    public var min: Double
-    public var max: Double
-    public var avg: Double
-    public var stdDev: Double
-    public var sumsqr: Double?
-}
-
-public class StatsBreakdownJSON: SerializableObject {
-    public var sum: NSNumber?
-    public var count: NSNumber?
-    public var min: NSNumber?
-    public var max: NSNumber?
-    public var avg: NSNumber?
-    public var stdDev: NSNumber?
-    public var sumsqr: NSNumber?
+public struct AuthenticationStrategy: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case authenticationType = "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey"
+    }
+    
+    public var authenticationType: String?
 }

@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// ConditionsJSON.swift
+// Assets.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,24 +26,13 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct Conditions: Codable {
-    public var status: Int
-    public var onAllIssuesResolved: Bool
-    public var onWarnings: Bool
-    public var onBuildErrors: Bool
-    public var onAnalyzerWarnings: Bool
-    public var onFailingTests: Bool
-    public var onSuccess: Bool
-}
-
-public class ConditionsJSON: SerializableObject {
-    public var status: Int = 0
-    public var onWarnings: Bool = false
-    public var onBuildErrors: Bool = false
-    public var onInternalErrors: Bool = false
-    public var onAnalyzerWarnings: Bool = false
-    public var onFailingTests: Bool = false
-    public var onSuccess: Bool = false
+public struct Assets: Codable {
+    public var xcodebuildOutput: IntegrationAsset?
+    public var buildServiceLog: IntegrationAsset?
+    public var xcodebuildLog: IntegrationAsset?
+    public var sourceControlLog: IntegrationAsset?
+    public var triggerAssets: [IntegrationAsset]?
+    public var archive: IntegrationAsset?
+    public var product: IntegrationAsset?
 }

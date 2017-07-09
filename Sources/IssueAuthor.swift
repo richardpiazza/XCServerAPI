@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// BlueprintLocationJSON.swift
+// IssueAuthor.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,28 +26,15 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct BlueprintLocation: Codable {
-    
+public struct IssueAuthor: Codable {
     enum CodingKeys: String, CodingKey {
-        case branchIdentifier = "DVTSourceControlBranchIdentifierKey"
-        case locationRevision = "DVTSourceControlLocationRevisionKey"
-        case branchOptions = "DVTSourceControlBranchOptionsKey"
-        case locationType = "DVTSourceControlWorkspaceBlueprintLocationTypeKey"
-        case remoteName = "DVTSourceControlBranchRemoteNameKey"
+//        case issueSusptectStrategy = "XCSIssueSuspectstrategy"
+        case blueprintRepository = "XCSBlueprintRepositoryID"
+        case commitHash = "XCSCommitHash"
     }
     
-    public var branchIdentifier: String?
-    public var locationRevision: String?
-    public var branchOptions: Int?
-    public var locationType: String?
-    public var remoteName: String?
-}
-
-public class BlueprintLocationJSON: SerializableObject {
-    public var DVTSourceControlBranchIdentifierKey: String?
-    public var DVTSourceControlLocationRevisionKey: String?
-    public var DVTSourceControlBranchOptionsKey: Int = -1
-    public var DVTSourceControlWorkspaceBlueprintLocationTypeKey: String?
+//    public var issueSusptectstrategy: String?
+    public var blueprintRepository: String?
+    public var commitHash: String?
 }

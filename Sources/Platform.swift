@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// IssueJSON.swift
+// Platform.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,48 +26,13 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct Issue: Codable {
+public struct Platform: Codable {
     public var _id: String
     public var _rev: String
-    public var message: String?
-    public var type: String?
-    public var fixItType: String?
-    public var issueType: String?
-    public var commits: [Commit]?
-    public var integrationID: String?
-    public var age: Int?
-    public var status: Int?
-    public var issueAuthors: [IssueAuthor]?
-}
-
-public class IssueJSON: SerializableObject, XCServerDocument {
-    public var _id: String = ""
-    public var _rev: String = ""
-    
-    public var status: Int = 0
-    public var target: String?
-    public var testCase: String?
-    public var lineNumber: Int?
-    public var documentLocationData: String?
-    public var documentFilePath: String?
-    public var age: Int = 0
-    public var message: String?
-    public var integrationID: String?
-    public var type: String?
-    public var issueType: String?
-    
-    public var commits: [CommitJSON] = [CommitJSON]()
-    public var issueAuthors: [IssueAuthorJSON] = [IssueAuthorJSON]()
-    
-    override public func objectClassOfCollectionType(forPropertyname propertyName: String) -> AnyClass? {
-        if propertyName == "commits" {
-            return CommitJSON.self
-        } else if propertyName == "issueAuthors" {
-            return IssueAuthorJSON.self
-        }
-        
-        return super.objectClassOfCollectionType(forPropertyname: propertyName)
-    }
+    public var displayName: String?
+    public var simulatorIdentifier: String?
+    public var identifier: String?
+    public var buildNumber: String?
+    public var version: String?
 }

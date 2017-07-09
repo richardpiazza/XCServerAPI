@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// PlatformJSON.swift
+// Conditions.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,24 +26,13 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct Platform: Codable {
-    public var _id: String
-    public var _rev: String
-    public var displayName: String?
-    public var simulatorIdentifier: String?
-    public var identifier: String?
-    public var buildNumber: String?
-    public var version: String?
-}
-
-public class PlatformJSON: SerializableObject, XCServerDocument {
-    public var _id: String = ""
-    public var _rev: String = ""
-    public var displayName: String?
-    public var simulatorIdentifier: String?
-    public var identifier: String?
-    public var buildNumber: String?
-    public var version: String?
+public struct Conditions: Codable {
+    public var status: Int
+    public var onAllIssuesResolved: Bool
+    public var onWarnings: Bool
+    public var onBuildErrors: Bool
+    public var onAnalyzerWarnings: Bool
+    public var onFailingTests: Bool
+    public var onSuccess: Bool
 }

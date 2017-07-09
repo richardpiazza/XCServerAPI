@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// StatsJSON.swift
+// Stats.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,7 +26,6 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
 public struct Stats: Codable {
     public var lastCleanIntegration: IntegrationSnippet?
@@ -45,23 +44,4 @@ public struct Stats: Codable {
     public var codeCoveragePercentageDelta: Int?
     public var numberOfSuccessfulIntegrations: Int?
     public var sinceDate: Date?
-}
-
-public class StatsJSON: SerializableObject {
-    public var lastCleanIntegration: LastCleanIntegrationJSON?
-    public var bestSuccessStreak: BestSuccessStreakJSON?
-    public var numberOfIntegrations: NSNumber?
-    public var numberOfCommits: NSNumber?
-    public var averageIntegrationTime: StatsBreakdownJSON?
-    public var testAdditionRate: NSNumber?
-    public var analysisWarnings: StatsBreakdownJSON?
-    public var testFailures: StatsBreakdownJSON?
-    public var errors: StatsBreakdownJSON?
-    public var regressedPerfTests: StatsBreakdownJSON?
-    public var warnings: StatsBreakdownJSON?
-    public var improvedPerfTests: StatsBreakdownJSON?
-    public var tests: StatsBreakdownJSON?
-    public var codeCoveragePercentageDelta: NSNumber?
-    public var numberOfSuccessfulIntegrations: NSNumber?
-    public var sinceDate: String?
 }

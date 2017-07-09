@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// IssueAuthorJSON.swift
+// CommitDocument.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,13 +26,28 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct IssueAuthor: Codable {
-}
-
-public class IssueAuthorJSON: SerializableObject {
-    public var XCSIssueSuspectstrategy: NSDictionary?
-    public var XCSBlueprintRepositoryID: String?
-    public var XCSCommitHash: String?
+public struct CommitDocument: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case _id
+        case _rev
+        case docType = "doc_type"
+        case tinyID
+        case integration
+        case botID
+        case botTinyID
+        case endedTimeDate
+        case commits
+    }
+    
+    public var _id: String
+    public var _rev: String
+    public var docType: String = "commit"
+    public var tinyID: String
+    public var integration: String?
+    public var botID: String?
+    public var botTinyID: String?
+    public var endedTimeDate: [Int]?
+    public var commits: [String : [Commit]]?
 }

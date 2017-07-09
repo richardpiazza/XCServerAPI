@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// CommitContributorJSON.swift
+// RepositoryLocation.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -26,23 +26,7 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
-public struct CommitContributor: Codable {
+public struct RepositoryLocation: Codable {
     
-    enum CodingKeys: String, CodingKey {
-        case emails = "XCSContributorEmails"
-        case name = "XCSContributorName"
-        case displayName = "XCSContributorDisplayName"
-    }
-    
-    public var emails: [String]?
-    public var name: String?
-    public var displayName: String?
-}
-
-public class CommitContributorJSON: SerializableObject {
-    public var XCSContributorEmails: [String] = [String]()
-    public var XCSContributorName: String?
-    public var XCSContributorDisplayName: String?
 }
