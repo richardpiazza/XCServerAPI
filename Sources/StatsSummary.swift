@@ -26,7 +26,6 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
-import CodeQuickKit
 
 public struct StatsSummary: Codable {
     public var sum: Double
