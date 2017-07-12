@@ -146,14 +146,14 @@ class StatsTests: XCTestCase {
             return
         }
         
-        XCTAssertEqualWithAccuracy(averageIntegrationTime.sum, 577.129, accuracy: 0.1)
+        XCTAssertEqual(averageIntegrationTime.sum, 577.129, accuracy: 0.1)
         XCTAssertEqual(averageIntegrationTime.count, 3)
-        XCTAssertEqualWithAccuracy(averageIntegrationTime.min, 166.791, accuracy: 0.1)
-        XCTAssertEqualWithAccuracy(averageIntegrationTime.max, 208.35, accuracy: 0.1)
-        XCTAssertEqualWithAccuracy(averageIntegrationTime.avg, 192.376, accuracy: 0.1)
-        XCTAssertEqualWithAccuracy(averageIntegrationTime.stdDev, 141.421, accuracy: 0.1)
+        XCTAssertEqual(averageIntegrationTime.min, 166.791, accuracy: 0.1)
+        XCTAssertEqual(averageIntegrationTime.max, 208.35, accuracy: 0.1)
+        XCTAssertEqual(averageIntegrationTime.avg, 192.376, accuracy: 0.1)
+        XCTAssertEqual(averageIntegrationTime.stdDev, 141.421, accuracy: 0.1)
         XCTAssertNotNil(averageIntegrationTime.sumsqr)
-        XCTAssertEqualWithAccuracy(averageIntegrationTime.sumsqr!, 112028.112, accuracy: 0.1)
+        XCTAssertEqual(averageIntegrationTime.sumsqr!, 112028.112, accuracy: 0.1)
         
         guard let analysisWarnings = stats.analysisWarnings else {
             XCTFail()
@@ -238,13 +238,13 @@ class StatsTests: XCTestCase {
             return
         }
         
-        XCTAssertEqualWithAccuracy(tests.sum, 34, accuracy: 0.1)
+        XCTAssertEqual(tests.sum, 34, accuracy: 0.1)
         XCTAssertEqual(tests.count, 3)
-        XCTAssertEqualWithAccuracy(tests.min, 9, accuracy: 0.1)
-        XCTAssertEqualWithAccuracy(tests.max, 13, accuracy: 0.1)
-        XCTAssertEqualWithAccuracy(tests.avg, 11.3, accuracy: 0.1)
-        XCTAssertEqualWithAccuracy(tests.stdDev, 141.421, accuracy: 0.1)
+        XCTAssertEqual(tests.min, 9, accuracy: 0.1)
+        XCTAssertEqual(tests.max, 13, accuracy: 0.1)
+        XCTAssertEqual(tests.avg, 11.3, accuracy: 0.1)
+        XCTAssertEqual(tests.stdDev, 141.421, accuracy: 0.1)
         XCTAssertNotNil(tests.sumsqr)
-        XCTAssertEqualWithAccuracy(tests.sumsqr!, 394.0, accuracy: 0.1)
+        XCTAssertEqual(tests.sumsqr!, 394.0, accuracy: 0.1)
     }
 }

@@ -215,8 +215,8 @@ public class XCServerWebAPI: WebAPI {
             }
             
             if let responseHeaders = headers {
-                if let version = responseHeaders[HTTPHeaders.xscAPIVersion] as? Int {
-                    apiVersion = version
+                if let version = responseHeaders[HTTPHeaders.xscAPIVersion] as? String {
+                    apiVersion = Int(version)
                 }
             }
             

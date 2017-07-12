@@ -59,6 +59,9 @@
 		E176DFD51F0283D1005CE042 /* XCServerJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */; };
 		E176DFD71F02851F005CE042 /* Decodable+XCServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */; };
 		E176DFDB1F029E4D005CE042 /* IssueGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFDA1F029E4D005CE042 /* IssueGroup.swift */; };
+		E18CDBD31F1659B8000DD01C /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CDBD21F1659B8000DD01C /* MockAPI.swift */; };
+		E18CDBD51F165AEE000DD01C /* VersionResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E18CDBD41F165AEE000DD01C /* VersionResponse.json */; };
+		E18CDBD71F165FFB000DD01C /* MockAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CDBD61F165FFB000DD01C /* MockAPITests.swift */; };
 		E190EBCD1EFEB91C004F0920 /* BotSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */; };
 		E190EBCF1EFEB981004F0920 /* PeriodicScheduleInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */; };
 		E190EBD11EFEBA23004F0920 /* IssueStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD01EFEBA23004F0920 /* IssueStatus.swift */; };
@@ -152,6 +155,9 @@
 		E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCServerJSONDecoder.swift; sourceTree = "<group>"; };
 		E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+XCServerAPI.swift"; sourceTree = "<group>"; };
 		E176DFDA1F029E4D005CE042 /* IssueGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueGroup.swift; sourceTree = "<group>"; };
+		E18CDBD21F1659B8000DD01C /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
+		E18CDBD41F165AEE000DD01C /* VersionResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VersionResponse.json; sourceTree = "<group>"; };
+		E18CDBD61F165FFB000DD01C /* MockAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPITests.swift; sourceTree = "<group>"; };
 		E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotSchedule.swift; sourceTree = "<group>"; };
 		E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicScheduleInterval.swift; sourceTree = "<group>"; };
 		E190EBD01EFEBA23004F0920 /* IssueStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueStatus.swift; sourceTree = "<group>"; };
@@ -265,6 +271,9 @@
 				E1956AD81F01D9DE006193D7 /* StatsTests.swift */,
 				E19E5E321F0FC92500440470 /* TriggersTests.swift */,
 				E19E5E341F0FCB2300440470 /* AssetsTests.swift */,
+				E18CDBD21F1659B8000DD01C /* MockAPI.swift */,
+				E18CDBD61F165FFB000DD01C /* MockAPITests.swift */,
+				E18CDBD41F165AEE000DD01C /* VersionResponse.json */,
 			);
 			path = XCServerAPITests;
 			sourceTree = "<group>";
@@ -434,6 +443,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18CDBD51F165AEE000DD01C /* VersionResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +492,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C850CE59D5337C2C4928EA69 /* [CP] Copy Pods Resources */ = {
@@ -512,7 +522,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -589,9 +599,11 @@
 				E108CFD41EFFFD3700BB7978 /* DeviceTests.swift in Sources */,
 				E1956AD51F01D3F4006193D7 /* IssueTests.swift in Sources */,
 				E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */,
+				E18CDBD71F165FFB000DD01C /* MockAPITests.swift in Sources */,
 				E1956AD71F01D712006193D7 /* CommitTests.swift in Sources */,
 				E108CFD21EFFFB6700BB7978 /* IntegrationTests.swift in Sources */,
 				E10CC65B1EFFDDDB00FE4A3F /* ConfigurationTests.swift in Sources */,
+				E18CDBD31F1659B8000DD01C /* MockAPI.swift in Sources */,
 				E108CFD61EFFFDF900BB7978 /* TestHierarchyTests.swift in Sources */,
 				E10CC6571EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift in Sources */,
 				E190EBE21EFEC953004F0920 /* RepositoryBlueprintTests.swift in Sources */,
@@ -727,7 +739,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -751,7 +762,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.richardpiazza.XCServerAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -769,7 +779,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.richardpiazza.XCServerAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -783,7 +792,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.richardpiazza.XCServerAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
