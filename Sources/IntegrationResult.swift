@@ -36,4 +36,6 @@ public enum IntegrationResult: String, Codable {
     case analyzerWarnings = "analyzer-warnings"
     case canceled
     case internalError = "internal-error"
+    case buildFailed = "build-failed"
+    case checkoutError = "checkout-error"
 }

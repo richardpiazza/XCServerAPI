@@ -17,9 +17,9 @@ class MockAPI: XCServerWebAPI {
         self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/ping")] = pingResponse
         self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/versions")] = versionsResponse
         self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bots")] = botsResponse
-        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bot/a7341f3521c7245492693c0d780006f9")] = botResponse
-        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bot/a7341f3521c7245492693c0d780006f9/stats")] = statsResponse
-        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bot/a7341f3521c7245492693c0d780006f9/integrations")] = integrationsResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bots/a7341f3521c7245492693c0d780006f9")] = botResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bots/a7341f3521c7245492693c0d780006f9/stats")] = statsResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bots/a7341f3521c7245492693c0d780006f9/integrations")] = integrationsResponse
         self.injectedResponses[InjectedPath(method: .post, string: "https://localhost:20343/api/bot/a7341f3521c7245492693c0d780006f9/integrations")] = integrationsRequest
         self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/integration/8a526f6a0ce6b83bb969758e0f0038b7")] = integrationResponse
         self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/integration/8a526f6a0ce6b83bb969758e0f0038b7/commits")] = commitsResponse
