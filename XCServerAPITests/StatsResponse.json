@@ -1,0 +1,89 @@
+{
+    "lastCleanIntegration": {
+        "integrationID": "8a526f6a0ce6b83bb969758e0f0038b7",
+        "endedTime": "2017-07-12T14:07:07.462Z"
+    },
+    "bestSuccessStreak": {
+        "integrationID": "8a526f6a0ce6b83bb969758e0f0038b7",
+        "success_streak": 1,
+        "endedTime": "2017-07-12T14:07:07.462Z"
+    },
+    "numberOfIntegrations": 14,
+    "numberOfCommits": 23,
+    "averageIntegrationTime": {
+        "sum": 1333.175,
+        "count": 7,
+        "min": 156.597,
+        "max": 243.61,
+        "avg": 190.45357142857142,
+        "stdDev": 244.9489742783178,
+        "sumsqr": 259277.461195
+    },
+    "testAdditionRate": 15,
+    "analysisWarnings": {
+        "sum": 2,
+        "count": 2,
+        "min": 1,
+        "max": 1,
+        "avg": 1,
+        "stdDev": 100,
+        "sumsqr": 2
+    },
+    "testFailures": {
+        "sum": 0,
+        "count": 7,
+        "min": 0,
+        "max": 0,
+        "avg": 0,
+        "stdDev": 0,
+        "sumsqr": 0
+    },
+    "errors": {
+        "sum": 0,
+        "count": 7,
+        "min": 0,
+        "max": 0,
+        "avg": 0,
+        "stdDev": 0,
+        "sumsqr": 0
+    },
+    "regressedPerfTests": {
+        "sum": 0,
+        "count": 7,
+        "min": 0,
+        "max": 0,
+        "avg": 0,
+        "stdDev": 0,
+        "sumsqr": 0
+    },
+    "warnings": {
+        "sum": 2,
+        "count": 7,
+        "min": 0,
+        "max": 1,
+        "avg": 0.2857142857142857,
+        "stdDev": 244.94897427831782,
+        "sumsqr": 2
+    },
+    "improvedPerfTests": {
+        "sum": 0,
+        "count": 7,
+        "min": 0,
+        "max": 0,
+        "avg": 0,
+        "stdDev": 0,
+        "sumsqr": 0
+    },
+    "tests": {
+        "sum": 89,
+        "count": 7,
+        "min": 9,
+        "max": 15,
+        "avg": 12.714285714285714,
+        "stdDev": 244.94897427831782,
+        "sumsqr": 1155
+    },
+    "codeCoveragePercentageDelta": 4,
+    "numberOfSuccessfulIntegrations": 5,
+    "sinceDate": "2016-07-12T17:21:39.013Z"
+}

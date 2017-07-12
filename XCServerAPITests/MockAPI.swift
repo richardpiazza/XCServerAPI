@@ -14,8 +14,16 @@ class MockAPI: XCServerWebAPI {
     public convenience init() {
         let url = URL(string: "https://localhost:20343/api")
         self.init(baseURL: url, sessionDelegate: XCServerWebAPI.sessionDelegate)
-        self.injectedResponses["https://localhost:20343/api/ping"] = pingResponse
-        self.injectedResponses["https://localhost:20343/api/versions"] = versionsResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/ping")] = pingResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/versions")] = versionsResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bots")] = botsResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bot/a7341f3521c7245492693c0d780006f9")] = botResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bot/a7341f3521c7245492693c0d780006f9/stats")] = statsResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/bot/a7341f3521c7245492693c0d780006f9/integrations")] = integrationsResponse
+        self.injectedResponses[InjectedPath(method: .post, string: "https://localhost:20343/api/bot/a7341f3521c7245492693c0d780006f9/integrations")] = integrationsRequest
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/integration/8a526f6a0ce6b83bb969758e0f0038b7")] = integrationResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/integration/8a526f6a0ce6b83bb969758e0f0038b7/commits")] = commitsResponse
+        self.injectedResponses[InjectedPath(string: "https://localhost:20343/api/integration/8a526f6a0ce6b83bb969758e0f0038b7/issues")] = issuesResponse
     }
     
     public var pingResponse: InjectedResponse {
@@ -47,6 +55,70 @@ class MockAPI: XCServerWebAPI {
             "x-xscapiversion" : "18",
             "Transfer-Encoding" : "Identity"
         ]
+        return response
+    }
+    
+    public var botsResponse: InjectedResponse {
+        var response = InjectedResponse()
+        let url = Bundle(for: type(of: self)).url(forResource: "BotsResponse", withExtension: "json")!
+        response.data = FileManager.default.contents(atPath: url.path)
+        response.statusCode = 200
+        return response
+    }
+    
+    public var botResponse: InjectedResponse {
+        var response = InjectedResponse()
+        let url = Bundle(for: type(of: self)).url(forResource: "BotResponse", withExtension: "json")!
+        response.data = FileManager.default.contents(atPath: url.path)
+        response.statusCode = 200
+        return response
+    }
+    
+    public var statsResponse: InjectedResponse {
+        var response = InjectedResponse()
+        let url = Bundle(for: type(of: self)).url(forResource: "StatsResponse", withExtension: "json")!
+        response.data = FileManager.default.contents(atPath: url.path)
+        response.statusCode = 200
+        return response
+    }
+    
+    public var integrationsResponse: InjectedResponse {
+        var response = InjectedResponse()
+        let url = Bundle(for: type(of: self)).url(forResource: "IntegrationsResponse", withExtension: "json")!
+        response.data = FileManager.default.contents(atPath: url.path)
+        response.statusCode = 200
+        return response
+    }
+    
+    public var integrationsRequest: InjectedResponse {
+        var response = InjectedResponse()
+        let url = Bundle(for: type(of: self)).url(forResource: "IntegrationsRequest", withExtension: "json")!
+        response.data = FileManager.default.contents(atPath: url.path)
+        response.statusCode = 201
+        return response
+    }
+    
+    public var integrationResponse: InjectedResponse {
+        var response = InjectedResponse()
+        let url = Bundle(for: type(of: self)).url(forResource: "IntegrationResponse", withExtension: "json")!
+        response.data = FileManager.default.contents(atPath: url.path)
+        response.statusCode = 200
+        return response
+    }
+    
+    public var commitsResponse: InjectedResponse {
+        var response = InjectedResponse()
+        let url = Bundle(for: type(of: self)).url(forResource: "CommitsResponse", withExtension: "json")!
+        response.data = FileManager.default.contents(atPath: url.path)
+        response.statusCode = 200
+        return response
+    }
+    
+    public var issuesResponse: InjectedResponse {
+        var response = InjectedResponse()
+        let url = Bundle(for: type(of: self)).url(forResource: "IssuesResponse", withExtension: "json")!
+        response.data = FileManager.default.contents(atPath: url.path)
+        response.statusCode = 200
         return response
     }
 }

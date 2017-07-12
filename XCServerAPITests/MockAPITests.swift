@@ -54,4 +54,24 @@ class MockAPITests: XCTestCase {
             }
         }
     }
+    
+//    func testBots() {
+//        let exp = expectation(description: "bots")
+//        exp.fulfill()
+//    }
+//    
+//    func testBot() {
+//        let exp = expectation(description: "bot")
+//        exp.fulfill()
+//    }
+//    
+//    func testBotStats() {
+//        let exp = expectation(description: "stats")
+//        exp.fulfill()
+//    }
+//    
+//    func testBotIntegrations() {
+//        let exp = expectation(description: "integrations")
+//        exp.fulfill()
+//    }
 }

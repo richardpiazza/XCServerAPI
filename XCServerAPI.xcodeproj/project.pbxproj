@@ -55,6 +55,14 @@
 		E149CBFB1D2ABDD700E2E688 /* VersionDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDC1D2ABDD700E2E688 /* VersionDocument.swift */; };
 		E149CBFC1D2ABDD700E2E688 /* XCServerWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */; };
 		E151F2171D99BE5600157040 /* IssueAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2161D99BE5600157040 /* IssueAuthor.swift */; };
+		E15254D51F1691DC00119BE3 /* BotsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D41F1691DC00119BE3 /* BotsResponse.json */; };
+		E15254D71F16921400119BE3 /* BotResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D61F16921400119BE3 /* BotResponse.json */; };
+		E15254D91F16923400119BE3 /* StatsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D81F16923400119BE3 /* StatsResponse.json */; };
+		E15254DB1F16925000119BE3 /* IntegrationsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254DA1F16925000119BE3 /* IntegrationsResponse.json */; };
+		E15254DD1F16928B00119BE3 /* IntegrationResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254DC1F16928B00119BE3 /* IntegrationResponse.json */; };
+		E15254DF1F1692B800119BE3 /* CommitsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254DE1F1692B800119BE3 /* CommitsResponse.json */; };
+		E15254E11F1692DD00119BE3 /* IssuesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254E01F1692DD00119BE3 /* IssuesResponse.json */; };
+		E15254E31F16938C00119BE3 /* IntegrationsRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254E21F16938C00119BE3 /* IntegrationsRequest.json */; };
 		E176DFD31F0280B1005CE042 /* IntegrationSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */; };
 		E176DFD51F0283D1005CE042 /* XCServerJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */; };
 		E176DFD71F02851F005CE042 /* Decodable+XCServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */; };
@@ -150,6 +158,14 @@
 		E149CC341D2AC0FB00E2E688 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E149CC351D2AC0FB00E2E688 /* XCServerAPI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XCServerAPI.podspec; sourceTree = "<group>"; };
 		E151F2161D99BE5600157040 /* IssueAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAuthor.swift; sourceTree = "<group>"; };
+		E15254D41F1691DC00119BE3 /* BotsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BotsResponse.json; sourceTree = "<group>"; };
+		E15254D61F16921400119BE3 /* BotResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BotResponse.json; sourceTree = "<group>"; };
+		E15254D81F16923400119BE3 /* StatsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StatsResponse.json; sourceTree = "<group>"; };
+		E15254DA1F16925000119BE3 /* IntegrationsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IntegrationsResponse.json; sourceTree = "<group>"; };
+		E15254DC1F16928B00119BE3 /* IntegrationResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IntegrationResponse.json; sourceTree = "<group>"; };
+		E15254DE1F1692B800119BE3 /* CommitsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CommitsResponse.json; sourceTree = "<group>"; };
+		E15254E01F1692DD00119BE3 /* IssuesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IssuesResponse.json; sourceTree = "<group>"; };
+		E15254E21F16938C00119BE3 /* IntegrationsRequest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IntegrationsRequest.json; sourceTree = "<group>"; };
 		E160CEFCE43769AE99A0D9A8 /* Pods-XCServerAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.release.xcconfig"; sourceTree = "<group>"; };
 		E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationSnippet.swift; sourceTree = "<group>"; };
 		E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCServerJSONDecoder.swift; sourceTree = "<group>"; };
@@ -274,6 +290,14 @@
 				E18CDBD21F1659B8000DD01C /* MockAPI.swift */,
 				E18CDBD61F165FFB000DD01C /* MockAPITests.swift */,
 				E18CDBD41F165AEE000DD01C /* VersionResponse.json */,
+				E15254D41F1691DC00119BE3 /* BotsResponse.json */,
+				E15254D61F16921400119BE3 /* BotResponse.json */,
+				E15254D81F16923400119BE3 /* StatsResponse.json */,
+				E15254DA1F16925000119BE3 /* IntegrationsResponse.json */,
+				E15254DC1F16928B00119BE3 /* IntegrationResponse.json */,
+				E15254DE1F1692B800119BE3 /* CommitsResponse.json */,
+				E15254E01F1692DD00119BE3 /* IssuesResponse.json */,
+				E15254E21F16938C00119BE3 /* IntegrationsRequest.json */,
 			);
 			path = XCServerAPITests;
 			sourceTree = "<group>";
@@ -443,7 +467,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15254E31F16938C00119BE3 /* IntegrationsRequest.json in Resources */,
+				E15254D91F16923400119BE3 /* StatsResponse.json in Resources */,
+				E15254DB1F16925000119BE3 /* IntegrationsResponse.json in Resources */,
+				E15254D51F1691DC00119BE3 /* BotsResponse.json in Resources */,
+				E15254DF1F1692B800119BE3 /* CommitsResponse.json in Resources */,
 				E18CDBD51F165AEE000DD01C /* VersionResponse.json in Resources */,
+				E15254D71F16921400119BE3 /* BotResponse.json in Resources */,
+				E15254E11F1692DD00119BE3 /* IssuesResponse.json in Resources */,
+				E15254DD1F16928B00119BE3 /* IntegrationResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

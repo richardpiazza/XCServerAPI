@@ -1,0 +1,69 @@
+{
+    "buildServiceErrors": [],
+    "buildServiceWarnings": [],
+    "triggerErrors": [],
+    "errors": {
+        "unresolvedIssues": [],
+        "freshIssues": [],
+        "resolvedIssues": [],
+        "silencedIssues": []
+    },
+    "warnings": {
+        "unresolvedIssues": [],
+        "freshIssues": [],
+        "resolvedIssues": [
+                           {
+                           "_id": "2e8a68806db45b894808285141086f4b",
+                           "_rev": "5-e5efc3c9558708c1c75787fb0c774c71",
+                           "message": "The use of Swift 3 @objc inference in Swift 4 mode is deprecated. Please address deprecated @objc inference warnings, test your code with “Use of deprecated Swift 3 @objc inference” logging enabled, and disable Swift 3 @objc inference.",
+                           "type": "warning",
+                           "issueType": "Dependency Analysis Warning",
+                           "commits": [
+                                       {
+                                       "XCSBlueprintRepositoryID": "FBDCD372C080F115B518613EB0C4141F30E28CCE",
+                                       "XCSCommitContributor": {
+                                       "XCSContributorEmails": [
+                                                                "richard@richardpiazza.com"
+                                                                ],
+                                       "XCSContributorName": "Richard Piazza",
+                                       "XCSContributorDisplayName": "Richard Piazza"
+                                       },
+                                       "XCSCommitHash": "bbb29e1796a48e83b26a16f2393da19d20a8eb60",
+                                       "XCSCommitMessage": "Build Settings update\n",
+                                       "XCSCommitIsMerge": "NO",
+                                       "XCSCommitTimestamp": "2017-07-09T16:55:20.000Z"
+                                       }
+                                       ],
+                           "target": "XCServerAPI",
+                           "documentLocationData": "YnBsaXN0MDDUAQIDBAUGCAlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKEHVSRudWxsXxAPTlNLZXllZEFyY2hpdmVy0QoLVHJvb3SAAAgRGiMtMjc5P1FUWQAAAAAAAAEBAAAAAAAAAAwAAAAAAAAAAAAAAAAAAABb",
+                           "integrationID": "2e8a68806db45b894808285141004efa",
+                           "age": 2,
+                           "status": 2,
+                           "issueAuthors": [
+                                            {
+                                            "XCSIssueSuspectstrategy": {
+                                            "confidence": 1,
+                                            "reliability": 30,
+                                            "identificationStrategy": 5
+                                            },
+                                            "XCSBlueprintRepositoryID": "FBDCD372C080F115B518613EB0C4141F30E28CCE",
+                                            "XCSCommitHash": "bbb29e1796a48e83b26a16f2393da19d20a8eb60"
+                                            }
+                                            ]
+                           }
+                           ],
+        "silencedIssues": []
+    },
+    "testFailures": {
+        "unresolvedIssues": [],
+        "freshIssues": [],
+        "resolvedIssues": [],
+        "silencedIssues": []
+    },
+    "analyzerWarnings": {
+        "unresolvedIssues": [],
+        "freshIssues": [],
+        "resolvedIssues": [],
+        "silencedIssues": []
+    }
+}
