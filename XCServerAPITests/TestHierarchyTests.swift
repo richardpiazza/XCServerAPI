@@ -98,17 +98,22 @@ class TestHierarchyTests: XCTestCase {
             return
         }
         
-        guard let tests = hierarchy["XCServerAPITests"] else {
+        guard let module = hierarchy["XCServerAPITests"] else {
             XCTFail()
             return
         }
         
-        guard let blueprintTests = tests["RepositoryBlueprintTests"] else {
+        guard let `class` = module["RepositoryBlueprintTests"] else {
             XCTFail()
             return
         }
         
-        guard let sourceControlTest = blueprintTests?["testSourceControlBlueprint()"] else {
+        guard let results = `class`.methodResults else {
+            XCTFail()
+            return
+        }
+        
+        guard let sourceControlTest = results["testSourceControlBlueprint()"] else {
             XCTFail()
             return
         }

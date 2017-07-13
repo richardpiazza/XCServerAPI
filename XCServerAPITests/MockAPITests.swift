@@ -219,6 +219,7 @@ class MockAPITests: XCTestCase {
             
             XCTAssertEqual(i.number, 14)
             XCTAssertEqual(i.result, .succeeded)
+            XCTAssertNotNil(i.testHierarchy)
             
             exp.fulfill()
         }
