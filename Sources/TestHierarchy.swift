@@ -28,11 +28,11 @@
 import Foundation
 
 public typealias TestModuleName = String
-public typealias TestFileName = String
-public typealias TestFunctionName = String
+public typealias TestClassName = String
+public typealias TestMethodName = String
 public typealias TestDeviceIdentifier = String
 
 public typealias TestDeviceResults = [TestDeviceIdentifier : Int]
-public typealias TestFunctionResults = [TestFunctionName : TestDeviceResults]
-public typealias TestFileResults = [TestFileName : TestFunctionResults]
-public typealias TestHierarchy = [TestModuleName : TestFileResults]
+public typealias TestMethodResults = [TestMethodName : TestDeviceResults]
+public typealias TestClassResults = [TestClassName : TestMethodResults]
+public typealias TestHierarchy = [TestModuleName : TestClassResults]

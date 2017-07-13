@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-// IssueAuthor.swift
+// SuspectStrategy.swift
 //
 // Copyright (c) 2016 Richard Piazza
 // https://github.com/richardpiazza/XCServerAPI
@@ -27,14 +27,8 @@
 
 import Foundation
 
-public struct IssueAuthor: Codable {
-    enum CodingKeys: String, CodingKey {
-        case suspectStrategy = "XCSIssueSuspectstrategy"
-        case blueprintRepository = "XCSBlueprintRepositoryID"
-        case commitHash = "XCSCommitHash"
-    }
-    
-    public var suspectStrategy: SuspectStrategy?
-    public var blueprintRepository: String?
-    public var commitHash: String?
+public struct SuspectStrategy: Codable {
+    public var confidence: Int?
+    public var reliability: Int?
+    public var identificationStrategy: Int?
 }

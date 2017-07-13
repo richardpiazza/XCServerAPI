@@ -15,6 +15,7 @@
 		E108CFD41EFFFD3700BB7978 /* DeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD31EFFFD3700BB7978 /* DeviceTests.swift */; };
 		E108CFD61EFFFDF900BB7978 /* TestHierarchyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD51EFFFDF900BB7978 /* TestHierarchyTests.swift */; };
 		E108CFD81F012FE000BB7978 /* ProxiedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD71F012FE000BB7978 /* ProxiedDevice.swift */; };
+		E10A7FC21F17AB1600080A44 /* SuspectStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10A7FC11F17AB1600080A44 /* SuspectStrategy.swift */; };
 		E10CC6571EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6561EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift */; };
 		E10CC6591EFFDC7700FE4A3F /* ProvisioningConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6581EFFDC7700FE4A3F /* ProvisioningConfiguration.swift */; };
 		E10CC65B1EFFDDDB00FE4A3F /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65A1EFFDDDB00FE4A3F /* ConfigurationTests.swift */; };
@@ -112,6 +113,7 @@
 		E108CFD31EFFFD3700BB7978 /* DeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTests.swift; sourceTree = "<group>"; };
 		E108CFD51EFFFDF900BB7978 /* TestHierarchyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHierarchyTests.swift; sourceTree = "<group>"; };
 		E108CFD71F012FE000BB7978 /* ProxiedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxiedDevice.swift; sourceTree = "<group>"; };
+		E10A7FC11F17AB1600080A44 /* SuspectStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspectStrategy.swift; sourceTree = "<group>"; };
 		E10CC6561EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningConfigurationTests.swift; sourceTree = "<group>"; };
 		E10CC6581EFFDC7700FE4A3F /* ProvisioningConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningConfiguration.swift; sourceTree = "<group>"; };
 		E10CC65A1EFFDDDB00FE4A3F /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				E149CBD71D2ABDD700E2E688 /* RepositoryLocation.swift */,
 				E149CBDA1D2ABDD700E2E688 /* Stats.swift */,
 				E149CBD91D2ABDD700E2E688 /* StatsSummary.swift */,
+				E10A7FC11F17AB1600080A44 /* SuspectStrategy.swift */,
 				E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */,
 				E10CC65E1EFFE27A00FE4A3F /* TestLocalization.swift */,
 				E149CBDB1D2ABDD700E2E688 /* Trigger.swift */,
@@ -590,6 +593,7 @@
 				E149CBF21D2ABDD700E2E688 /* Issue.swift in Sources */,
 				E190EBD71EFEBC8C004F0920 /* TriggerType.swift in Sources */,
 				E149CBEB1D2ABDD700E2E688 /* DeviceSpecification.swift in Sources */,
+				E10A7FC21F17AB1600080A44 /* SuspectStrategy.swift in Sources */,
 				E176DFD31F0280B1005CE042 /* IntegrationSnippet.swift in Sources */,
 				E149CBFB1D2ABDD700E2E688 /* VersionDocument.swift in Sources */,
 				E14878401F0813C4008C5788 /* XCServerWebAPI+Issues.swift in Sources */,

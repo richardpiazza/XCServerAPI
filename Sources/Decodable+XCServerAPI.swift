@@ -26,6 +26,7 @@
 //===----------------------------------------------------------------------===//
 
 import Foundation
+import CodeQuickKit
 
 public extension Decodable {
     static func decode(json: String) -> Self? {
@@ -46,6 +47,7 @@ public extension Decodable {
             return try XCServerJSONDecoder.default.decode(Self.self, from: data)
         } catch {
             print(error)
+            Log.error(error, message: "Failed to decode type '\(String(describing: Self.self)): \(error.localizedDescription)'")
             return nil
         }
     }

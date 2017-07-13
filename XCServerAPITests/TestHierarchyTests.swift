@@ -108,7 +108,7 @@ class TestHierarchyTests: XCTestCase {
             return
         }
         
-        guard let sourceControlTest = blueprintTests["testSourceControlBlueprint()"] else {
+        guard let sourceControlTest = blueprintTests?["testSourceControlBlueprint()"] else {
             XCTFail()
             return
         }

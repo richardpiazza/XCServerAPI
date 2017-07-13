@@ -72,7 +72,7 @@ public extension XCServerWebAPI {
                 return
             }
             
-            guard statusCode == 200 else {
+            guard statusCode == 201 else {
                 completion(nil, error)
                 return
             }

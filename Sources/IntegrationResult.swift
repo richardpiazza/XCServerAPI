@@ -38,4 +38,5 @@ public enum IntegrationResult: String, Codable {
     case internalError = "internal-error"
     case buildFailed = "build-failed"
     case checkoutError = "checkout-error"
+    case unknown
 }
