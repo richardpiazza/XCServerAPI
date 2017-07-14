@@ -14,6 +14,7 @@ class MockAPITests: XCTestCase {
     let api = MockAPI()
     let botIdentifier = "a7341f3521c7245492693c0d780006f9"
     let integrationIdentifier = "8a526f6a0ce6b83bb969758e0f0038b7"
+    let invalidApi = InvalidMockAPI()
     
     override func setUp() {
         super.setUp()
@@ -45,6 +46,22 @@ class MockAPITests: XCTestCase {
         }
     }
     
+    func testInvalidPing() {
+        let exp = expectation(description: "ping")
+        
+        invalidApi.ping { (statusCode, headers, data, error) in
+            XCTAssertEqual(statusCode, 404)
+            exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5) { (error) in
+            if let e = error {
+                print(e)
+                XCTFail()
+            }
+        }
+    }
+    
     func testVersions() {
         let exp = expectation(description: "versions")
         
@@ -55,6 +72,28 @@ class MockAPITests: XCTestCase {
             }
             
             XCTAssertEqual(version, 18)
+            
+            exp.fulfill()
+        })
+        
+        waitForExpectations(timeout: 5) { (error) in
+            if let e = error {
+                print(e)
+                XCTFail()
+            }
+        }
+    }
+    
+    func testInvalidVersions() {
+        let exp = expectation(description: "versions")
+        
+        invalidApi.versions({ (versions, apiVersion, error) in
+            guard let e = error else {
+                XCTFail()
+                return
+            }
+            
+            XCTAssertTrue(type(of: e) == type(of: XCServerWebAPI.Errors.decodeResponse))
             
             exp.fulfill()
         })
@@ -94,6 +133,28 @@ class MockAPITests: XCTestCase {
         }
     }
     
+    func testInvalidBots() {
+        let exp = expectation(description: "bots")
+        
+        invalidApi.bots { (bots, error) in
+            guard let e = error else {
+                XCTFail()
+                return
+            }
+            
+            XCTAssertTrue(type(of: e) == type(of: XCServerWebAPI.Errors.authorization))
+            
+            exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5) { (error) in
+            if let e = error {
+                print(e)
+                XCTFail()
+            }
+        }
+    }
+    
     func testBot() {
         let exp = expectation(description: "bot")
         
@@ -109,6 +170,28 @@ class MockAPITests: XCTestCase {
             }
          
             XCTAssertEqual(b.integrationCounter, 15)
+            
+            exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5) { (error) in
+            if let e = error {
+                print(e)
+                XCTFail()
+            }
+        }
+    }
+    
+    func testInvalidBot() {
+        let exp = expectation(description: "bot")
+        
+        invalidApi.bot(withIdentifier: botIdentifier) { (bot, error) in
+            guard let e = error else {
+                XCTFail()
+                return
+            }
+            
+            XCTAssertTrue(type(of: e) == type(of: XCServerWebAPI.Errors.noXcodeServer))
             
             exp.fulfill()
         }
@@ -319,5 +402,25 @@ class MockAPITests: XCTestCase {
                 XCTFail()
             }
         }
+    }
+    
+    func testVerifyErrors() {
+        let authorizationError = XCServerWebAPI.Errors.authorization
+        XCTAssertEqual(authorizationError.code, 0)
+        XCTAssertEqual(authorizationError.localizedDescription, "Invalid Authorization")
+        XCTAssertEqual(authorizationError.localizedFailureReason, "The server returned a 401 response code.")
+        XCTAssertEqual(authorizationError.localizedRecoverySuggestion, "Have you specified a XCServerWebAPICredentialDelegate to handle authentication?")
+        
+        let noServerError = XCServerWebAPI.Errors.noXcodeServer
+        XCTAssertEqual(noServerError.code, 1)
+        XCTAssertEqual(noServerError.localizedDescription, "No Xcode Server")
+        XCTAssertEqual(noServerError.localizedFailureReason, "This class was initialized without an XcodeServer entity.")
+        XCTAssertEqual(noServerError.localizedRecoverySuggestion, "Re-initialize this class using init(xcodeServer:).")
+        
+        let decodeError = XCServerWebAPI.Errors.decodeResponse
+        XCTAssertEqual(decodeError.code, 2)
+        XCTAssertEqual(decodeError.localizedDescription, "Failed To Decode Response")
+        XCTAssertEqual(decodeError.localizedFailureReason, "The response object could not be cast into the requested type.")
+        XCTAssertEqual(decodeError.localizedRecoverySuggestion, "Check the request is sending a valid response.")
     }
 }

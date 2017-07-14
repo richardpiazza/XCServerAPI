@@ -89,6 +89,7 @@
 		E19E5E331F0FC92500440470 /* TriggersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19E5E321F0FC92500440470 /* TriggersTests.swift */; };
 		E19E5E351F0FCB2300440470 /* AssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19E5E341F0FCB2300440470 /* AssetsTests.swift */; };
 		E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */; };
+		E1A535611F18F266006F2792 /* InvalidMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A535601F18F266006F2792 /* InvalidMockAPI.swift */; };
 		E1AEB59F1F013E7B0019B6E2 /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */; };
 /* End PBXBuildFile section */
 
@@ -196,6 +197,7 @@
 		E19E5E321F0FC92500440470 /* TriggersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggersTests.swift; sourceTree = "<group>"; };
 		E19E5E341F0FCB2300440470 /* AssetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTests.swift; sourceTree = "<group>"; };
 		E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSpecificationTests.swift; sourceTree = "<group>"; };
+		E1A535601F18F266006F2792 /* InvalidMockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidMockAPI.swift; sourceTree = "<group>"; };
 		E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHierarchy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,6 +294,7 @@
 				E19E5E321F0FC92500440470 /* TriggersTests.swift */,
 				E19E5E341F0FCB2300440470 /* AssetsTests.swift */,
 				E18CDBD21F1659B8000DD01C /* MockAPI.swift */,
+				E1A535601F18F266006F2792 /* InvalidMockAPI.swift */,
 				E18CDBD61F165FFB000DD01C /* MockAPITests.swift */,
 				E18CDBD41F165AEE000DD01C /* VersionResponse.json */,
 				E15254D41F1691DC00119BE3 /* BotsResponse.json */,
@@ -646,6 +649,7 @@
 				E18CDBD31F1659B8000DD01C /* MockAPI.swift in Sources */,
 				E108CFD61EFFFDF900BB7978 /* TestHierarchyTests.swift in Sources */,
 				E10CC6571EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift in Sources */,
+				E1A535611F18F266006F2792 /* InvalidMockAPI.swift in Sources */,
 				E190EBE21EFEC953004F0920 /* RepositoryBlueprintTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
