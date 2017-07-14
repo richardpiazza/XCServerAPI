@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.dependency 'CodeQuickKit', '~> 5.0'
 
-  s.osx.deployment_target = "10.12"
-  s.ios.deployment_target = "10.0"
-  s.tvos.deployment_target = "10.0"
-  s.watchos.deployment_target = "3.0"
+  s.osx.deployment_target = "10.13"
+  s.ios.deployment_target = "11.0"
+  s.tvos.deployment_target = "11.0"
+  s.watchos.deployment_target = "4.0"
 end

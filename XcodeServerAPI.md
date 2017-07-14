@@ -68,7 +68,7 @@ __Request__: `[GET] /bots/{id}`
 
 __Response__: `200`
 
-Returns a single [Bot Document](### _Bot_)
+Returns a single [Bot Document](### _BotDocument_)
 
 __Request__: `[GET] /bots/{id}/stats`
 
@@ -164,7 +164,7 @@ __Request__: `[GET] /integrations/{id}`
 
 __Response__: `200`
 
-Returns a single [Integration Document](### _Integration_)
+Returns a single [Integration Document](### _IntegrationDocument_)
 
 __Request__: `[GET] /integrations/{id}/commits`
 
@@ -255,7 +255,7 @@ __Response__: `200`
 		]
 	}
 
-### _Bot_
+### _BotDocument_
 
      {
 		"_id":"7b0bfdf8f209bf9b85b8aa0205102b39",
@@ -302,7 +302,7 @@ __Response__: `200`
 		}
 	}
 
-### _Bot Configuration_
+### _Configuration_
 
 	{
 		"triggers":[],
@@ -378,7 +378,7 @@ __Response__: `200`
 		}
 	}
 
-### _Integration_
+### _IntegrationDocument_
 
 	{
 		"_id":"7b0bfdf8f209bf9b85b8aa02051031e7",
