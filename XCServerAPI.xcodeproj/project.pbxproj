@@ -64,6 +64,7 @@
 		E15254DF1F1692B800119BE3 /* CommitsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254DE1F1692B800119BE3 /* CommitsResponse.json */; };
 		E15254E11F1692DD00119BE3 /* IssuesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254E01F1692DD00119BE3 /* IssuesResponse.json */; };
 		E15254E31F16938C00119BE3 /* IntegrationsRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254E21F16938C00119BE3 /* IntegrationsRequest.json */; };
+		E152A89A1F18E9DB00506696 /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152A8991F18E9DB00506696 /* DecodableTests.swift */; };
 		E176DFD31F0280B1005CE042 /* IntegrationSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */; };
 		E176DFD51F0283D1005CE042 /* XCServerJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */; };
 		E176DFD71F02851F005CE042 /* Decodable+XCServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */; };
@@ -168,6 +169,7 @@
 		E15254DE1F1692B800119BE3 /* CommitsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CommitsResponse.json; sourceTree = "<group>"; };
 		E15254E01F1692DD00119BE3 /* IssuesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IssuesResponse.json; sourceTree = "<group>"; };
 		E15254E21F16938C00119BE3 /* IntegrationsRequest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IntegrationsRequest.json; sourceTree = "<group>"; };
+		E152A8991F18E9DB00506696 /* DecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableTests.swift; sourceTree = "<group>"; };
 		E160CEFCE43769AE99A0D9A8 /* Pods-XCServerAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.release.xcconfig"; sourceTree = "<group>"; };
 		E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationSnippet.swift; sourceTree = "<group>"; };
 		E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCServerJSONDecoder.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				E15254DE1F1692B800119BE3 /* CommitsResponse.json */,
 				E15254E01F1692DD00119BE3 /* IssuesResponse.json */,
 				E15254E21F16938C00119BE3 /* IntegrationsRequest.json */,
+				E152A8991F18E9DB00506696 /* DecodableTests.swift */,
 			);
 			path = XCServerAPITests;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				E108CFCE1EFFF33C00BB7978 /* BotTests.swift in Sources */,
 				E1956AD91F01D9DE006193D7 /* StatsTests.swift in Sources */,
 				E108CFD41EFFFD3700BB7978 /* DeviceTests.swift in Sources */,
+				E152A89A1F18E9DB00506696 /* DecodableTests.swift in Sources */,
 				E1956AD51F01D3F4006193D7 /* IssueTests.swift in Sources */,
 				E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */,
 				E18CDBD71F165FFB000DD01C /* MockAPITests.swift in Sources */,

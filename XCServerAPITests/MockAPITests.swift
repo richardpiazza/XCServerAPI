@@ -221,6 +221,13 @@ class MockAPITests: XCTestCase {
             XCTAssertEqual(i.result, .succeeded)
             XCTAssertNotNil(i.testHierarchy)
             
+            guard let tests = i.tests else {
+                XCTFail()
+                return
+            }
+            
+            XCTAssertTrue(tests.pass)
+            
             exp.fulfill()
         }
         

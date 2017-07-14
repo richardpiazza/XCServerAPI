@@ -95,6 +95,11 @@ public enum Results: Codable {
 
 public struct Tests {
     public var modules: [Module] = []
+    public var pass: Bool {
+        return modules.contains { (m) -> Bool in
+            return m.pass == true
+        }
+    }
     
     internal init(testHierarchy: TestHierarchy) {
         for moduleKey in testHierarchy.keys.sorted() {
