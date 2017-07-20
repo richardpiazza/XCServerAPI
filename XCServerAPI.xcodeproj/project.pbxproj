@@ -42,7 +42,7 @@
 		E149CBEA1D2ABDD700E2E688 /* DeviceDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCB1D2ABDD700E2E688 /* DeviceDocument.swift */; };
 		E149CBEB1D2ABDD700E2E688 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCC1D2ABDD700E2E688 /* DeviceSpecification.swift */; };
 		E149CBEC1D2ABDD700E2E688 /* EmailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCD1D2ABDD700E2E688 /* EmailConfiguration.swift */; };
-		E149CBED1D2ABDD700E2E688 /* FilterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCE1D2ABDD700E2E688 /* FilterJSON.swift */; };
+		E149CBED1D2ABDD700E2E688 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCE1D2ABDD700E2E688 /* Filter.swift */; };
 		E149CBEE1D2ABDD700E2E688 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCF1D2ABDD700E2E688 /* Assets.swift */; };
 		E149CBEF1D2ABDD700E2E688 /* CommitDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD01D2ABDD700E2E688 /* CommitDocument.swift */; };
 		E149CBF11D2ABDD700E2E688 /* IntegrationDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD21D2ABDD700E2E688 /* IntegrationDocument.swift */; };
@@ -145,7 +145,7 @@
 		E149CBCB1D2ABDD700E2E688 /* DeviceDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDocument.swift; sourceTree = "<group>"; };
 		E149CBCC1D2ABDD700E2E688 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
 		E149CBCD1D2ABDD700E2E688 /* EmailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailConfiguration.swift; sourceTree = "<group>"; };
-		E149CBCE1D2ABDD700E2E688 /* FilterJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterJSON.swift; sourceTree = "<group>"; };
+		E149CBCE1D2ABDD700E2E688 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		E149CBCF1D2ABDD700E2E688 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		E149CBD01D2ABDD700E2E688 /* CommitDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitDocument.swift; sourceTree = "<group>"; };
 		E149CBD21D2ABDD700E2E688 /* IntegrationDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrationDocument.swift; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 				E149CBCC1D2ABDD700E2E688 /* DeviceSpecification.swift */,
 				E149CBCD1D2ABDD700E2E688 /* EmailConfiguration.swift */,
 				E190EBDA1EFEBD23004F0920 /* EmailType.swift */,
-				E149CBCE1D2ABDD700E2E688 /* FilterJSON.swift */,
+				E149CBCE1D2ABDD700E2E688 /* Filter.swift */,
 				E108CFCF1EFFF59F00BB7978 /* Group.swift */,
 				E149CBC01D2ABDD700E2E688 /* IntegrationAsset.swift */,
 				E149CBD21D2ABDD700E2E688 /* IntegrationDocument.swift */,
@@ -610,7 +610,7 @@
 				E149CBE31D2ABDD700E2E688 /* BotDocument.swift in Sources */,
 				E10CC6631EFFE51100FE4A3F /* CleanSchedule.swift in Sources */,
 				E10CC6611EFFE47200FE4A3F /* CodeCoveragePreference.swift in Sources */,
-				E149CBED1D2ABDD700E2E688 /* FilterJSON.swift in Sources */,
+				E149CBED1D2ABDD700E2E688 /* Filter.swift in Sources */,
 				E149CBF91D2ABDD700E2E688 /* Stats.swift in Sources */,
 				E108CFD81F012FE000BB7978 /* ProxiedDevice.swift in Sources */,
 				E149CBE71D2ABDD700E2E688 /* Commit.swift in Sources */,
