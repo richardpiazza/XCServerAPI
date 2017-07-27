@@ -1,4 +1,5 @@
 PODS:
+  - BZipCompression (1.0.2)
   - CodeQuickKit (5.0.3):
     - CodeQuickKit/iOS (= 5.0.3)
   - CodeQuickKit/Foundation (5.0.3)
@@ -6,11 +7,13 @@ PODS:
     - CodeQuickKit/Foundation
 
 DEPENDENCIES:
+  - BZipCompression (~> 1.0.0)
   - CodeQuickKit (~> 5.0)
 
 SPEC CHECKSUMS:
+  BZipCompression: e0f96508e60eb93b5f5d4c7de1eb3dd0ac4f9ae9
   CodeQuickKit: 1a93019176bff93b5547de239ea691ccdcfdc226
 
-PODFILE CHECKSUM: 400fac87728c04ef894eed1820932d0d605ed6d1
+PODFILE CHECKSUM: dd49ccef4a2dfbc42e2e8ea2c021b6353885ab42
 
 COCOAPODS: 1.2.1

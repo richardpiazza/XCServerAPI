@@ -55,6 +55,12 @@
 		E149CBFA1D2ABDD700E2E688 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDB1D2ABDD700E2E688 /* Trigger.swift */; };
 		E149CBFB1D2ABDD700E2E688 /* VersionDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDC1D2ABDD700E2E688 /* VersionDocument.swift */; };
 		E149CBFC1D2ABDD700E2E688 /* XCServerWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */; };
+		E15166FD1F2A812C001CF4D6 /* CoverageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15166FC1F2A812C001CF4D6 /* CoverageResult.swift */; };
+		E15166FF1F2A8249001CF4D6 /* CoverageMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15166FE1F2A8249001CF4D6 /* CoverageMethod.swift */; };
+		E15167011F2A8309001CF4D6 /* CoverageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167001F2A8309001CF4D6 /* CoverageFile.swift */; };
+		E15167031F2A83C5001CF4D6 /* CoverageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */; };
+		E15167051F2A854E001CF4D6 /* CoverageHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */; };
+		E15167071F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167061F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift */; };
 		E151F2171D99BE5600157040 /* IssueAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2161D99BE5600157040 /* IssueAuthor.swift */; };
 		E15254D51F1691DC00119BE3 /* BotsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D41F1691DC00119BE3 /* BotsResponse.json */; };
 		E15254D71F16921400119BE3 /* BotResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D61F16921400119BE3 /* BotResponse.json */; };
@@ -161,6 +167,12 @@
 		E149CC331D2AC0FB00E2E688 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E149CC341D2AC0FB00E2E688 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E149CC351D2AC0FB00E2E688 /* XCServerAPI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XCServerAPI.podspec; sourceTree = "<group>"; };
+		E15166FC1F2A812C001CF4D6 /* CoverageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageResult.swift; sourceTree = "<group>"; };
+		E15166FE1F2A8249001CF4D6 /* CoverageMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageMethod.swift; sourceTree = "<group>"; };
+		E15167001F2A8309001CF4D6 /* CoverageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageFile.swift; sourceTree = "<group>"; };
+		E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageTarget.swift; sourceTree = "<group>"; };
+		E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageHierarchy.swift; sourceTree = "<group>"; };
+		E15167061F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Coverage.swift"; sourceTree = "<group>"; };
 		E151F2161D99BE5600157040 /* IssueAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAuthor.swift; sourceTree = "<group>"; };
 		E15254D41F1691DC00119BE3 /* BotsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BotsResponse.json; sourceTree = "<group>"; };
 		E15254D61F16921400119BE3 /* BotResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BotResponse.json; sourceTree = "<group>"; };
@@ -328,6 +340,11 @@
 				E149CBD01D2ABDD700E2E688 /* CommitDocument.swift */,
 				E149CBC91D2ABDD700E2E688 /* Conditions.swift */,
 				E149CBCA1D2ABDD700E2E688 /* Configuration.swift */,
+				E15167001F2A8309001CF4D6 /* CoverageFile.swift */,
+				E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */,
+				E15166FE1F2A8249001CF4D6 /* CoverageMethod.swift */,
+				E15166FC1F2A812C001CF4D6 /* CoverageResult.swift */,
+				E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */,
 				E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */,
 				E149CBCB1D2ABDD700E2E688 /* DeviceDocument.swift */,
 				E149CBCC1D2ABDD700E2E688 /* DeviceSpecification.swift */,
@@ -365,6 +382,7 @@
 				E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */,
 				E12209AC1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift */,
 				E14878411F08169A008C5788 /* XCServerWebAPI+Commits.swift */,
+				E15167061F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift */,
 				E12209AA1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift */,
 				E148783F1F0813C4008C5788 /* XCServerWebAPI+Issues.swift */,
 			);
@@ -574,8 +592,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E108CFD01EFFF59F00BB7978 /* Group.swift in Sources */,
+				E15166FF1F2A8249001CF4D6 /* CoverageMethod.swift in Sources */,
 				E149CBEA1D2ABDD700E2E688 /* DeviceDocument.swift in Sources */,
 				E10CC6591EFFDC7700FE4A3F /* ProvisioningConfiguration.swift in Sources */,
+				E15166FD1F2A812C001CF4D6 /* CoverageResult.swift in Sources */,
 				E12209AB1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift in Sources */,
 				E10CC65F1EFFE27A00FE4A3F /* TestLocalization.swift in Sources */,
 				E149CBE91D2ABDD700E2E688 /* Configuration.swift in Sources */,
@@ -584,7 +604,9 @@
 				E14878421F08169A008C5788 /* XCServerWebAPI+Commits.swift in Sources */,
 				E190EBD31EFEBADD004F0920 /* IntegrationStep.swift in Sources */,
 				E149CBEC1D2ABDD700E2E688 /* EmailConfiguration.swift in Sources */,
+				E15167071F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift in Sources */,
 				E1AEB59F1F013E7B0019B6E2 /* TestHierarchy.swift in Sources */,
+				E15167051F2A854E001CF4D6 /* CoverageHierarchy.swift in Sources */,
 				E190EBD11EFEBA23004F0920 /* IssueStatus.swift in Sources */,
 				E190EBDB1EFEBD23004F0920 /* EmailType.swift in Sources */,
 				E149CBE41D2ABDD700E2E688 /* BuildResultSummary.swift in Sources */,
@@ -603,6 +625,7 @@
 				E176DFD31F0280B1005CE042 /* IntegrationSnippet.swift in Sources */,
 				E149CBFB1D2ABDD700E2E688 /* VersionDocument.swift in Sources */,
 				E14878401F0813C4008C5788 /* XCServerWebAPI+Issues.swift in Sources */,
+				E15167011F2A8309001CF4D6 /* CoverageFile.swift in Sources */,
 				E149CBF51D2ABDD700E2E688 /* RemoteRepository.swift in Sources */,
 				E12209AD1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift in Sources */,
 				E149CBEE1D2ABDD700E2E688 /* Assets.swift in Sources */,
@@ -617,6 +640,7 @@
 				E190EBD51EFEBBB0004F0920 /* IntegrationResult.swift in Sources */,
 				E149CBE01D2ABDD700E2E688 /* AuthenticationStrategy.swift in Sources */,
 				E190EBE01EFEC056004F0920 /* RepositoryBlueprint.swift in Sources */,
+				E15167031F2A83C5001CF4D6 /* CoverageTarget.swift in Sources */,
 				E151F2171D99BE5600157040 /* IssueAuthor.swift in Sources */,
 				E176DFD51F0283D1005CE042 /* XCServerJSONDecoder.swift in Sources */,
 				E149CBE61D2ABDD700E2E688 /* CommitContributor.swift in Sources */,
