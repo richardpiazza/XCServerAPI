@@ -30,15 +30,13 @@ import Foundation
 public struct CoverageTarget: Codable {
     
     enum CodingKeys: String, CodingKey {
-        case name = "tte"
-        case results = "dvs"
+        case results = "dvcs"
         case percent = "lnp"
         case delta = "lnpd"
         case files = "fls"
         case count = "cnt"
     }
     
-    public var name: String?
     public var results: [CoverageResult]?
     public var files: [String : CoverageFile]?
     public var percent: Double?

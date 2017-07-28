@@ -61,6 +61,7 @@
 		E15167031F2A83C5001CF4D6 /* CoverageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */; };
 		E15167051F2A854E001CF4D6 /* CoverageHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */; };
 		E15167071F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167061F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift */; };
+		E15167091F2B664A001CF4D6 /* CoverageResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15167081F2B664A001CF4D6 /* CoverageResponse.json */; };
 		E151F2171D99BE5600157040 /* IssueAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2161D99BE5600157040 /* IssueAuthor.swift */; };
 		E15254D51F1691DC00119BE3 /* BotsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D41F1691DC00119BE3 /* BotsResponse.json */; };
 		E15254D71F16921400119BE3 /* BotResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D61F16921400119BE3 /* BotResponse.json */; };
@@ -97,6 +98,7 @@
 		E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */; };
 		E1A535611F18F266006F2792 /* InvalidMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A535601F18F266006F2792 /* InvalidMockAPI.swift */; };
 		E1AEB59F1F013E7B0019B6E2 /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */; };
+		E1FCE7F41F2B689800AD669F /* CodeCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCE7F31F2B689800AD669F /* CodeCoverageTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,7 @@
 		E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageTarget.swift; sourceTree = "<group>"; };
 		E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageHierarchy.swift; sourceTree = "<group>"; };
 		E15167061F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Coverage.swift"; sourceTree = "<group>"; };
+		E15167081F2B664A001CF4D6 /* CoverageResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CoverageResponse.json; sourceTree = "<group>"; };
 		E151F2161D99BE5600157040 /* IssueAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAuthor.swift; sourceTree = "<group>"; };
 		E15254D41F1691DC00119BE3 /* BotsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BotsResponse.json; sourceTree = "<group>"; };
 		E15254D61F16921400119BE3 /* BotResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BotResponse.json; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 		E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSpecificationTests.swift; sourceTree = "<group>"; };
 		E1A535601F18F266006F2792 /* InvalidMockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidMockAPI.swift; sourceTree = "<group>"; };
 		E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHierarchy.swift; sourceTree = "<group>"; };
+		E1FCE7F31F2B689800AD669F /* CodeCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +322,8 @@
 				E15254E01F1692DD00119BE3 /* IssuesResponse.json */,
 				E15254E21F16938C00119BE3 /* IntegrationsRequest.json */,
 				E152A8991F18E9DB00506696 /* DecodableTests.swift */,
+				E15167081F2B664A001CF4D6 /* CoverageResponse.json */,
+				E1FCE7F31F2B689800AD669F /* CodeCoverageTests.swift */,
 			);
 			path = XCServerAPITests;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 				E18CDBD51F165AEE000DD01C /* VersionResponse.json in Resources */,
 				E15254D71F16921400119BE3 /* BotResponse.json in Resources */,
 				E15254E11F1692DD00119BE3 /* IssuesResponse.json in Resources */,
+				E15167091F2B664A001CF4D6 /* CoverageResponse.json in Resources */,
 				E15254DD1F16928B00119BE3 /* IntegrationResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,6 +667,7 @@
 			files = (
 				E19E5E331F0FC92500440470 /* TriggersTests.swift in Sources */,
 				E19E5E351F0FCB2300440470 /* AssetsTests.swift in Sources */,
+				E1FCE7F41F2B689800AD669F /* CodeCoverageTests.swift in Sources */,
 				E108CFCE1EFFF33C00BB7978 /* BotTests.swift in Sources */,
 				E1956AD91F01D9DE006193D7 /* StatsTests.swift in Sources */,
 				E108CFD41EFFFD3700BB7978 /* DeviceTests.swift in Sources */,
