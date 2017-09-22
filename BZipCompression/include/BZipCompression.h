@@ -18,8 +18,6 @@
 //  limitations under the License.
 //
 
-#ifdef __x86_64__
-#else
 #import <Foundation/Foundation.h>
 
 // The domain for errors returned by the BZip library.
@@ -114,4 +112,3 @@ extern NSInteger const BZipDefaultWorkFactor;
 + (void)asynchronouslyDecompressFileAtPath:(NSString *)sourcePath toFileAtPath:(NSString *)destinationPath progress:(NSProgress **)progress completion:(void (^)(BOOL success, NSError *error))completion;
 
 @end
-#endif

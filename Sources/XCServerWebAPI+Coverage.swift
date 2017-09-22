@@ -27,7 +27,6 @@
 
 import Foundation
 import CodeQuickKit
-import BZipCompression
 
 public extension XCServerWebAPI {
     
@@ -73,9 +72,6 @@ public extension XCServerWebAPI {
     }
     
     internal func decompress(data: Data) throws -> Data {
-        #if arch(x86_64)
-            throw Errors.decodeResponse
-        #else
         let decompressedData = try BZipCompression.decompressedData(with: data)
 
         guard let decompressedString = String(data: decompressedData, encoding: .utf8) else {
@@ -98,6 +94,5 @@ public extension XCServerWebAPI {
         }
 
         return validData
-        #endif
     }
 }

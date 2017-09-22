@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation'
   s.requires_arc = true
   s.dependency 'CodeQuickKit', '~> 6.0'
-  s.dependency 'BZipCompression', '~> 1.0'
 
   s.osx.deployment_target = "10.13"
   s.ios.deployment_target = "11.0"

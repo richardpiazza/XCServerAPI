@@ -18,8 +18,6 @@
 //  limitations under the License.
 //
 
-#ifdef __x86_64__
-#else
 #import <bzlib.h>
 #import "BZipCompression.h"
 
@@ -298,4 +296,3 @@ NSInteger const BZipDefaultWorkFactor = 0;
 }
 
 @end
-#endif
