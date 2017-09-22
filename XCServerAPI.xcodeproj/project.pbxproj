@@ -9,22 +9,44 @@
 /* Begin PBXBuildFile section */
 		0164414CA64501C6F71102CF /* Pods_XCServerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB6F550AA2780D2129BCABA /* Pods_XCServerAPI.framework */; };
 		2CAA4B297B94CA4ED5C2CC6B /* Pods_XCServerAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F41A62328F1F9FD45C1DD92 /* Pods_XCServerAPITests.framework */; };
-		E108CFCE1EFFF33C00BB7978 /* BotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFCD1EFFF33C00BB7978 /* BotTests.swift */; };
 		E108CFD01EFFF59F00BB7978 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFCF1EFFF59F00BB7978 /* Group.swift */; };
-		E108CFD21EFFFB6700BB7978 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD11EFFFB6700BB7978 /* IntegrationTests.swift */; };
-		E108CFD41EFFFD3700BB7978 /* DeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD31EFFFD3700BB7978 /* DeviceTests.swift */; };
-		E108CFD61EFFFDF900BB7978 /* TestHierarchyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD51EFFFDF900BB7978 /* TestHierarchyTests.swift */; };
 		E108CFD81F012FE000BB7978 /* ProxiedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD71F012FE000BB7978 /* ProxiedDevice.swift */; };
 		E10A7FC21F17AB1600080A44 /* SuspectStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10A7FC11F17AB1600080A44 /* SuspectStrategy.swift */; };
-		E10CC6571EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6561EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift */; };
 		E10CC6591EFFDC7700FE4A3F /* ProvisioningConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6581EFFDC7700FE4A3F /* ProvisioningConfiguration.swift */; };
-		E10CC65B1EFFDDDB00FE4A3F /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65A1EFFDDDB00FE4A3F /* ConfigurationTests.swift */; };
 		E10CC65D1EFFE24600FE4A3F /* BuildArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65C1EFFE24600FE4A3F /* BuildArgument.swift */; };
 		E10CC65F1EFFE27A00FE4A3F /* TestLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65E1EFFE27A00FE4A3F /* TestLocalization.swift */; };
 		E10CC6611EFFE47200FE4A3F /* CodeCoveragePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6601EFFE47200FE4A3F /* CodeCoveragePreference.swift */; };
 		E10CC6631EFFE51100FE4A3F /* CleanSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6621EFFE51100FE4A3F /* CleanSchedule.swift */; };
 		E12209AB1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12209AA1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift */; };
 		E12209AD1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12209AC1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift */; };
+		E1358CF21F748CB400785ED6 /* VersionResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CD61F748CB400785ED6 /* VersionResponse.json */; };
+		E1358CF31F748CB400785ED6 /* TestHierarchyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CD71F748CB400785ED6 /* TestHierarchyTests.swift */; };
+		E1358CF41F748CB400785ED6 /* CommitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CD81F748CB400785ED6 /* CommitTests.swift */; };
+		E1358CF51F748CB400785ED6 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CD91F748CB400785ED6 /* ConfigurationTests.swift */; };
+		E1358CF61F748CB400785ED6 /* MockAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CDA1F748CB400785ED6 /* MockAPITests.swift */; };
+		E1358CF71F748CB400785ED6 /* TriggersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CDB1F748CB400785ED6 /* TriggersTests.swift */; };
+		E1358CF81F748CB400785ED6 /* CodeCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CDC1F748CB400785ED6 /* CodeCoverageTests.swift */; };
+		E1358CF91F748CB400785ED6 /* StatsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CDD1F748CB400785ED6 /* StatsResponse.json */; };
+		E1358CFA1F748CB400785ED6 /* AssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CDE1F748CB400785ED6 /* AssetsTests.swift */; };
+		E1358CFB1F748CB400785ED6 /* CommitsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CDF1F748CB400785ED6 /* CommitsResponse.json */; };
+		E1358CFC1F748CB400785ED6 /* DeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CE01F748CB400785ED6 /* DeviceTests.swift */; };
+		E1358CFD1F748CB400785ED6 /* BotResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CE11F748CB400785ED6 /* BotResponse.json */; };
+		E1358CFE1F748CB400785ED6 /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CE21F748CB400785ED6 /* DecodableTests.swift */; };
+		E1358CFF1F748CB400785ED6 /* IntegrationResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CE31F748CB400785ED6 /* IntegrationResponse.json */; };
+		E1358D001F748CB400785ED6 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CE41F748CB400785ED6 /* IntegrationTests.swift */; };
+		E1358D011F748CB400785ED6 /* IntegrationsRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CE51F748CB400785ED6 /* IntegrationsRequest.json */; };
+		E1358D021F748CB400785ED6 /* BotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CE61F748CB400785ED6 /* BotTests.swift */; };
+		E1358D031F748CB400785ED6 /* IssuesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CE71F748CB400785ED6 /* IssuesResponse.json */; };
+		E1358D041F748CB400785ED6 /* IssueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CE81F748CB400785ED6 /* IssueTests.swift */; };
+		E1358D051F748CB400785ED6 /* DeviceSpecificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CE91F748CB400785ED6 /* DeviceSpecificationTests.swift */; };
+		E1358D061F748CB400785ED6 /* StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CEA1F748CB400785ED6 /* StatsTests.swift */; };
+		E1358D071F748CB400785ED6 /* BotsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CEB1F748CB400785ED6 /* BotsResponse.json */; };
+		E1358D081F748CB400785ED6 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CEC1F748CB400785ED6 /* MockAPI.swift */; };
+		E1358D091F748CB400785ED6 /* CoverageResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CED1F748CB400785ED6 /* CoverageResponse.json */; };
+		E1358D0A1F748CB400785ED6 /* InvalidMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CEE1F748CB400785ED6 /* InvalidMockAPI.swift */; };
+		E1358D0B1F748CB400785ED6 /* ProvisioningConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CEF1F748CB400785ED6 /* ProvisioningConfigurationTests.swift */; };
+		E1358D0C1F748CB400785ED6 /* RepositoryBlueprintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1358CF01F748CB400785ED6 /* RepositoryBlueprintTests.swift */; };
+		E1358D0D1F748CB400785ED6 /* IntegrationsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CF11F748CB400785ED6 /* IntegrationsResponse.json */; };
 		E14878401F0813C4008C5788 /* XCServerWebAPI+Issues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148783F1F0813C4008C5788 /* XCServerWebAPI+Issues.swift */; };
 		E14878421F08169A008C5788 /* XCServerWebAPI+Commits.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14878411F08169A008C5788 /* XCServerWebAPI+Commits.swift */; };
 		E149CBAA1D2ABC8E00E2E688 /* XCServerAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E149CBA91D2ABC8E00E2E688 /* XCServerAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,24 +83,11 @@
 		E15167031F2A83C5001CF4D6 /* CoverageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */; };
 		E15167051F2A854E001CF4D6 /* CoverageHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */; };
 		E15167071F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167061F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift */; };
-		E15167091F2B664A001CF4D6 /* CoverageResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15167081F2B664A001CF4D6 /* CoverageResponse.json */; };
 		E151F2171D99BE5600157040 /* IssueAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2161D99BE5600157040 /* IssueAuthor.swift */; };
-		E15254D51F1691DC00119BE3 /* BotsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D41F1691DC00119BE3 /* BotsResponse.json */; };
-		E15254D71F16921400119BE3 /* BotResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D61F16921400119BE3 /* BotResponse.json */; };
-		E15254D91F16923400119BE3 /* StatsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254D81F16923400119BE3 /* StatsResponse.json */; };
-		E15254DB1F16925000119BE3 /* IntegrationsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254DA1F16925000119BE3 /* IntegrationsResponse.json */; };
-		E15254DD1F16928B00119BE3 /* IntegrationResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254DC1F16928B00119BE3 /* IntegrationResponse.json */; };
-		E15254DF1F1692B800119BE3 /* CommitsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254DE1F1692B800119BE3 /* CommitsResponse.json */; };
-		E15254E11F1692DD00119BE3 /* IssuesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254E01F1692DD00119BE3 /* IssuesResponse.json */; };
-		E15254E31F16938C00119BE3 /* IntegrationsRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = E15254E21F16938C00119BE3 /* IntegrationsRequest.json */; };
-		E152A89A1F18E9DB00506696 /* DecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152A8991F18E9DB00506696 /* DecodableTests.swift */; };
 		E176DFD31F0280B1005CE042 /* IntegrationSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */; };
 		E176DFD51F0283D1005CE042 /* XCServerJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */; };
 		E176DFD71F02851F005CE042 /* Decodable+XCServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */; };
 		E176DFDB1F029E4D005CE042 /* IssueGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFDA1F029E4D005CE042 /* IssueGroup.swift */; };
-		E18CDBD31F1659B8000DD01C /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CDBD21F1659B8000DD01C /* MockAPI.swift */; };
-		E18CDBD51F165AEE000DD01C /* VersionResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E18CDBD41F165AEE000DD01C /* VersionResponse.json */; };
-		E18CDBD71F165FFB000DD01C /* MockAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CDBD61F165FFB000DD01C /* MockAPITests.swift */; };
 		E190EBCD1EFEB91C004F0920 /* BotSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */; };
 		E190EBCF1EFEB981004F0920 /* PeriodicScheduleInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */; };
 		E190EBD11EFEBA23004F0920 /* IssueStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD01EFEBA23004F0920 /* IssueStatus.swift */; };
@@ -89,16 +98,7 @@
 		E190EBDB1EFEBD23004F0920 /* EmailType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDA1EFEBD23004F0920 /* EmailType.swift */; };
 		E190EBDD1EFEBD81004F0920 /* ReportSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */; };
 		E190EBE01EFEC056004F0920 /* RepositoryBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */; };
-		E190EBE21EFEC953004F0920 /* RepositoryBlueprintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBE11EFEC953004F0920 /* RepositoryBlueprintTests.swift */; };
-		E1956AD51F01D3F4006193D7 /* IssueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1956AD41F01D3F4006193D7 /* IssueTests.swift */; };
-		E1956AD71F01D712006193D7 /* CommitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1956AD61F01D712006193D7 /* CommitTests.swift */; };
-		E1956AD91F01D9DE006193D7 /* StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1956AD81F01D9DE006193D7 /* StatsTests.swift */; };
-		E19E5E331F0FC92500440470 /* TriggersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19E5E321F0FC92500440470 /* TriggersTests.swift */; };
-		E19E5E351F0FCB2300440470 /* AssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19E5E341F0FCB2300440470 /* AssetsTests.swift */; };
-		E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */; };
-		E1A535611F18F266006F2792 /* InvalidMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A535601F18F266006F2792 /* InvalidMockAPI.swift */; };
 		E1AEB59F1F013E7B0019B6E2 /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */; };
-		E1FCE7F41F2B689800AD669F /* CodeCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FCE7F31F2B689800AD669F /* CodeCoverageTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,22 +117,47 @@
 		3F41A62328F1F9FD45C1DD92 /* Pods_XCServerAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCServerAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7168F2F8281D069E3847D606 /* Pods-XCServerAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFC97C85D34636CE86B14D89 /* Pods-XCServerAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPI/Pods-XCServerAPI.debug.xcconfig"; sourceTree = "<group>"; };
-		E108CFCD1EFFF33C00BB7978 /* BotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotTests.swift; sourceTree = "<group>"; };
 		E108CFCF1EFFF59F00BB7978 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		E108CFD11EFFFB6700BB7978 /* IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
-		E108CFD31EFFFD3700BB7978 /* DeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTests.swift; sourceTree = "<group>"; };
-		E108CFD51EFFFDF900BB7978 /* TestHierarchyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHierarchyTests.swift; sourceTree = "<group>"; };
 		E108CFD71F012FE000BB7978 /* ProxiedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxiedDevice.swift; sourceTree = "<group>"; };
 		E10A7FC11F17AB1600080A44 /* SuspectStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspectStrategy.swift; sourceTree = "<group>"; };
-		E10CC6561EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningConfigurationTests.swift; sourceTree = "<group>"; };
 		E10CC6581EFFDC7700FE4A3F /* ProvisioningConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningConfiguration.swift; sourceTree = "<group>"; };
-		E10CC65A1EFFDDDB00FE4A3F /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 		E10CC65C1EFFE24600FE4A3F /* BuildArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildArgument.swift; sourceTree = "<group>"; };
 		E10CC65E1EFFE27A00FE4A3F /* TestLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocalization.swift; sourceTree = "<group>"; };
 		E10CC6601EFFE47200FE4A3F /* CodeCoveragePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoveragePreference.swift; sourceTree = "<group>"; };
 		E10CC6621EFFE51100FE4A3F /* CleanSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSchedule.swift; sourceTree = "<group>"; };
 		E12209AA1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Integrations.swift"; sourceTree = "<group>"; };
 		E12209AC1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Bots.swift"; sourceTree = "<group>"; };
+		E1358CD41F748BEC00785ED6 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		E1358CD61F748CB400785ED6 /* VersionResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = VersionResponse.json; path = Tests/VersionResponse.json; sourceTree = SOURCE_ROOT; };
+		E1358CD71F748CB400785ED6 /* TestHierarchyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestHierarchyTests.swift; path = Tests/TestHierarchyTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CD81F748CB400785ED6 /* CommitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommitTests.swift; path = Tests/CommitTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CD91F748CB400785ED6 /* ConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigurationTests.swift; path = Tests/ConfigurationTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CDA1F748CB400785ED6 /* MockAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockAPITests.swift; path = Tests/MockAPITests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CDB1F748CB400785ED6 /* TriggersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TriggersTests.swift; path = Tests/TriggersTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CDC1F748CB400785ED6 /* CodeCoverageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CodeCoverageTests.swift; path = Tests/CodeCoverageTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CDD1F748CB400785ED6 /* StatsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = StatsResponse.json; path = Tests/StatsResponse.json; sourceTree = SOURCE_ROOT; };
+		E1358CDE1F748CB400785ED6 /* AssetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetsTests.swift; path = Tests/AssetsTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CDF1F748CB400785ED6 /* CommitsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CommitsResponse.json; path = Tests/CommitsResponse.json; sourceTree = SOURCE_ROOT; };
+		E1358CE01F748CB400785ED6 /* DeviceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceTests.swift; path = Tests/DeviceTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CE11F748CB400785ED6 /* BotResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BotResponse.json; path = Tests/BotResponse.json; sourceTree = SOURCE_ROOT; };
+		E1358CE21F748CB400785ED6 /* DecodableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecodableTests.swift; path = Tests/DecodableTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CE31F748CB400785ED6 /* IntegrationResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = IntegrationResponse.json; path = Tests/IntegrationResponse.json; sourceTree = SOURCE_ROOT; };
+		E1358CE41F748CB400785ED6 /* IntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntegrationTests.swift; path = Tests/IntegrationTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CE51F748CB400785ED6 /* IntegrationsRequest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = IntegrationsRequest.json; path = Tests/IntegrationsRequest.json; sourceTree = SOURCE_ROOT; };
+		E1358CE61F748CB400785ED6 /* BotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BotTests.swift; path = Tests/BotTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CE71F748CB400785ED6 /* IssuesResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = IssuesResponse.json; path = Tests/IssuesResponse.json; sourceTree = SOURCE_ROOT; };
+		E1358CE81F748CB400785ED6 /* IssueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueTests.swift; path = Tests/IssueTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CE91F748CB400785ED6 /* DeviceSpecificationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceSpecificationTests.swift; path = Tests/DeviceSpecificationTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CEA1F748CB400785ED6 /* StatsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsTests.swift; path = Tests/StatsTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CEB1F748CB400785ED6 /* BotsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BotsResponse.json; path = Tests/BotsResponse.json; sourceTree = SOURCE_ROOT; };
+		E1358CEC1F748CB400785ED6 /* MockAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockAPI.swift; path = Tests/MockAPI.swift; sourceTree = SOURCE_ROOT; };
+		E1358CED1F748CB400785ED6 /* CoverageResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CoverageResponse.json; path = Tests/CoverageResponse.json; sourceTree = SOURCE_ROOT; };
+		E1358CEE1F748CB400785ED6 /* InvalidMockAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InvalidMockAPI.swift; path = Tests/InvalidMockAPI.swift; sourceTree = SOURCE_ROOT; };
+		E1358CEF1F748CB400785ED6 /* ProvisioningConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProvisioningConfigurationTests.swift; path = Tests/ProvisioningConfigurationTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CF01F748CB400785ED6 /* RepositoryBlueprintTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryBlueprintTests.swift; path = Tests/RepositoryBlueprintTests.swift; sourceTree = SOURCE_ROOT; };
+		E1358CF11F748CB400785ED6 /* IntegrationsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = IntegrationsResponse.json; path = Tests/IntegrationsResponse.json; sourceTree = SOURCE_ROOT; };
+		E14163641F7532E200651654 /* BZipCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZipCompression.m; sourceTree = "<group>"; };
+		E14163661F7532E200651654 /* BZipCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZipCompression.h; sourceTree = "<group>"; };
 		E148783F1F0813C4008C5788 /* XCServerWebAPI+Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Issues.swift"; sourceTree = "<group>"; };
 		E14878411F08169A008C5788 /* XCServerWebAPI+Commits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Commits.swift"; sourceTree = "<group>"; };
 		E149CBA71D2ABC8E00E2E688 /* XCServerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCServerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,25 +200,12 @@
 		E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageTarget.swift; sourceTree = "<group>"; };
 		E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageHierarchy.swift; sourceTree = "<group>"; };
 		E15167061F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Coverage.swift"; sourceTree = "<group>"; };
-		E15167081F2B664A001CF4D6 /* CoverageResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CoverageResponse.json; sourceTree = "<group>"; };
 		E151F2161D99BE5600157040 /* IssueAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAuthor.swift; sourceTree = "<group>"; };
-		E15254D41F1691DC00119BE3 /* BotsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BotsResponse.json; sourceTree = "<group>"; };
-		E15254D61F16921400119BE3 /* BotResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BotResponse.json; sourceTree = "<group>"; };
-		E15254D81F16923400119BE3 /* StatsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StatsResponse.json; sourceTree = "<group>"; };
-		E15254DA1F16925000119BE3 /* IntegrationsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IntegrationsResponse.json; sourceTree = "<group>"; };
-		E15254DC1F16928B00119BE3 /* IntegrationResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IntegrationResponse.json; sourceTree = "<group>"; };
-		E15254DE1F1692B800119BE3 /* CommitsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CommitsResponse.json; sourceTree = "<group>"; };
-		E15254E01F1692DD00119BE3 /* IssuesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IssuesResponse.json; sourceTree = "<group>"; };
-		E15254E21F16938C00119BE3 /* IntegrationsRequest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IntegrationsRequest.json; sourceTree = "<group>"; };
-		E152A8991F18E9DB00506696 /* DecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableTests.swift; sourceTree = "<group>"; };
 		E160CEFCE43769AE99A0D9A8 /* Pods-XCServerAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.release.xcconfig"; sourceTree = "<group>"; };
 		E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationSnippet.swift; sourceTree = "<group>"; };
 		E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCServerJSONDecoder.swift; sourceTree = "<group>"; };
 		E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+XCServerAPI.swift"; sourceTree = "<group>"; };
 		E176DFDA1F029E4D005CE042 /* IssueGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueGroup.swift; sourceTree = "<group>"; };
-		E18CDBD21F1659B8000DD01C /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
-		E18CDBD41F165AEE000DD01C /* VersionResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VersionResponse.json; sourceTree = "<group>"; };
-		E18CDBD61F165FFB000DD01C /* MockAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPITests.swift; sourceTree = "<group>"; };
 		E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotSchedule.swift; sourceTree = "<group>"; };
 		E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicScheduleInterval.swift; sourceTree = "<group>"; };
 		E190EBD01EFEBA23004F0920 /* IssueStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueStatus.swift; sourceTree = "<group>"; };
@@ -205,16 +217,7 @@
 		E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSchedule.swift; sourceTree = "<group>"; };
 		E190EBDE1EFEBF22004F0920 /* XcodeServerAPI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = XcodeServerAPI.md; sourceTree = "<group>"; };
 		E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBlueprint.swift; sourceTree = "<group>"; };
-		E190EBE11EFEC953004F0920 /* RepositoryBlueprintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBlueprintTests.swift; sourceTree = "<group>"; };
-		E1956AD41F01D3F4006193D7 /* IssueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTests.swift; sourceTree = "<group>"; };
-		E1956AD61F01D712006193D7 /* CommitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTests.swift; sourceTree = "<group>"; };
-		E1956AD81F01D9DE006193D7 /* StatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTests.swift; sourceTree = "<group>"; };
-		E19E5E321F0FC92500440470 /* TriggersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggersTests.swift; sourceTree = "<group>"; };
-		E19E5E341F0FCB2300440470 /* AssetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsTests.swift; sourceTree = "<group>"; };
-		E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSpecificationTests.swift; sourceTree = "<group>"; };
-		E1A535601F18F266006F2792 /* InvalidMockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidMockAPI.swift; sourceTree = "<group>"; };
 		E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHierarchy.swift; sourceTree = "<group>"; };
-		E1FCE7F31F2B689800AD669F /* CodeCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,13 +261,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E14163631F7532E200651654 /* BZipCompression */ = {
+			isa = PBXGroup;
+			children = (
+				E14163641F7532E200651654 /* BZipCompression.m */,
+				E14163651F7532E200651654 /* include */,
+			);
+			path = BZipCompression;
+			sourceTree = "<group>";
+		};
+		E14163651F7532E200651654 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E14163661F7532E200651654 /* BZipCompression.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		E149CB8D1D2ABC7600E2E688 = {
 			isa = PBXGroup;
 			children = (
+				E1358CD41F748BEC00785ED6 /* Package.swift */,
 				E149CC331D2AC0FB00E2E688 /* Podfile */,
 				E149CC341D2AC0FB00E2E688 /* README.md */,
 				E190EBDE1EFEBF22004F0920 /* XcodeServerAPI.md */,
 				E149CC351D2AC0FB00E2E688 /* XCServerAPI.podspec */,
+				E14163631F7532E200651654 /* BZipCompression */,
 				E149CBBE1D2ABDD700E2E688 /* Sources */,
 				E149CBA81D2ABC8E00E2E688 /* XCServerAPI */,
 				E149CBB41D2ABC8E00E2E688 /* XCServerAPITests */,
@@ -295,35 +317,35 @@
 		E149CBB41D2ABC8E00E2E688 /* XCServerAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				E1358CDE1F748CB400785ED6 /* AssetsTests.swift */,
+				E1358CE11F748CB400785ED6 /* BotResponse.json */,
+				E1358CEB1F748CB400785ED6 /* BotsResponse.json */,
+				E1358CE61F748CB400785ED6 /* BotTests.swift */,
+				E1358CDC1F748CB400785ED6 /* CodeCoverageTests.swift */,
+				E1358CDF1F748CB400785ED6 /* CommitsResponse.json */,
+				E1358CD81F748CB400785ED6 /* CommitTests.swift */,
+				E1358CD91F748CB400785ED6 /* ConfigurationTests.swift */,
+				E1358CED1F748CB400785ED6 /* CoverageResponse.json */,
+				E1358CE21F748CB400785ED6 /* DecodableTests.swift */,
+				E1358CE91F748CB400785ED6 /* DeviceSpecificationTests.swift */,
+				E1358CE01F748CB400785ED6 /* DeviceTests.swift */,
+				E1358CE31F748CB400785ED6 /* IntegrationResponse.json */,
+				E1358CE51F748CB400785ED6 /* IntegrationsRequest.json */,
+				E1358CF11F748CB400785ED6 /* IntegrationsResponse.json */,
+				E1358CE41F748CB400785ED6 /* IntegrationTests.swift */,
+				E1358CEE1F748CB400785ED6 /* InvalidMockAPI.swift */,
+				E1358CE71F748CB400785ED6 /* IssuesResponse.json */,
+				E1358CE81F748CB400785ED6 /* IssueTests.swift */,
+				E1358CEC1F748CB400785ED6 /* MockAPI.swift */,
+				E1358CDA1F748CB400785ED6 /* MockAPITests.swift */,
+				E1358CEF1F748CB400785ED6 /* ProvisioningConfigurationTests.swift */,
+				E1358CF01F748CB400785ED6 /* RepositoryBlueprintTests.swift */,
+				E1358CDD1F748CB400785ED6 /* StatsResponse.json */,
+				E1358CEA1F748CB400785ED6 /* StatsTests.swift */,
+				E1358CD71F748CB400785ED6 /* TestHierarchyTests.swift */,
+				E1358CDB1F748CB400785ED6 /* TriggersTests.swift */,
+				E1358CD61F748CB400785ED6 /* VersionResponse.json */,
 				E149CBB71D2ABC8E00E2E688 /* Info.plist */,
-				E190EBE11EFEC953004F0920 /* RepositoryBlueprintTests.swift */,
-				E1A3BBB21EFF6152003FBF7F /* DeviceSpecificationTests.swift */,
-				E10CC6561EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift */,
-				E10CC65A1EFFDDDB00FE4A3F /* ConfigurationTests.swift */,
-				E108CFCD1EFFF33C00BB7978 /* BotTests.swift */,
-				E108CFD11EFFFB6700BB7978 /* IntegrationTests.swift */,
-				E108CFD31EFFFD3700BB7978 /* DeviceTests.swift */,
-				E108CFD51EFFFDF900BB7978 /* TestHierarchyTests.swift */,
-				E1956AD41F01D3F4006193D7 /* IssueTests.swift */,
-				E1956AD61F01D712006193D7 /* CommitTests.swift */,
-				E1956AD81F01D9DE006193D7 /* StatsTests.swift */,
-				E19E5E321F0FC92500440470 /* TriggersTests.swift */,
-				E19E5E341F0FCB2300440470 /* AssetsTests.swift */,
-				E18CDBD21F1659B8000DD01C /* MockAPI.swift */,
-				E1A535601F18F266006F2792 /* InvalidMockAPI.swift */,
-				E18CDBD61F165FFB000DD01C /* MockAPITests.swift */,
-				E18CDBD41F165AEE000DD01C /* VersionResponse.json */,
-				E15254D41F1691DC00119BE3 /* BotsResponse.json */,
-				E15254D61F16921400119BE3 /* BotResponse.json */,
-				E15254D81F16923400119BE3 /* StatsResponse.json */,
-				E15254DA1F16925000119BE3 /* IntegrationsResponse.json */,
-				E15254DC1F16928B00119BE3 /* IntegrationResponse.json */,
-				E15254DE1F1692B800119BE3 /* CommitsResponse.json */,
-				E15254E01F1692DD00119BE3 /* IssuesResponse.json */,
-				E15254E21F16938C00119BE3 /* IntegrationsRequest.json */,
-				E152A8991F18E9DB00506696 /* DecodableTests.swift */,
-				E15167081F2B664A001CF4D6 /* CoverageResponse.json */,
-				E1FCE7F31F2B689800AD669F /* CodeCoverageTests.swift */,
 			);
 			path = XCServerAPITests;
 			sourceTree = "<group>";
@@ -500,16 +522,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15254E31F16938C00119BE3 /* IntegrationsRequest.json in Resources */,
-				E15254D91F16923400119BE3 /* StatsResponse.json in Resources */,
-				E15254DB1F16925000119BE3 /* IntegrationsResponse.json in Resources */,
-				E15254D51F1691DC00119BE3 /* BotsResponse.json in Resources */,
-				E15254DF1F1692B800119BE3 /* CommitsResponse.json in Resources */,
-				E18CDBD51F165AEE000DD01C /* VersionResponse.json in Resources */,
-				E15254D71F16921400119BE3 /* BotResponse.json in Resources */,
-				E15254E11F1692DD00119BE3 /* IssuesResponse.json in Resources */,
-				E15167091F2B664A001CF4D6 /* CoverageResponse.json in Resources */,
-				E15254DD1F16928B00119BE3 /* IntegrationResponse.json in Resources */,
+				E1358D071F748CB400785ED6 /* BotsResponse.json in Resources */,
+				E1358D0D1F748CB400785ED6 /* IntegrationsResponse.json in Resources */,
+				E1358D091F748CB400785ED6 /* CoverageResponse.json in Resources */,
+				E1358D011F748CB400785ED6 /* IntegrationsRequest.json in Resources */,
+				E1358CFD1F748CB400785ED6 /* BotResponse.json in Resources */,
+				E1358CFF1F748CB400785ED6 /* IntegrationResponse.json in Resources */,
+				E1358D031F748CB400785ED6 /* IssuesResponse.json in Resources */,
+				E1358CFB1F748CB400785ED6 /* CommitsResponse.json in Resources */,
+				E1358CF91F748CB400785ED6 /* StatsResponse.json in Resources */,
+				E1358CF21F748CB400785ED6 /* VersionResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,9 +544,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BZipCompression/BZipCompression.framework",
+				"${BUILT_PRODUCTS_DIR}/CodeQuickKit/CodeQuickKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BZipCompression.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodeQuickKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -552,13 +579,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XCServerAPITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C850CE59D5337C2C4928EA69 /* [CP] Copy Pods Resources */ = {
@@ -582,13 +612,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XCServerAPI-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -665,24 +698,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E19E5E331F0FC92500440470 /* TriggersTests.swift in Sources */,
-				E19E5E351F0FCB2300440470 /* AssetsTests.swift in Sources */,
-				E1FCE7F41F2B689800AD669F /* CodeCoverageTests.swift in Sources */,
-				E108CFCE1EFFF33C00BB7978 /* BotTests.swift in Sources */,
-				E1956AD91F01D9DE006193D7 /* StatsTests.swift in Sources */,
-				E108CFD41EFFFD3700BB7978 /* DeviceTests.swift in Sources */,
-				E152A89A1F18E9DB00506696 /* DecodableTests.swift in Sources */,
-				E1956AD51F01D3F4006193D7 /* IssueTests.swift in Sources */,
-				E1A3BBB31EFF6152003FBF7F /* DeviceSpecificationTests.swift in Sources */,
-				E18CDBD71F165FFB000DD01C /* MockAPITests.swift in Sources */,
-				E1956AD71F01D712006193D7 /* CommitTests.swift in Sources */,
-				E108CFD21EFFFB6700BB7978 /* IntegrationTests.swift in Sources */,
-				E10CC65B1EFFDDDB00FE4A3F /* ConfigurationTests.swift in Sources */,
-				E18CDBD31F1659B8000DD01C /* MockAPI.swift in Sources */,
-				E108CFD61EFFFDF900BB7978 /* TestHierarchyTests.swift in Sources */,
-				E10CC6571EFFDC2C00FE4A3F /* ProvisioningConfigurationTests.swift in Sources */,
-				E1A535611F18F266006F2792 /* InvalidMockAPI.swift in Sources */,
-				E190EBE21EFEC953004F0920 /* RepositoryBlueprintTests.swift in Sources */,
+				E1358CFA1F748CB400785ED6 /* AssetsTests.swift in Sources */,
+				E1358D051F748CB400785ED6 /* DeviceSpecificationTests.swift in Sources */,
+				E1358CF61F748CB400785ED6 /* MockAPITests.swift in Sources */,
+				E1358D0B1F748CB400785ED6 /* ProvisioningConfigurationTests.swift in Sources */,
+				E1358D001F748CB400785ED6 /* IntegrationTests.swift in Sources */,
+				E1358CF41F748CB400785ED6 /* CommitTests.swift in Sources */,
+				E1358CF81F748CB400785ED6 /* CodeCoverageTests.swift in Sources */,
+				E1358CF71F748CB400785ED6 /* TriggersTests.swift in Sources */,
+				E1358D061F748CB400785ED6 /* StatsTests.swift in Sources */,
+				E1358CF31F748CB400785ED6 /* TestHierarchyTests.swift in Sources */,
+				E1358CF51F748CB400785ED6 /* ConfigurationTests.swift in Sources */,
+				E1358D0A1F748CB400785ED6 /* InvalidMockAPI.swift in Sources */,
+				E1358CFE1F748CB400785ED6 /* DecodableTests.swift in Sources */,
+				E1358D021F748CB400785ED6 /* BotTests.swift in Sources */,
+				E1358CFC1F748CB400785ED6 /* DeviceTests.swift in Sources */,
+				E1358D081F748CB400785ED6 /* MockAPI.swift in Sources */,
+				E1358D041F748CB400785ED6 /* IssueTests.swift in Sources */,
+				E1358D0C1F748CB400785ED6 /* RepositoryBlueprintTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,14 +844,18 @@
 				INFOPLIST_FILE = XCServerAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.richardpiazza.XCServerAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -835,13 +872,17 @@
 				INFOPLIST_FILE = XCServerAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.richardpiazza.XCServerAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos macosx";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -850,10 +891,12 @@
 			baseConfigurationReference = 7168F2F8281D069E3847D606 /* Pods-XCServerAPITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = XCServerAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.richardpiazza.XCServerAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -864,10 +907,12 @@
 			baseConfigurationReference = E160CEFCE43769AE99A0D9A8 /* Pods-XCServerAPITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = XCServerAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.richardpiazza.XCServerAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos macosx";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

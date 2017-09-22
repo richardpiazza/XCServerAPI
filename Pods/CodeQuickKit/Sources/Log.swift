@@ -33,6 +33,8 @@ import Foundation
 public struct Log {
     public private(set) static var observers: [LogObserver] = [LogObserver]()
     public static var consoleLevel: LogLevel = .debug
+    
+    #if (os(macOS) || os(iOS) || os(tvOS) || os(watchOS))
     public static var writeToFile: Bool = false {
         didSet {
             if writeToFile {
@@ -42,11 +44,12 @@ public struct Log {
             }
         }
     }
+    #endif
     
     // MARK: - Observers
     private static func index(of observer: LogObserver) -> Array<LogObserver>.Index? {
-        let index = observers.index { (o) -> Bool in
-            return o.isEqual(observers)
+        let index = observers.index { (o: LogObserver) -> Bool in
+            return o.isEqual(observer)
         }
         
         return index
@@ -89,7 +92,7 @@ public struct Log {
         let log = Log(level, file: file, line: line, message: message, error: error)
         
         if level.rawValue >= consoleLevel.rawValue {
-            NSLog("%@", log.stringValue)
+            print(log.stringValue)
         }
         
         for observer in observers {
@@ -163,7 +166,9 @@ public protocol LogObserver: NSObjectProtocol {
 
 /// A Simple class conforming to `LogObserver` that writes `Log`s to a file on disk.
 public class LogFile: NSObject, LogObserver {
+    #if (os(macOS) || os(iOS) || os(tvOS) || os(watchOS))
     public static var `default`: LogFile = LogFile(fileName: "log.txt", autoPurge: true)
+    #endif
     
     private static var fileDirectory: URL {
         var urls: [URL]
@@ -193,10 +198,12 @@ public class LogFile: NSObject, LogObserver {
         }
     }
     
+    #if (os(macOS) || os(iOS) || os(tvOS) || os(watchOS))
     public convenience init(fileName: String, logLevel: LogLevel = .error, autoPurge: Bool = false) {
         let url = type(of: self).fileDirectory.appendingPathComponent(fileName)
         self.init(url: url, logLevel: logLevel, autoPurge: autoPurge)
     }
+    #endif
     
     public func log(_ log: Log) {
         guard log.level.rawValue >= logLevel.rawValue else {
@@ -211,7 +218,7 @@ public class LogFile: NSObject, LogObserver {
             do {
                 try data.write(to: url, options: .atomic)
             } catch {
-                NSLog("%@", error as NSError)
+                print(error)
             }
             return
         }
@@ -220,11 +227,11 @@ public class LogFile: NSObject, LogObserver {
         do {
             handle = try FileHandle(forWritingTo: url)
         } catch {
-            NSLog("%@", error as NSError)
+            print(error)
             return
         }
         
-        handle.seekToEndOfFile()
+        let _ = handle.seekToEndOfFile()
         handle.write(data)
         handle.closeFile()
     }
@@ -240,7 +247,7 @@ public class LogFile: NSObject, LogObserver {
         do {
             attributes = try FileManager.default.attributesOfItem(atPath: url.path)
         } catch {
-            NSLog("%@", error as NSError)
+            print(error)
             return
         }
         
@@ -248,7 +255,7 @@ public class LogFile: NSObject, LogObserver {
             return
         }
         
-        guard fileBytes < bytes else {
+        guard fileBytes > bytes else {
             return
         }
         
@@ -263,7 +270,7 @@ public class LogFile: NSObject, LogObserver {
         do {
             try FileManager.default.removeItem(at: url)
         } catch {
-            NSLog("%@", error as NSError)
+            print(error)
         }
     }
     
@@ -276,7 +283,7 @@ public class LogFile: NSObject, LogObserver {
         do {
             data = try Data(contentsOf: url)
         } catch {
-            NSLog("%@", error as NSError)
+            print(error)
             return nil
         }
         

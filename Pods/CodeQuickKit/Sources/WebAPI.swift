@@ -30,7 +30,7 @@ import Foundation
 public typealias WebAPIRequestCompletion = (_ statusCode: Int, _ headers: [AnyHashable : Any]?, _ data: Data?, _ error: Error?) -> Void
 
 /// # WebAPI
-/// A testable wrapper for NSURLSession for communication with REST API's
+/// A testable wrapper for URLSession for communication with REST API's
 open class WebAPI {
     
     public enum HTTPRequestMethod: String {
@@ -58,9 +58,9 @@ open class WebAPI {
         var method: HTTPRequestMethod = .get
         var absoluteString: String
         
-        public init(request: NSMutableURLRequest) {
+        public init(request: URLRequest) {
             var m = HTTPRequestMethod.get
-            if let requestMethod = HTTPRequestMethod(rawValue: request.httpMethod) {
+            if let httpMethod = request.httpMethod, let requestMethod = HTTPRequestMethod(rawValue: httpMethod) {
                 m = requestMethod
             }
             var a = ""
@@ -118,47 +118,12 @@ open class WebAPI {
     public enum Errors: Error {
         case invalidURL
         case invalidRequest
-        case requestError(requestError: NSError)
-        case responseError(responseError: NSError)
         
-        public var description: String {
+        public var localizedDescription: String {
             switch self {
-            case .invalidURL: return "Invalid Base URL"
-            case .invalidRequest: return "Invalid URL Request"
-            case .requestError(let requestError): return requestError.localizedDescription
-            case .responseError(let responseError): return responseError.localizedDescription
+            case .invalidURL: return "Invalid Base URL: Base URL is nil or invalid"
+            case .invalidRequest: return "Invalid URL Request: URLRequest is nil or invalid"
             }
-        }
-        
-        public var failureReason: String {
-            switch self {
-            case .invalidURL: return "Base URL is nil or invalid"
-            case .invalidRequest: return "NSURLRequest is nil or invalid"
-            case .requestError(let requestError): return requestError.localizedFailureReason ?? ""
-            case .responseError(let responseError): return responseError.localizedFailureReason ?? ""
-            }
-        }
-        
-        public var recoverySuggestion: String {
-            switch self {
-            case .invalidURL: return "Set the base URL and try the request again."
-            case .invalidRequest: return "Try the request again with a valid NSURLRequest."
-            case .requestError(let requestError): return requestError.localizedRecoverySuggestion ?? ""
-            case .responseError(let responseError): return responseError.localizedRecoverySuggestion ?? ""
-            }
-        }
-        
-        public var code: Int {
-            switch self {
-            case .invalidURL: return 0
-            case .invalidRequest: return 1
-            case .requestError(let requestError): return requestError.code
-            case .responseError(let responseError): return responseError.code
-            }
-        }
-        
-        public var error: NSError {
-            return NSError(domain: String(describing: WebAPI.self), code: code, userInfo: [NSLocalizedDescriptionKey: description, NSLocalizedFailureReasonErrorKey: failureReason, NSLocalizedRecoverySuggestionErrorKey: recoverySuggestion])
         }
     }
     
@@ -180,7 +145,7 @@ open class WebAPI {
     
     /// Constructs the request, setting the method, body data, and headers based on parameters
     /// Subclasses can override this method to customize the request as needed.
-    open func request(method: HTTPRequestMethod, path: String, queryItems: [URLQueryItem]?, data: Data?) throws -> NSMutableURLRequest {
+    open func request(method: HTTPRequestMethod, path: String, queryItems: [URLQueryItem]?, data: Data?) throws -> URLRequest {
         guard let baseURL = self.baseURL else {
             Log.error(Errors.invalidURL)
             throw Errors.invalidURL
@@ -194,7 +159,7 @@ open class WebAPI {
             throw Errors.invalidURL
         }
         
-        let request = NSMutableURLRequest(url: url)
+        var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.httpBody = data
         request.setValue(DateFormatter.rfc1123DateFormatter.string(from: Date()), forHTTPHeaderField: HTTPHeaderKey.Date)
@@ -208,9 +173,8 @@ open class WebAPI {
     
     /// Constructs the URLSession task with the specified request
     /// - note: Injected Responses are ignored when using this method.
-    open func task(request: NSMutableURLRequest, completion: @escaping WebAPIRequestCompletion) -> URLSessionDataTask {
-        let urlRequest = request as URLRequest
-        return self.session.dataTask(with: urlRequest, completionHandler: { (responseData, urlResponse, error) in
+    open func task(request: URLRequest, completion: @escaping WebAPIRequestCompletion) -> URLSessionDataTask {
+        return self.session.dataTask(with: request, completionHandler: { (responseData, urlResponse, error) in
             guard let httpResponse = urlResponse as? HTTPURLResponse else {
                 Log.error(error, message: "URLResponse failed to cast as HTTPURLResponse")
                 completion(0, nil, responseData, error)
@@ -225,7 +189,7 @@ open class WebAPI {
     
     /// Executes the specified request.
     /// - note: Injected Responses will be queried before a task is executed.
-    open func execute(request: NSMutableURLRequest, completion: @escaping WebAPIRequestCompletion) {
+    open func execute(request: URLRequest, completion: @escaping WebAPIRequestCompletion) {
         guard let _ = request.url else {
             Log.error(Errors.invalidURL, message: "Failed to execute URL Request.")
             completion(0, nil, nil, Errors.invalidURL)
@@ -233,10 +197,17 @@ open class WebAPI {
         }
         
         if let canned = injectedResponses[InjectedPath(request: request)] {
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(canned.timeout * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: { () -> Void in
-                completion(canned.statusCode, canned.headers, canned.data, canned.error)
-            })
+            #if (os(macOS) || os(iOS) || os(tvOS) || os(watchOS))
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(canned.timeout * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: { () -> Void in
+                    completion(canned.statusCode, canned.headers, canned.data, canned.error)
+                })
+            #else
+                let _ = Timer.scheduledTimer(withTimeInterval: TimeInterval(exactly: canned.timeout) ?? TimeInterval(floatLiteral: 0.0), repeats: false, block: { (timer) in
+                    completion(canned.statusCode, canned.headers, canned.data, canned.error)
+                })
+            #endif
             return
+            
         }
         
         let task = self.task(request: request, completion: completion)
@@ -246,7 +217,7 @@ open class WebAPI {
     /// Transforms the request into a `multipart/form-data` request.
     /// The request `content-type` will be set to `image/png`
     open func execute(method: HTTPRequestMethod, path: String, queryItems: [URLQueryItem]?, pngImageData: Data, filename: String = "image.png", completion: @escaping WebAPIRequestCompletion) {
-        var request: NSMutableURLRequest
+        var request: URLRequest
         do {
             request = try self.request(method: method, path: path, queryItems: queryItems, data: nil)
         } catch {
@@ -258,7 +229,7 @@ open class WebAPI {
         let contentType = "multipart/form-data; boundary=\(boundary)"
         request.setValue(contentType, forHTTPHeaderField: HTTPHeaderKey.ContentType)
         
-        let data = NSMutableData()
+        var data = Data()
         
         if let d = "--\(boundary)\r\n".data(using: String.Encoding.utf8) {
             data.append(d)
@@ -277,10 +248,10 @@ open class WebAPI {
             data.append(d)
         }
         
-        let contentLength = String(format: "%zu", data.length)
+        let contentLength = String(format: "%zu", data.count)
         request.setValue(contentLength, forHTTPHeaderField: HTTPHeaderKey.ContentLength)
         
-        request.httpBody = data as Data
+        request.httpBody = data
         
         self.execute(request: request, completion: completion)
     }

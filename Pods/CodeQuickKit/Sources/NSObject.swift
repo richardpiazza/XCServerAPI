@@ -25,6 +25,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if (os(macOS) || os(iOS) || os(tvOS) || os(watchOS))
+
 import Foundation
 
 public extension NSObject {
@@ -35,7 +37,7 @@ public extension NSObject {
         }
         
         let range = propertyName.startIndex..<propertyName.characters.index(propertyName.startIndex, offsetBy: 1)
-        let character = propertyName.substring(with: range).uppercased()
+        let character = propertyName[range].uppercased()
         let setter = propertyName.replacingCharacters(in: range, with: character)
         
         return NSSelectorFromString("set\(setter):")
@@ -49,3 +51,5 @@ public extension NSObject {
         return responds(to: selector)
     }
 }
+
+#endif

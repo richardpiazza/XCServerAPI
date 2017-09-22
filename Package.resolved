@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CodeQuickKit",
+        "repositoryURL": "https://github.com/richardpiazza/CodeQuickKit.git",
+        "state": {
+          "branch": null,
+          "revision": "2be97dc7572dbe19dd2a906e40f1b827996a740e",
+          "version": "6.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

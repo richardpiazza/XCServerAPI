@@ -25,6 +25,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if (os(macOS) || os(iOS) || os(tvOS) || os(watchOS))
+
 import Foundation
 
 public enum UbiquityState {
@@ -47,13 +49,13 @@ public enum UbiquityState {
         case .available: return "iCloud is enabled, and the application container is ready."
         }
     }
+}
+
+public enum UbiquityError: Error {
+    case invalidState
     
-    public static var invalidUbiquityState: NSError {
-        var userInfo = [String : AnyObject]()
-        userInfo[NSLocalizedDescriptionKey] = "Invalid ubiquity state." as AnyObject?
-        userInfo[NSLocalizedFailureReasonErrorKey] = "This application does not have access to a valid iCloud ubiquity container." as AnyObject?
-        userInfo[NSLocalizedRecoverySuggestionErrorKey] = "Log into iCloud and initialize the ubiquity container." as AnyObject?
-        return NSError(domain: String(describing: self), code: 0, userInfo: userInfo)
+    public var localizedDescription: String {
+        return "Invalid Ubiquity State: This application does not have access to a valid iCloud ubiquity container."
     }
 }
 
@@ -115,3 +117,5 @@ open class UbiquityContainer: UbiquityContainerDelegate {
         Log.debug("Ubiquity State did change from '\(oldState.description)' to '\(newState.description)'")
     }
 }
+
+#endif

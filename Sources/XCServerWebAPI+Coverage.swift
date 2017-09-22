@@ -73,27 +73,31 @@ public extension XCServerWebAPI {
     }
     
     internal func decompress(data: Data) throws -> Data {
+        #if arch(x86_64)
+            throw Errors.decodeResponse
+        #else
         let decompressedData = try BZipCompression.decompressedData(with: data)
-        
+
         guard let decompressedString = String(data: decompressedData, encoding: .utf8) else {
             throw Errors.decodeResponse
         }
-        
+
         guard let firstBrace = decompressedString.range(of: "{") else {
             throw Errors.decodeResponse
         }
-        
+
         guard let lastBrace = decompressedString.range(of: "}", options: .backwards, range: nil, locale: nil) else {
             throw Errors.decodeResponse
         }
-        
+
         let range = decompressedString.index(firstBrace.lowerBound, offsetBy: 0)..<decompressedString.index(lastBrace.lowerBound, offsetBy: 1)
-        let json = decompressedString.substring(with: range)
-        
+        let json = decompressedString[range]
+
         guard let validData = json.data(using: .utf8) else {
             throw Errors.decodeResponse
         }
-        
+
         return validData
+        #endif
     }
 }

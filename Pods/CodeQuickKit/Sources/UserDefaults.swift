@@ -28,7 +28,7 @@
 import Foundation
 
 /// ### UserDefault
-/// A defined structure for storing information in `NSUserDefaults` and `NSUbiquitousKeyValueStore`.
+/// A defined structure for storing information in `UserDefaults` and `NSUbiquitousKeyValueStore`.
 /// The `timestamp` and optional `build` variables allow for comparisson during syncing.
 public struct KeyValueItem {
     public struct Keys {
@@ -117,9 +117,7 @@ public protocol KeyValueUbiquityContainerDelegate {
     func didSet(_ item: KeyValueItem, forKey: String)
 }
 
-#if os(watchOS)
-
-#else
+#if (os(macOS) || os(iOS) || os(tvOS))
     extension NSUbiquitousKeyValueStore: KeyValueStorage {
         
     }

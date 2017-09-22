@@ -6,7 +6,7 @@
 //  Copyright © 2016 Richard Piazza. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for XCServerAPI.
 FOUNDATION_EXPORT double XCServerAPIVersionNumber;

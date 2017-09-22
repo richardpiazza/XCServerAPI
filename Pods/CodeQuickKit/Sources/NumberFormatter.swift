@@ -82,8 +82,8 @@ public extension NumberFormatter {
         maximumFractionDigits = format.maximumFractionDigits
     }
     
-    /// An NSNumberFormatter for whole integers.
-    /// Uses the NSNumberFormatterDecimalStyle with MaximumFractionDigits set to
+    /// An NumberFormatter for whole integers.
+    /// Uses the NumberFormatterDecimalStyle with MaximumFractionDigits set to
     /// 0 (zero).
     public static func integerFormatter() -> NumberFormatter {
         return common.integerFormatter
@@ -97,8 +97,8 @@ public extension NumberFormatter {
         return common.integerFormatter.string(from: NSNumber(value: number))
     }
     
-    /// An NSNumberFormatter for whole integers.
-    /// Uses the NSNumberFormatterDecimalStyle with MaximumFractionDigits set to
+    /// An NumberFormatter for whole integers.
+    /// Uses the NumberFormatterDecimalStyle with MaximumFractionDigits set to
     /// 1 (one).
     public static func singleDecimalFormatter() -> NumberFormatter {
         return common.singleDecimalFormatter
@@ -112,8 +112,8 @@ public extension NumberFormatter {
         return common.singleDecimalFormatter.string(from: NSNumber(value: number))
     }
     
-    /// An NSNumberFormatter for whole integers.
-    /// Uses the NSNumberFormatterDecimalStyle with MaximumFractionDigits set to
+    /// An NumberFormatter for whole integers.
+    /// Uses the NumberFormatterDecimalStyle with MaximumFractionDigits set to
     /// 2 (two).
     public static func decimalFormatter() -> NumberFormatter {
         return common.decimalFormatter
@@ -127,8 +127,8 @@ public extension NumberFormatter {
         return common.decimalFormatter.string(from: NSNumber(value: number))
     }
     
-    /// An NSNumberFormatter for whole integers.
-    /// Uses the NSNumberFormatterCurrencyStyle.
+    /// An NumberFormatter for whole integers.
+    /// Uses the NumberFormatterCurrencyStyle.
     public static func currencyFormatter() -> NumberFormatter {
         return common.currencyFormatter
     }
@@ -141,8 +141,8 @@ public extension NumberFormatter {
         return common.currencyFormatter.string(from: NSNumber(value: number))
     }
     
-    /// An NSNumberFormatter for whole integers.
-    /// Uses the NSNumberFormatterPercentStyle with MinimumFractionDigits set to
+    /// An NumberFormatter for whole integers.
+    /// Uses the NumberFormatterPercentStyle with MinimumFractionDigits set to
     /// 1 (one) and MaximumFractionDigits set to 3 (three).
     public static func percentFormatter() -> NumberFormatter {
         return common.percentFormatter

@@ -25,6 +25,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if (os(macOS) || os(iOS) || os(tvOS) || os(watchOS))
+    
 import Foundation
 
 public typealias PausableTimerExpiredCompletion = () -> Void
@@ -145,3 +147,5 @@ public class PausableTimer {
         }
     }
 }
+
+#endif

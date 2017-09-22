@@ -29,7 +29,7 @@ import Foundation
 
 /// ## DateFormat
 ///
-/// Enum grouping the format options for `NSDateFormatter`s.
+/// Enum grouping the format options for `DateFormatter`s.
 public enum DateFormat {
     case rfc1123
     case shortDateTime
@@ -89,7 +89,7 @@ public enum DateFormat {
     }
 }
 
-/// Extension of `NSDateFormatter` adding static access to common formatters.
+/// Extension of `DateFormatter` adding static access to common formatters.
 public extension DateFormatter {
     fileprivate struct common {
         static let rfc1123DateFormatter: DateFormatter = DateFormatter(.rfc1123)

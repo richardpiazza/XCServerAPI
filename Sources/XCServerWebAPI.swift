@@ -180,8 +180,8 @@ public class XCServerWebAPI: WebAPI {
         self.init(baseURL: url, sessionDelegate: XCServerWebAPI.sessionDelegate)
     }
     
-    public override func request(method: WebAPI.HTTPRequestMethod, path: String, queryItems: [URLQueryItem]?, data: Data?) throws -> NSMutableURLRequest {
-        let request = try super.request(method: method, path: path, queryItems: queryItems, data: data)
+    public override func request(method: WebAPI.HTTPRequestMethod, path: String, queryItems: [URLQueryItem]?, data: Data?) throws -> URLRequest {
+        var request = try super.request(method: method, path: path, queryItems: queryItems, data: data)
         
         if let header = XCServerWebAPI.credentialDelegate.credentialsHeader(forAPI: self) {
             request.setValue(header.value, forHTTPHeaderField: header.key)
