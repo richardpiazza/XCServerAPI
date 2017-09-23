@@ -7,20 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0118E48350776DC74DB0D48ACDCB4FB9 /* BZipCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0505AFBA692AEF8FE91ED2F1DF26D9 /* BZipCompression.m */; };
 		087F6AE304DFD17BF96B2E547CAD4B08 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5337DB655A4DAB240B9802B9DBF0E344 /* Storyboarded.swift */; };
 		15D79E522C05ADFFFA56E3A241025911 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CAFE6DA13AD58A66E76DD3C06A287B /* WebAPI.swift */; };
-		16D09F9D9BC0F1D306214456E0C8F36C /* BZipCompression-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F83AEA3D90DD2D8F0008285B343203E /* BZipCompression-dummy.m */; };
 		24CC6D314EE9F6C289051BFA0E4D1DCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		3D981F2091EDD75D22410D2A9E15B67F /* Pods-XCServerAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 968EB88995300E80FB8D7824813F56BF /* Pods-XCServerAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CCC6F4B706371B34A93B7A40B2653B9 /* Pods-XCServerAPITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D76BD6DE9612D313F66764C5E0B8E2 /* Pods-XCServerAPITests-dummy.m */; };
 		51610C2D2DC48F06B7CD2171C50658BD /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB14B3C96F41F9BD79EF64F23B2F04 /* Log.swift */; };
-		576A14B57033FD9ABE415EC8FD96B97C /* BZipCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 0017D1B920DEDC5AABCC48402B65DB7F /* BZipCompression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		600846CFF45E048CA6AC0E2878F94545 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3A01F4FD4A52103F417B6F9922E355 /* Reusable.swift */; };
-		65A42F03CD57151A995D28F2DE137E26 /* BZipCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8256C9C7B2E7304858DDECF02170E6 /* BZipCompression.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		6BE4496B651BD627BA6DE285F4175B95 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37861DF3D32D29098183923A86BBC51B /* NSObject.swift */; };
 		6E76DCDE7D39480DCF8DAEF9F0F8E23E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A19055887E3095741A1443F72D1779 /* Date.swift */; };
 		7185703BA903C47546896906A31B5858 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF1EAD355D18C42D77B2609B2A5430 /* UserDefaults.swift */; };
-		72D9695C694811FC962343AACF8C6AF3 /* BZipCompression-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A77775B00D97392E45C200C3638632E4 /* BZipCompression-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72D9695C694811FC962343AACF8C6AF3 /* BZipCompression-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9EB66236A140F878F6A2435038AF2CB /* BZipCompression-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74CBB943674EA5450BAAB03F099C661C /* NSMetadataQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C738D135EC10F99081DD53E9B48E717 /* NSMetadataQuery.swift */; };
 		76FE74634CE73384A7B013849DDFEF9E /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5617E037042EE4A154F9304D111D7 /* Downloader.swift */; };
 		777A443B1F96A32658476D39E42FD829 /* ProgrammaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A7BD581EBD1058F42CC531BCC4BF18 /* ProgrammaticView.swift */; };
@@ -29,10 +27,12 @@
 		9139FCD28A106FE8088476C5346C8CE7 /* CodeQuickKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 798E41BA2AD97CCFAD32E4EEB9C7A6C8 /* CodeQuickKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94696683C9D17E99EC7BCDBAF5E3C58B /* Ubiquity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085818A5D8AC112B79275710D5F6E794 /* Ubiquity.swift */; };
 		94DFD6C1BA359E4F7F2A4782F4B67EB7 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55148EBC03F95EEA83B2D07D456A1B91 /* Bundle.swift */; };
+		9F65BAD991AEB6D64E60A8A9E26919FC /* BZipCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CA9057C2023E3589B07ABB0B59DA64 /* BZipCompression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B188F506B981D11972D61BEA2E78D2AF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D14BF18D7C406C97A0FAC9725ECBE6D /* UIViewController.swift */; };
 		B2BF7608DEA61F42B9C68552D802757C /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E6A08669FBA4E4910A82AADBB72F52 /* NumberFormatter.swift */; };
 		B2DE23FA9156D930877AE5D97BC9F8E2 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687B9D169B2D709A0B8E9BFF85C72AD /* UITableView.swift */; };
 		B999C49FBC79D8FE2E03A47FC587E64E /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AA1EF5D7E094920CBA8038AF7848F7 /* FileManager.swift */; };
+		C02605604E999C9665CA3FB6BDF2D73F /* BZipCompression-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB18771544ECF73CB420E02D4B53E9 /* BZipCompression-dummy.m */; };
 		C04EBA8B3D136A6DEA76A484CD6015F7 /* Pods-XCServerAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D272D44DC21357CC292A3CF3340E90C5 /* Pods-XCServerAPI-dummy.m */; };
 		CA2FB858EB55C6B3C3DCE2FC25C87ACB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		CA4017BB549E46B440567FA4DFCB2D0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
@@ -77,8 +77,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0017D1B920DEDC5AABCC48402B65DB7F /* BZipCompression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BZipCompression.h; path = Code/BZipCompression.h; sourceTree = "<group>"; };
 		085818A5D8AC112B79275710D5F6E794 /* Ubiquity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ubiquity.swift; path = Sources/Ubiquity.swift; sourceTree = "<group>"; };
+		0A2747E15FDD8BE27EF08BFF4186971C /* BZipCompression.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BZipCompression.modulemap; sourceTree = "<group>"; };
 		0BCDE5CE82A6E7231EBF516D340D653E /* CodeQuickKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CodeQuickKit.framework; path = CodeQuickKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9F3A8EE4B667A6133503B030161DC2 /* CodeQuickKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CodeQuickKit-prefix.pch"; sourceTree = "<group>"; };
 		0D14BF18D7C406C97A0FAC9725ECBE6D /* UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Sources/UIViewController.swift; sourceTree = "<group>"; };
@@ -87,22 +87,22 @@
 		258D5AFAB0790612210B5497B659E140 /* Pods_XCServerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XCServerAPI.framework; path = "Pods-XCServerAPI.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		285CC2BED9FD64E218B4B6DB2AC7A5B1 /* BZipCompression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BZipCompression.framework; path = BZipCompression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD6798762B96391BF224CC1A27C1D6A /* DateFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Sources/DateFormatter.swift; sourceTree = "<group>"; };
-		2F83AEA3D90DD2D8F0008285B343203E /* BZipCompression-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BZipCompression-dummy.m"; sourceTree = "<group>"; };
+		30B1C9342238ED8EA6BA2AF963A6F52F /* BZipCompression-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BZipCompression-prefix.pch"; sourceTree = "<group>"; };
 		37861DF3D32D29098183923A86BBC51B /* NSObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSObject.swift; path = Sources/NSObject.swift; sourceTree = "<group>"; };
 		3CF3BC6ACA315A3F25CB4F3530F0B97F /* PausableTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PausableTimer.swift; path = Sources/PausableTimer.swift; sourceTree = "<group>"; };
 		3D9399932DC04C105D3BF44D028076D2 /* Pods-XCServerAPITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-XCServerAPITests.modulemap"; sourceTree = "<group>"; };
 		4BCF1EAD355D18C42D77B2609B2A5430 /* UserDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Sources/UserDefaults.swift; sourceTree = "<group>"; };
-		4E8256C9C7B2E7304858DDECF02170E6 /* BZipCompression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BZipCompression.m; path = Code/BZipCompression.m; sourceTree = "<group>"; };
 		51AA1EF5D7E094920CBA8038AF7848F7 /* FileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = Sources/FileManager.swift; sourceTree = "<group>"; };
 		5337DB655A4DAB240B9802B9DBF0E344 /* Storyboarded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storyboarded.swift; path = Sources/Storyboarded.swift; sourceTree = "<group>"; };
 		55148EBC03F95EEA83B2D07D456A1B91 /* Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bundle.swift; path = Sources/Bundle.swift; sourceTree = "<group>"; };
 		5C738D135EC10F99081DD53E9B48E717 /* NSMetadataQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSMetadataQuery.swift; path = Sources/NSMetadataQuery.swift; sourceTree = "<group>"; };
-		62F6E23DE00CFB4AA1BBFFFAC4383277 /* BZipCompression-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BZipCompression-prefix.pch"; sourceTree = "<group>"; };
+		5DE411FDB0FE866F557D3D8701AC6064 /* BZipCompression.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BZipCompression.xcconfig; sourceTree = "<group>"; };
 		665D39F0F5A19E9DF93BE2EACB76A773 /* Pods-XCServerAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XCServerAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6A6F02F4EE76A2428F3CF87A16FAEF4C /* CodeQuickKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CodeQuickKit.xcconfig; sourceTree = "<group>"; };
 		6DE5D26C004483D944BDD8DE8A39289A /* UIAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIAlertController.swift; path = Sources/UIAlertController.swift; sourceTree = "<group>"; };
 		78FE144B4FB5568CAD8C93D39D81A16F /* Pods-XCServerAPITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XCServerAPITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		798E41BA2AD97CCFAD32E4EEB9C7A6C8 /* CodeQuickKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CodeQuickKit-umbrella.h"; sourceTree = "<group>"; };
+		7A0505AFBA692AEF8FE91ED2F1DF26D9 /* BZipCompression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BZipCompression.m; path = Sources/BZipCompression/BZipCompression.m; sourceTree = "<group>"; };
 		8687B9D169B2D709A0B8E9BFF85C72AD /* UITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = Sources/UITableView.swift; sourceTree = "<group>"; };
 		8A03624404DDBD201AD8C535A510505E /* Pods-XCServerAPI-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XCServerAPI-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -113,28 +113,28 @@
 		A2DE45234BB1ACE44883E8A8D4CFB631 /* UIPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIPickerView.swift; path = Sources/UIPickerView.swift; sourceTree = "<group>"; };
 		A4D5617E037042EE4A154F9304D111D7 /* Downloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = Sources/Downloader.swift; sourceTree = "<group>"; };
 		A5A19055887E3095741A1443F72D1779 /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Sources/Date.swift; sourceTree = "<group>"; };
-		A77775B00D97392E45C200C3638632E4 /* BZipCompression-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BZipCompression-umbrella.h"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B665C3F30930A0C8A2191C4FC5CF26FD /* Pods-XCServerAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XCServerAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		C44F2FFA95EEF0C178472A7C50DA78C2 /* Environment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Environment.swift; path = Sources/Environment.swift; sourceTree = "<group>"; };
 		C5CAFE6DA13AD58A66E76DD3C06A287B /* WebAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebAPI.swift; path = Sources/WebAPI.swift; sourceTree = "<group>"; };
 		C7F5B7D7F27DAC3001B185CFFCE81500 /* Pods-XCServerAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XCServerAPITests.release.xcconfig"; sourceTree = "<group>"; };
+		C9CA9057C2023E3589B07ABB0B59DA64 /* BZipCompression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BZipCompression.h; path = Sources/BZipCompression/include/BZipCompression.h; sourceTree = "<group>"; };
 		C9D4A39C3A76652012D51E895DF4A85D /* Pods-XCServerAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XCServerAPITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CCA4DE819B5C21ED2405D387D23ACC5B /* BZipCompression.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BZipCompression.modulemap; sourceTree = "<group>"; };
 		D272D44DC21357CC292A3CF3340E90C5 /* Pods-XCServerAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XCServerAPI-dummy.m"; sourceTree = "<group>"; };
 		D3E6A08669FBA4E4910A82AADBB72F52 /* NumberFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NumberFormatter.swift; path = Sources/NumberFormatter.swift; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D982477A18966E523E80E03C04728317 /* Pods-XCServerAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XCServerAPI-acknowledgements.plist"; sourceTree = "<group>"; };
 		DA50DBCD108EA8E29A364F7626C34E7A /* Pods-XCServerAPITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XCServerAPITests-umbrella.h"; sourceTree = "<group>"; };
-		DAB265F39F942E93BFBC61099CD5734E /* BZipCompression.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BZipCompression.xcconfig; sourceTree = "<group>"; };
 		DC3A01F4FD4A52103F417B6F9922E355 /* Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Sources/Reusable.swift; sourceTree = "<group>"; };
 		DEBB14B3C96F41F9BD79EF64F23B2F04 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Sources/Log.swift; sourceTree = "<group>"; };
+		E3A6B5044D5C1FA8D32A3E6A78E08AFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6A7BD581EBD1058F42CC531BCC4BF18 /* ProgrammaticView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgrammaticView.swift; path = Sources/ProgrammaticView.swift; sourceTree = "<group>"; };
+		E9EB66236A140F878F6A2435038AF2CB /* BZipCompression-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BZipCompression-umbrella.h"; sourceTree = "<group>"; };
 		EAAC49ADC6921BF9A757AE5B66D5ABC4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC0F1573AA1D56156B7804732CB530DC /* Pods-XCServerAPITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XCServerAPITests-frameworks.sh"; sourceTree = "<group>"; };
+		F0FB18771544ECF73CB420E02D4B53E9 /* BZipCompression-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BZipCompression-dummy.m"; sourceTree = "<group>"; };
 		F1534727B6A4D2A711B85F4216FA2C3C /* Pods-XCServerAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XCServerAPI.release.xcconfig"; sourceTree = "<group>"; };
 		F3159EB93D125257634B88A98225CCE9 /* CodeQuickKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CodeQuickKit-dummy.m"; sourceTree = "<group>"; };
-		F42513CC90F8CF01DB0F1D9648E4146E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9D76BD6DE9612D313F66764C5E0B8E2 /* Pods-XCServerAPITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XCServerAPITests-dummy.m"; sourceTree = "<group>"; };
 		FBEB29D2888C28E3295AA0EEB5B654A9 /* Pods-XCServerAPITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XCServerAPITests-resources.sh"; sourceTree = "<group>"; };
 		FCDE07957EF034A3627F943E400DDCC1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,17 +177,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		219EFDFAF772BC30DE4B981ABB6F5863 /* BZipCompression */ = {
-			isa = PBXGroup;
-			children = (
-				0017D1B920DEDC5AABCC48402B65DB7F /* BZipCompression.h */,
-				4E8256C9C7B2E7304858DDECF02170E6 /* BZipCompression.m */,
-				C55FE707D4E8C40DDFF635941E1DFA3B /* Support Files */,
-			);
-			name = BZipCompression;
-			path = BZipCompression;
-			sourceTree = "<group>";
-		};
 		39326D4507A93EF085472A5059513DD3 /* Pods-XCServerAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +192,20 @@
 			);
 			name = "Pods-XCServerAPI";
 			path = "Target Support Files/Pods-XCServerAPI";
+			sourceTree = "<group>";
+		};
+		3EABF7B7046DEE8F3183753E31BC1E69 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A2747E15FDD8BE27EF08BFF4186971C /* BZipCompression.modulemap */,
+				5DE411FDB0FE866F557D3D8701AC6064 /* BZipCompression.xcconfig */,
+				F0FB18771544ECF73CB420E02D4B53E9 /* BZipCompression-dummy.m */,
+				30B1C9342238ED8EA6BA2AF963A6F52F /* BZipCompression-prefix.pch */,
+				E9EB66236A140F878F6A2435038AF2CB /* BZipCompression-umbrella.h */,
+				E3A6B5044D5C1FA8D32A3E6A78E08AFA /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BZipCompression";
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -255,7 +258,7 @@
 		7101CEB597B7D40DCE70EC56900C3ABB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				219EFDFAF772BC30DE4B981ABB6F5863 /* BZipCompression */,
+				E6D55129B3687F2867F9F39036543FD7 /* BZipCompression */,
 				56F020274BACE54C038B95FD876A1A7A /* CodeQuickKit */,
 			);
 			name = Pods;
@@ -297,20 +300,6 @@
 			path = "../Target Support Files/CodeQuickKit";
 			sourceTree = "<group>";
 		};
-		C55FE707D4E8C40DDFF635941E1DFA3B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CCA4DE819B5C21ED2405D387D23ACC5B /* BZipCompression.modulemap */,
-				DAB265F39F942E93BFBC61099CD5734E /* BZipCompression.xcconfig */,
-				2F83AEA3D90DD2D8F0008285B343203E /* BZipCompression-dummy.m */,
-				62F6E23DE00CFB4AA1BBFFFAC4383277 /* BZipCompression-prefix.pch */,
-				A77775B00D97392E45C200C3638632E4 /* BZipCompression-umbrella.h */,
-				F42513CC90F8CF01DB0F1D9648E4146E /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/BZipCompression";
-			sourceTree = "<group>";
-		};
 		CBCAECC5893E81BA9808F362401CF8B6 /* Pods-XCServerAPITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +316,17 @@
 			);
 			name = "Pods-XCServerAPITests";
 			path = "Target Support Files/Pods-XCServerAPITests";
+			sourceTree = "<group>";
+		};
+		E6D55129B3687F2867F9F39036543FD7 /* BZipCompression */ = {
+			isa = PBXGroup;
+			children = (
+				C9CA9057C2023E3589B07ABB0B59DA64 /* BZipCompression.h */,
+				7A0505AFBA692AEF8FE91ED2F1DF26D9 /* BZipCompression.m */,
+				3EABF7B7046DEE8F3183753E31BC1E69 /* Support Files */,
+			);
+			name = BZipCompression;
+			path = BZipCompression;
 			sourceTree = "<group>";
 		};
 		F56B19467CB9DD5963E3B10C02029AF1 /* Targets Support Files */ = {
@@ -346,7 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D9695C694811FC962343AACF8C6AF3 /* BZipCompression-umbrella.h in Headers */,
-				576A14B57033FD9ABE415EC8FD96B97C /* BZipCompression.h in Headers */,
+				9F65BAD991AEB6D64E60A8A9E26919FC /* BZipCompression.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +436,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27FDCF920423B18E6168870E892833AB /* Build configuration list for PBXNativeTarget "BZipCompression" */;
 			buildPhases = (
-				3CA04E49D45D8B60328AA4DF5EE1471A /* Sources */,
+				81815114ABAE145B8E601D1586BE3883 /* Sources */,
 				9128DE050D7AA8BAA99BB8C40EA3C68E /* Frameworks */,
 				77D090EA849D0449D5143C113A30E58C /* Headers */,
 			);
@@ -487,15 +487,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CA04E49D45D8B60328AA4DF5EE1471A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				16D09F9D9BC0F1D306214456E0C8F36C /* BZipCompression-dummy.m in Sources */,
-				65A42F03CD57151A995D28F2DE137E26 /* BZipCompression.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5816A07DD80BDC84FFC68A55FE7408D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,6 +513,15 @@
 				B188F506B981D11972D61BEA2E78D2AF /* UIViewController.swift in Sources */,
 				7185703BA903C47546896906A31B5858 /* UserDefaults.swift in Sources */,
 				15D79E522C05ADFFFA56E3A241025911 /* WebAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81815114ABAE145B8E601D1586BE3883 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02605604E999C9665CA3FB6BDF2D73F /* BZipCompression-dummy.m in Sources */,
+				0118E48350776DC74DB0D48ACDCB4FB9 /* BZipCompression.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,40 +645,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		20E21F0588310EDC58245D23715CBE7D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAB265F39F942E93BFBC61099CD5734E /* BZipCompression.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BZipCompression/BZipCompression-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BZipCompression/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BZipCompression/BZipCompression.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = BZipCompression;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		3FCBCA12DE9A3B5DF6EBC5219DD3A23E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -830,6 +796,40 @@
 			};
 			name = Debug;
 		};
+		B44F7243EFFB4BF7381415226476E5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DE411FDB0FE866F557D3D8701AC6064 /* BZipCompression.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BZipCompression/BZipCompression-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BZipCompression/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BZipCompression/BZipCompression.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BZipCompression;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		BC80BBB5C066539FFFC0B2127CA5D3C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -879,16 +879,16 @@
 			};
 			name = Debug;
 		};
-		D87218A5015DF9B9611D48DA0EAE7C53 /* Release */ = {
+		DD251C78E5384141F25781FDF63A78C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAB265F39F942E93BFBC61099CD5734E /* BZipCompression.xcconfig */;
+			baseConfigurationReference = 5DE411FDB0FE866F557D3D8701AC6064 /* BZipCompression.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -898,10 +898,10 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BZipCompression/BZipCompression-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BZipCompression/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/BZipCompression/BZipCompression.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = BZipCompression;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -911,7 +911,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		F88072BC12C057B109F8EECDB47D55E2 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -954,8 +954,8 @@
 		27FDCF920423B18E6168870E892833AB /* Build configuration list for PBXNativeTarget "BZipCompression" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20E21F0588310EDC58245D23715CBE7D /* Debug */,
-				D87218A5015DF9B9611D48DA0EAE7C53 /* Release */,
+				DD251C78E5384141F25781FDF63A78C8 /* Debug */,
+				B44F7243EFFB4BF7381415226476E5F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
