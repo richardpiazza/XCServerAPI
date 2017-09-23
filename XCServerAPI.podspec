@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation'
   s.requires_arc = true
   s.dependency 'CodeQuickKit', '~> 6.0'
-  s.dependency 'BZipCompression', :git => 'https://github.com/richardpiazza/BZipCompression.git', :tag => '1.0.2'
+  s.dependency 'BZipper', '~> 1.0.3'
 
   s.osx.deployment_target = "10.13"
   s.ios.deployment_target = "11.0"

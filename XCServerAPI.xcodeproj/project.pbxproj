@@ -529,7 +529,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BZipCompression/BZipCompression.framework",
+				"${BUILT_PRODUCTS_DIR}/BZipper/BZipCompression.framework",
 				"${BUILT_PRODUCTS_DIR}/CodeQuickKit/CodeQuickKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
