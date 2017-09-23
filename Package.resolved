@@ -2,6 +2,24 @@
   "object": {
     "pins": [
       {
+        "package": "BZipCompression",
+        "repositoryURL": "https://github.com/richardpiazza/BZipCompression.git",
+        "state": {
+          "branch": null,
+          "revision": "c28b380a27bea5d68983407727e4673586ff3316",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "Cbz2",
+        "repositoryURL": "https://github.com/richardpiazza/Cbz2.git",
+        "state": {
+          "branch": null,
+          "revision": "1d6111e39e5d48286a9eee5eee17770c3296d5f4",
+          "version": "1.0.1"
+        }
+      },
+      {
         "package": "CodeQuickKit",
         "repositoryURL": "https://github.com/richardpiazza/CodeQuickKit.git",
         "state": {

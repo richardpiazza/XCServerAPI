@@ -98,8 +98,6 @@
 		E190EBDB1EFEBD23004F0920 /* EmailType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDA1EFEBD23004F0920 /* EmailType.swift */; };
 		E190EBDD1EFEBD81004F0920 /* ReportSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */; };
 		E190EBE01EFEC056004F0920 /* RepositoryBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */; };
-		E19AE3821F75810A0040CE07 /* BZipCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = E14163641F7532E200651654 /* BZipCompression.m */; };
-		E19AE3831F7581140040CE07 /* BZipCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = E14163661F7532E200651654 /* BZipCompression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E19AE3861F75834B0040CE07 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E19AE3851F75834B0040CE07 /* libbz2.tbd */; };
 		E1AEB59F1F013E7B0019B6E2 /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */; };
 /* End PBXBuildFile section */
@@ -159,8 +157,6 @@
 		E1358CEF1F748CB400785ED6 /* ProvisioningConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProvisioningConfigurationTests.swift; path = Tests/ProvisioningConfigurationTests.swift; sourceTree = SOURCE_ROOT; };
 		E1358CF01F748CB400785ED6 /* RepositoryBlueprintTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryBlueprintTests.swift; path = Tests/RepositoryBlueprintTests.swift; sourceTree = SOURCE_ROOT; };
 		E1358CF11F748CB400785ED6 /* IntegrationsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = IntegrationsResponse.json; path = Tests/IntegrationsResponse.json; sourceTree = SOURCE_ROOT; };
-		E14163641F7532E200651654 /* BZipCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZipCompression.m; sourceTree = "<group>"; };
-		E14163661F7532E200651654 /* BZipCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZipCompression.h; sourceTree = "<group>"; };
 		E148783F1F0813C4008C5788 /* XCServerWebAPI+Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Issues.swift"; sourceTree = "<group>"; };
 		E14878411F08169A008C5788 /* XCServerWebAPI+Commits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Commits.swift"; sourceTree = "<group>"; };
 		E149CBA71D2ABC8E00E2E688 /* XCServerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCServerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,23 +263,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E14163631F7532E200651654 /* BZipCompression */ = {
-			isa = PBXGroup;
-			children = (
-				E14163641F7532E200651654 /* BZipCompression.m */,
-				E14163651F7532E200651654 /* include */,
-			);
-			path = BZipCompression;
-			sourceTree = "<group>";
-		};
-		E14163651F7532E200651654 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				E14163661F7532E200651654 /* BZipCompression.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
 		E149CB8D1D2ABC7600E2E688 = {
 			isa = PBXGroup;
 			children = (
@@ -292,7 +271,6 @@
 				E149CC341D2AC0FB00E2E688 /* README.md */,
 				E190EBDE1EFEBF22004F0920 /* XcodeServerAPI.md */,
 				E149CC351D2AC0FB00E2E688 /* XCServerAPI.podspec */,
-				E14163631F7532E200651654 /* BZipCompression */,
 				E149CBBE1D2ABDD700E2E688 /* Sources */,
 				E149CBA81D2ABC8E00E2E688 /* XCServerAPI */,
 				E149CBB41D2ABC8E00E2E688 /* XCServerAPITests */,
@@ -431,7 +409,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E149CBAA1D2ABC8E00E2E688 /* XCServerAPI.h in Headers */,
-				E19AE3831F7581140040CE07 /* BZipCompression.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,10 +529,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BZipCompression/BZipCompression.framework",
 				"${BUILT_PRODUCTS_DIR}/CodeQuickKit/CodeQuickKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BZipCompression.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodeQuickKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,7 +615,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E19AE3821F75810A0040CE07 /* BZipCompression.m in Sources */,
 				E108CFD01EFFF59F00BB7978 /* Group.swift in Sources */,
 				E15166FF1F2A8249001CF4D6 /* CoverageMethod.swift in Sources */,
 				E149CBEA1D2ABDD700E2E688 /* DeviceDocument.swift in Sources */,

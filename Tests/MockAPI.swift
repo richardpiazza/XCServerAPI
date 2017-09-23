@@ -11,6 +11,22 @@ import Foundation
 
 class MockAPI: XCServerWebAPI {
     
+    public func url(forResource resource: String) -> URL {
+        let bundle = Bundle(for: type(of: self))
+        if let url = bundle.url(forResource: resource, withExtension: "json") {
+            return url
+        }
+        
+        let path = FileManager.default.currentDirectoryPath
+        let url = URL(fileURLWithPath: path).appendingPathComponent("Tests").appendingPathComponent(resource).appendingPathExtension("json")
+        
+        if !FileManager.default.fileExists(atPath: url.path) {
+            fatalError("Failed to locate resource \(resource).json")
+        }
+        
+        return url
+    }
+    
     public convenience init() {
         let url = URL(string: "https://localhost:20343/api")
         self.init(baseURL: url, sessionDelegate: XCServerWebAPI.sessionDelegate)
@@ -42,7 +58,7 @@ class MockAPI: XCServerWebAPI {
     
     public var versionsResponse: InjectedResponse {
         var response = InjectedResponse()
-        let url = Bundle(for: type(of: self)).url(forResource: "VersionResponse", withExtension: "json")!
+        let url = self.url(forResource: "VersionResponse")
         response.data = FileManager.default.contents(atPath: url.path)
         response.statusCode = 200
         response.headers = [
@@ -60,7 +76,7 @@ class MockAPI: XCServerWebAPI {
     
     public var botsResponse: InjectedResponse {
         var response = InjectedResponse()
-        let url = Bundle(for: type(of: self)).url(forResource: "BotsResponse", withExtension: "json")!
+        let url = self.url(forResource: "BotsResponse")
         response.data = FileManager.default.contents(atPath: url.path)
         response.statusCode = 200
         return response
@@ -68,7 +84,7 @@ class MockAPI: XCServerWebAPI {
     
     public var botResponse: InjectedResponse {
         var response = InjectedResponse()
-        let url = Bundle(for: type(of: self)).url(forResource: "BotResponse", withExtension: "json")!
+        let url = self.url(forResource: "BotResponse")
         response.data = FileManager.default.contents(atPath: url.path)
         response.statusCode = 200
         return response
@@ -76,7 +92,7 @@ class MockAPI: XCServerWebAPI {
     
     public var statsResponse: InjectedResponse {
         var response = InjectedResponse()
-        let url = Bundle(for: type(of: self)).url(forResource: "StatsResponse", withExtension: "json")!
+        let url = self.url(forResource: "StatsResponse")
         response.data = FileManager.default.contents(atPath: url.path)
         response.statusCode = 200
         return response
@@ -84,7 +100,7 @@ class MockAPI: XCServerWebAPI {
     
     public var integrationsResponse: InjectedResponse {
         var response = InjectedResponse()
-        let url = Bundle(for: type(of: self)).url(forResource: "IntegrationsResponse", withExtension: "json")!
+        let url = self.url(forResource: "IntegrationsResponse")
         response.data = FileManager.default.contents(atPath: url.path)
         response.statusCode = 200
         return response
@@ -92,7 +108,7 @@ class MockAPI: XCServerWebAPI {
     
     public var integrationsRequest: InjectedResponse {
         var response = InjectedResponse()
-        let url = Bundle(for: type(of: self)).url(forResource: "IntegrationsRequest", withExtension: "json")!
+        let url = self.url(forResource: "IntegrationsRequest")
         response.data = FileManager.default.contents(atPath: url.path)
         response.statusCode = 201
         return response
@@ -100,7 +116,7 @@ class MockAPI: XCServerWebAPI {
     
     public var integrationResponse: InjectedResponse {
         var response = InjectedResponse()
-        let url = Bundle(for: type(of: self)).url(forResource: "IntegrationResponse", withExtension: "json")!
+        let url = self.url(forResource: "IntegrationResponse")
         response.data = FileManager.default.contents(atPath: url.path)
         response.statusCode = 200
         return response
@@ -108,7 +124,7 @@ class MockAPI: XCServerWebAPI {
     
     public var commitsResponse: InjectedResponse {
         var response = InjectedResponse()
-        let url = Bundle(for: type(of: self)).url(forResource: "CommitsResponse", withExtension: "json")!
+        let url = self.url(forResource: "CommitsResponse")
         response.data = FileManager.default.contents(atPath: url.path)
         response.statusCode = 200
         return response
@@ -116,7 +132,7 @@ class MockAPI: XCServerWebAPI {
     
     public var issuesResponse: InjectedResponse {
         var response = InjectedResponse()
-        let url = Bundle(for: type(of: self)).url(forResource: "IssuesResponse", withExtension: "json")!
+        let url = self.url(forResource: "IssuesResponse")
         response.data = FileManager.default.contents(atPath: url.path)
         response.statusCode = 200
         return response

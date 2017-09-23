@@ -27,6 +27,7 @@
 
 import Foundation
 import CodeQuickKit
+import BZipCompression
 
 public extension XCServerWebAPI {
     

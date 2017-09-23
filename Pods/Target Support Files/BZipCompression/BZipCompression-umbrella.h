@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "BZipCompression.h"
 
-FOUNDATION_EXPORT double Pods_XCServerAPITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_XCServerAPITestsVersionString[];
+FOUNDATION_EXPORT double BZipCompressionVersionNumber;
+FOUNDATION_EXPORT const unsigned char BZipCompressionVersionString[];
 
