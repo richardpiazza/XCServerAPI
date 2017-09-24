@@ -89,9 +89,9 @@ class TestHierarchyTests: XCTestCase {
             return
         }
         
-        var hierarchy: TestHierarchy
+        var hierarchy: XCSTestHierarchy
         do {
-            hierarchy = try decoder.decode(TestHierarchy.self, from: data)
+            hierarchy = try decoder.decode(XCSTestHierarchy.self, from: data)
         } catch {
             print(error)
             XCTFail()

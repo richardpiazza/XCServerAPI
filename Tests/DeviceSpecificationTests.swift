@@ -50,9 +50,9 @@ class DeviceSpecificationTests: XCTestCase {
             return
         }
         
-        var deviceSpecification: DeviceSpecification
+        var deviceSpecification: XCSDeviceSpecification
         do {
-            deviceSpecification = try decoder.decode(DeviceSpecification.self, from: data)
+            deviceSpecification = try decoder.decode(XCSDeviceSpecification.self, from: data)
         } catch {
             print(error)
             XCTFail()

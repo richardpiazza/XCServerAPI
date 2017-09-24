@@ -36,9 +36,9 @@ class ProvisioningConfigurationTests: XCTestCase {
             return
         }
         
-        var provisioningConfiguration: ProvisioningConfiguration
+        var provisioningConfiguration: XCSProvisioningConfiguration
         do {
-            provisioningConfiguration = try decoder.decode(ProvisioningConfiguration.self, from: data)
+            provisioningConfiguration = try decoder.decode(XCSProvisioningConfiguration.self, from: data)
         } catch {
             print(error)
             XCTFail()

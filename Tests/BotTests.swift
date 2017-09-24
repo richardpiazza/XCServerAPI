@@ -48,9 +48,9 @@ class BotTests: XCTestCase {
             return
         }
         
-        var bot: BotDocument
+        var bot: XCSBot
         do {
-            bot = try decoder.decode(BotDocument.self, from: data)
+            bot = try decoder.decode(XCSBot.self, from: data)
         } catch {
             print(error)
             XCTFail()

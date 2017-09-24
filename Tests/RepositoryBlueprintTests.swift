@@ -96,9 +96,9 @@ class RepositoryBlueprintTests: XCTestCase {
             return
         }
         
-        var blueprint: RepositoryBlueprint
+        var blueprint: XCSRepositoryBlueprint
         do {
-            blueprint = try decoder.decode(RepositoryBlueprint.self, from: data)
+            blueprint = try decoder.decode(XCSRepositoryBlueprint.self, from: data)
         } catch {
             print(error)
             XCTFail()
@@ -154,9 +154,9 @@ class RepositoryBlueprintTests: XCTestCase {
             return
         }
         
-        var blueprint: RepositoryBlueprint
+        var blueprint: XCSRepositoryBlueprint
         do {
-            blueprint = try decoder.decode(RepositoryBlueprint.self, from: data)
+            blueprint = try decoder.decode(XCSRepositoryBlueprint.self, from: data)
         } catch {
             print(error)
             XCTFail()

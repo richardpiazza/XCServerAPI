@@ -23,15 +23,15 @@ class DecodableTests: XCTestCase {
     
     func testInvalidDecodable() {
         let invalidJson = "{}"
-        var versionDocument = VersionDocument.decode(json: invalidJson)
+        var versionDocument = XCSVersion.decode(json: invalidJson)
         XCTAssertNil(versionDocument)
         
         let invalidString = String()
-        versionDocument = VersionDocument.decode(json: invalidString)
+        versionDocument = XCSVersion.decode(json: invalidString)
         XCTAssertNil(versionDocument)
         
         let invalidData = Data()
-        versionDocument = VersionDocument.decode(data: invalidData)
+        versionDocument = XCSVersion.decode(data: invalidData)
         XCTAssertNil(versionDocument)
     }
 }

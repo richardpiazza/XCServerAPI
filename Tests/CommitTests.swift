@@ -131,7 +131,7 @@ class CommitTests: XCTestCase {
     }
     
     func testCommitDocument() {
-        guard let commitDocument = CommitDocument.decode(json: json) else {
+        guard let commitDocument = XCSCommit.decode(json: json) else {
             XCTFail()
             return
         }

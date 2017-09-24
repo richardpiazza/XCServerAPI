@@ -409,7 +409,7 @@ class CodeCoverageTests: XCTestCase {
     }
     
     func testCoverage() {
-        guard let coverage = CoverageHierarchy.decode(json: json) else {
+        guard let coverage = XCSCoverageHierarchy.decode(json: json) else {
             XCTFail()
             return
         }

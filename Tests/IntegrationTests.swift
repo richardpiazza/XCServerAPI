@@ -117,7 +117,7 @@ class IntegrationTests: XCTestCase {
         let startDate = DateComponents(calendar: Calendar.current, timeZone: TimeZone.current, era: 1, year: 2017, month: 06, day: 25, hour: 13, minute: 24, second: 06, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil).date!
         let endDate = DateComponents(calendar: Calendar.current, timeZone: TimeZone.current, era: 1, year: 2017, month: 06, day: 25, hour: 13, minute: 27, second: 28, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil).date!
         
-        guard let integration = IntegrationDocument.decode(json: json) else {
+        guard let integration = XCSIntegration.decode(json: json) else {
             XCTFail()
             return
         }

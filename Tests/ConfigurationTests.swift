@@ -58,9 +58,9 @@ class ConfigurationTests: XCTestCase {
             return
         }
         
-        var configuration: Configuration
+        var configuration: XCSConfiguration
         do {
-            configuration = try decoder.decode(Configuration.self, from: data)
+            configuration = try decoder.decode(XCSConfiguration.self, from: data)
         } catch {
             print(error)
             XCTFail()

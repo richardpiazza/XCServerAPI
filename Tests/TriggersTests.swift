@@ -127,7 +127,7 @@ class TriggersTests: XCTestCase {
     }
     
     func testTriggers() {
-        guard let triggers = [Trigger].decode(json: json) else {
+        guard let triggers = [XCSTrigger].decode(json: json) else {
             XCTFail()
             return
         }

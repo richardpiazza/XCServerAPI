@@ -113,7 +113,7 @@ class StatsTests: XCTestCase {
     }
     
     func testStats() {
-        guard let stats = Stats.decode(json: json) else {
+        guard let stats = XCSStats.decode(json: json) else {
             XCTFail()
             return
         }

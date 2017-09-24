@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		0164414CA64501C6F71102CF /* Pods_XCServerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB6F550AA2780D2129BCABA /* Pods_XCServerAPI.framework */; };
 		2CAA4B297B94CA4ED5C2CC6B /* Pods_XCServerAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F41A62328F1F9FD45C1DD92 /* Pods_XCServerAPITests.framework */; };
-		E108CFD01EFFF59F00BB7978 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFCF1EFFF59F00BB7978 /* Group.swift */; };
-		E108CFD81F012FE000BB7978 /* ProxiedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD71F012FE000BB7978 /* ProxiedDevice.swift */; };
-		E10A7FC21F17AB1600080A44 /* SuspectStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10A7FC11F17AB1600080A44 /* SuspectStrategy.swift */; };
-		E10CC6591EFFDC7700FE4A3F /* ProvisioningConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6581EFFDC7700FE4A3F /* ProvisioningConfiguration.swift */; };
-		E10CC65D1EFFE24600FE4A3F /* BuildArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65C1EFFE24600FE4A3F /* BuildArgument.swift */; };
-		E10CC65F1EFFE27A00FE4A3F /* TestLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65E1EFFE27A00FE4A3F /* TestLocalization.swift */; };
-		E10CC6611EFFE47200FE4A3F /* CodeCoveragePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6601EFFE47200FE4A3F /* CodeCoveragePreference.swift */; };
-		E10CC6631EFFE51100FE4A3F /* CleanSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6621EFFE51100FE4A3F /* CleanSchedule.swift */; };
+		E108CFD01EFFF59F00BB7978 /* XCSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFCF1EFFF59F00BB7978 /* XCSGroup.swift */; };
+		E108CFD81F012FE000BB7978 /* XCSProxiedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD71F012FE000BB7978 /* XCSProxiedDevice.swift */; };
+		E10A7FC21F17AB1600080A44 /* XCSSuspectStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10A7FC11F17AB1600080A44 /* XCSSuspectStrategy.swift */; };
+		E10CC6591EFFDC7700FE4A3F /* XCSProvisioningConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6581EFFDC7700FE4A3F /* XCSProvisioningConfiguration.swift */; };
+		E10CC65D1EFFE24600FE4A3F /* XCSBuildArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65C1EFFE24600FE4A3F /* XCSBuildArgument.swift */; };
+		E10CC65F1EFFE27A00FE4A3F /* XCSTestLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC65E1EFFE27A00FE4A3F /* XCSTestLocalization.swift */; };
+		E10CC6611EFFE47200FE4A3F /* XCSCodeCoveragePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6601EFFE47200FE4A3F /* XCSCodeCoveragePreference.swift */; };
+		E10CC6631EFFE51100FE4A3F /* XCSCleanSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CC6621EFFE51100FE4A3F /* XCSCleanSchedule.swift */; };
 		E12209AB1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12209AA1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift */; };
 		E12209AD1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12209AC1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift */; };
 		E1358CF21F748CB400785ED6 /* VersionResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1358CD61F748CB400785ED6 /* VersionResponse.json */; };
@@ -51,55 +51,55 @@
 		E14878421F08169A008C5788 /* XCServerWebAPI+Commits.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14878411F08169A008C5788 /* XCServerWebAPI+Commits.swift */; };
 		E149CBAA1D2ABC8E00E2E688 /* XCServerAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E149CBA91D2ABC8E00E2E688 /* XCServerAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E149CBB11D2ABC8E00E2E688 /* XCServerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E149CBA71D2ABC8E00E2E688 /* XCServerAPI.framework */; };
-		E149CBDF1D2ABDD700E2E688 /* IntegrationAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC01D2ABDD700E2E688 /* IntegrationAsset.swift */; };
-		E149CBE01D2ABDD700E2E688 /* AuthenticationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC11D2ABDD700E2E688 /* AuthenticationStrategy.swift */; };
-		E149CBE21D2ABDD700E2E688 /* BlueprintLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC31D2ABDD700E2E688 /* BlueprintLocation.swift */; };
-		E149CBE31D2ABDD700E2E688 /* BotDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC41D2ABDD700E2E688 /* BotDocument.swift */; };
-		E149CBE41D2ABDD700E2E688 /* BuildResultSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC51D2ABDD700E2E688 /* BuildResultSummary.swift */; };
-		E149CBE51D2ABDD700E2E688 /* CommitChangeFilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC61D2ABDD700E2E688 /* CommitChangeFilePath.swift */; };
-		E149CBE61D2ABDD700E2E688 /* CommitContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC71D2ABDD700E2E688 /* CommitContributor.swift */; };
-		E149CBE71D2ABDD700E2E688 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC81D2ABDD700E2E688 /* Commit.swift */; };
-		E149CBE81D2ABDD700E2E688 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC91D2ABDD700E2E688 /* Conditions.swift */; };
-		E149CBE91D2ABDD700E2E688 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCA1D2ABDD700E2E688 /* Configuration.swift */; };
-		E149CBEA1D2ABDD700E2E688 /* DeviceDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCB1D2ABDD700E2E688 /* DeviceDocument.swift */; };
-		E149CBEB1D2ABDD700E2E688 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCC1D2ABDD700E2E688 /* DeviceSpecification.swift */; };
-		E149CBEC1D2ABDD700E2E688 /* EmailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCD1D2ABDD700E2E688 /* EmailConfiguration.swift */; };
-		E149CBED1D2ABDD700E2E688 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCE1D2ABDD700E2E688 /* Filter.swift */; };
-		E149CBEE1D2ABDD700E2E688 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCF1D2ABDD700E2E688 /* Assets.swift */; };
-		E149CBEF1D2ABDD700E2E688 /* CommitDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD01D2ABDD700E2E688 /* CommitDocument.swift */; };
-		E149CBF11D2ABDD700E2E688 /* IntegrationDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD21D2ABDD700E2E688 /* IntegrationDocument.swift */; };
-		E149CBF21D2ABDD700E2E688 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD31D2ABDD700E2E688 /* Issue.swift */; };
-		E149CBF41D2ABDD700E2E688 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD51D2ABDD700E2E688 /* Platform.swift */; };
-		E149CBF51D2ABDD700E2E688 /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD61D2ABDD700E2E688 /* RemoteRepository.swift */; };
-		E149CBF61D2ABDD700E2E688 /* RepositoryLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD71D2ABDD700E2E688 /* RepositoryLocation.swift */; };
-		E149CBF81D2ABDD700E2E688 /* StatsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD91D2ABDD700E2E688 /* StatsSummary.swift */; };
-		E149CBF91D2ABDD700E2E688 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDA1D2ABDD700E2E688 /* Stats.swift */; };
-		E149CBFA1D2ABDD700E2E688 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDB1D2ABDD700E2E688 /* Trigger.swift */; };
-		E149CBFB1D2ABDD700E2E688 /* VersionDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDC1D2ABDD700E2E688 /* VersionDocument.swift */; };
+		E149CBDF1D2ABDD700E2E688 /* XCSIntegrationAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC01D2ABDD700E2E688 /* XCSIntegrationAsset.swift */; };
+		E149CBE01D2ABDD700E2E688 /* XCSAuthenticationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC11D2ABDD700E2E688 /* XCSAuthenticationStrategy.swift */; };
+		E149CBE21D2ABDD700E2E688 /* XCSBlueprintLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC31D2ABDD700E2E688 /* XCSBlueprintLocation.swift */; };
+		E149CBE31D2ABDD700E2E688 /* XCSBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC41D2ABDD700E2E688 /* XCSBot.swift */; };
+		E149CBE41D2ABDD700E2E688 /* XCSBuildResultSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC51D2ABDD700E2E688 /* XCSBuildResultSummary.swift */; };
+		E149CBE51D2ABDD700E2E688 /* XCSCommitChangeFilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC61D2ABDD700E2E688 /* XCSCommitChangeFilePath.swift */; };
+		E149CBE61D2ABDD700E2E688 /* XCSCommitContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC71D2ABDD700E2E688 /* XCSCommitContributor.swift */; };
+		E149CBE71D2ABDD700E2E688 /* XCSRepositoryCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC81D2ABDD700E2E688 /* XCSRepositoryCommit.swift */; };
+		E149CBE81D2ABDD700E2E688 /* XCSConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBC91D2ABDD700E2E688 /* XCSConditions.swift */; };
+		E149CBE91D2ABDD700E2E688 /* XCSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCA1D2ABDD700E2E688 /* XCSConfiguration.swift */; };
+		E149CBEA1D2ABDD700E2E688 /* XCSDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCB1D2ABDD700E2E688 /* XCSDevice.swift */; };
+		E149CBEB1D2ABDD700E2E688 /* XCSDeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCC1D2ABDD700E2E688 /* XCSDeviceSpecification.swift */; };
+		E149CBEC1D2ABDD700E2E688 /* XCSEmailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCD1D2ABDD700E2E688 /* XCSEmailConfiguration.swift */; };
+		E149CBED1D2ABDD700E2E688 /* XCSFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCE1D2ABDD700E2E688 /* XCSFilter.swift */; };
+		E149CBEE1D2ABDD700E2E688 /* XCSAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBCF1D2ABDD700E2E688 /* XCSAssets.swift */; };
+		E149CBEF1D2ABDD700E2E688 /* XCSCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD01D2ABDD700E2E688 /* XCSCommit.swift */; };
+		E149CBF11D2ABDD700E2E688 /* XCSIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD21D2ABDD700E2E688 /* XCSIntegration.swift */; };
+		E149CBF21D2ABDD700E2E688 /* XCSIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD31D2ABDD700E2E688 /* XCSIssue.swift */; };
+		E149CBF41D2ABDD700E2E688 /* XCSPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD51D2ABDD700E2E688 /* XCSPlatform.swift */; };
+		E149CBF51D2ABDD700E2E688 /* XCSRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD61D2ABDD700E2E688 /* XCSRemoteRepository.swift */; };
+		E149CBF61D2ABDD700E2E688 /* XCSRepositoryLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD71D2ABDD700E2E688 /* XCSRepositoryLocation.swift */; };
+		E149CBF81D2ABDD700E2E688 /* XCSStatsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBD91D2ABDD700E2E688 /* XCSStatsSummary.swift */; };
+		E149CBF91D2ABDD700E2E688 /* XCSStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDA1D2ABDD700E2E688 /* XCSStats.swift */; };
+		E149CBFA1D2ABDD700E2E688 /* XCSTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDB1D2ABDD700E2E688 /* XCSTrigger.swift */; };
+		E149CBFB1D2ABDD700E2E688 /* XCSVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDC1D2ABDD700E2E688 /* XCSVersion.swift */; };
 		E149CBFC1D2ABDD700E2E688 /* XCServerWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */; };
-		E15166FD1F2A812C001CF4D6 /* CoverageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15166FC1F2A812C001CF4D6 /* CoverageResult.swift */; };
-		E15166FF1F2A8249001CF4D6 /* CoverageMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15166FE1F2A8249001CF4D6 /* CoverageMethod.swift */; };
-		E15167011F2A8309001CF4D6 /* CoverageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167001F2A8309001CF4D6 /* CoverageFile.swift */; };
-		E15167031F2A83C5001CF4D6 /* CoverageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */; };
-		E15167051F2A854E001CF4D6 /* CoverageHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */; };
+		E15166FD1F2A812C001CF4D6 /* XCSCoverageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15166FC1F2A812C001CF4D6 /* XCSCoverageResult.swift */; };
+		E15166FF1F2A8249001CF4D6 /* XCSCoverageMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15166FE1F2A8249001CF4D6 /* XCSCoverageMethod.swift */; };
+		E15167011F2A8309001CF4D6 /* XCSCoverageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167001F2A8309001CF4D6 /* XCSCoverageFile.swift */; };
+		E15167031F2A83C5001CF4D6 /* XCSCoverageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167021F2A83C5001CF4D6 /* XCSCoverageTarget.swift */; };
+		E15167051F2A854E001CF4D6 /* XCSCoverageHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167041F2A854E001CF4D6 /* XCSCoverageHierarchy.swift */; };
 		E15167071F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15167061F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift */; };
-		E151F2171D99BE5600157040 /* IssueAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2161D99BE5600157040 /* IssueAuthor.swift */; };
-		E176DFD31F0280B1005CE042 /* IntegrationSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */; };
+		E151F2171D99BE5600157040 /* XCSIssueAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151F2161D99BE5600157040 /* XCSIssueAuthor.swift */; };
+		E176DFD31F0280B1005CE042 /* XCSIntegrationSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD21F0280B1005CE042 /* XCSIntegrationSnippet.swift */; };
 		E176DFD51F0283D1005CE042 /* XCServerJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */; };
 		E176DFD71F02851F005CE042 /* Decodable+XCServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */; };
-		E176DFDB1F029E4D005CE042 /* IssueGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFDA1F029E4D005CE042 /* IssueGroup.swift */; };
-		E190EBCD1EFEB91C004F0920 /* BotSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */; };
-		E190EBCF1EFEB981004F0920 /* PeriodicScheduleInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */; };
-		E190EBD11EFEBA23004F0920 /* IssueStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD01EFEBA23004F0920 /* IssueStatus.swift */; };
-		E190EBD31EFEBADD004F0920 /* IntegrationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD21EFEBADD004F0920 /* IntegrationStep.swift */; };
-		E190EBD51EFEBBB0004F0920 /* IntegrationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD41EFEBBB0004F0920 /* IntegrationResult.swift */; };
-		E190EBD71EFEBC8C004F0920 /* TriggerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD61EFEBC8C004F0920 /* TriggerType.swift */; };
-		E190EBD91EFEBCC1004F0920 /* TriggerPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD81EFEBCC1004F0920 /* TriggerPhase.swift */; };
-		E190EBDB1EFEBD23004F0920 /* EmailType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDA1EFEBD23004F0920 /* EmailType.swift */; };
-		E190EBDD1EFEBD81004F0920 /* ReportSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */; };
-		E190EBE01EFEC056004F0920 /* RepositoryBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */; };
+		E176DFDB1F029E4D005CE042 /* XCSIssueGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176DFDA1F029E4D005CE042 /* XCSIssueGroup.swift */; };
+		E190EBCD1EFEB91C004F0920 /* XCSBotSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCC1EFEB91C004F0920 /* XCSBotSchedule.swift */; };
+		E190EBCF1EFEB981004F0920 /* XCSPeriodicScheduleInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBCE1EFEB981004F0920 /* XCSPeriodicScheduleInterval.swift */; };
+		E190EBD11EFEBA23004F0920 /* XCSIssueStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD01EFEBA23004F0920 /* XCSIssueStatus.swift */; };
+		E190EBD31EFEBADD004F0920 /* XCSIntegrationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD21EFEBADD004F0920 /* XCSIntegrationStep.swift */; };
+		E190EBD51EFEBBB0004F0920 /* XCSIntegrationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD41EFEBBB0004F0920 /* XCSIntegrationResult.swift */; };
+		E190EBD71EFEBC8C004F0920 /* XCSTriggerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD61EFEBC8C004F0920 /* XCSTriggerType.swift */; };
+		E190EBD91EFEBCC1004F0920 /* XCSTriggerPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBD81EFEBCC1004F0920 /* XCSTriggerPhase.swift */; };
+		E190EBDB1EFEBD23004F0920 /* XCSEmailType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDA1EFEBD23004F0920 /* XCSEmailType.swift */; };
+		E190EBDD1EFEBD81004F0920 /* XCSReportSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDC1EFEBD81004F0920 /* XCSReportSchedule.swift */; };
+		E190EBE01EFEC056004F0920 /* XCSRepositoryBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190EBDF1EFEC056004F0920 /* XCSRepositoryBlueprint.swift */; };
 		E19AE3861F75834B0040CE07 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E19AE3851F75834B0040CE07 /* libbz2.tbd */; };
-		E1AEB59F1F013E7B0019B6E2 /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */; };
+		E1AEB59F1F013E7B0019B6E2 /* XCSTestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AEB59E1F013E7B0019B6E2 /* XCSTestHierarchy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,14 +118,14 @@
 		3F41A62328F1F9FD45C1DD92 /* Pods_XCServerAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCServerAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7168F2F8281D069E3847D606 /* Pods-XCServerAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFC97C85D34636CE86B14D89 /* Pods-XCServerAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPI/Pods-XCServerAPI.debug.xcconfig"; sourceTree = "<group>"; };
-		E108CFCF1EFFF59F00BB7978 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		E108CFD71F012FE000BB7978 /* ProxiedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxiedDevice.swift; sourceTree = "<group>"; };
-		E10A7FC11F17AB1600080A44 /* SuspectStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspectStrategy.swift; sourceTree = "<group>"; };
-		E10CC6581EFFDC7700FE4A3F /* ProvisioningConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisioningConfiguration.swift; sourceTree = "<group>"; };
-		E10CC65C1EFFE24600FE4A3F /* BuildArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildArgument.swift; sourceTree = "<group>"; };
-		E10CC65E1EFFE27A00FE4A3F /* TestLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocalization.swift; sourceTree = "<group>"; };
-		E10CC6601EFFE47200FE4A3F /* CodeCoveragePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoveragePreference.swift; sourceTree = "<group>"; };
-		E10CC6621EFFE51100FE4A3F /* CleanSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSchedule.swift; sourceTree = "<group>"; };
+		E108CFCF1EFFF59F00BB7978 /* XCSGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSGroup.swift; sourceTree = "<group>"; };
+		E108CFD71F012FE000BB7978 /* XCSProxiedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSProxiedDevice.swift; sourceTree = "<group>"; };
+		E10A7FC11F17AB1600080A44 /* XCSSuspectStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSSuspectStrategy.swift; sourceTree = "<group>"; };
+		E10CC6581EFFDC7700FE4A3F /* XCSProvisioningConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSProvisioningConfiguration.swift; sourceTree = "<group>"; };
+		E10CC65C1EFFE24600FE4A3F /* XCSBuildArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSBuildArgument.swift; sourceTree = "<group>"; };
+		E10CC65E1EFFE27A00FE4A3F /* XCSTestLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSTestLocalization.swift; sourceTree = "<group>"; };
+		E10CC6601EFFE47200FE4A3F /* XCSCodeCoveragePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSCodeCoveragePreference.swift; sourceTree = "<group>"; };
+		E10CC6621EFFE51100FE4A3F /* XCSCleanSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSCleanSchedule.swift; sourceTree = "<group>"; };
 		E12209AA1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Integrations.swift"; sourceTree = "<group>"; };
 		E12209AC1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Bots.swift"; sourceTree = "<group>"; };
 		E1358CD41F748BEC00785ED6 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -164,60 +164,60 @@
 		E149CBAB1D2ABC8E00E2E688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E149CBB01D2ABC8E00E2E688 /* XCServerAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCServerAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E149CBB71D2ABC8E00E2E688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E149CBC01D2ABDD700E2E688 /* IntegrationAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrationAsset.swift; sourceTree = "<group>"; };
-		E149CBC11D2ABDD700E2E688 /* AuthenticationStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStrategy.swift; sourceTree = "<group>"; };
-		E149CBC31D2ABDD700E2E688 /* BlueprintLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueprintLocation.swift; sourceTree = "<group>"; };
-		E149CBC41D2ABDD700E2E688 /* BotDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotDocument.swift; sourceTree = "<group>"; };
-		E149CBC51D2ABDD700E2E688 /* BuildResultSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildResultSummary.swift; sourceTree = "<group>"; };
-		E149CBC61D2ABDD700E2E688 /* CommitChangeFilePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitChangeFilePath.swift; sourceTree = "<group>"; };
-		E149CBC71D2ABDD700E2E688 /* CommitContributor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitContributor.swift; sourceTree = "<group>"; };
-		E149CBC81D2ABDD700E2E688 /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
-		E149CBC91D2ABDD700E2E688 /* Conditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
-		E149CBCA1D2ABDD700E2E688 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		E149CBCB1D2ABDD700E2E688 /* DeviceDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDocument.swift; sourceTree = "<group>"; };
-		E149CBCC1D2ABDD700E2E688 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
-		E149CBCD1D2ABDD700E2E688 /* EmailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailConfiguration.swift; sourceTree = "<group>"; };
-		E149CBCE1D2ABDD700E2E688 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		E149CBCF1D2ABDD700E2E688 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
-		E149CBD01D2ABDD700E2E688 /* CommitDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitDocument.swift; sourceTree = "<group>"; };
-		E149CBD21D2ABDD700E2E688 /* IntegrationDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrationDocument.swift; sourceTree = "<group>"; };
-		E149CBD31D2ABDD700E2E688 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
-		E149CBD51D2ABDD700E2E688 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
-		E149CBD61D2ABDD700E2E688 /* RemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
-		E149CBD71D2ABDD700E2E688 /* RepositoryLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryLocation.swift; sourceTree = "<group>"; };
-		E149CBD91D2ABDD700E2E688 /* StatsSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsSummary.swift; sourceTree = "<group>"; };
-		E149CBDA1D2ABDD700E2E688 /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
-		E149CBDB1D2ABDD700E2E688 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
-		E149CBDC1D2ABDD700E2E688 /* VersionDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionDocument.swift; sourceTree = "<group>"; };
+		E149CBC01D2ABDD700E2E688 /* XCSIntegrationAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSIntegrationAsset.swift; sourceTree = "<group>"; };
+		E149CBC11D2ABDD700E2E688 /* XCSAuthenticationStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSAuthenticationStrategy.swift; sourceTree = "<group>"; };
+		E149CBC31D2ABDD700E2E688 /* XCSBlueprintLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSBlueprintLocation.swift; sourceTree = "<group>"; };
+		E149CBC41D2ABDD700E2E688 /* XCSBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSBot.swift; sourceTree = "<group>"; };
+		E149CBC51D2ABDD700E2E688 /* XCSBuildResultSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSBuildResultSummary.swift; sourceTree = "<group>"; };
+		E149CBC61D2ABDD700E2E688 /* XCSCommitChangeFilePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSCommitChangeFilePath.swift; sourceTree = "<group>"; };
+		E149CBC71D2ABDD700E2E688 /* XCSCommitContributor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSCommitContributor.swift; sourceTree = "<group>"; };
+		E149CBC81D2ABDD700E2E688 /* XCSRepositoryCommit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSRepositoryCommit.swift; sourceTree = "<group>"; };
+		E149CBC91D2ABDD700E2E688 /* XCSConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSConditions.swift; sourceTree = "<group>"; };
+		E149CBCA1D2ABDD700E2E688 /* XCSConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSConfiguration.swift; sourceTree = "<group>"; };
+		E149CBCB1D2ABDD700E2E688 /* XCSDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSDevice.swift; sourceTree = "<group>"; };
+		E149CBCC1D2ABDD700E2E688 /* XCSDeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSDeviceSpecification.swift; sourceTree = "<group>"; };
+		E149CBCD1D2ABDD700E2E688 /* XCSEmailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSEmailConfiguration.swift; sourceTree = "<group>"; };
+		E149CBCE1D2ABDD700E2E688 /* XCSFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSFilter.swift; sourceTree = "<group>"; };
+		E149CBCF1D2ABDD700E2E688 /* XCSAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSAssets.swift; sourceTree = "<group>"; };
+		E149CBD01D2ABDD700E2E688 /* XCSCommit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSCommit.swift; sourceTree = "<group>"; };
+		E149CBD21D2ABDD700E2E688 /* XCSIntegration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSIntegration.swift; sourceTree = "<group>"; };
+		E149CBD31D2ABDD700E2E688 /* XCSIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSIssue.swift; sourceTree = "<group>"; };
+		E149CBD51D2ABDD700E2E688 /* XCSPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSPlatform.swift; sourceTree = "<group>"; };
+		E149CBD61D2ABDD700E2E688 /* XCSRemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSRemoteRepository.swift; sourceTree = "<group>"; };
+		E149CBD71D2ABDD700E2E688 /* XCSRepositoryLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSRepositoryLocation.swift; sourceTree = "<group>"; };
+		E149CBD91D2ABDD700E2E688 /* XCSStatsSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSStatsSummary.swift; sourceTree = "<group>"; };
+		E149CBDA1D2ABDD700E2E688 /* XCSStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSStats.swift; sourceTree = "<group>"; };
+		E149CBDB1D2ABDD700E2E688 /* XCSTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSTrigger.swift; sourceTree = "<group>"; };
+		E149CBDC1D2ABDD700E2E688 /* XCSVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSVersion.swift; sourceTree = "<group>"; };
 		E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCServerWebAPI.swift; sourceTree = "<group>"; };
 		E149CC331D2AC0FB00E2E688 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E149CC341D2AC0FB00E2E688 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E149CC351D2AC0FB00E2E688 /* XCServerAPI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XCServerAPI.podspec; sourceTree = "<group>"; };
-		E15166FC1F2A812C001CF4D6 /* CoverageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageResult.swift; sourceTree = "<group>"; };
-		E15166FE1F2A8249001CF4D6 /* CoverageMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageMethod.swift; sourceTree = "<group>"; };
-		E15167001F2A8309001CF4D6 /* CoverageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageFile.swift; sourceTree = "<group>"; };
-		E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageTarget.swift; sourceTree = "<group>"; };
-		E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageHierarchy.swift; sourceTree = "<group>"; };
+		E15166FC1F2A812C001CF4D6 /* XCSCoverageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSCoverageResult.swift; sourceTree = "<group>"; };
+		E15166FE1F2A8249001CF4D6 /* XCSCoverageMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSCoverageMethod.swift; sourceTree = "<group>"; };
+		E15167001F2A8309001CF4D6 /* XCSCoverageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSCoverageFile.swift; sourceTree = "<group>"; };
+		E15167021F2A83C5001CF4D6 /* XCSCoverageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSCoverageTarget.swift; sourceTree = "<group>"; };
+		E15167041F2A854E001CF4D6 /* XCSCoverageHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSCoverageHierarchy.swift; sourceTree = "<group>"; };
 		E15167061F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCServerWebAPI+Coverage.swift"; sourceTree = "<group>"; };
-		E151F2161D99BE5600157040 /* IssueAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueAuthor.swift; sourceTree = "<group>"; };
+		E151F2161D99BE5600157040 /* XCSIssueAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSIssueAuthor.swift; sourceTree = "<group>"; };
 		E160CEFCE43769AE99A0D9A8 /* Pods-XCServerAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.release.xcconfig"; sourceTree = "<group>"; };
-		E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationSnippet.swift; sourceTree = "<group>"; };
+		E176DFD21F0280B1005CE042 /* XCSIntegrationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSIntegrationSnippet.swift; sourceTree = "<group>"; };
 		E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCServerJSONDecoder.swift; sourceTree = "<group>"; };
 		E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+XCServerAPI.swift"; sourceTree = "<group>"; };
-		E176DFDA1F029E4D005CE042 /* IssueGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueGroup.swift; sourceTree = "<group>"; };
-		E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotSchedule.swift; sourceTree = "<group>"; };
-		E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicScheduleInterval.swift; sourceTree = "<group>"; };
-		E190EBD01EFEBA23004F0920 /* IssueStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueStatus.swift; sourceTree = "<group>"; };
-		E190EBD21EFEBADD004F0920 /* IntegrationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationStep.swift; sourceTree = "<group>"; };
-		E190EBD41EFEBBB0004F0920 /* IntegrationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationResult.swift; sourceTree = "<group>"; };
-		E190EBD61EFEBC8C004F0920 /* TriggerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerType.swift; sourceTree = "<group>"; };
-		E190EBD81EFEBCC1004F0920 /* TriggerPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerPhase.swift; sourceTree = "<group>"; };
-		E190EBDA1EFEBD23004F0920 /* EmailType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailType.swift; sourceTree = "<group>"; };
-		E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSchedule.swift; sourceTree = "<group>"; };
+		E176DFDA1F029E4D005CE042 /* XCSIssueGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSIssueGroup.swift; sourceTree = "<group>"; };
+		E190EBCC1EFEB91C004F0920 /* XCSBotSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSBotSchedule.swift; sourceTree = "<group>"; };
+		E190EBCE1EFEB981004F0920 /* XCSPeriodicScheduleInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSPeriodicScheduleInterval.swift; sourceTree = "<group>"; };
+		E190EBD01EFEBA23004F0920 /* XCSIssueStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSIssueStatus.swift; sourceTree = "<group>"; };
+		E190EBD21EFEBADD004F0920 /* XCSIntegrationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSIntegrationStep.swift; sourceTree = "<group>"; };
+		E190EBD41EFEBBB0004F0920 /* XCSIntegrationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSIntegrationResult.swift; sourceTree = "<group>"; };
+		E190EBD61EFEBC8C004F0920 /* XCSTriggerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSTriggerType.swift; sourceTree = "<group>"; };
+		E190EBD81EFEBCC1004F0920 /* XCSTriggerPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSTriggerPhase.swift; sourceTree = "<group>"; };
+		E190EBDA1EFEBD23004F0920 /* XCSEmailType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSEmailType.swift; sourceTree = "<group>"; };
+		E190EBDC1EFEBD81004F0920 /* XCSReportSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSReportSchedule.swift; sourceTree = "<group>"; };
 		E190EBDE1EFEBF22004F0920 /* XcodeServerAPI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = XcodeServerAPI.md; sourceTree = "<group>"; };
-		E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBlueprint.swift; sourceTree = "<group>"; };
+		E190EBDF1EFEC056004F0920 /* XCSRepositoryBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSRepositoryBlueprint.swift; sourceTree = "<group>"; };
 		E19AE3851F75834B0040CE07 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
-		E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHierarchy.swift; sourceTree = "<group>"; };
+		E1AEB59E1F013E7B0019B6E2 /* XCSTestHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSTestHierarchy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,59 +337,59 @@
 		E149CBBE1D2ABDD700E2E688 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E149CBCF1D2ABDD700E2E688 /* Assets.swift */,
-				E149CBC11D2ABDD700E2E688 /* AuthenticationStrategy.swift */,
-				E149CBC31D2ABDD700E2E688 /* BlueprintLocation.swift */,
-				E149CBC41D2ABDD700E2E688 /* BotDocument.swift */,
-				E190EBCC1EFEB91C004F0920 /* BotSchedule.swift */,
-				E10CC65C1EFFE24600FE4A3F /* BuildArgument.swift */,
-				E149CBC51D2ABDD700E2E688 /* BuildResultSummary.swift */,
-				E10CC6621EFFE51100FE4A3F /* CleanSchedule.swift */,
-				E10CC6601EFFE47200FE4A3F /* CodeCoveragePreference.swift */,
-				E149CBC81D2ABDD700E2E688 /* Commit.swift */,
-				E149CBC61D2ABDD700E2E688 /* CommitChangeFilePath.swift */,
-				E149CBC71D2ABDD700E2E688 /* CommitContributor.swift */,
-				E149CBD01D2ABDD700E2E688 /* CommitDocument.swift */,
-				E149CBC91D2ABDD700E2E688 /* Conditions.swift */,
-				E149CBCA1D2ABDD700E2E688 /* Configuration.swift */,
-				E15167001F2A8309001CF4D6 /* CoverageFile.swift */,
-				E15167041F2A854E001CF4D6 /* CoverageHierarchy.swift */,
-				E15166FE1F2A8249001CF4D6 /* CoverageMethod.swift */,
-				E15166FC1F2A812C001CF4D6 /* CoverageResult.swift */,
-				E15167021F2A83C5001CF4D6 /* CoverageTarget.swift */,
 				E176DFD61F02851F005CE042 /* Decodable+XCServerAPI.swift */,
-				E149CBCB1D2ABDD700E2E688 /* DeviceDocument.swift */,
-				E149CBCC1D2ABDD700E2E688 /* DeviceSpecification.swift */,
-				E149CBCD1D2ABDD700E2E688 /* EmailConfiguration.swift */,
-				E190EBDA1EFEBD23004F0920 /* EmailType.swift */,
-				E149CBCE1D2ABDD700E2E688 /* Filter.swift */,
-				E108CFCF1EFFF59F00BB7978 /* Group.swift */,
-				E149CBC01D2ABDD700E2E688 /* IntegrationAsset.swift */,
-				E149CBD21D2ABDD700E2E688 /* IntegrationDocument.swift */,
-				E190EBD41EFEBBB0004F0920 /* IntegrationResult.swift */,
-				E176DFD21F0280B1005CE042 /* IntegrationSnippet.swift */,
-				E190EBD21EFEBADD004F0920 /* IntegrationStep.swift */,
-				E151F2161D99BE5600157040 /* IssueAuthor.swift */,
-				E149CBD31D2ABDD700E2E688 /* Issue.swift */,
-				E176DFDA1F029E4D005CE042 /* IssueGroup.swift */,
-				E190EBD01EFEBA23004F0920 /* IssueStatus.swift */,
-				E190EBCE1EFEB981004F0920 /* PeriodicScheduleInterval.swift */,
-				E149CBD51D2ABDD700E2E688 /* Platform.swift */,
-				E10CC6581EFFDC7700FE4A3F /* ProvisioningConfiguration.swift */,
-				E108CFD71F012FE000BB7978 /* ProxiedDevice.swift */,
-				E149CBD61D2ABDD700E2E688 /* RemoteRepository.swift */,
-				E190EBDC1EFEBD81004F0920 /* ReportSchedule.swift */,
-				E190EBDF1EFEC056004F0920 /* RepositoryBlueprint.swift */,
-				E149CBD71D2ABDD700E2E688 /* RepositoryLocation.swift */,
-				E149CBDA1D2ABDD700E2E688 /* Stats.swift */,
-				E149CBD91D2ABDD700E2E688 /* StatsSummary.swift */,
-				E10A7FC11F17AB1600080A44 /* SuspectStrategy.swift */,
-				E1AEB59E1F013E7B0019B6E2 /* TestHierarchy.swift */,
-				E10CC65E1EFFE27A00FE4A3F /* TestLocalization.swift */,
-				E149CBDB1D2ABDD700E2E688 /* Trigger.swift */,
-				E190EBD81EFEBCC1004F0920 /* TriggerPhase.swift */,
-				E190EBD61EFEBC8C004F0920 /* TriggerType.swift */,
-				E149CBDC1D2ABDD700E2E688 /* VersionDocument.swift */,
+				E149CBCF1D2ABDD700E2E688 /* XCSAssets.swift */,
+				E149CBC11D2ABDD700E2E688 /* XCSAuthenticationStrategy.swift */,
+				E149CBC31D2ABDD700E2E688 /* XCSBlueprintLocation.swift */,
+				E149CBC41D2ABDD700E2E688 /* XCSBot.swift */,
+				E190EBCC1EFEB91C004F0920 /* XCSBotSchedule.swift */,
+				E10CC65C1EFFE24600FE4A3F /* XCSBuildArgument.swift */,
+				E149CBC51D2ABDD700E2E688 /* XCSBuildResultSummary.swift */,
+				E10CC6621EFFE51100FE4A3F /* XCSCleanSchedule.swift */,
+				E10CC6601EFFE47200FE4A3F /* XCSCodeCoveragePreference.swift */,
+				E149CBD01D2ABDD700E2E688 /* XCSCommit.swift */,
+				E149CBC61D2ABDD700E2E688 /* XCSCommitChangeFilePath.swift */,
+				E149CBC71D2ABDD700E2E688 /* XCSCommitContributor.swift */,
+				E149CBC91D2ABDD700E2E688 /* XCSConditions.swift */,
+				E149CBCA1D2ABDD700E2E688 /* XCSConfiguration.swift */,
+				E15167001F2A8309001CF4D6 /* XCSCoverageFile.swift */,
+				E15167041F2A854E001CF4D6 /* XCSCoverageHierarchy.swift */,
+				E15166FE1F2A8249001CF4D6 /* XCSCoverageMethod.swift */,
+				E15166FC1F2A812C001CF4D6 /* XCSCoverageResult.swift */,
+				E15167021F2A83C5001CF4D6 /* XCSCoverageTarget.swift */,
+				E149CBCB1D2ABDD700E2E688 /* XCSDevice.swift */,
+				E149CBCC1D2ABDD700E2E688 /* XCSDeviceSpecification.swift */,
+				E149CBCD1D2ABDD700E2E688 /* XCSEmailConfiguration.swift */,
+				E190EBDA1EFEBD23004F0920 /* XCSEmailType.swift */,
+				E149CBCE1D2ABDD700E2E688 /* XCSFilter.swift */,
+				E108CFCF1EFFF59F00BB7978 /* XCSGroup.swift */,
+				E149CBD21D2ABDD700E2E688 /* XCSIntegration.swift */,
+				E149CBC01D2ABDD700E2E688 /* XCSIntegrationAsset.swift */,
+				E190EBD41EFEBBB0004F0920 /* XCSIntegrationResult.swift */,
+				E176DFD21F0280B1005CE042 /* XCSIntegrationSnippet.swift */,
+				E190EBD21EFEBADD004F0920 /* XCSIntegrationStep.swift */,
+				E149CBD31D2ABDD700E2E688 /* XCSIssue.swift */,
+				E151F2161D99BE5600157040 /* XCSIssueAuthor.swift */,
+				E176DFDA1F029E4D005CE042 /* XCSIssueGroup.swift */,
+				E190EBD01EFEBA23004F0920 /* XCSIssueStatus.swift */,
+				E190EBCE1EFEB981004F0920 /* XCSPeriodicScheduleInterval.swift */,
+				E149CBD51D2ABDD700E2E688 /* XCSPlatform.swift */,
+				E10CC6581EFFDC7700FE4A3F /* XCSProvisioningConfiguration.swift */,
+				E108CFD71F012FE000BB7978 /* XCSProxiedDevice.swift */,
+				E149CBD61D2ABDD700E2E688 /* XCSRemoteRepository.swift */,
+				E190EBDC1EFEBD81004F0920 /* XCSReportSchedule.swift */,
+				E190EBDF1EFEC056004F0920 /* XCSRepositoryBlueprint.swift */,
+				E149CBC81D2ABDD700E2E688 /* XCSRepositoryCommit.swift */,
+				E149CBD71D2ABDD700E2E688 /* XCSRepositoryLocation.swift */,
+				E149CBDA1D2ABDD700E2E688 /* XCSStats.swift */,
+				E149CBD91D2ABDD700E2E688 /* XCSStatsSummary.swift */,
+				E10A7FC11F17AB1600080A44 /* XCSSuspectStrategy.swift */,
+				E1AEB59E1F013E7B0019B6E2 /* XCSTestHierarchy.swift */,
+				E10CC65E1EFFE27A00FE4A3F /* XCSTestLocalization.swift */,
+				E149CBDB1D2ABDD700E2E688 /* XCSTrigger.swift */,
+				E190EBD81EFEBCC1004F0920 /* XCSTriggerPhase.swift */,
+				E190EBD61EFEBC8C004F0920 /* XCSTriggerType.swift */,
+				E149CBDC1D2ABDD700E2E688 /* XCSVersion.swift */,
 				E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */,
 				E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */,
 				E12209AC1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift */,
@@ -615,66 +615,66 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E108CFD01EFFF59F00BB7978 /* Group.swift in Sources */,
-				E15166FF1F2A8249001CF4D6 /* CoverageMethod.swift in Sources */,
-				E149CBEA1D2ABDD700E2E688 /* DeviceDocument.swift in Sources */,
-				E10CC6591EFFDC7700FE4A3F /* ProvisioningConfiguration.swift in Sources */,
-				E15166FD1F2A812C001CF4D6 /* CoverageResult.swift in Sources */,
+				E108CFD01EFFF59F00BB7978 /* XCSGroup.swift in Sources */,
+				E15166FF1F2A8249001CF4D6 /* XCSCoverageMethod.swift in Sources */,
+				E149CBEA1D2ABDD700E2E688 /* XCSDevice.swift in Sources */,
+				E10CC6591EFFDC7700FE4A3F /* XCSProvisioningConfiguration.swift in Sources */,
+				E15166FD1F2A812C001CF4D6 /* XCSCoverageResult.swift in Sources */,
 				E12209AB1F0FC19E004403B1 /* XCServerWebAPI+Integrations.swift in Sources */,
-				E10CC65F1EFFE27A00FE4A3F /* TestLocalization.swift in Sources */,
-				E149CBE91D2ABDD700E2E688 /* Configuration.swift in Sources */,
-				E10CC65D1EFFE24600FE4A3F /* BuildArgument.swift in Sources */,
-				E190EBD91EFEBCC1004F0920 /* TriggerPhase.swift in Sources */,
+				E10CC65F1EFFE27A00FE4A3F /* XCSTestLocalization.swift in Sources */,
+				E149CBE91D2ABDD700E2E688 /* XCSConfiguration.swift in Sources */,
+				E10CC65D1EFFE24600FE4A3F /* XCSBuildArgument.swift in Sources */,
+				E190EBD91EFEBCC1004F0920 /* XCSTriggerPhase.swift in Sources */,
 				E14878421F08169A008C5788 /* XCServerWebAPI+Commits.swift in Sources */,
-				E190EBD31EFEBADD004F0920 /* IntegrationStep.swift in Sources */,
-				E149CBEC1D2ABDD700E2E688 /* EmailConfiguration.swift in Sources */,
+				E190EBD31EFEBADD004F0920 /* XCSIntegrationStep.swift in Sources */,
+				E149CBEC1D2ABDD700E2E688 /* XCSEmailConfiguration.swift in Sources */,
 				E15167071F2A8777001CF4D6 /* XCServerWebAPI+Coverage.swift in Sources */,
-				E1AEB59F1F013E7B0019B6E2 /* TestHierarchy.swift in Sources */,
-				E15167051F2A854E001CF4D6 /* CoverageHierarchy.swift in Sources */,
-				E190EBD11EFEBA23004F0920 /* IssueStatus.swift in Sources */,
-				E190EBDB1EFEBD23004F0920 /* EmailType.swift in Sources */,
-				E149CBE41D2ABDD700E2E688 /* BuildResultSummary.swift in Sources */,
-				E149CBF61D2ABDD700E2E688 /* RepositoryLocation.swift in Sources */,
-				E190EBCD1EFEB91C004F0920 /* BotSchedule.swift in Sources */,
-				E149CBE21D2ABDD700E2E688 /* BlueprintLocation.swift in Sources */,
-				E149CBF41D2ABDD700E2E688 /* Platform.swift in Sources */,
-				E149CBE81D2ABDD700E2E688 /* Conditions.swift in Sources */,
-				E149CBE51D2ABDD700E2E688 /* CommitChangeFilePath.swift in Sources */,
-				E149CBDF1D2ABDD700E2E688 /* IntegrationAsset.swift in Sources */,
-				E149CBFA1D2ABDD700E2E688 /* Trigger.swift in Sources */,
-				E149CBF21D2ABDD700E2E688 /* Issue.swift in Sources */,
-				E190EBD71EFEBC8C004F0920 /* TriggerType.swift in Sources */,
-				E149CBEB1D2ABDD700E2E688 /* DeviceSpecification.swift in Sources */,
-				E10A7FC21F17AB1600080A44 /* SuspectStrategy.swift in Sources */,
-				E176DFD31F0280B1005CE042 /* IntegrationSnippet.swift in Sources */,
-				E149CBFB1D2ABDD700E2E688 /* VersionDocument.swift in Sources */,
+				E1AEB59F1F013E7B0019B6E2 /* XCSTestHierarchy.swift in Sources */,
+				E15167051F2A854E001CF4D6 /* XCSCoverageHierarchy.swift in Sources */,
+				E190EBD11EFEBA23004F0920 /* XCSIssueStatus.swift in Sources */,
+				E190EBDB1EFEBD23004F0920 /* XCSEmailType.swift in Sources */,
+				E149CBE41D2ABDD700E2E688 /* XCSBuildResultSummary.swift in Sources */,
+				E149CBF61D2ABDD700E2E688 /* XCSRepositoryLocation.swift in Sources */,
+				E190EBCD1EFEB91C004F0920 /* XCSBotSchedule.swift in Sources */,
+				E149CBE21D2ABDD700E2E688 /* XCSBlueprintLocation.swift in Sources */,
+				E149CBF41D2ABDD700E2E688 /* XCSPlatform.swift in Sources */,
+				E149CBE81D2ABDD700E2E688 /* XCSConditions.swift in Sources */,
+				E149CBE51D2ABDD700E2E688 /* XCSCommitChangeFilePath.swift in Sources */,
+				E149CBDF1D2ABDD700E2E688 /* XCSIntegrationAsset.swift in Sources */,
+				E149CBFA1D2ABDD700E2E688 /* XCSTrigger.swift in Sources */,
+				E149CBF21D2ABDD700E2E688 /* XCSIssue.swift in Sources */,
+				E190EBD71EFEBC8C004F0920 /* XCSTriggerType.swift in Sources */,
+				E149CBEB1D2ABDD700E2E688 /* XCSDeviceSpecification.swift in Sources */,
+				E10A7FC21F17AB1600080A44 /* XCSSuspectStrategy.swift in Sources */,
+				E176DFD31F0280B1005CE042 /* XCSIntegrationSnippet.swift in Sources */,
+				E149CBFB1D2ABDD700E2E688 /* XCSVersion.swift in Sources */,
 				E14878401F0813C4008C5788 /* XCServerWebAPI+Issues.swift in Sources */,
-				E15167011F2A8309001CF4D6 /* CoverageFile.swift in Sources */,
-				E149CBF51D2ABDD700E2E688 /* RemoteRepository.swift in Sources */,
+				E15167011F2A8309001CF4D6 /* XCSCoverageFile.swift in Sources */,
+				E149CBF51D2ABDD700E2E688 /* XCSRemoteRepository.swift in Sources */,
 				E12209AD1F0FC1F7004403B1 /* XCServerWebAPI+Bots.swift in Sources */,
-				E149CBEE1D2ABDD700E2E688 /* Assets.swift in Sources */,
-				E149CBF81D2ABDD700E2E688 /* StatsSummary.swift in Sources */,
-				E149CBE31D2ABDD700E2E688 /* BotDocument.swift in Sources */,
-				E10CC6631EFFE51100FE4A3F /* CleanSchedule.swift in Sources */,
-				E10CC6611EFFE47200FE4A3F /* CodeCoveragePreference.swift in Sources */,
-				E149CBED1D2ABDD700E2E688 /* Filter.swift in Sources */,
-				E149CBF91D2ABDD700E2E688 /* Stats.swift in Sources */,
-				E108CFD81F012FE000BB7978 /* ProxiedDevice.swift in Sources */,
-				E149CBE71D2ABDD700E2E688 /* Commit.swift in Sources */,
-				E190EBD51EFEBBB0004F0920 /* IntegrationResult.swift in Sources */,
-				E149CBE01D2ABDD700E2E688 /* AuthenticationStrategy.swift in Sources */,
-				E190EBE01EFEC056004F0920 /* RepositoryBlueprint.swift in Sources */,
-				E15167031F2A83C5001CF4D6 /* CoverageTarget.swift in Sources */,
-				E151F2171D99BE5600157040 /* IssueAuthor.swift in Sources */,
+				E149CBEE1D2ABDD700E2E688 /* XCSAssets.swift in Sources */,
+				E149CBF81D2ABDD700E2E688 /* XCSStatsSummary.swift in Sources */,
+				E149CBE31D2ABDD700E2E688 /* XCSBot.swift in Sources */,
+				E10CC6631EFFE51100FE4A3F /* XCSCleanSchedule.swift in Sources */,
+				E10CC6611EFFE47200FE4A3F /* XCSCodeCoveragePreference.swift in Sources */,
+				E149CBED1D2ABDD700E2E688 /* XCSFilter.swift in Sources */,
+				E149CBF91D2ABDD700E2E688 /* XCSStats.swift in Sources */,
+				E108CFD81F012FE000BB7978 /* XCSProxiedDevice.swift in Sources */,
+				E149CBE71D2ABDD700E2E688 /* XCSRepositoryCommit.swift in Sources */,
+				E190EBD51EFEBBB0004F0920 /* XCSIntegrationResult.swift in Sources */,
+				E149CBE01D2ABDD700E2E688 /* XCSAuthenticationStrategy.swift in Sources */,
+				E190EBE01EFEC056004F0920 /* XCSRepositoryBlueprint.swift in Sources */,
+				E15167031F2A83C5001CF4D6 /* XCSCoverageTarget.swift in Sources */,
+				E151F2171D99BE5600157040 /* XCSIssueAuthor.swift in Sources */,
 				E176DFD51F0283D1005CE042 /* XCServerJSONDecoder.swift in Sources */,
-				E149CBE61D2ABDD700E2E688 /* CommitContributor.swift in Sources */,
-				E149CBF11D2ABDD700E2E688 /* IntegrationDocument.swift in Sources */,
-				E176DFDB1F029E4D005CE042 /* IssueGroup.swift in Sources */,
-				E190EBDD1EFEBD81004F0920 /* ReportSchedule.swift in Sources */,
+				E149CBE61D2ABDD700E2E688 /* XCSCommitContributor.swift in Sources */,
+				E149CBF11D2ABDD700E2E688 /* XCSIntegration.swift in Sources */,
+				E176DFDB1F029E4D005CE042 /* XCSIssueGroup.swift in Sources */,
+				E190EBDD1EFEBD81004F0920 /* XCSReportSchedule.swift in Sources */,
 				E176DFD71F02851F005CE042 /* Decodable+XCServerAPI.swift in Sources */,
-				E190EBCF1EFEB981004F0920 /* PeriodicScheduleInterval.swift in Sources */,
+				E190EBCF1EFEB981004F0920 /* XCSPeriodicScheduleInterval.swift in Sources */,
 				E149CBFC1D2ABDD700E2E688 /* XCServerWebAPI.swift in Sources */,
-				E149CBEF1D2ABDD700E2E688 /* CommitDocument.swift in Sources */,
+				E149CBEF1D2ABDD700E2E688 /* XCSCommit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

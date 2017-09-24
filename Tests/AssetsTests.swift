@@ -67,7 +67,7 @@ class AssetsTests: XCTestCase {
     }
     
     func testAssets() {
-        guard let assets = Assets.decode(json: json) else {
+        guard let assets = XCSAssets.decode(json: json) else {
             XCTFail()
             return
         }
