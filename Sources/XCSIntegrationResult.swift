@@ -11,5 +11,7 @@ public enum XCSIntegrationResult: String, Codable {
     case internalError = "internal-error"
     case buildFailed = "build-failed"
     case checkoutError = "checkout-error"
+    case internalBuildError = "internal-build-error"
+    case triggerError = "trigger-error"
     case unknown
 }
