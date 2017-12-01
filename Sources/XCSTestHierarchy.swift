@@ -4,6 +4,7 @@ public typealias XCSTestModuleName = String
 public typealias XCSTestClassName = String
 public typealias XCSTestMethodName = String
 public typealias XCSDeviceIdentifier = String
+public typealias XCSAggregateResults = [XCSDeviceIdentifier : Double]
 public typealias XCSDeviceResults = [XCSDeviceIdentifier : Int]
 public typealias XCSMethodResults = [XCSTestMethodName : XCSDeviceResults]
 public typealias XCSClassHierarchy = [XCSTestClassName : XCSTestResults]
@@ -12,6 +13,7 @@ public typealias XCSTestHierarchy = [XCSTestModuleName : XCSClassHierarchy]
 public enum XCSTestResults: Codable {
     case method(methodResults: XCSMethodResults)
     case device(deviceResults: XCSDeviceResults)
+    case aggregate(aggregateResults: XCSAggregateResults)
     
     enum Errors: Error {
         case mismatchType
@@ -35,6 +37,15 @@ public enum XCSTestResults: Codable {
         }
     }
     
+    var aggregateResults: XCSAggregateResults? {
+        switch self {
+        case .aggregate(let aggregateResults):
+            return aggregateResults
+        default:
+            return nil
+        }
+    }
+    
     public init(from decoder: Decoder) throws {
         do {
             let container = try decoder.singleValueContainer()
@@ -52,16 +63,26 @@ public enum XCSTestResults: Codable {
         } catch {
         }
         
+        do {
+            let container = try decoder.singleValueContainer()
+            let data = try container.decode(XCSAggregateResults.self)
+            self = XCSTestResults.aggregate(aggregateResults: data)
+            return
+        } catch {
+        }
+        
         throw Errors.mismatchType
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
-        case .device(let deviceResults):
-            try container.encode(deviceResults)
         case .method(let methodResults):
             try container.encode(methodResults)
+        case .device(let deviceResults):
+            try container.encode(deviceResults)
+        case .aggregate(let aggregateResults):
+            try container.encode(aggregateResults)
         }
     }
 }

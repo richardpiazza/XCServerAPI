@@ -12,7 +12,7 @@ public struct XCSRepositoryBlueprint: Codable {
         case locations = "DVTSourceControlWorkspaceBlueprintLocationsKey"
         case workingCopyRepositoryLocations = "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey"
         case remoteRepositoryAuthenticationStrategies = "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey"
-//        case workingCopyStates = "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey"
+        case workingCopyStates = "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey"
         case workingCopyPaths = "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey"
         case additionalValidationRemoteRepositories = "DVTSourceControlWorkspaceBlueprintAdditionalValidationRemoteRepositoriesKey"
     }
@@ -26,7 +26,7 @@ public struct XCSRepositoryBlueprint: Codable {
     public var locations: [String : XCSBlueprintLocation]?
     public var workingCopyRepositoryLocations: XCSRepositoryLocation?
     public var remoteRepositoryAuthenticationStrategies: [String : XCSAuthenticationStrategy]?
-//    public var workingCopyStates: [String : Int]?
+    public var workingCopyStates: [String : Int]?
     public var workingCopyPaths: [String : String]?
     public var additionalValidationRemoteRepositories: [XCSRemoteRepository]?
 }
