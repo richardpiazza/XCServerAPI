@@ -26,7 +26,7 @@ public struct XCSRepositoryBlueprint: Codable {
     public var locations: [String : XCSBlueprintLocation]?
     public var workingCopyRepositoryLocations: XCSRepositoryLocation?
     public var remoteRepositoryAuthenticationStrategies: [String : XCSAuthenticationStrategy]?
-    public var workingCopyStates: [String : Int]?
+    public var workingCopyStates: [String : Double]?
     public var workingCopyPaths: [String : String]?
     public var additionalValidationRemoteRepositories: [XCSRemoteRepository]?
 }

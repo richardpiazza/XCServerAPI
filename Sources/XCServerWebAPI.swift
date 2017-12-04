@@ -43,49 +43,17 @@ public class XCServerWebAPI: WebAPI {
         public static let xscAPIVersion = "x-xscapiversion"
     }
     
-    public enum Errors: Error {
+    public enum Errors: Error, LocalizedError {
         case authorization
         case noXcodeServer
         case decodeResponse
         
-        public var code: Int {
+        public var errorDescription: String? {
             switch self {
-            case .authorization: return 0
-            case .noXcodeServer: return 1
-            case .decodeResponse: return 2
+                case .authorization: return "The server returned a 401 response code."
+                case .noXcodeServer: return "This class was initialized without an XcodeServer entity."
+                case .decodeResponse: return "The response object could not be cast into the requested type."
             }
-        }
-        
-        public var localizedDescription: String {
-            switch self {
-            case .authorization: return "Invalid Authorization"
-            case .noXcodeServer: return "No Xcode Server"
-            case .decodeResponse: return "Failed To Decode Response"
-            }
-        }
-        
-        public var localizedFailureReason: String {
-            switch self {
-            case .authorization: return "The server returned a 401 response code."
-            case .noXcodeServer: return "This class was initialized without an XcodeServer entity."
-            case .decodeResponse: return "The response object could not be cast into the requested type."
-            }
-        }
-        
-        public var localizedRecoverySuggestion: String {
-            switch self {
-            case .authorization: return "Have you specified a XCServerWebAPICredentialDelegate to handle authentication?"
-            case .noXcodeServer: return "Re-initialize this class using init(xcodeServer:)."
-            case .decodeResponse: return "Check the request is sending a valid response."
-            }
-        }
-        
-        public var nsError: NSError {
-            return NSError(domain: String(describing: self), code: self.code, userInfo: [
-                    NSLocalizedDescriptionKey: self.localizedDescription,
-                    NSLocalizedFailureReasonErrorKey: self.localizedFailureReason,
-                    NSLocalizedRecoverySuggestionErrorKey: self.localizedRecoverySuggestion
-                ])
         }
     }
     
@@ -172,7 +140,7 @@ public class XCServerWebAPI: WebAPI {
     
     public typealias VersionCompletion = (_ version: XCSVersion?, _ apiVersion: Int?, _ error: Error?) -> Void
     
-    /// Requests the '`/version`' endpoint from the Xcode Server API.
+    /// Requests the '`/versions`' endpoint from the Xcode Server API.
     public func versions(_ completion: @escaping VersionCompletion) {
         self.get("versions") { (statusCode, headers, data, error) in
             var apiVersion: Int?

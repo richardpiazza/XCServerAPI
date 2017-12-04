@@ -19,7 +19,6 @@ public extension Decodable {
         do {
             return try XCServerJSONDecoder.default.decode(Self.self, from: data)
         } catch {
-            print(error)
             Log.error(error, message: "Failed to decode type '\(String(describing: Self.self)): \(error.localizedDescription)'")
             return nil
         }
