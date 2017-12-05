@@ -1,12 +1,4 @@
-//
-//  InvalidMockAPI.swift
-//  XCServerAPITests
-//
-//  Created by Richard Piazza on 7/14/17.
-//  Copyright © 2017 Richard Piazza. All rights reserved.
-//
-
-import Foundation
+import XCTest
 @testable import XCServerAPI
 
 class InvalidMockAPI: XCServerWebAPI {

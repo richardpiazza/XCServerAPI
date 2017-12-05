@@ -1,11 +1,3 @@
-//
-//  IntegrationTests.swift
-//  XCServerAPITests
-//
-//  Created by Richard Piazza on 6/25/17.
-//  Copyright © 2017 Richard Piazza. All rights reserved.
-//
-
 import XCTest
 @testable import XCServerAPI
 

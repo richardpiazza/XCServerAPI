@@ -29,6 +29,7 @@ public struct XCSIntegration: Codable {
         case revisionBlueprint
         case testedDevices
         case testHierarchy
+        case controlledChanges
     }
     
     public var _id: String
@@ -57,4 +58,5 @@ public struct XCSIntegration: Codable {
     public var revisionBlueprint: XCSRepositoryBlueprint?
     public var testedDevices: [XCSDevice]?
     public var testHierarchy: XCSTestHierarchy?
+    public var controlledChanges: XCSControlledChanges?
 }

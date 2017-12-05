@@ -10,4 +10,5 @@ public enum XCSIntegrationStep: String, Codable {
     case processing
     case uploading
     case completed
+    case testing
 }

@@ -406,21 +406,12 @@ class MockAPITests: XCTestCase {
     
     func testVerifyErrors() {
         let authorizationError = XCServerWebAPI.Errors.authorization
-        XCTAssertEqual(authorizationError.code, 0)
-        XCTAssertEqual(authorizationError.localizedDescription, "Invalid Authorization")
-        XCTAssertEqual(authorizationError.localizedFailureReason, "The server returned a 401 response code.")
-        XCTAssertEqual(authorizationError.localizedRecoverySuggestion, "Have you specified a XCServerWebAPICredentialDelegate to handle authentication?")
+        XCTAssertEqual(authorizationError.localizedDescription, "The server returned a 401 response code.")
         
         let noServerError = XCServerWebAPI.Errors.noXcodeServer
-        XCTAssertEqual(noServerError.code, 1)
-        XCTAssertEqual(noServerError.localizedDescription, "No Xcode Server")
-        XCTAssertEqual(noServerError.localizedFailureReason, "This class was initialized without an XcodeServer entity.")
-        XCTAssertEqual(noServerError.localizedRecoverySuggestion, "Re-initialize this class using init(xcodeServer:).")
+        XCTAssertEqual(noServerError.localizedDescription, "This class was initialized without an XcodeServer entity.")
         
         let decodeError = XCServerWebAPI.Errors.decodeResponse
-        XCTAssertEqual(decodeError.code, 2)
-        XCTAssertEqual(decodeError.localizedDescription, "Failed To Decode Response")
-        XCTAssertEqual(decodeError.localizedFailureReason, "The response object could not be cast into the requested type.")
-        XCTAssertEqual(decodeError.localizedRecoverySuggestion, "Check the request is sending a valid response.")
+        XCTAssertEqual(decodeError.localizedDescription, "The response object could not be cast into the requested type.")
     }
 }
