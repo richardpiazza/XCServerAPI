@@ -90,29 +90,36 @@ class TestHierarchyTests: XCTestCase {
             return
         }
         
-        guard let module = hierarchy["XCServerAPITests"] else {
+        let suite = hierarchy.suites.first { (suite) -> Bool in
+            return suite.name == "XCServerAPITests"
+        }
+        
+        guard let module = suite  else {
             XCTFail()
             return
         }
         
-        guard let `class` = module["RepositoryBlueprintTests"] else {
+        let testClass = module.classes.first(where: { (`class`) -> Bool in
+            return `class`.name == "RepositoryBlueprintTests"
+        })
+        
+        guard let `class` = testClass else {
             XCTFail()
             return
         }
         
-        guard let results = `class`.methodResults else {
+        let methodResults = `class`.methods.first { (method) -> Bool in
+            return method.name == "testSourceControlBlueprint()"
+        }
+        
+        guard let results = methodResults else {
             XCTFail()
             return
         }
         
-        guard let sourceControlTest = results["testSourceControlBlueprint()"] else {
-            XCTFail()
-            return
-        }
+        XCTAssertEqual(results.deviceResults.keys.count, 15)
         
-        XCTAssertEqual(sourceControlTest.keys.count, 15)
-        
-        guard let deviceResult = sourceControlTest["9B0227C6-807D-4E6D-B7A1-0064524E7334"] else {
+        guard let deviceResult = results.deviceResults["9B0227C6-807D-4E6D-B7A1-0064524E7334"] else {
             XCTFail()
             return
         }

@@ -303,13 +303,7 @@ class MockAPITests: XCTestCase {
             XCTAssertEqual(i.number, 14)
             XCTAssertEqual(i.result, .succeeded)
             XCTAssertNotNil(i.testHierarchy)
-            
-            guard let tests = i.tests else {
-                XCTFail()
-                return
-            }
-            
-            XCTAssertTrue(tests.pass)
+            XCTAssertFalse(i.testHierarchy!.hasFailures)
             
             exp.fulfill()
         }
