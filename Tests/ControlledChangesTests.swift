@@ -88,5 +88,14 @@ class ControlledChangesTests: XCTestCase {
         }
         
         XCTAssertEqual(controlledChanges.xcode?.version?.before, "9.1")
+        XCTAssertEqual(controlledChanges.xcode?.buildNumber?.after, "9C40b")
+        XCTAssertEqual(controlledChanges.platforms?.tvOS?.version?.before, "11.1")
+        XCTAssertEqual(controlledChanges.platforms?.tvOS?.buildNumber?.after, "15K104")
+        XCTAssertEqual(controlledChanges.platforms?.iOS?.version?.after, "11.2")
+        XCTAssertEqual(controlledChanges.platforms?.iOS?.buildNumber?.before, "15B87")
+        XCTAssertEqual(controlledChanges.platforms?.macOS?.version?.after, "10.13.2")
+        XCTAssertEqual(controlledChanges.platforms?.macOS?.buildNumber?.before, "17B41")
+        XCTAssertEqual(controlledChanges.platforms?.watchOS?.version?.before, "4.1")
+        XCTAssertEqual(controlledChanges.platforms?.watchOS?.buildNumber?.after, "15S100")
     }
 }
