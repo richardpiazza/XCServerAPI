@@ -59,7 +59,70 @@
     "success_streak":3,
     "shouldClean":false,
     "assets":{
-        "product":{"size":11624795,"fileName":"Pocket Bot.ipa","allowAnonymousAccess":false,"infoDictionary":{"CFBundleName":"Pocket Bot","DTSDKName":"iphoneos10.0","DTXcode":"0800","UILaunchStoryboardName":"LaunchScreen","CFBundleIcons~ipad":{"CFBundlePrimaryIcon":{"CFBundleIconFiles":["AppIcon29x29","AppIcon40x40","AppIcon60x60","AppIcon76x76","AppIcon83.5x83.5"]}},"ITSAppUsesNonExemptEncryption":false,"DTSDKBuild":"14A345","CFBundleDevelopmentRegion":"en","CFBundleVersion":"119","UIBackgroundModes":["fetch"],"BuildMachineOSBuild":"16A323","DTPlatformName":"iphoneos","CFBundleShortVersionString":"1.6","UIMainStoryboardFile":"Main","CFBundlePackageType":"APPL","CFBundleSupportedPlatforms":["iPhoneOS"],"NSAppTransportSecurity":{"NSAllowsArbitraryLoads":true},"CFBundleInfoDictionaryVersion":"6.0","UIRequiredDeviceCapabilities":["armv7"],"CFBundleExecutable":"Pocket Bot","DTCompiler":"com.apple.compilers.llvm.clang.1_0","MinimumOSVersion":"10.0","CFBundleIdentifier":"com.richardpiazza.pocketbot","UIDeviceFamily":[1,2],"CFBundleSignature":"????","DTXcodeBuild":"8A218a","LSRequiresIPhoneOS":true,"UISupportedInterfaceOrientations":["UIInterfaceOrientationPortrait","UIInterfaceOrientationLandscapeLeft","UIInterfaceOrientationLandscapeRight","UIInterfaceOrientationPortraitUpsideDown"],"CFBundleIcons":{"CFBundlePrimaryIcon":{"CFBundleIconFiles":["AppIcon29x29","AppIcon40x40","AppIcon60x60"]}},"DTPlatformVersion":"10.0","DTPlatformBuild":"14A345"},"relativePath":"bba9b6ff6d6f0899a63d1e347e00ff15-Pocket Bot Bot/119/Pocket Bot.ipa"},
+        "product":{
+            "size":11624795,
+            "fileName":"Pocket Bot.ipa",
+            "allowAnonymousAccess":false,
+            "infoDictionary":{
+                "CFBundleName":"Pocket Bot",
+                "DTSDKName":"iphoneos10.0",
+                "DTXcode":"0800",
+                "UILaunchStoryboardName":"LaunchScreen",
+                "CFBundleIcons~ipad":{
+                    "CFBundlePrimaryIcon":{
+                        "CFBundleIconFiles":[
+                            "AppIcon29x29",
+                            "AppIcon40x40",
+                            "AppIcon60x60",
+                            "AppIcon76x76",
+                            "AppIcon83.5x83.5"
+                        ]
+                    }
+                },
+                "ITSAppUsesNonExemptEncryption":false,
+                "DTSDKBuild":"14A345",
+                "CFBundleDevelopmentRegion":"en",
+                "CFBundleVersion":"119",
+                "UIBackgroundModes":["fetch"],
+                "BuildMachineOSBuild":"16A323",
+                "DTPlatformName":"iphoneos",
+                "CFBundleShortVersionString":"1.6",
+                "UIMainStoryboardFile":"Main",
+                "CFBundlePackageType":"APPL",
+                "CFBundleSupportedPlatforms":["iPhoneOS"],
+                "NSAppTransportSecurity":{
+                    "NSAllowsArbitraryLoads":true
+                },
+                "CFBundleInfoDictionaryVersion":"6.0",
+                "UIRequiredDeviceCapabilities":["armv7"],
+                "CFBundleExecutable":"Pocket Bot",
+                "DTCompiler":"com.apple.compilers.llvm.clang.1_0",
+                "MinimumOSVersion":"10.0",
+                "CFBundleIdentifier":"com.richardpiazza.pocketbot",
+                "UIDeviceFamily":[1,2],
+                "CFBundleSignature":"????",
+                "DTXcodeBuild":"8A218a",
+                "LSRequiresIPhoneOS":true,
+                "UISupportedInterfaceOrientations":[
+                    "UIInterfaceOrientationPortrait",
+                    "UIInterfaceOrientationLandscapeLeft",
+                    "UIInterfaceOrientationLandscapeRight",
+                    "UIInterfaceOrientationPortraitUpsideDown"
+                ],
+                "CFBundleIcons":{
+                    "CFBundlePrimaryIcon":{
+                        "CFBundleIconFiles":[
+                            "AppIcon29x29",
+                            "AppIcon40x40",
+                            "AppIcon60x60"
+                        ]
+                    }
+                },
+                "DTPlatformVersion":"10.0",
+                "DTPlatformBuild":"14A345"
+            },
+            "relativePath":"bba9b6ff6d6f0899a63d1e347e00ff15-Pocket Bot Bot/119/Pocket Bot.ipa"
+        },
         "sourceControlLog":{"size":2952,"fileName":"sourceControl.log","allowAnonymousAccess":false,"relativePath":"bba9b6ff6d6f0899a63d1e347e00ff15-Pocket Bot Bot/119/sourceControl.log"},
         "archive":{"size":80633068,"fileName":"Pocket Bot.xcarchive.zip","allowAnonymousAccess":false,"relativePath":"bba9b6ff6d6f0899a63d1e347e00ff15-Pocket Bot Bot/119/Pocket Bot.xcarchive.zip"},
         "xcodebuildOutput":{"size":10211449,"fileName":"xcodebuild_result.bundle.zip","allowAnonymousAccess":false,"relativePath":"bba9b6ff6d6f0899a63d1e347e00ff15-Pocket Bot Bot/119/xcodebuild_result.bundle.zip"},
@@ -92,7 +155,76 @@
     "ccPercentage":0,
     "ccPercentageDelta":0,
     "testedDevices":[{"activeProxiedDevice":{"modelUTI":"com.apple.watch-38mm-series2-1","connected":true,"modelCode":"Watch2,3","simulator":true,"osVersion":"3.0","modelName":"Apple Watch Series 2 - 38mm","deviceType":"com.apple.iphone-simulator","supported":true,"identifier":"209F551D-FEBD-4069-BC5D-53CEA773E9FE","enabledForDevelopment":true,"architecture":"i386","isServer":false,"doc_type":"device","trusted":true,"platformIdentifier":"com.apple.platform.watchsimulator","name":"Apple Watch Series 2 - 38mm","retina":false},"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPhone9,1","deviceType":"com.apple.iphone-simulator","modelName":"iPhone 7","revision":"515-a54e94b7592748faa6c51ac22b474df6","modelUTI":"com.apple.iphone-7-1","name":"iPhone 7","trusted":true,"doc_type":"device","supported":true,"identifier":"28D5428B-696C-43CA-A141-E2960E610288","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b28009ed7","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"F927E23"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPhone8,4","deviceType":"com.apple.iphone-simulator","modelName":"iPhone SE","revision":"3-9b1f08e41646a267cc00c42c7b407c36","modelUTI":"com.apple.iphone-se-a1662-aeb1b8","doc_type":"device","trusted":true,"name":"iPhone SE","supported":true,"identifier":"5163B4D8-70BE-4985-8BF2-B920D13E701B","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b28008a53","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"69D5347"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPhone6,1","deviceType":"com.apple.iphone-simulator","modelName":"iPhone 5s","revision":"3-fb29ef8605a4c894e6b23f49a0a0ac7f","modelUTI":"com.apple.iphone-5s-a1453-d4c5b3","doc_type":"device","trusted":true,"name":"iPhone 5s","supported":true,"identifier":"97CFF01E-83A4-429B-874D-C19C602903D4","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b2800b9bd","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"FFAB0CE"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPhone7,2","deviceType":"com.apple.iphone-simulator","modelName":"iPhone 6","revision":"3-b9a7da9d45bcf339ff07a8358483eb0e","modelUTI":"com.apple.iphone-6-b4b5b9","doc_type":"device","trusted":true,"name":"iPhone 6","supported":true,"identifier":"5AD34704-BA15-4674-BC74-02CEA85769C8","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b2800d56f","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"29B2EA7"},{"activeProxiedDevice":{"modelUTI":"com.apple.watch-42mm-series2-1","connected":true,"modelCode":"Watch2,4","simulator":true,"osVersion":"3.0","modelName":"Apple Watch Series 2 - 42mm","deviceType":"com.apple.iphone-simulator","supported":true,"identifier":"04242482-3AC7-43E9-A15B-8AA6A328159F","enabledForDevelopment":true,"architecture":"i386","isServer":false,"doc_type":"device","trusted":true,"platformIdentifier":"com.apple.platform.watchsimulator","name":"Apple Watch Series 2 - 42mm","retina":false},"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPhone9,2","deviceType":"com.apple.iphone-simulator","modelName":"iPhone 7 Plus","revision":"515-30c2554b079487b69feb6b4132355530","modelUTI":"com.apple.iphone-7-plus-1","name":"iPhone 7 Plus","trusted":true,"doc_type":"device","supported":true,"identifier":"7444FD27-E62C-42C5-BDF3-58661BF2A056","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b28004a2d","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"D305D15"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPhone8,1","deviceType":"com.apple.iphone-simulator","modelName":"iPhone 6s","revision":"3-2027e860ab60c486d3f6ea6287e787f5","modelUTI":"com.apple.iphone-6s-b9b7ba","doc_type":"device","trusted":true,"name":"iPhone 6s","supported":true,"identifier":"4EC6B6B5-24D8-492C-8969-48129EB08CC0","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b28006e61","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"5428B05"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPad4,2","deviceType":"com.apple.iphone-simulator","modelName":"iPad Air","revision":"3-6deddc6c05028f175987bb140a9946e3","modelUTI":"com.apple.ipad-air-a1475-d7d9d8","doc_type":"device","trusted":true,"name":"iPad Air","supported":true,"identifier":"24F91D53-2338-4AFC-8712-DE41132F3262","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b2800d6f9","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"96FB6C7"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPad3,1","deviceType":"com.apple.iphone-simulator","modelName":"iPad Retina","revision":"3-2388ab137186a50fa68808fe45d35d72","modelUTI":"com.apple.ipad-3-black","doc_type":"device","trusted":true,"name":"iPad Retina","supported":true,"identifier":"5658DB03-0AE4-4BA0-91EC-CC34293D6A57","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b2800c5ed","architecture":"i386","retina":false,"isServer":false,"tinyID":"E18392D"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPhone8,2","deviceType":"com.apple.iphone-simulator","modelName":"iPhone 6s Plus","revision":"3-89a065927e97b13219f460461df113e2","modelUTI":"com.apple.iphone-6s-plus-b9b7ba","doc_type":"device","trusted":true,"name":"iPhone 6s Plus","supported":true,"identifier":"EDEC24D3-5550-44AC-AA8B-87EF3BE4BE69","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b2800d13f","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"9943E39"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPhone7,1","deviceType":"com.apple.iphone-simulator","modelName":"iPhone 6 Plus","revision":"3-f9803176f8e6f6d454158cdf1905e1bb","modelUTI":"com.apple.iphone-6-plus-b4b5b9","doc_type":"device","trusted":true,"name":"iPhone 6 Plus","supported":true,"identifier":"D13FC53E-71FD-4DF9-BDD4-B991F9A0D8A6","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b28008d38","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"B2F07A4"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPad6,8","deviceType":"com.apple.iphone-simulator","modelName":"iPad Pro (12.9-inch)","revision":"3-8711c7b111e06fc1811b5cafa3a37da8","modelUTI":"com.apple.ipad-pro-a1652-b4b5b9","doc_type":"device","trusted":true,"name":"iPad Pro (12.9 inch)","supported":true,"identifier":"B2621942-9DD3-4285-BA78-D1121EDE13F7","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b2800ab68","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"46E0412"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPhone5,1","deviceType":"com.apple.iphone-simulator","modelName":"iPhone 5","revision":"3-e5ecf5666e8ee4abaf6a86a5d49ff3ea","modelUTI":"com.apple.iphone-5-a1428-black","doc_type":"device","trusted":true,"name":"iPhone 5","supported":true,"identifier":"032357CF-184E-4BEC-A567-2093D9923111","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b2800b3c9","architecture":"i386","retina":false,"isServer":false,"tinyID":"D198152"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPad5,4","deviceType":"com.apple.iphone-simulator","modelName":"iPad Air 2","revision":"3-6f19cba04a2a286554fd2d88c52fe0a5","modelUTI":"com.apple.ipad-air2-a1567-b4b5b9","doc_type":"device","trusted":true,"name":"iPad Air 2","supported":true,"identifier":"F75096AF-26BA-4C67-B853-3E447FD7786D","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b280054a0","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"ED69BC9"},{"osVersion":"10.0","connected":true,"simulator":true,"modelCode":"iPad6,4","deviceType":"com.apple.iphone-simulator","modelName":"iPad Pro (9.7-inch)","revision":"3-e6431d1a1193b0bcf67fb48246b94e8d","modelUTI":"com.apple.ipad-pro-9point7-a1674-b9b7ba","doc_type":"device","trusted":true,"name":"iPad Pro (9.7 inch)","supported":true,"identifier":"FF8D711C-6AA2-47B5-8F24-4AF9B54C08B9","enabledForDevelopment":true,"platformIdentifier":"com.apple.platform.iphonesimulator","ID":"7165830f996e973601a81f0b28007370","architecture":"x86_64","retina":false,"isServer":false,"tinyID":"E0642E8"}],
-    "testHierarchy":{"Pocket Bot Tests":{"FoundationExtensionTests":{"_xcsAggrDeviceStatus":{"28D5428B-696C-43CA-A141-E2960E610288":1,"5163B4D8-70BE-4985-8BF2-B920D13E701B":1,"5AD34704-BA15-4674-BC74-02CEA85769C8":1,"97CFF01E-83A4-429B-874D-C19C602903D4":1,"7444FD27-E62C-42C5-BDF3-58661BF2A056":1,"4EC6B6B5-24D8-492C-8969-48129EB08CC0":1,"24F91D53-2338-4AFC-8712-DE41132F3262":1,"B2621942-9DD3-4285-BA78-D1121EDE13F7":1,"5658DB03-0AE4-4BA0-91EC-CC34293D6A57":1,"D13FC53E-71FD-4DF9-BDD4-B991F9A0D8A6":1,"EDEC24D3-5550-44AC-AA8B-87EF3BE4BE69":1,"032357CF-184E-4BEC-A567-2093D9923111":1,"F75096AF-26BA-4C67-B853-3E447FD7786D":1,"FF8D711C-6AA2-47B5-8F24-4AF9B54C08B9":1},"testArrayRemoveEquatable()":{"28D5428B-696C-43CA-A141-E2960E610288":1,"5163B4D8-70BE-4985-8BF2-B920D13E701B":1,"5AD34704-BA15-4674-BC74-02CEA85769C8":1,"97CFF01E-83A4-429B-874D-C19C602903D4":1,"7444FD27-E62C-42C5-BDF3-58661BF2A056":1,"4EC6B6B5-24D8-492C-8969-48129EB08CC0":1,"24F91D53-2338-4AFC-8712-DE41132F3262":1,"B2621942-9DD3-4285-BA78-D1121EDE13F7":1,"5658DB03-0AE4-4BA0-91EC-CC34293D6A57":1,"D13FC53E-71FD-4DF9-BDD4-B991F9A0D8A6":1,"EDEC24D3-5550-44AC-AA8B-87EF3BE4BE69":1,"032357CF-184E-4BEC-A567-2093D9923111":1,"F75096AF-26BA-4C67-B853-3E447FD7786D":1,"FF8D711C-6AA2-47B5-8F24-4AF9B54C08B9":1},"testXcodeMethodName()":{"28D5428B-696C-43CA-A141-E2960E610288":1,"5163B4D8-70BE-4985-8BF2-B920D13E701B":1,"5AD34704-BA15-4674-BC74-02CEA85769C8":1,"97CFF01E-83A4-429B-874D-C19C602903D4":1,"7444FD27-E62C-42C5-BDF3-58661BF2A056":1,"4EC6B6B5-24D8-492C-8969-48129EB08CC0":1,"24F91D53-2338-4AFC-8712-DE41132F3262":1,"B2621942-9DD3-4285-BA78-D1121EDE13F7":1,"5658DB03-0AE4-4BA0-91EC-CC34293D6A57":1,"D13FC53E-71FD-4DF9-BDD4-B991F9A0D8A6":1,"EDEC24D3-5550-44AC-AA8B-87EF3BE4BE69":1,"032357CF-184E-4BEC-A567-2093D9923111":1,"F75096AF-26BA-4C67-B853-3E447FD7786D":1,"FF8D711C-6AA2-47B5-8F24-4AF9B54C08B9":1}},"_xcsAggrDeviceStatus":{"28D5428B-696C-43CA-A141-E2960E610288":1,"5163B4D8-70BE-4985-8BF2-B920D13E701B":1,"5AD34704-BA15-4674-BC74-02CEA85769C8":1,"97CFF01E-83A4-429B-874D-C19C602903D4":1,"7444FD27-E62C-42C5-BDF3-58661BF2A056":1,"4EC6B6B5-24D8-492C-8969-48129EB08CC0":1,"24F91D53-2338-4AFC-8712-DE41132F3262":1,"B2621942-9DD3-4285-BA78-D1121EDE13F7":1,"5658DB03-0AE4-4BA0-91EC-CC34293D6A57":1,"D13FC53E-71FD-4DF9-BDD4-B991F9A0D8A6":1,"EDEC24D3-5550-44AC-AA8B-87EF3BE4BE69":1,"032357CF-184E-4BEC-A567-2093D9923111":1,"F75096AF-26BA-4C67-B853-3E447FD7786D":1,"FF8D711C-6AA2-47B5-8F24-4AF9B54C08B9":1}}},
+    "testHierarchy":{
+        "Pocket Bot Tests":{
+            "FoundationExtensionTests":{
+                "_xcsAggrDeviceStatus":{
+                    "28D5428B-696C-43CA-A141-E2960E610288":1,
+                    "5163B4D8-70BE-4985-8BF2-B920D13E701B":1,
+                    "5AD34704-BA15-4674-BC74-02CEA85769C8":1,
+                    "97CFF01E-83A4-429B-874D-C19C602903D4":1,
+                    "7444FD27-E62C-42C5-BDF3-58661BF2A056":1,
+                    "4EC6B6B5-24D8-492C-8969-48129EB08CC0":1,
+                    "24F91D53-2338-4AFC-8712-DE41132F3262":1,
+                    "B2621942-9DD3-4285-BA78-D1121EDE13F7":1,
+                    "5658DB03-0AE4-4BA0-91EC-CC34293D6A57":1,
+                    "D13FC53E-71FD-4DF9-BDD4-B991F9A0D8A6":1,
+                    "EDEC24D3-5550-44AC-AA8B-87EF3BE4BE69":1,
+                    "032357CF-184E-4BEC-A567-2093D9923111":1,
+                    "F75096AF-26BA-4C67-B853-3E447FD7786D":1,
+                    "FF8D711C-6AA2-47B5-8F24-4AF9B54C08B9":1
+                },
+                "testArrayRemoveEquatable()":{
+                    "28D5428B-696C-43CA-A141-E2960E610288":1,
+                    "5163B4D8-70BE-4985-8BF2-B920D13E701B":1,
+                    "5AD34704-BA15-4674-BC74-02CEA85769C8":1,
+                    "97CFF01E-83A4-429B-874D-C19C602903D4":1,
+                    "7444FD27-E62C-42C5-BDF3-58661BF2A056":1,
+                    "4EC6B6B5-24D8-492C-8969-48129EB08CC0":1,
+                    "24F91D53-2338-4AFC-8712-DE41132F3262":1,
+                    "B2621942-9DD3-4285-BA78-D1121EDE13F7":1,
+                    "5658DB03-0AE4-4BA0-91EC-CC34293D6A57":1,
+                    "D13FC53E-71FD-4DF9-BDD4-B991F9A0D8A6":1,
+                    "EDEC24D3-5550-44AC-AA8B-87EF3BE4BE69":1,
+                    "032357CF-184E-4BEC-A567-2093D9923111":1,
+                    "F75096AF-26BA-4C67-B853-3E447FD7786D":1,
+                    "FF8D711C-6AA2-47B5-8F24-4AF9B54C08B9":1
+                },
+                "testXcodeMethodName()":{
+                    "28D5428B-696C-43CA-A141-E2960E610288":1,
+                    "5163B4D8-70BE-4985-8BF2-B920D13E701B":1,
+                    "5AD34704-BA15-4674-BC74-02CEA85769C8":1,
+                    "97CFF01E-83A4-429B-874D-C19C602903D4":1,
+                    "7444FD27-E62C-42C5-BDF3-58661BF2A056":1,
+                    "4EC6B6B5-24D8-492C-8969-48129EB08CC0":1,
+                    "24F91D53-2338-4AFC-8712-DE41132F3262":1,
+                    "B2621942-9DD3-4285-BA78-D1121EDE13F7":1,
+                    "5658DB03-0AE4-4BA0-91EC-CC34293D6A57":1,
+                    "D13FC53E-71FD-4DF9-BDD4-B991F9A0D8A6":1,
+                    "EDEC24D3-5550-44AC-AA8B-87EF3BE4BE69":1,
+                    "032357CF-184E-4BEC-A567-2093D9923111":1,
+                    "F75096AF-26BA-4C67-B853-3E447FD7786D":1,
+                    "FF8D711C-6AA2-47B5-8F24-4AF9B54C08B9":1
+                }
+            },
+            "_xcsAggrDeviceStatus":{
+                "28D5428B-696C-43CA-A141-E2960E610288":1,
+                "5163B4D8-70BE-4985-8BF2-B920D13E701B":1,
+                "5AD34704-BA15-4674-BC74-02CEA85769C8":1,
+                "97CFF01E-83A4-429B-874D-C19C602903D4":1,
+                "7444FD27-E62C-42C5-BDF3-58661BF2A056":1,
+                "4EC6B6B5-24D8-492C-8969-48129EB08CC0":1,
+                "24F91D53-2338-4AFC-8712-DE41132F3262":1,
+                "B2621942-9DD3-4285-BA78-D1121EDE13F7":1,
+                "5658DB03-0AE4-4BA0-91EC-CC34293D6A57":1,
+                "D13FC53E-71FD-4DF9-BDD4-B991F9A0D8A6":1,
+                "EDEC24D3-5550-44AC-AA8B-87EF3BE4BE69":1,
+                "032357CF-184E-4BEC-A567-2093D9923111":1,
+                "F75096AF-26BA-4C67-B853-3E447FD7786D":1,
+                "FF8D711C-6AA2-47B5-8F24-4AF9B54C08B9":1
+            }
+        }
+    },
     "perfMetricNames":[],
     "perfMetricKeyPaths":[]
 }
