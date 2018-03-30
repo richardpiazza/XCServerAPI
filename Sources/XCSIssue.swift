@@ -8,6 +8,10 @@ public struct XCSIssue: Codable {
     public var fixItType: String?
     public var issueType: String?
     public var commits: [XCSRepositoryCommit]?
+    public var testCase: String?
+    public var documentFilePath: String?
+    public var documentLocationData: String?
+    public var lineNumber: Int?
     public var integrationID: String?
     public var age: Int?
     public var status: Int?

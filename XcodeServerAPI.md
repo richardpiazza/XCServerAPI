@@ -1,6 +1,6 @@
 # Xcode Server API Reference
 
-_Xcode Server_: `2.0` | _Xcode_: `9.0`
+_Xcode Server_: `2.0` | _Xcode_: `9.3`
 
 ## Overview
 

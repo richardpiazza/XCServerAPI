@@ -1,11 +1,15 @@
 use_frameworks!
 
 target 'XCServerAPI' do
-    pod 'CodeQuickKit', '~> 6.0'
+    platform :ios, '11.0'
+    
+    pod 'CodeQuickKit', '~> 6.1'
     pod 'BZipper', '~> 1.0.3'
 end
 
 target 'XCServerAPITests' do
-    pod 'CodeQuickKit', '~> 6.0'
+    platform :ios, '11.0'
+    
+    pod 'CodeQuickKit', '~> 6.1'
     pod 'BZipper', '~> 1.0.3'
 end
