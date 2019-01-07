@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "XCServerAPI"
-  s.version = "4.3.0"
+  s.version = "5.0.0"
   s.summary = "API and model classes for interacting with an Xcode Server REST API."
   s.description = <<-DESC
   The Xcode Server REST API can be a powerful tool for interacting and managing Xcode bots and integrations.
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/*'
   s.frameworks = 'Foundation'
   s.requires_arc = true
-  s.dependency 'CodeQuickKit', '~> 6.1'
+  s.dependency 'CodeQuickKit', '~> 6.4'
   s.dependency 'BZipper', '~> 1.0.3'
 
   s.osx.deployment_target = "10.13"
