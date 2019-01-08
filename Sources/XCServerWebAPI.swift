@@ -28,7 +28,7 @@ public extension XCServerWebAPICredentialDelegate {
         let base64 = data.base64EncodedString(options: [])
         let auth = "Basic \(base64)"
         
-        return XCServerWebAPICredentialsHeader(value: auth, key: WebAPI.HTTPHeaderKey.Authorization)
+        return XCServerWebAPICredentialsHeader(value: auth, key: HTTP.Header.authorization.rawValue)
     }
     
     public func clearCredentials(forAPI api: XCServerWebAPI) {
@@ -95,7 +95,10 @@ public class XCServerWebAPI: WebAPI {
             return api
         }
         
-        let api = XCServerWebAPI(fqdn: fqdn)
+        guard let api = XCServerWebAPI(fqdn: fqdn) else {
+            preconditionFailure()
+        }
+        
         api.session.configuration.timeoutIntervalForRequest = 8
         api.session.configuration.timeoutIntervalForResource = 16
         api.session.configuration.httpCookieAcceptPolicy = .never
@@ -116,12 +119,15 @@ public class XCServerWebAPI: WebAPI {
         self.apis[fqdn] = nil
     }
     
-    public convenience init(fqdn: String) {
-        let url = URL(string: "https://\(fqdn):20343/api")
-        self.init(baseURL: url, sessionDelegate: XCServerWebAPI.sessionDelegate)
+    public convenience init?(fqdn: String) {
+        guard let url = URL(string: "https://\(fqdn):20343/api") else {
+            return nil
+        }
+        
+        self.init(baseURL: url, session: nil, delegate: XCServerWebAPI.sessionDelegate)
     }
     
-    public override func request(method: WebAPI.HTTPRequestMethod, path: String, queryItems: [URLQueryItem]?, data: Data?) throws -> URLRequest {
+    public func request(method: HTTP.RequestMethod, path: String, queryItems: [URLQueryItem]?, data: Data?) throws -> URLRequest {
         var request = try super.request(method: method, path: path, queryItems: queryItems, data: data)
         
         if let header = XCServerWebAPI.credentialDelegate.credentialsHeader(forAPI: self) {
@@ -134,7 +140,7 @@ public class XCServerWebAPI: WebAPI {
     // MARK: - Endpoints
     
     /// Requests the '`/ping`' endpoint from the Xcode Server API.
-    public func ping(_ completion: @escaping WebAPIRequestCompletion) {
+    public func ping(_ completion: @escaping HTTP.DataTaskCompletion) {
         self.get("ping", completion: completion)
     }
     

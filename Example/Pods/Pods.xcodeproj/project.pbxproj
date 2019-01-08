@@ -84,12 +84,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0594D6252B8EFACB9D512A552E8EE67B /* Pods_XCServerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XCServerAPI.framework; path = "Pods-XCServerAPI.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		06DA6091CA1A2A7AFD13ACF6A78A74AB /* BZipCompression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BZipCompression.framework; path = BZipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0594D6252B8EFACB9D512A552E8EE67B /* Pods_XCServerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCServerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06DA6091CA1A2A7AFD13ACF6A78A74AB /* BZipCompression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BZipCompression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BCA7C3089B8DE4EEFE07995BD4018B /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSMutableAttributedString.swift; path = Sources/NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		0907385D4A2EB0378305C7235EF857F0 /* Storyboarded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storyboarded.swift; path = Sources/Storyboarded.swift; sourceTree = "<group>"; };
 		100E4DEC97265FAD1E9C5EBB8C59680C /* Pods-XCServerAPITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XCServerAPITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1BE4B99B6FD4FF7F5B9C564E5A195470 /* Pods_XCServerAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XCServerAPITests.framework; path = "Pods-XCServerAPITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE4B99B6FD4FF7F5B9C564E5A195470 /* Pods_XCServerAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCServerAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D311993D8E16FBFEDF91FF90FDD461A /* WebAPI+Injectable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WebAPI+Injectable.swift"; path = "Sources/WebAPI+Injectable.swift"; sourceTree = "<group>"; };
 		26F0D0D67B4446D1DE80E8181DB377D4 /* BZipCompression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BZipCompression.m; path = Sources/BZipCompression/BZipCompression.m; sourceTree = "<group>"; };
 		2A0B104A5B90806385103EDD402BF80E /* Pods-XCServerAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XCServerAPI-umbrella.h"; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		40F1478314E89470BF5071E7550B9416 /* Environment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Environment.swift; path = Sources/Environment.swift; sourceTree = "<group>"; };
 		4776C9E720862EC5D8217D9C4CC3D8C8 /* Pods-XCServerAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XCServerAPI-dummy.m"; sourceTree = "<group>"; };
 		477F1C88CCB8E2BCB3A05CC4CAD7E128 /* BZipper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BZipper-Info.plist"; sourceTree = "<group>"; };
-		47A65EA0A591232986DCA0552791635D /* CodeQuickKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CodeQuickKit.framework; path = CodeQuickKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47A65EA0A591232986DCA0552791635D /* CodeQuickKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeQuickKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		526E6345CC368BE2DB7C8EFB370458D0 /* CodeQuickKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CodeQuickKit-prefix.pch"; sourceTree = "<group>"; };
 		527E231418DB83AA7AC921A53F9730C1 /* WebAPI+SSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WebAPI+SSL.swift"; path = "Sources/WebAPI+SSL.swift"; sourceTree = "<group>"; };
 		53519F6F1B65BFAC7E9A719ECC31F7CB /* Pods-XCServerAPI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XCServerAPI-Info.plist"; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		ABD58D3236D25940C3DE90D453067C2F /* UserDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Sources/UserDefaults.swift; sourceTree = "<group>"; };
 		ACBFE831BDCF88CBF81FBDC0CAB88412 /* Pods-XCServerAPITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XCServerAPITests-frameworks.sh"; sourceTree = "<group>"; };
 		AF10B6E286754FE9CCA21FEB2395399B /* DateFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Sources/DateFormatter.swift; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B6B87F94464B0E308504EFFDCB2F0C3C /* CodeQuickKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CodeQuickKit-Info.plist"; sourceTree = "<group>"; };
 		B7B2DB3BFC4F8AEE8A3C12FAA1A35DDA /* WebAPI+Client.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WebAPI+Client.swift"; path = "Sources/WebAPI+Client.swift"; sourceTree = "<group>"; };
 		C0FC9963704542B15BFE8D7FFB622F58 /* WebAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebAPI.swift; path = Sources/WebAPI.swift; sourceTree = "<group>"; };
@@ -340,7 +340,6 @@
 				527E231418DB83AA7AC921A53F9730C1 /* WebAPI+SSL.swift */,
 				84DE808A3C334E04E5B79A9F21ED5EF6 /* Support Files */,
 			);
-			name = CodeQuickKit;
 			path = CodeQuickKit;
 			sourceTree = "<group>";
 		};
@@ -351,7 +350,6 @@
 				26F0D0D67B4446D1DE80E8181DB377D4 /* BZipCompression.m */,
 				71DB34411DCD6FD8C87F299E6591D8E5 /* Support Files */,
 			);
-			name = BZipper;
 			path = BZipper;
 			sourceTree = "<group>";
 		};
@@ -477,7 +475,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1010;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -626,7 +624,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E34AF0CAF6A96826BB350CD2AC42A24F /* CodeQuickKit.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -660,7 +657,6 @@
 			baseConfigurationReference = 8FF91DBD16B624146F9CA08D7716C4D9 /* Pods-XCServerAPI.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -694,7 +690,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E34AF0CAF6A96826BB350CD2AC42A24F /* CodeQuickKit.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -728,7 +723,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC94EFBC710E0D1070FC18B3676B5CEF /* BZipper.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -762,7 +756,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC94EFBC710E0D1070FC18B3676B5CEF /* BZipper.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -860,7 +853,6 @@
 			baseConfigurationReference = 373BB11FD469E84AAD7496F9388B081B /* Pods-XCServerAPI.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -896,7 +888,6 @@
 			baseConfigurationReference = F87317B45C7D7A56DBC8B0FD4C4E08AA /* Pods-XCServerAPITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -980,8 +971,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -992,7 +982,6 @@
 			baseConfigurationReference = 678760C47E822D229ACAF45B95F71974 /* Pods-XCServerAPITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
