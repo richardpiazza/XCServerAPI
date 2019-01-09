@@ -7,8 +7,28 @@ public protocol XCServerHTTPClientAuthorizationDelegate: class {
     func clearCredentials(for fqdn: String?)
 }
 
-public protocol XCServerHTTPClient: HTTPClient {
+public protocol XCServerHTTPClient: HTTPClient, HTTPCodable {
     static var authorizationDelegate: XCServerHTTPClientAuthorizationDelegate? { get set }
+}
+
+public enum XCServerHTTPClientError: Swift.Error, LocalizedError {
+    case fqdn
+    case authorization
+    case xcodeServer
+    case serilization
+    
+    public var errorDescription: String? {
+        switch self {
+        case .fqdn: return "Attempted to initialize with an invalid FQDN."
+        case .authorization: return "The server returned a 401 response code."
+        case .xcodeServer: return "This class was initialized without an XcodeServer entity."
+        case .serilization: return "The response object could not be cast into the requested type."
+        }
+    }
+}
+
+public struct XCServerHTTPClientHeader {
+    public static let xscAPIVersion = "x-xscapiversion"
 }
 
 public extension XCServerHTTPClient {
@@ -57,7 +77,7 @@ public extension XCServerHTTPClient {
             var apiVersion: Int?
             
             guard statusCode != 401 else {
-                completion(nil, apiVersion, XCServerClient.Error.authorization)
+                completion(nil, apiVersion, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -67,18 +87,18 @@ public extension XCServerHTTPClient {
             }
             
             if let responseHeaders = headers {
-                if let version = responseHeaders[XCServerClient.Header.xscAPIVersion] as? String {
+                if let version = responseHeaders[XCServerHTTPClientHeader.xscAPIVersion] as? String {
                     apiVersion = Int(version)
                 }
             }
             
             guard let responseData = data else {
-                completion(nil, apiVersion, XCServerClient.Error.serilization)
+                completion(nil, apiVersion, XCServerHTTPClientError.serilization)
                 return
             }
             
             guard let versions = XCSVersion.decode(data: responseData) else {
-                completion(nil, apiVersion, XCServerClient.Error.serilization)
+                completion(nil, apiVersion, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -101,7 +121,7 @@ public extension XCServerHTTPClient {
     public func bots(_ completion: @escaping BotsCompletion) {
         self.get("bots") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, XCServerClient.Error.authorization)
+                completion(nil, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -111,12 +131,12 @@ public extension XCServerHTTPClient {
             }
             
             guard let responseData = data else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
             guard let bots = Bots.decode(data: responseData) else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -130,7 +150,7 @@ public extension XCServerHTTPClient {
     public func bot(withIdentifier identifier: String, completion: @escaping BotCompletion) {
         self.get("bots/\(identifier)") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, XCServerClient.Error.authorization)
+                completion(nil, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -140,12 +160,12 @@ public extension XCServerHTTPClient {
             }
             
             guard let responseData = data else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
             guard let bot = XCSBot.decode(data: responseData) else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -159,7 +179,7 @@ public extension XCServerHTTPClient {
     public func stats(forBotWithIdentifier identifier: String, completion: @escaping StatsCompletion) {
         self.get("bots/\(identifier)/stats") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, XCServerClient.Error.authorization)
+                completion(nil, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -169,12 +189,12 @@ public extension XCServerHTTPClient {
             }
             
             guard let responseData = data else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
             guard let stats = XCSStats.decode(data: responseData) else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -198,7 +218,7 @@ public extension XCServerHTTPClient {
     public func integrations(forBotWithIdentifier identifier: String, completion: @escaping IntegrationsCompletion) {
         self.get("bots/\(identifier)/integrations") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, XCServerClient.Error.authorization)
+                completion(nil, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -208,12 +228,12 @@ public extension XCServerHTTPClient {
             }
             
             guard let responseData = data else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
             guard let integrations = Integrations.decode(data: responseData) else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -225,7 +245,7 @@ public extension XCServerHTTPClient {
     public func runIntegration(forBotWithIdentifier identifier: String, completion: @escaping IntegrationCompletion) {
         self.post(nil, path: "bots/\(identifier)/integrations") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, XCServerClient.Error.authorization)
+                completion(nil, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -235,12 +255,12 @@ public extension XCServerHTTPClient {
             }
             
             guard let responseData = data else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
             guard let integration = XCSIntegration.decode(data: responseData) else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -252,7 +272,7 @@ public extension XCServerHTTPClient {
     public func integration(withIdentifier identifier: String, completion: @escaping IntegrationCompletion) {
         self.get("integrations/\(identifier)") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, XCServerClient.Error.authorization)
+                completion(nil, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -262,12 +282,12 @@ public extension XCServerHTTPClient {
             }
             
             guard let responseData = data else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
             guard let integration = XCSIntegration.decode(data: responseData) else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -290,7 +310,7 @@ public extension XCServerHTTPClient {
     public func commits(forIntegrationWithIdentifier identifier: String, completion: @escaping IntegrationCommitsCompletion) {
         self.get("integrations/\(identifier)/commits") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, XCServerClient.Error.authorization)
+                completion(nil, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -300,12 +320,12 @@ public extension XCServerHTTPClient {
             }
             
             guard let responseData = data else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
             guard let integrationCommits = IntegrationCommits.decode(data: responseData) else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -333,7 +353,7 @@ public extension XCServerHTTPClient {
     public func issues(forIntegrationWithIdentifier identifier: String, completion: @escaping IssuesCompletion) {
         self.get("integrations/\(identifier)/issues") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, XCServerClient.Error.authorization)
+                completion(nil, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -343,12 +363,12 @@ public extension XCServerHTTPClient {
             }
             
             guard let responseData = data else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
             guard let issues = Issues.decode(data: responseData) else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -365,7 +385,7 @@ public extension XCServerHTTPClient {
     public func coverage(forIntegrationWithIdentifier identifier: String, completion: @escaping CodeCoverageCompletion) {
         self.get("integrations/\(identifier)/coverage") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
-                completion(nil, XCServerClient.Error.authorization)
+                completion(nil, XCServerHTTPClientError.authorization)
                 return
             }
             
@@ -380,7 +400,7 @@ public extension XCServerHTTPClient {
             }
             
             guard let responseData = data else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -393,7 +413,7 @@ public extension XCServerHTTPClient {
             }
             
             guard let coverageHierachy = XCSCoverageHierarchy.decode(data: decompressedData) else {
-                completion(nil, XCServerClient.Error.serilization)
+                completion(nil, XCServerHTTPClientError.serilization)
                 return
             }
             
@@ -405,22 +425,22 @@ public extension XCServerHTTPClient {
         let decompressedData = try BZipCompression.decompressedData(with: data)
         
         guard let decompressedString = String(data: decompressedData, encoding: .utf8) else {
-            throw XCServerClient.Error.serilization
+            throw XCServerHTTPClientError.serilization
         }
         
         guard let firstBrace = decompressedString.range(of: "{") else {
-            throw XCServerClient.Error.serilization
+            throw XCServerHTTPClientError.serilization
         }
         
         guard let lastBrace = decompressedString.range(of: "}", options: .backwards, range: nil, locale: nil) else {
-            throw XCServerClient.Error.serilization
+            throw XCServerHTTPClientError.serilization
         }
         
         let range = decompressedString.index(firstBrace.lowerBound, offsetBy: 0)..<decompressedString.index(lastBrace.lowerBound, offsetBy: 1)
         let json = decompressedString[range]
         
         guard let validData = json.data(using: .utf8) else {
-            throw XCServerClient.Error.serilization
+            throw XCServerHTTPClientError.serilization
         }
         
         return validData
