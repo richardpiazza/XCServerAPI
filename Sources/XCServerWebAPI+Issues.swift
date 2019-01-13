@@ -1,6 +1,7 @@
 import Foundation
 import CodeQuickKit
 
+@available(*, deprecated)
 public extension XCServerWebAPI {
     public struct Issues: Codable {
         public var buildServiceErrors: [XCSIssue]?

@@ -2,6 +2,7 @@ import Foundation
 import CodeQuickKit
 import BZipCompression
 
+@available(*, deprecated)
 public extension XCServerWebAPI {
     
     public typealias CodeCoverageCompletion = (_ coverage: XCSCoverageHierarchy?, _ error: Error?) -> Void

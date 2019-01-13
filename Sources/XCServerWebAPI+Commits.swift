@@ -1,6 +1,7 @@
 import Foundation
 import CodeQuickKit
 
+@available(*, deprecated)
 public extension XCServerWebAPI {
     private struct IntegrationCommits: Codable {
         public var count: Int

@@ -4,12 +4,14 @@ import CodeQuickKit
 public typealias XCServerWebAPICredentials = (username: String, password: String?)
 public typealias XCServerWebAPICredentialsHeader = (value: String, key: String)
 
+@available(*, deprecated, message: "Use `XCServerClientAuthorizationDelegate`.")
 public protocol XCServerWebAPICredentialDelegate {
     func credentials(forAPI api: XCServerWebAPI) -> XCServerWebAPICredentials?
     func credentialsHeader(forAPI api: XCServerWebAPI) -> XCServerWebAPICredentialsHeader?
     func clearCredentials(forAPI api: XCServerWebAPI)
 }
 
+@available(*, deprecated)
 public extension XCServerWebAPICredentialDelegate {
     public func credentialsHeader(forAPI api: XCServerWebAPI) -> XCServerWebAPICredentialsHeader? {
         guard let creds = credentials(forAPI: api) else {
@@ -37,6 +39,7 @@ public extension XCServerWebAPICredentialDelegate {
 }
 
 /// Wrapper for `WebAPI` that implements common Xcode Server requests.
+@available(*, deprecated, message: "Use `XCServerClient`.")
 public class XCServerWebAPI: WebAPI {
     
     public struct HTTPHeaders {

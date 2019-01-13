@@ -70,7 +70,7 @@ public extension HTTPCodable where Self: HTTPClient {
     }
     
     public func post<D: Decodable>(_ data: Data?, path: String, queryItems: [URLQueryItem]? = nil, completion: @escaping HTTP.CodableTaskCompletion<D>) {
-        self.post(nil, path: path, queryItems: queryItems) { (statusCode, headers, data: Data?, error) in
+        self.post(data, path: path, queryItems: queryItems) { (statusCode, headers, data: Data?, error) in
             self.decode(statusCode: statusCode, headers: headers, data: data, error: error, completion: completion)
         }
     }

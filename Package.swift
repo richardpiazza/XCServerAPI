@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "XCServerAPI", targets: ["XCServerAPI"])
     ],
     dependencies: [
-        .package(url: "https://github.com/richardpiazza/CodeQuickKit.git", from: "6.4.0"),
+        .package(url: "https://github.com/richardpiazza/CodeQuickKit.git", from: "6.4.1"),
         .package(url: "https://github.com/richardpiazza/BZipCompression.git", from: "1.0.0")
     ],
     targets: [

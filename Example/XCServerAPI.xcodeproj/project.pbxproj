@@ -10,7 +10,6 @@
 		0164414CA64501C6F71102CF /* Pods_XCServerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB6F550AA2780D2129BCABA /* Pods_XCServerAPI.framework */; };
 		2CAA4B297B94CA4ED5C2CC6B /* Pods_XCServerAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F41A62328F1F9FD45C1DD92 /* Pods_XCServerAPITests.framework */; };
 		733F9CE721E69C7B0045CF77 /* XCServerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F9CE621E69C7B0045CF77 /* XCServerResult.swift */; };
-		73F5591621E2EA7100F7CC61 /* XCServerHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F5591521E2EA7100F7CC61 /* XCServerHTTPClient.swift */; };
 		73F5591821E2EAA200F7CC61 /* XCServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F5591721E2EAA200F7CC61 /* XCServerClient.swift */; };
 		E108CFD01EFFF59F00BB7978 /* XCSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFCF1EFFF59F00BB7978 /* XCSGroup.swift */; };
 		E108CFD81F012FE000BB7978 /* XCSProxiedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108CFD71F012FE000BB7978 /* XCSProxiedDevice.swift */; };
@@ -128,7 +127,6 @@
 		3F41A62328F1F9FD45C1DD92 /* Pods_XCServerAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCServerAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7168F2F8281D069E3847D606 /* Pods-XCServerAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPITests/Pods-XCServerAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 		733F9CE621E69C7B0045CF77 /* XCServerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCServerResult.swift; sourceTree = "<group>"; };
-		73F5591521E2EA7100F7CC61 /* XCServerHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCServerHTTPClient.swift; sourceTree = "<group>"; };
 		73F5591721E2EAA200F7CC61 /* XCServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCServerClient.swift; sourceTree = "<group>"; };
 		DFC97C85D34636CE86B14D89 /* Pods-XCServerAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCServerAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCServerAPI/Pods-XCServerAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		E108CFCF1EFFF59F00BB7978 /* XCSGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSGroup.swift; sourceTree = "<group>"; };
@@ -388,7 +386,6 @@
 				E190EBD61EFEBC8C004F0920 /* XCSTriggerType.swift */,
 				E149CBDC1D2ABDD700E2E688 /* XCSVersion.swift */,
 				73F5591721E2EAA200F7CC61 /* XCServerClient.swift */,
-				73F5591521E2EA7100F7CC61 /* XCServerHTTPClient.swift */,
 				E176DFD41F0283D1005CE042 /* XCServerJSONDecoder.swift */,
 				733F9CE621E69C7B0045CF77 /* XCServerResult.swift */,
 				E149CBDD1D2ABDD700E2E688 /* XCServerWebAPI.swift */,
@@ -674,7 +671,6 @@
 				E10CC6611EFFE47200FE4A3F /* XCSCodeCoveragePreference.swift in Sources */,
 				E149CBED1D2ABDD700E2E688 /* XCSFilter.swift in Sources */,
 				E149CBF91D2ABDD700E2E688 /* XCSStats.swift in Sources */,
-				73F5591621E2EA7100F7CC61 /* XCServerHTTPClient.swift in Sources */,
 				E108CFD81F012FE000BB7978 /* XCSProxiedDevice.swift in Sources */,
 				E149CBE71D2ABDD700E2E688 /* XCSRepositoryCommit.swift in Sources */,
 				E190EBD51EFEBBB0004F0920 /* XCSIntegrationResult.swift in Sources */,

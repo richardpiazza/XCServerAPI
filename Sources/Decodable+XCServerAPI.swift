@@ -2,6 +2,7 @@ import Foundation
 import CodeQuickKit
 
 public extension Decodable {
+    @available(*, deprecated)
     static func decode(json: String) -> Self? {
         var mutable = json
         while let range = mutable.rangeOfCharacter(from: CharacterSet.controlCharacters) {
@@ -15,6 +16,7 @@ public extension Decodable {
         return decode(data: data)
     }
     
+    @available(*, deprecated)
     static func decode(data: Data) -> Self? {
         do {
             return try XCServerJSONDecoder.default.decode(Self.self, from: data)

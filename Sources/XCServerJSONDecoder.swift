@@ -1,5 +1,6 @@
 import Foundation
 
+@available(*, deprecated)
 public class XCServerJSONDecoder: JSONDecoder {
     
     public static var dateFormatter: DateFormatter {
