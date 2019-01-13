@@ -181,7 +181,7 @@ extension XCServerClient {
 }
 
 // MARK: - Connection/Versioning
-public extension XCServerHTTPClient {
+public extension XCServerClient {
     
     /// Requests the '`/ping`' endpoint from the Xcode Server API.
     public func ping(_ completion: @escaping (XCServerResult<Void>) -> Void) {
