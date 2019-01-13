@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/*'
   s.frameworks = 'Foundation'
   s.requires_arc = true
+  s.swift_version = '4.2'
+  
   s.dependency 'CodeQuickKit', '~> 6.4'
   s.dependency 'BZipper', '~> 1.0.3'
 
