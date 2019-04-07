@@ -170,7 +170,7 @@ extension XCServerClient {
 public extension XCServerClient {
     
     /// Requests the '`/ping`' endpoint from the Xcode Server API.
-    public func ping(_ completion: @escaping (XCServerResult<Void>) -> Void) {
+    func ping(_ completion: @escaping (XCServerResult<Void>) -> Void) {
         get("ping") { (statusCode, headers, data: Data?, error) in
             guard statusCode == 204 else {
                 completion(.error(XCServerClientError.xcodeServer))
@@ -181,7 +181,7 @@ public extension XCServerClient {
         }
     }
     
-    public func versions(_ completion: @escaping (XCServerResult<(XCSVersion, Int?)>) -> Void) {
+    func versions(_ completion: @escaping (XCServerResult<(XCSVersion, Int?)>) -> Void) {
         get("versions") { (statusCode, headers, data: XCSVersion?, error) in
             guard statusCode != 401 else {
                 completion(.error(XCServerClientError.authorization))
@@ -219,21 +219,21 @@ public extension XCServerClient {
     }
     
     /// Requests the '`/bots`' endpoint from the Xcode Server API.
-    public func bots(_ completion: @escaping (XCServerResult<[XCSBot]>) -> Void) {
+    func bots(_ completion: @escaping (XCServerResult<[XCSBot]>) -> Void) {
         get("bots") { (statusCode, headers, data: Bots?, error) in
             completion(self.serverResult(statusCode, headers, data: data?.results, error))
         }
     }
     
     /// Requests the '`/bots/{id}`' endpoint from the Xcode Server API.
-    public func bot(withIdentifier identifier: String, completion: @escaping (XCServerResult<XCSBot>) -> Void) {
+    func bot(withIdentifier identifier: String, completion: @escaping (XCServerResult<XCSBot>) -> Void) {
         get("bots/\(identifier)") { (statusCode, headers, data: XCSBot?, error) in
             completion(self.serverResult(statusCode, headers, data: data, error))
         }
     }
     
     /// Requests the '`/bots/{id}/stats`' endpoint from the Xcode Server API.
-    public func stats(forBotWithIdentifier identifier: String, completion: @escaping (XCServerResult<XCSStats>) -> Void) {
+    func stats(forBotWithIdentifier identifier: String, completion: @escaping (XCServerResult<XCSStats>) -> Void) {
         get("bots/\(identifier)/stats") { (statusCode, headers, data: XCSStats?, error) in
             completion(self.serverResult(statusCode, headers, data: data, error))
         }
@@ -248,21 +248,21 @@ public extension XCServerClient {
     }
     
     /// Requests the '`/bots/{id}/integrations`' endpoint from the Xcode Server API.
-    public func integrations(forBotWithIdentifier identifier: String, completion: @escaping (XCServerResult<[XCSIntegration]>) -> Void) {
+    func integrations(forBotWithIdentifier identifier: String, completion: @escaping (XCServerResult<[XCSIntegration]>) -> Void) {
         get("bots/\(identifier)/integrations") { (statusCode, headers, data: Integrations?, error) in
             completion(self.serverResult(statusCode, headers, data: data?.results, error))
         }
     }
     
     /// Posts a request to the '`/bots/{id}`' endpoint from the Xcode Server API.
-    public func runIntegration(forBotWithIdentifier identifier: String, completion: @escaping (XCServerResult<XCSIntegration>) -> Void) {
+    func runIntegration(forBotWithIdentifier identifier: String, completion: @escaping (XCServerResult<XCSIntegration>) -> Void) {
         post(nil, path: "bots/\(identifier)/integrations") { (statusCode, headers, data: XCSIntegration?, error) in
             completion(self.serverResult(statusCode, headers, data: data, error))
         }
     }
     
     /// Requests the '`/integrations/{id}`' endpoint from the Xcode Server API.
-    public func integration(withIdentifier identifier: String, completion: @escaping (XCServerResult<XCSIntegration>) -> Void) {
+    func integration(withIdentifier identifier: String, completion: @escaping (XCServerResult<XCSIntegration>) -> Void) {
         get("integrations/\(identifier)") { (statusCode, headers, data: XCSIntegration?, error) in
             completion(self.serverResult(statusCode, headers, data: data, error))
         }
@@ -277,7 +277,7 @@ public extension XCServerClient {
     }
     
     /// Requests the '`/integrations/{id}/commits`' endpoint from the Xcode Server API.
-    public func commits(forIntegrationWithIdentifier identifier: String, completion: @escaping (XCServerResult<[XCSCommit]>) -> Void) {
+    func commits(forIntegrationWithIdentifier identifier: String, completion: @escaping (XCServerResult<[XCSCommit]>) -> Void) {
         get("integrations/\(identifier)/commits") { (statusCode, headers, data: IntegrationCommits?, error) in
             completion(self.serverResult(statusCode, headers, data: data?.results, error))
         }
@@ -286,7 +286,7 @@ public extension XCServerClient {
 
 // MARK: - Issues
 public extension XCServerClient {
-    public struct Issues: Codable {
+    struct Issues: Codable {
         public var buildServiceErrors: [XCSIssue]?
         public var buildServiceWarnings: [XCSIssue]?
         public var triggerErrors: [XCSIssue]?
@@ -297,7 +297,7 @@ public extension XCServerClient {
     }
     
     /// Requests the '`/integrations/{id}/issues`' endpoint from the Xcode Server API.
-    public func issues(forIntegrationWithIdentifier identifier: String, completion: @escaping (XCServerResult<Issues>) -> Void) {
+    func issues(forIntegrationWithIdentifier identifier: String, completion: @escaping (XCServerResult<Issues>) -> Void) {
         get("integrations/\(identifier)/issues") { (statusCode, headers, data: Issues?, error) in
             completion(self.serverResult(statusCode, headers, data: data, error))
         }
@@ -308,7 +308,7 @@ public extension XCServerClient {
 public extension XCServerClient {
     
     /// Requests the '`/integrations/{id}/coverage`' endpoint from the Xcode Server API.
-    public func coverage(forIntegrationWithIdentifier identifier: String, completion: @escaping (XCServerResult<XCSCoverageHierarchy?>) -> Void) {
+    func coverage(forIntegrationWithIdentifier identifier: String, completion: @escaping (XCServerResult<XCSCoverageHierarchy?>) -> Void) {
         get("integrations/\(identifier)/coverage") { (statusCode, headers, data: Data?, error) in
             guard statusCode != 401 else {
                 completion(.error(XCServerClientError.authorization))

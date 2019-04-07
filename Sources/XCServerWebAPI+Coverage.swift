@@ -5,9 +5,9 @@ import BZipCompression
 @available(*, deprecated)
 public extension XCServerWebAPI {
     
-    public typealias CodeCoverageCompletion = (_ coverage: XCSCoverageHierarchy?, _ error: Error?) -> Void
+    typealias CodeCoverageCompletion = (_ coverage: XCSCoverageHierarchy?, _ error: Error?) -> Void
     
-    public func coverage(forIntegrationWithIdentifier identifier: String, completion: @escaping CodeCoverageCompletion) {
+    func coverage(forIntegrationWithIdentifier identifier: String, completion: @escaping CodeCoverageCompletion) {
         self.get("integrations/\(identifier)/coverage") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
                 completion(nil, Errors.authorization)

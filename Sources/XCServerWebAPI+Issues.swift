@@ -3,7 +3,7 @@ import CodeQuickKit
 
 @available(*, deprecated)
 public extension XCServerWebAPI {
-    public struct Issues: Codable {
+    struct Issues: Codable {
         public var buildServiceErrors: [XCSIssue]?
         public var buildServiceWarnings: [XCSIssue]?
         public var triggerErrors: [XCSIssue]?
@@ -13,10 +13,10 @@ public extension XCServerWebAPI {
         public var analyzerWarnings: XCSIssueGroup?
     }
     
-    public typealias IssuesCompletion = (_ issues: Issues?, _ error: Error?) -> Void
+    typealias IssuesCompletion = (_ issues: Issues?, _ error: Error?) -> Void
     
     /// Requests the '`/integrations/{id}/issues`' endpoint from the Xcode Server API.
-    public func issues(forIntegrationWithIdentifier identifier: String, completion: @escaping IssuesCompletion) {
+    func issues(forIntegrationWithIdentifier identifier: String, completion: @escaping IssuesCompletion) {
         self.get("integrations/\(identifier)/issues") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
                 completion(nil, Errors.authorization)

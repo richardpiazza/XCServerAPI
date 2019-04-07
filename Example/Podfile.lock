@@ -1,6 +1,6 @@
 PODS:
   - BZipper (1.0.3)
-  - CodeQuickKit (6.4.1)
+  - CodeQuickKit (6.5.0)
 
 DEPENDENCIES:
   - BZipper (~> 1.0.3)
@@ -13,8 +13,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   BZipper: 33b4dd36545a2a817f44214d6558659656185366
-  CodeQuickKit: c3c84e055fc251598e97efda66a7dd1cb5ac2a36
+  CodeQuickKit: 6f1ee4051dcffa1b5cd8d59bfbc28c222b694d43
 
 PODFILE CHECKSUM: d60253125052d64346f846faf7cd9023735a121a
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.0

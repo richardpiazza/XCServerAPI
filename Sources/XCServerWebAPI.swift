@@ -13,7 +13,7 @@ public protocol XCServerWebAPICredentialDelegate {
 
 @available(*, deprecated)
 public extension XCServerWebAPICredentialDelegate {
-    public func credentialsHeader(forAPI api: XCServerWebAPI) -> XCServerWebAPICredentialsHeader? {
+    func credentialsHeader(forAPI api: XCServerWebAPI) -> XCServerWebAPICredentialsHeader? {
         guard let creds = credentials(forAPI: api) else {
             return nil
         }
@@ -33,7 +33,7 @@ public extension XCServerWebAPICredentialDelegate {
         return XCServerWebAPICredentialsHeader(value: auth, key: HTTP.Header.authorization.rawValue)
     }
     
-    public func clearCredentials(forAPI api: XCServerWebAPI) {
+    func clearCredentials(forAPI api: XCServerWebAPI) {
         Log.info("Reset of XCServerWebAPI requested; Credentials should be cleared.")
     }
 }

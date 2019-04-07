@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/richardpiazza/BZipCompression.git",
         "state": {
           "branch": null,
-          "revision": "f20380f80ad16bd4ae7a109a12c57db1b3d44cc7",
-          "version": "1.0.3"
+          "revision": "4ae165393870d497d10ca50ea25eaa5a0b59b26d",
+          "version": "1.1.0"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/richardpiazza/CodeQuickKit.git",
         "state": {
           "branch": null,
-          "revision": "df76a07017c23c4976b96aa6ff1570255b393fdc",
-          "version": "6.4.1"
+          "revision": "3ee58d2aa6ecf116cefef3ec8e29e7cf6fe8a3d8",
+          "version": "6.5.0"
         }
       }
     ]

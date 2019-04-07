@@ -8,10 +8,10 @@ public extension XCServerWebAPI {
         public var results: [XCSBot]
     }
     
-    public typealias BotsCompletion = (_ bots: [XCSBot]?, _ error: Error?) -> Void
+    typealias BotsCompletion = (_ bots: [XCSBot]?, _ error: Error?) -> Void
     
     /// Requests the '`/bots`' endpoint from the Xcode Server API.
-    public func bots(_ completion: @escaping BotsCompletion) {
+    func bots(_ completion: @escaping BotsCompletion) {
         self.get("bots") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
                 completion(nil, Errors.authorization)
@@ -37,10 +37,10 @@ public extension XCServerWebAPI {
         }
     }
     
-    public typealias BotCompletion = (_ bot: XCSBot?, _ error: Error?) -> Void
+    typealias BotCompletion = (_ bot: XCSBot?, _ error: Error?) -> Void
     
     /// Requests the '`/bots/{id}`' endpoint from the Xcode Server API.
-    public func bot(withIdentifier identifier: String, completion: @escaping BotCompletion) {
+    func bot(withIdentifier identifier: String, completion: @escaping BotCompletion) {
         self.get("bots/\(identifier)") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
                 completion(nil, Errors.authorization)
@@ -66,10 +66,10 @@ public extension XCServerWebAPI {
         }
     }
     
-    public typealias StatsCompletion = (_ stats: XCSStats?, _ error: Error?) -> Void
+    typealias StatsCompletion = (_ stats: XCSStats?, _ error: Error?) -> Void
     
     /// Requests the '`/bots/{id}/stats`' endpoint from the Xcode Server API.
-    public func stats(forBotWithIdentifier identifier: String, completion: @escaping StatsCompletion) {
+    func stats(forBotWithIdentifier identifier: String, completion: @escaping StatsCompletion) {
         self.get("bots/\(identifier)/stats") { (statusCode, headers, data, error) in
             guard statusCode != 401 else {
                 completion(nil, Errors.authorization)
