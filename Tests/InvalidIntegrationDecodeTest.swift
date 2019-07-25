@@ -99,26 +99,9 @@ class InvalidIntegrationDecodeTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
-    public func url(forResource resource: String) -> URL {
-        let bundle = Bundle(for: type(of: self))
-        if let url = bundle.url(forResource: resource, withExtension: "json") {
-            return url
-        }
-        
-        let path = FileManager.default.currentDirectoryPath
-        let url = URL(fileURLWithPath: path).appendingPathComponent("Tests").appendingPathComponent(resource).appendingPathExtension("json")
-        
-        if !FileManager.default.fileExists(atPath: url.path) {
-            fatalError("Failed to locate resource \(resource).json")
-        }
-        
-        return url
-    }
     
     func testInvalidIntegration() {
-        let url = self.url(forResource: "InvalidIntegration")
-        guard let data = FileManager.default.contents(atPath: url.path) else {
+        guard let data = invalidIntegrationJSON.data(using: .utf8) else {
             XCTFail()
             return
         }
@@ -133,12 +116,7 @@ class InvalidIntegrationDecodeTest: XCTestCase {
             print(String(data: data, encoding: .utf8)!)
         }
         
-        do {
-            let integration = try XCServerJSONDecoder.default.decode(XCSMinimalIntegration.self, from: data)
-            print(integration._id)
-        } catch {
-            print(error)
-            XCTFail()
-        }
+        let integration = XCSMinimalIntegration.decode(data: data)
+        XCTAssertEqual(integration?._id, "7165830f996e973601a81f0b28a4b4f3")
     }
 }

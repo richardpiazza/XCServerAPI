@@ -2,21 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "BZipCompression",
-        "repositoryURL": "https://github.com/richardpiazza/BZipCompression.git",
+        "package": "BitByteData",
+        "repositoryURL": "https://github.com/tsolomko/BitByteData.git",
         "state": {
           "branch": null,
-          "revision": "4ae165393870d497d10ca50ea25eaa5a0b59b26d",
-          "version": "1.1.0"
-        }
-      },
-      {
-        "package": "Cbz2",
-        "repositoryURL": "https://github.com/richardpiazza/Cbz2.git",
-        "state": {
-          "branch": null,
-          "revision": "1d6111e39e5d48286a9eee5eee17770c3296d5f4",
-          "version": "1.0.1"
+          "revision": "e7516072dfc33cad98db8db28e97d573d9e540aa",
+          "version": "1.4.1"
         }
       },
       {
@@ -24,8 +15,8 @@
         "repositoryURL": "https://github.com/richardpiazza/CodeQuickKit.git",
         "state": {
           "branch": null,
-          "revision": "3ee58d2aa6ecf116cefef3ec8e29e7cf6fe8a3d8",
-          "version": "6.5.0"
+          "revision": "5bb67f17dd575d458626293865f5b96f49d55bfe",
+          "version": "6.6.0"
         }
       }
     ]

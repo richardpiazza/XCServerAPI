@@ -1,3 +1,4 @@
+let commitsResponseJSON = """
 {
     "count": 1,
     "results": [
@@ -110,7 +111,7 @@
                                                              "XCSContributorDisplayName": "Richard Piazza"
                                                              },
                                                              "XCSCommitHash": "2bde8ec3aaef0742ec7e028c26c7548ccd5aba78",
-                                                             "XCSCommitMessage": "Mock API Tests\n",
+                                                             "XCSCommitMessage": "Mock API Tests\\n",
                                                              "XCSCommitIsMerge": "NO",
                                                              "XCSCommitTimestamp": "2017-07-12T14:03:28.000Z",
                                                              "XCSCommitTimestampDate": [
@@ -142,3 +143,4 @@
                 }
                 ]
 }
+"""

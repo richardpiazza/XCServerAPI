@@ -1,3 +1,4 @@
+let integrationResponseJSON = """
 {
     "_id": "8a526f6a0ce6b83bb969758e0f0038b7",
     "_rev": "19-fca71f668d1787cc8877b6722530060c",
@@ -11,7 +12,7 @@
             "triggers": [
                          {
                          "phase": 1,
-                         "scriptBody": "#!/bin/sh\n\necho Pre-Integration Script Running\n\n",
+                         "scriptBody": "#!/bin/sh\\n\\necho Pre-Integration Script Running\\n\\n",
                          "type": 1,
                          "name": "preintegration",
                          "conditions": {
@@ -26,7 +27,7 @@
                          },
                          {
                          "phase": 2,
-                         "scriptBody": "#!/bin/sh\n\necho Post-Integration Script Running\n\n",
+                         "scriptBody": "#!/bin/sh\\n\\necho Post-Integration Script Running\\n\\n",
                          "type": 1,
                          "name": "postintegration",
                          "conditions": {
@@ -1285,3 +1286,4 @@
     "perfMetricNames": [],
     "perfMetricKeyPaths": []
 }
+"""

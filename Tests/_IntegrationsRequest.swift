@@ -1,3 +1,4 @@
+let integrationRequestJSON = """
 {
     "_id": "8a526f6a0ce6b83bb969758e0f08d8d0",
     "_rev": "3-412b1e1cced84acee49ee583342633ce",
@@ -11,7 +12,7 @@
             "triggers": [
                          {
                          "phase": 1,
-                         "scriptBody": "#!/bin/sh\n\necho Pre-Integration Script Running\n\n",
+                         "scriptBody": "#!/bin/sh\\n\\necho Pre-Integration Script Running\\n\\n",
                          "type": 1,
                          "name": "preintegration",
                          "conditions": {
@@ -26,7 +27,7 @@
                          },
                          {
                          "phase": 2,
-                         "scriptBody": "#!/bin/sh\n\necho Post-Integration Script Running\n\n",
+                         "scriptBody": "#!/bin/sh\\n\\necho Post-Integration Script Running\\n\\n",
                          "type": 1,
                          "name": "postintegration",
                          "conditions": {
@@ -245,3 +246,4 @@
     "doc_type": "integration",
     "tinyID": "DD5CD9F"
 }
+"""

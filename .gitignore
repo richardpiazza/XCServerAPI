@@ -37,6 +37,9 @@ playground.xcworkspace
 # Packages/
 .build/
 
+XCServerAPI.xcodeproj
+XCServerAPI.xcodeproj/*
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However

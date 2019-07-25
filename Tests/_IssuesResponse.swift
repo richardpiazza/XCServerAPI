@@ -1,3 +1,4 @@
+let issuesResponseJSON = """
 {
     "buildServiceErrors": [],
     "buildServiceWarnings": [],
@@ -29,7 +30,7 @@
                                        "XCSContributorDisplayName": "Richard Piazza"
                                        },
                                        "XCSCommitHash": "bbb29e1796a48e83b26a16f2393da19d20a8eb60",
-                                       "XCSCommitMessage": "Build Settings update\n",
+                                       "XCSCommitMessage": "Build Settings update\\n",
                                        "XCSCommitIsMerge": "NO",
                                        "XCSCommitTimestamp": "2017-07-09T16:55:20.000Z"
                                        }
@@ -67,3 +68,4 @@
         "silencedIssues": []
     }
 }
+"""

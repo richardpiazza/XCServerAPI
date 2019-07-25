@@ -1,3 +1,4 @@
+let statsResponseJSON = """
 {
     "lastCleanIntegration": {
         "integrationID": "8a526f6a0ce6b83bb969758e0f0038b7",
@@ -87,3 +88,4 @@
     "numberOfSuccessfulIntegrations": 5,
     "sinceDate": "2016-07-12T17:21:39.013Z"
 }
+"""

@@ -1,8 +1,19 @@
 import Foundation
-import CodeQuickKit
+@testable import XCServerAPI
+
+var testSuite_jsonDateFormatter: DateFormatter {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+    return formatter
+}
+
+var testSuite_jsonDecoder: JSONDecoder = {
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .formatted(testSuite_jsonDateFormatter)
+    return decoder
+}()
 
 public extension Decodable {
-    @available(*, deprecated)
     static func decode(json: String) -> Self? {
         var mutable = json
         while let range = mutable.rangeOfCharacter(from: CharacterSet.controlCharacters) {
@@ -16,12 +27,10 @@ public extension Decodable {
         return decode(data: data)
     }
     
-    @available(*, deprecated)
     static func decode(data: Data) -> Self? {
         do {
-            return try XCServerJSONDecoder.default.decode(Self.self, from: data)
+            return try testSuite_jsonDecoder.decode(Self.self, from: data)
         } catch {
-            Log.error(error, message: "Failed to decode type '\(String(describing: Self.self)): \(error.localizedDescription)'")
             return nil
         }
     }

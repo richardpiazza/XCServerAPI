@@ -1,3 +1,4 @@
+let botsResponseJSON = """
 {
     "count": 2,
     "results": [
@@ -133,7 +134,7 @@
                 "triggers": [
                              {
                              "phase": 1,
-                             "scriptBody": "#!/bin/sh\n\necho Pre-Integration Script Running\n\n",
+                             "scriptBody": "#!/bin/sh\\n\\necho Pre-Integration Script Running\\n\\n",
                              "type": 1,
                              "name": "preintegration",
                              "conditions": {
@@ -148,7 +149,7 @@
                              },
                              {
                              "phase": 2,
-                             "scriptBody": "#!/bin/sh\n\necho Post-Integration Script Running\n\n",
+                             "scriptBody": "#!/bin/sh\\n\\necho Post-Integration Script Running\\n\\n",
                              "type": 1,
                              "name": "postintegration",
                              "conditions": {
@@ -350,3 +351,4 @@
                 }
                 ]
 }
+"""

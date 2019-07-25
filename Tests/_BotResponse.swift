@@ -1,3 +1,4 @@
+let botResponseJSON = """
 {
     "_id": "a7341f3521c7245492693c0d780006f9",
     "_rev": "33-98a45812535fd887382ef2837c943f3d",
@@ -8,7 +9,7 @@
         "triggers": [
                      {
                      "phase": 1,
-                     "scriptBody": "#!/bin/sh\n\necho Pre-Integration Script Running\n\n",
+                     "scriptBody": "#!/bin/sh\\n\\necho Pre-Integration Script Running\\n\\n",
                      "type": 1,
                      "name": "preintegration",
                      "conditions": {
@@ -23,7 +24,7 @@
                      },
                      {
                      "phase": 2,
-                     "scriptBody": "#!/bin/sh\n\necho Post-Integration Script Running\n\n",
+                     "scriptBody": "#!/bin/sh\\n\\necho Post-Integration Script Running\\n\\n",
                      "type": 1,
                      "name": "postintegration",
                      "conditions": {
@@ -223,4 +224,4 @@
         "DVTSourceControlWorkspaceBlueprintAdditionalValidationRemoteRepositoriesKey": []
     }
 }
-
+"""

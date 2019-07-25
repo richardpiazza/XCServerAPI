@@ -1,6 +1,6 @@
 import Foundation
 import CodeQuickKit
-import BZipCompression
+import SWCompression
 
 public protocol XCServerClientAuthorizationDelegate: class {
     func authorization(for fqdn: String?) -> HTTP.Authorization?
@@ -121,6 +121,18 @@ public class XCServerClient: HTTPClient, HTTPCodable {
         
         return request
     }
+    
+    public func execute(request: URLRequest, completion: @escaping HTTP.DataTaskCompletion) {
+        let task: URLSessionDataTask
+        do {
+            task = try self.task(request: request, completion: completion)
+        } catch {
+            completion(0, nil, nil, error)
+            return
+        }
+        
+        task.resume()
+    }
 }
 
 extension XCServerClient {
@@ -141,7 +153,7 @@ extension XCServerClient {
     }
     
     private func decompress(data: Data) throws -> Data {
-        let decompressedData = try BZipCompression.decompressedData(with: data)
+        let decompressedData = try BZip2.decompress(data: data)
         
         guard let decompressedString = String(data: decompressedData, encoding: .utf8) else {
             throw XCServerClientError.serilization

@@ -1,3 +1,4 @@
+let coverageResponseJSON = """
 {
 	"trg":{
 		"CodeQuickKit.framework":{
@@ -35256,3 +35257,4 @@
 	"lnp":38.211569486056696,
 	"lnpd":0
 }
+"""
