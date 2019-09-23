@@ -4,6 +4,10 @@
 
 An API and model framework for working with Xcode Server.
 
+## NOTICE
+
+This project is being deprecated, and the work is being folded into a new framework. Checkout the 'XcodeServer' framework [here](https://github.com/richardpiazza/XcodeServer)
+
 #### XCServerWebAPI.swift
 
 Wraps an `NSURLSession` for each `XcodeServer` entity.
